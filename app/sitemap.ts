@@ -1,0 +1,58 @@
+import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/site";
+import { PROVIDER_SLUGS, latestProviderUpdate } from "@/data/providers";
+import { BUSINESS_TYPE_SLUGS } from "@/data/businessTypes";
+import { VERSUS_SLUGS } from "@/data/versusPages";
+import { GUIDE_SLUGS, GUIDES } from "@/data/guides";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = SITE.url;
+  const updated = new Date(latestProviderUpdate());
+
+  const staticPaths = [
+    "",
+    "/compare-pos-systems",
+    "/compare-card-machines",
+    "/card-machine-fee-calculator",
+    "/get-pos-quotes",
+    "/reviews",
+    "/pos-systems",
+    "/guides",
+    "/about",
+    "/how-we-make-money",
+    "/methodology",
+    "/contact",
+    "/editorial-policy",
+    "/privacy-policy",
+    "/cookie-policy",
+    "/terms",
+  ];
+
+  const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
+    url: `${base}${p}`,
+    lastModified: updated,
+    changeFrequency: "weekly",
+    priority: p === "" ? 1 : 0.8,
+  }));
+
+  for (const slug of PROVIDER_SLUGS) {
+    entries.push({ url: `${base}/reviews/${slug}`, lastModified: updated, changeFrequency: "monthly", priority: 0.7 });
+  }
+  for (const slug of BUSINESS_TYPE_SLUGS) {
+    entries.push({ url: `${base}/pos-systems/${slug}`, lastModified: updated, changeFrequency: "monthly", priority: 0.7 });
+  }
+  for (const slug of VERSUS_SLUGS) {
+    entries.push({ url: `${base}/compare/${slug}`, lastModified: updated, changeFrequency: "monthly", priority: 0.6 });
+  }
+  for (const slug of GUIDE_SLUGS) {
+    const g = GUIDES.find((x) => x.slug === slug);
+    entries.push({
+      url: `${base}/guides/${slug}`,
+      lastModified: g ? new Date(g.lastUpdated) : updated,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+
+  return entries;
+}

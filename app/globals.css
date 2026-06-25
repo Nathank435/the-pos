@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* ThePOS.co.uk — brand theme (Tailwind v4 CSS-first config)          */
+/* Clean blue/slate SaaS palette per the brand guide. Edit to re-skin. */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-cream: #f8fafc;        /* Off White  #F8FAFC (page bg)        */
+  --color-navy: #0f172a;         /* Navy       #0F172A (ink)            */
+  --color-deepblue: #1e40af;     /* Blue 800   (links / secondary)      */
+  --color-accent: #1d4ed8;       /* Primary Blue #1D4ED8 (CTAs/accent)  */
+  --color-accent-soft: #dbeafe;  /* Soft blue tint                      */
+  --color-sky: #60a5fa;          /* Sky Blue   #60A5FA                  */
+  --color-amber: #f5b84b;        /* Warning amber (catch-out boxes)     */
+  --color-grey: #64748b;         /* Slate Grey #64748B                  */
+  --color-border: #e2e8f0;       /* Slate 200 border                    */
+
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius: 0.75rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  letter-spacing: -0.022em;
+}
+
+/* Editorial figure styling for fees / numbers */
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mono eyebrow / kicker label — the editorial signature */
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+/* Soft highlight accent */
+.marker {
+  background-image: linear-gradient(transparent 62%, var(--color-accent-soft) 62%);
+  padding: 0 0.1em;
+}
+
+/* Hairline rule, slightly stronger than the border token */
+.hairline {
+  border-color: var(--color-border);
+}
+
+/* Section index numerals */
+.index-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus visibility for accessibility */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-deepblue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth accordion */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

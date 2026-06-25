@@ -1,0 +1,13 @@
+# Netlify config for ThePOS.co.uk (Next.js 15, App Router).
+# Uses Netlify's official Next.js runtime so SSR pages, SSG and the /api/leads
+# function all work — no static-export limitations.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
