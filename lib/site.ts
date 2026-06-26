@@ -31,9 +31,9 @@ export const PRIMARY_NAV: { label: string; href: string }[] = [
   { label: "Compare POS Systems", href: "/compare-pos-systems" },
   { label: "Compare Card Machines", href: "/compare-card-machines" },
   { label: "By Business Type", href: "/pos-systems" },
-  { label: "Guides", href: "/guides" },
   { label: "Reviews", href: "/reviews" },
-  { label: "About", href: "/about" },
+  { label: "Guides", href: "/guides" },
+  { label: "Blog", href: "/blog" },
 ];
 
 /** Primary call-to-action label + destination, used in the header and CTAs. */
@@ -66,6 +66,15 @@ export const FOOTER_NAV: { title: string; links: { label: string; href: string }
       { label: "Restaurants", href: "/pos-systems/restaurants" },
       { label: "Retail", href: "/pos-systems/retail" },
       { label: "Market stalls", href: "/pos-systems/market-stalls" },
+    ],
+  },
+  {
+    title: "Learn",
+    links: [
+      { label: "Blog", href: "/blog" },
+      { label: "Guides", href: "/guides" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched", href: "/get-pos-quotes" },
     ],
   },
   {

@@ -70,6 +70,8 @@ export function articleSchema(input: {
   path: string;
   datePublished: string;
   dateModified: string;
+  image?: string;
+  author?: string;
 }): Json {
   return {
     "@context": "https://schema.org",
@@ -79,7 +81,8 @@ export function articleSchema(input: {
     mainEntityOfPage: `${SITE.url}${input.path}`,
     datePublished: input.datePublished,
     dateModified: input.dateModified,
-    author: { "@type": "Organization", name: SITE.publisher },
+    ...(input.image ? { image: `${SITE.url}${input.image}` } : {}),
+    author: { "@type": input.author ? "Person" : "Organization", name: input.author || SITE.publisher },
     publisher: { "@type": "Organization", name: SITE.publisher },
   };
 }

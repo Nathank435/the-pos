@@ -18,9 +18,11 @@ import { ButtonLink } from "@/components/ui/Button";
 import { EditorialImage } from "@/components/ui/EditorialImage";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
+import { BlogCard } from "@/components/content/BlogCard";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { PROVIDERS, getProvider } from "@/data/providers";
 import { GUIDES } from "@/data/guides";
+import { postsByDate } from "@/data/blog";
 
 const BUSINESS_CHIPS = [
   { label: "Hospitality", icon: Coffee, href: "/pos-systems/restaurants" },
@@ -73,6 +75,7 @@ const HOME_FAQS = [
 
 export default function HomePage() {
   const latestGuides = GUIDES.slice(0, 3);
+  const latestPosts = postsByDate().slice(0, 3);
 
   return (
     <>
@@ -253,6 +256,23 @@ export default function HomePage() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {latestGuides.map((g) => (
               <GuideCard key={g.slug} guide={g} />
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* From the blog */}
+      <Section muted className="py-10 sm:py-14">
+        <Container>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-heading text-2xl font-extrabold text-navy">From the blog</h2>
+            <Link href="/blog" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              All posts <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {latestPosts.map((p) => (
+              <BlogCard key={p.slug} post={p} />
             ))}
           </div>
         </Container>

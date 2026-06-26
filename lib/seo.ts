@@ -6,11 +6,14 @@ type PageMetaInput = {
   description: string;
   path: string; // leading slash, e.g. "/compare-pos-systems"
   type?: "website" | "article";
+  /** Optional featured image (leading-slash path), used for OG/Twitter cards. */
+  image?: string;
 };
 
 /** Build per-page metadata with canonical + OG/Twitter wired up. */
-export function pageMeta({ title, description, path, type = "website" }: PageMetaInput): Metadata {
+export function pageMeta({ title, description, path, type = "website", image }: PageMetaInput): Metadata {
   const url = `${SITE.url}${path}`;
+  const images = image ? [{ url: `${SITE.url}${image}` }] : undefined;
   return {
     title,
     description,
@@ -22,12 +25,14 @@ export function pageMeta({ title, description, path, type = "website" }: PageMet
       description,
       siteName: SITE.name,
       locale: "en_GB",
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       site: SITE.twitter,
+      images,
     },
   };
 }

@@ -4,6 +4,7 @@ import { PROVIDER_SLUGS, latestProviderUpdate } from "@/data/providers";
 import { BUSINESS_TYPE_SLUGS } from "@/data/businessTypes";
 import { VERSUS_SLUGS } from "@/data/versusPages";
 import { GUIDE_SLUGS, GUIDES } from "@/data/guides";
+import { BLOG_POSTS } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reviews",
     "/pos-systems",
     "/guides",
+    "/blog",
     "/about",
     "/how-we-make-money",
     "/methodology",
@@ -49,6 +51,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: `${base}/guides/${slug}`,
       lastModified: g ? new Date(g.lastUpdated) : updated,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+  for (const post of BLOG_POSTS) {
+    entries.push({
+      url: `${base}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
       changeFrequency: "monthly",
       priority: 0.6,
     });

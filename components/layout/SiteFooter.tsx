@@ -7,8 +7,8 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-navy text-white/80">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
-          <div className="lg:col-span-1">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-7">
+          <div className="md:col-span-2 lg:col-span-1">
             <Link href="/" aria-label={SITE.name}>
               <BrandLogo reversed />
             </Link>
