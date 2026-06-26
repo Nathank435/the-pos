@@ -16,12 +16,17 @@ export function InlineQuoteCTA({
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="font-heading text-2xl font-bold sm:text-3xl">{title}</h2>
         <p className="mx-auto mt-3 max-w-xl text-white/70">{copy}</p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <ButtonLink href={primary.href} size="lg">
+        <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <ButtonLink href={primary.href} size="lg" className="w-full sm:w-auto">
             {primary.label}
           </ButtonLink>
           {secondary && (
-            <ButtonLink href={secondary.href} variant="outline" size="lg" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+            <ButtonLink
+              href={secondary.href}
+              variant="outline"
+              size="lg"
+              className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto"
+            >
               {secondary.label}
             </ButtonLink>
           )}

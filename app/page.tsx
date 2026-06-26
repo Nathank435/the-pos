@@ -89,7 +89,7 @@ export default function HomePage() {
       {/* Hero */}
       <Section className="py-10 sm:py-14">
         <Container>
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-white via-white to-accent-soft/60 p-6 sm:p-10">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-white via-white to-accent-soft/60 p-5 sm:p-10">
             <div
               aria-hidden
               className="pointer-events-none absolute right-6 top-6 hidden h-32 w-40 opacity-50 lg:block"
@@ -98,19 +98,19 @@ export default function HomePage() {
                 backgroundSize: "14px 14px",
               }}
             />
-            <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="grid items-center gap-8 lg:grid-cols-2">
               <div className="relative">
-                <h1 className="font-heading text-4xl font-extrabold leading-[1.05] text-navy sm:text-5xl">
+                <h1 className="font-heading text-3xl font-extrabold leading-[1.08] text-navy sm:text-4xl lg:text-5xl">
                   Compare POS Systems &amp; Card Machines for UK Businesses
                 </h1>
-                <p className="mt-4 max-w-lg text-lg leading-relaxed text-grey">
+                <p className="mt-4 max-w-lg text-base leading-relaxed text-grey sm:text-lg">
                   Find the right till, terminal and payment setup for your business — without the waffle.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <ButtonLink href="/compare-pos-systems" size="lg">
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <ButtonLink href="/compare-pos-systems" size="lg" className="w-full sm:w-auto">
                     Compare Providers
                   </ButtonLink>
-                  <ButtonLink href="/pos-systems" variant="outline" size="lg">
+                  <ButtonLink href="/pos-systems" variant="outline" size="lg" className="w-full sm:w-auto">
                     See Top Picks
                   </ButtonLink>
                 </div>

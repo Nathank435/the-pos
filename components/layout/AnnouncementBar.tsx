@@ -15,11 +15,11 @@ export function AnnouncementBar() {
       <Link
         href="/get-pos-quotes#quiz"
         onClick={() => track("quiz_start", { source: "announcement_bar" })}
-        className="group mx-auto flex max-w-6xl items-center justify-center gap-2 px-10 py-2 text-center text-sm font-medium"
+        className="group mx-auto flex max-w-6xl items-center justify-center gap-2 px-9 py-2 text-center text-[13px] font-medium sm:text-sm"
       >
         <Zap className="hidden h-4 w-4 shrink-0 fill-white/30 sm:block" />
         <span>
-          Not sure which POS fits your business?{" "}
+          <span className="hidden sm:inline">Not sure which POS fits your business? </span>
           <span className="font-bold underline decoration-white/40 underline-offset-2 group-hover:decoration-white">
             Take the free 60-second quiz
           </span>

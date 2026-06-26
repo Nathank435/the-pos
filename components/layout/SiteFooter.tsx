@@ -6,7 +6,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border bg-navy text-white/80">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-12 pb-28 sm:px-6 lg:pb-12">
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
           <div className="lg:w-56 lg:shrink-0">
             <Link href="/" aria-label={SITE.name} className="inline-block">
