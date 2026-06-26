@@ -13,6 +13,20 @@ export const SITE = {
   twitter: "@thepos_uk",
 } as const;
 
+/** Legal operating company — surfaced in the footer, legal pages and schema. */
+export const COMPANY = {
+  legalName: "Cracked Media Ltd",
+  number: "13648057",
+  addressLines: ["The Old Workshop", "1 Ecclesall Road South", "Sheffield", "South Yorkshire", "S11 9PA"],
+  addressLocality: "Sheffield",
+  addressRegion: "South Yorkshire",
+  postalCode: "S11 9PA",
+  country: "United Kingdom",
+  get addressOneLine() {
+    return this.addressLines.join(", ");
+  },
+} as const;
+
 export const PRIMARY_NAV: { label: string; href: string }[] = [
   { label: "Compare POS Systems", href: "/compare-pos-systems" },
   { label: "Compare Card Machines", href: "/compare-card-machines" },

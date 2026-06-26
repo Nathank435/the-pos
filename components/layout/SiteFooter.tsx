@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FOOTER_NAV, SITE, DISCLOSURE } from "@/lib/site";
+import { FOOTER_NAV, SITE, DISCLOSURE, COMPANY } from "@/lib/site";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function SiteFooter() {
@@ -36,12 +36,18 @@ export function SiteFooter() {
           {DISCLOSURE}
         </div>
 
-        <div className="mt-6 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 space-y-2 border-t border-white/10 pt-6 text-xs text-white/50">
           <p>
-            © {year} {SITE.name}. {SITE.domain}. All prices and rates are indicative and may change — always check
-            provider terms.
+            {SITE.domain} is operated by <span className="text-white/70">{COMPANY.legalName}</span>, a company
+            registered in England &amp; Wales (no. {COMPANY.number}). Registered office: {COMPANY.addressOneLine}.
           </p>
-          <p>Made for UK small businesses.</p>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} {COMPANY.legalName}. All prices and rates are indicative and may change — always check provider
+              terms.
+            </p>
+            <p>Made for UK small businesses.</p>
+          </div>
         </div>
       </div>
     </footer>

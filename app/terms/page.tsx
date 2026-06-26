@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/content/InfoPage";
 import { pageMeta } from "@/lib/seo";
+import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Terms of Use",
@@ -17,6 +18,12 @@ export default function TermsPage() {
       path="/terms"
       lastUpdated="2026-06-25"
       sections={[
+        {
+          heading: "Who operates this site",
+          paragraphs: [
+            `${SITE.domain} is operated by ${COMPANY.legalName}, a company registered in England & Wales under company number ${COMPANY.number}, registered office ${COMPANY.addressOneLine}. By using this site you agree to these terms.`,
+          ],
+        },
         {
           heading: "Information, not advice",
           paragraphs: [

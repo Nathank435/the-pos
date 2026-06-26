@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/content/InfoPage";
 import { pageMeta } from "@/lib/seo";
-import { SITE } from "@/lib/site";
+import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Privacy Policy",
@@ -20,7 +20,10 @@ export default function PrivacyPolicyPage() {
       sections={[
         {
           heading: "Who we are",
-          paragraphs: [`${SITE.name} (${SITE.domain}) operates this website. Contact: ${SITE.email}.`],
+          paragraphs: [
+            `${SITE.domain} (“${SITE.name}”) is operated by ${COMPANY.legalName}, a company registered in England & Wales under company number ${COMPANY.number}, with its registered office at ${COMPANY.addressOneLine}.`,
+            `${COMPANY.legalName} is the data controller for personal data collected through this site. Contact: ${SITE.email}.`,
+          ],
         },
         {
           heading: "What we collect",

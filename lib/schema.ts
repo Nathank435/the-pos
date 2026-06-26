@@ -1,5 +1,5 @@
 /* JSON-LD schema builders. Output is injected via <JsonLd>. */
-import { SITE } from "./site";
+import { SITE, COMPANY } from "./site";
 import type { Provider } from "@/data/providers";
 
 type Json = Record<string, unknown>;
@@ -9,9 +9,18 @@ export function organizationSchema(): Json {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE.publisher,
+    legalName: COMPANY.legalName,
     url: SITE.url,
     description: SITE.description,
     email: SITE.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${COMPANY.addressLines[0]}, ${COMPANY.addressLines[1]}`,
+      addressLocality: COMPANY.addressLocality,
+      addressRegion: COMPANY.addressRegion,
+      postalCode: COMPANY.postalCode,
+      addressCountry: "GB",
+    },
   };
 }
 

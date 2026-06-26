@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/content/InfoPage";
 import { pageMeta } from "@/lib/seo";
+import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "About The POS",
@@ -40,6 +41,12 @@ export default function AboutPage() {
           heading: "A note on advice",
           paragraphs: [
             "We provide comparison guidance, not financial advice. Always check a provider's current terms before signing up.",
+          ],
+        },
+        {
+          heading: "Who operates The POS",
+          paragraphs: [
+            `${SITE.domain} is operated by ${COMPANY.legalName}, a company registered in England & Wales (no. ${COMPANY.number}), registered office ${COMPANY.addressOneLine}.`,
           ],
         },
       ]}

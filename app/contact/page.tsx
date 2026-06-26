@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { InfoPage } from "@/components/content/InfoPage";
 import { pageMeta } from "@/lib/seo";
-import { SITE } from "@/lib/site";
+import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Contact The POS",
@@ -21,6 +21,13 @@ export default function ContactPage() {
           heading: "Email",
           paragraphs: [
             `The quickest way to reach us is by email at ${SITE.email}. We read everything, though we can't always reply individually.`,
+          ],
+        },
+        {
+          heading: "Registered office",
+          paragraphs: [
+            `${SITE.domain} is operated by ${COMPANY.legalName} (company no. ${COMPANY.number}).`,
+            `${COMPANY.addressOneLine}.`,
           ],
         },
         {
