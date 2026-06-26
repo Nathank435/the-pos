@@ -7,28 +7,30 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-navy text-white/80">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-7">
-          <div className="md:col-span-2 lg:col-span-1">
-            <Link href="/" aria-label={SITE.name}>
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
+          <div className="lg:w-56 lg:shrink-0">
+            <Link href="/" aria-label={SITE.name} className="inline-block">
               <BrandLogo reversed />
             </Link>
-            <p className="mt-3 text-sm text-white/60">{SITE.tagline}</p>
+            <p className="mt-3 max-w-56 text-sm text-white/60">{SITE.tagline}</p>
           </div>
 
-          {FOOTER_NAV.map((col) => (
-            <div key={col.title}>
-              <h3 className="font-heading text-sm font-semibold text-white">{col.title}</h3>
-              <ul className="mt-3 space-y-2">
-                {col.links.map((l) => (
-                  <li key={l.href}>
-                    <Link href={l.href} className="text-sm text-white/60 transition-colors hover:text-white">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+            {FOOTER_NAV.map((col) => (
+              <div key={col.title}>
+                <h3 className="font-heading text-sm font-semibold text-white">{col.title}</h3>
+                <ul className="mt-3 space-y-2">
+                  {col.links.map((l) => (
+                    <li key={l.href}>
+                      <Link href={l.href} className="text-sm text-white/60 transition-colors hover:text-white">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/60">
