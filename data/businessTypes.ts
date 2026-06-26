@@ -24,8 +24,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     name: "Cafés",
     h1: "Best POS Systems for Cafés in the UK",
     imageHint: "barista espresso machine coffee shop counter, iPad POS on wooden counter",
-    image:
-      "https://media.istockphoto.com/id/2193878250/photo/smiling-small-business-owner-of-neighbourhood-deli-standing-proudly-in-front-of-their-shop.jpg?s=612x612&w=0&k=20&c=qmc1nkXu2fP3YRNFiFGVUZVGtBWVpWXua8GtaHtwkEE=",
+    image: "/images/hubs/cafes.jpg",
     intro:
       "A café POS needs to be quick, easy for staff, decent with tips, and not fall over during the Saturday morning oat-flat-white stampede. You want fast taps, simple menus and reliable card payments — not a 12-week onboarding project.",
     recommendedProviders: ["square", "sumup", "zettle", "dojo"],
@@ -58,8 +57,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     name: "Restaurants",
     h1: "Best POS Systems for Restaurants in the UK",
     imageHint: "independent restaurant table service, waiter with handheld card machine, warm ambient light",
-    image:
-      "https://media.istockphoto.com/id/1125683587/photo/are-you-ready-for-the-bill.jpg?s=612x612&w=0&k=20&c=fWmz4b5lLRXNTYeC_Sl1z3r90Z4wOOKR4_C0MtKsZC8=",
+    image: "/images/hubs/restaurants.jpg",
     intro:
       "A restaurant POS has to handle tables, tabs, coursing, tips and a kitchen that's already on fire at 8pm. You want something staff can learn fast and that won't drop payments mid-service.",
     recommendedProviders: ["dojo", "square", "touchbistro", "lightspeed"],
@@ -92,8 +90,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     name: "Retail shops",
     h1: "Best POS Systems for Retail Shops in the UK",
     imageHint: "independent boutique counter retail, card reader next to folded apparel",
-    image:
-      "https://static.vecteezy.com/system/resources/thumbnails/029/555/274/small/hand-holding-credit-card-payment-machine-in-the-supermarket-generative-ai-photo.jpg",
+    image: "/images/hubs/retail.jpg",
     intro:
       "Retail lives and dies on stock. A good retail POS tracks inventory, handles barcodes, and ideally keeps your shop and online store in sync — without charging you a fortune per sale.",
     recommendedProviders: ["square", "shopify-pos", "lightspeed", "zettle"],
@@ -126,7 +123,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     name: "Market stalls",
     h1: "Best Card Machines for Market Stalls in the UK",
     imageHint: "farmers market stall vendor, handing over card reader over crate of fresh produce",
-    image: "https://t4.ftcdn.net/jpg/03/02/68/27/360_F_302682764_k7AMhkFik7gjuR2sLLN8vVHcD7b6UWW4.jpg",
+    image: "/images/hubs/market-stalls.jpg",
     intro:
       "On a market stall you want something that fits in your apron, works on mobile data, charges all day and costs almost nothing when it's quiet. No contracts, no monthly fees, no nonsense.",
     recommendedProviders: ["sumup", "zettle", "square", "mypos"],
@@ -212,8 +209,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     slug: "tradesmen",
     name: "Tradespeople",
     h1: "Best Card Readers for Tradesmen & Sole Traders in the UK",
-    image:
-      "https://media.istockphoto.com/id/1400564019/photo/carpenters-designing-in-shop.jpg?s=612x612&w=0&k=20&c=Qrl52WmSxWZPtM_2mmnY1bGVyfK0c612Zxyg1vJ1psE=",
+    image: "/images/hubs/tradesmen.jpg",
     intro:
       "If you're a plumber, electrician or one-person band, you want to take a card on the doorstep, send the odd invoice, and not pay a monthly fee for the privilege. Keep it simple.",
     recommendedProviders: ["sumup", "zettle", "square", "mypos"],

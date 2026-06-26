@@ -107,8 +107,8 @@ export default function HomePage() {
               </div>
 
               <EditorialImage
-                src="https://fitsmallbusiness.com/wp-content/uploads/2020/09/FeatureImage_POS_Inventory_System.jpg"
-                alt="UK POS system, card machine and inventory on screen"
+                src="/images/hero-pos.jpg"
+                alt="Contactless card payment on a POS terminal"
                 label="POS hardware"
                 ratio="4 / 3"
                 priority

@@ -699,18 +699,18 @@ export const PROVIDERS: Provider[] = [
  * lockups are fine; <ProviderLogo> contains + multiply-blends them.     *
  * ------------------------------------------------------------------ */
 export const PROVIDER_LOGOS: Partial<Record<string, string>> = {
-  sumup: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sumup_logo.svg",
-  square: "https://images.vectorlogo.zone/logos/square/square-ar21.svg",
-  zettle: "https://images.vectorlogo.zone/logos/paypal/paypal-ar21.svg",
-  mypos: "https://upload.wikimedia.org/wikipedia/commons/f/f6/MyPOS_Logo.svg",
-  "shopify-pos": "https://images.vectorlogo.zone/logos/shopify/shopify-ar21.svg",
-  dojo: "https://goepos.com/wp-content/uploads/2022/08/Dojo_Logo.png",
-  worldpay: "https://commons.wikimedia.org/wiki/Special:FilePath/Worldpay_Logo.svg",
-  barclaycard: "https://commons.wikimedia.org/wiki/Special:FilePath/Barclaycard_Logo.svg",
-  lightspeed: "https://commons.wikimedia.org/wiki/Special:FilePath/Lightspeed_Commerce_Logo.svg",
-  "epos-now": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Blue_on_Transparent.png",
-  "tyl-by-natwest":
-    "https://www.tylbynatwest.com/assets/images/_600x60_fit_center-center_82_none/65384/tyl-by-natwest-logo.png",
+  // Self-hosted in /public/assets/logos so the site never depends on a third-party CDN.
+  sumup: "/assets/logos/sumup.svg",
+  square: "/assets/logos/square.svg",
+  zettle: "/assets/logos/zettle.svg",
+  mypos: "/assets/logos/mypos.svg",
+  "shopify-pos": "/assets/logos/shopify-pos.svg",
+  dojo: "/assets/logos/dojo.png",
+  worldpay: "/assets/logos/worldpay.svg",
+  barclaycard: "/assets/logos/barclaycard.svg",
+  lightspeed: "/assets/logos/lightspeed.svg",
+  "epos-now": "/assets/logos/epos-now.png",
+  "tyl-by-natwest": "/assets/logos/tyl-by-natwest.png",
   // TouchBistro's site logo is inline SVG (no hotlinkable file) — uses the initials
   // fallback. Drop /public/assets/logos/touchbistro.svg to enable.
   touchbistro: "/assets/logos/touchbistro.svg",
