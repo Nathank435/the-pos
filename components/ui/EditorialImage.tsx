@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,7 +31,15 @@ export function EditorialImage({
   priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
   const showImage = src && !failed;
+
+  // Catch images that 404'd before React hydrated (onError already fired by then):
+  // a complete image with zero natural width means it failed to load.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+  }, [src]);
 
   return (
     <div
@@ -42,6 +50,7 @@ export function EditorialImage({
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            ref={imgRef}
             src={src}
             alt={alt}
             loading={priority ? "eager" : "lazy"}

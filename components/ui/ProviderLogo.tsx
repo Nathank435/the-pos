@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { getProviderLogo } from "@/data/providers";
 
@@ -23,6 +23,13 @@ export function ProviderLogo({
 }) {
   const src = slug ? getProviderLogo(slug) : undefined;
   const [failed, setFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Catch logos that 404'd before hydration (onError already fired) → fall back to initials.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+  }, [src]);
 
   const heights = { sm: "h-8", md: "h-10", lg: "h-12" };
   const initialSizes = { sm: "h-8 w-8 text-xs", md: "h-10 w-10 text-sm", lg: "h-12 w-12 text-base" };
