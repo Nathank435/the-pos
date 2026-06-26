@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
+import { ProviderLogo } from "@/components/ui/ProviderLogo";
 import { EditorialImage } from "@/components/ui/EditorialImage";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
@@ -151,7 +152,10 @@ export default function HomePage() {
               if (!p) return null;
               return (
                 <div key={slug} className="flex flex-col rounded-xl border border-border bg-white p-5 transition-colors hover:border-accent">
-                  <h3 className="text-center font-heading text-xl font-extrabold text-accent">{p.name}</h3>
+                  <div className="flex justify-center">
+                    <ProviderLogo name={p.name} slug={p.slug} size="xl" />
+                  </div>
+                  <h3 className="sr-only">{p.name}</h3>
                   <dl className="mt-4 space-y-2.5 text-sm">
                     <SummaryRow label="Fees" value={fee} />
                     <SummaryRow label="Hardware" value={hardware} />
