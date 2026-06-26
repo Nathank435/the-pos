@@ -149,44 +149,52 @@ export function ProviderComparisonTable({
       </div>
 
       {/* Desktop table */}
-      <div className="hidden overflow-x-auto rounded-lg border border-border bg-white lg:block">
-        <table className="w-full min-w-[920px] text-sm">
+      <div className="hidden rounded-lg border border-border bg-white lg:block">
+        <table className="w-full table-fixed text-[13px] leading-snug">
+          <colgroup>
+            <col style={{ width: "20%" }} />
+            <col style={{ width: "11%" }} />
+            <col style={{ width: "12%" }} />
+            <col style={{ width: "17%" }} />
+            <col style={{ width: "11%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "11%" }} />
+            <col style={{ width: "9%" }} />
+          </colgroup>
           <thead>
-            <tr className="border-b border-border bg-cream/60 text-left text-xs uppercase tracking-wide text-grey">
-              <th className="p-3 font-semibold">Provider</th>
-              <th className="p-3 font-semibold">Best for</th>
-              <th className="p-3 font-semibold">Monthly</th>
-              <th className="p-3 font-semibold">Transaction</th>
-              <th className="p-3 font-semibold">Reader from</th>
-              <th className="p-3 font-semibold">Contract</th>
-              <th className="p-3 font-semibold">Payouts</th>
-              <th className="p-3 font-semibold">Watch out for</th>
-              <th className="p-3 font-semibold"></th>
+            <tr className="border-b border-border bg-cream/60 text-left text-[11px] uppercase tracking-wide text-grey">
+              <th className="px-3 py-2.5 font-semibold">Provider</th>
+              <th className="px-3 py-2.5 font-semibold">Best for</th>
+              <th className="px-3 py-2.5 font-semibold">Monthly</th>
+              <th className="px-3 py-2.5 font-semibold">Transaction</th>
+              <th className="px-3 py-2.5 font-semibold">Reader from</th>
+              <th className="px-3 py-2.5 font-semibold">Contract</th>
+              <th className="px-3 py-2.5 font-semibold">Payouts</th>
+              <th className="px-3 py-2.5 font-semibold"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
             {filtered.map((p) => (
               <tr key={p.slug} className="align-top hover:bg-cream/40">
-                <td className="p-3">
+                <td className="px-3 py-3">
                   <div className="flex items-center gap-2">
                     <ProviderLogo name={p.name} slug={p.slug} size="sm" />
-                    <div>
-                      <Link href={`/reviews/${p.slug}`} className="font-semibold text-navy hover:underline">
+                    <div className="min-w-0">
+                      <Link href={`/reviews/${p.slug}`} className="block truncate font-semibold text-navy hover:underline">
                         {p.name}
                       </Link>
                       <RatingStars value={p.editorialRating.overall} className="mt-0.5" />
                     </div>
                   </div>
                 </td>
-                <td className="p-3 text-grey">{p.bestFor[0]}</td>
-                <td className="tabular p-3 font-medium text-navy">{p.monthlyFeeFrom}</td>
-                <td className="p-3 text-navy">{p.transactionFeeHeadline}</td>
-                <td className="tabular p-3 text-navy">{p.cardReaderCostFrom}</td>
-                <td className="p-3 text-grey">{p.contractLength}</td>
-                <td className="p-3 text-grey">{p.payoutSpeed}</td>
-                <td className="p-3 text-grey">{p.cons[0]}</td>
-                <td className="p-3">
-                  <ProviderCTA provider={p} size="sm" sourcePage={sourcePage} label="Visit" />
+                <td className="px-3 py-3 text-grey">{p.bestFor[0]}</td>
+                <td className="px-3 py-3 font-medium text-navy">{p.monthlyFeeFrom}</td>
+                <td className="px-3 py-3 text-navy">{p.transactionFeeHeadline}</td>
+                <td className="px-3 py-3 text-navy">{p.cardReaderCostFrom}</td>
+                <td className="px-3 py-3 text-grey">{p.contractLength}</td>
+                <td className="px-3 py-3 text-grey">{p.payoutSpeed}</td>
+                <td className="px-2 py-3 text-right">
+                  <ProviderCTA provider={p} size="sm" sourcePage={sourcePage} label="Visit" className="px-3" />
                 </td>
               </tr>
             ))}
