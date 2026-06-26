@@ -6,6 +6,7 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Analytics } from "@/lib/analytics";
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/analytics/GoogleTagManager";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -51,6 +52,7 @@ export const metadata: Metadata = {
     description: SITE.description,
   },
   robots: { index: true, follow: true },
+  verification: { google: "ej17Nv_lU_YHGfmqOVzwTyQ3t-I6PNrTwjRV7rkPC80" },
 };
 
 export default function RootLayout({
@@ -59,6 +61,8 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${montserrat.variable} ${plexMono.variable}`}>
       <body className="min-h-screen flex flex-col">
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Analytics />
         <AnnouncementBar />

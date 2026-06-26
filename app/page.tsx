@@ -59,6 +59,12 @@ const TRUST = [
   { icon: Users, title: "Built for SMEs", body: "For hospitality, retail, salons and independents." },
 ];
 
+const PEOPLE = [
+  { src: "/images/people/cafe-owner.jpg", alt: "Independent café and deli owner in her shop doorway", caption: "Café & deli owners" },
+  { src: "/images/people/shop-worker.jpg", alt: "Shop assistant folding clothes in an independent store", caption: "Independent retailers" },
+  { src: "/images/people/owner.jpg", alt: "Small business owner standing confidently", caption: "Small business owners" },
+];
+
 const HOME_FAQS = [
   {
     q: "What's the best POS system for a UK small business?",
@@ -202,6 +208,33 @@ export default function HomePage() {
             <div className="mt-8 text-center">
               <ButtonLink href="/get-pos-quotes">Get Matched</ButtonLink>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Built for businesses like yours — real faces */}
+      <Section muted className="py-10 sm:py-14">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">Built for businesses like yours</h2>
+            <p className="mt-3 text-grey">
+              From market stalls to cafés and clothing shops, we help real UK small businesses choose how to take
+              payments — in plain English.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {PEOPLE.map((person) => (
+              <figure key={person.src} className="overflow-hidden rounded-xl border border-border bg-white">
+                <div className="aspect-[4/3] overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={person.src} alt={person.alt} loading="lazy" className="h-full w-full object-cover" />
+                </div>
+                <figcaption className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-navy">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  {person.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </Container>
       </Section>
