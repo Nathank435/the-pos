@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   MapPin,
   Users,
+  Calculator,
 } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
@@ -181,6 +182,29 @@ export default function HomePage() {
           <div className="mt-7 text-center">
             <ButtonLink href="/compare-pos-systems" variant="outline">
               Compare all {PROVIDERS.length} providers <ArrowRight className="h-4 w-4" />
+            </ButtonLink>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Fee calculator promo */}
+      <Section className="py-6 sm:py-8">
+        <Container>
+          <div className="overflow-hidden rounded-2xl border border-accent/30 bg-accent-soft/40 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-8">
+            <div className="flex items-start gap-4">
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-white text-accent ring-1 ring-border">
+                <Calculator className="h-6 w-6" />
+              </span>
+              <div>
+                <h2 className="font-heading text-xl font-extrabold text-navy sm:text-2xl">Work out exactly what you'd pay</h2>
+                <p className="mt-1 text-grey">
+                  Pop in your turnover and average sale — see your monthly cost and all-in rate across the main UK
+                  providers in seconds.
+                </p>
+              </div>
+            </div>
+            <ButtonLink href="/card-machine-fee-calculator" size="lg" className="mt-4 w-full shrink-0 sm:mt-0 sm:w-auto">
+              Try the fee calculator
             </ButtonLink>
           </div>
         </Container>
