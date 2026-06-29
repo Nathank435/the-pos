@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!biz) return {};
   return pageMeta({
     title: `${biz.h1} (2026)`,
-    description: `${biz.intro.slice(0, 150)} Compare the best providers, fees and features.`,
+    description: biz.seoDescription,
     path: `/pos-systems/${slug}`,
     type: "article",
   });

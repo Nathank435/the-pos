@@ -5,6 +5,8 @@ export type BusinessType = {
   name: string; // plural, e.g. "Cafés"
   h1: string;
   intro: string;
+  /** Bespoke ≤155-char SEO meta description (front-load the segment keyword). */
+  seoDescription: string;
   /** Art-direction hint for the hub banner photo (Unsplash/Pexels search string).
    *  Drop a real photo at /public/images/hubs/<slug>.jpg to replace the placeholder. */
   imageHint?: string;
@@ -21,6 +23,8 @@ export type BusinessType = {
 export const BUSINESS_TYPES: BusinessType[] = [
   {
     slug: "cafes",
+    seoDescription:
+      "The best café POS systems and card machines in the UK for 2026 - fast service, tips and low fees compared in plain English. Find your match.",
     name: "Cafés",
     h1: "Best POS Systems for Cafés in the UK",
     imageHint: "barista espresso machine coffee shop counter, iPad POS on wooden counter",
@@ -54,6 +58,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "restaurants",
+    seoDescription:
+      "The best restaurant POS systems in the UK for 2026 - table service, tips, menus and card fees compared in plain English. Find your best-fit setup.",
     name: "Restaurants",
     h1: "Best POS Systems for Restaurants in the UK",
     imageHint: "independent restaurant table service, waiter with handheld card machine, warm ambient light",
@@ -87,6 +93,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "retail",
+    seoDescription:
+      "The best retail POS systems and card machines for UK shops in 2026 - stock, barcodes and low fees compared in plain English. Find your match.",
     name: "Retail shops",
     h1: "Best POS Systems for Retail Shops in the UK",
     imageHint: "independent boutique counter retail, card reader next to folded apparel",
@@ -120,6 +128,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "market-stalls",
+    seoDescription:
+      "Best card readers for UK market stalls in 2026 - works on mobile data, no monthly fee, all-day battery. Top picks compared. Find your match.",
     name: "Market stalls",
     h1: "Best Card Machines for Market Stalls in the UK",
     imageHint: "farmers market stall vendor, handing over card reader over crate of fresh produce",
@@ -153,6 +163,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "pubs-bars",
+    seoDescription:
+      "The best POS systems for UK pubs and bars in 2026 - fast rounds, tabs and card fees compared in plain English. Find your best-fit setup.",
     name: "Pubs & bars",
     h1: "Best POS Systems for Pubs & Bars in the UK",
     intro:
@@ -180,6 +192,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "salons",
+    seoDescription:
+      "The best salon POS systems and card machines in the UK for 2026 - chair-side payments, tips and low fees compared in plain English.",
     name: "Salons",
     h1: "Best POS Systems for Salons & Barbers in the UK",
     intro:
@@ -207,6 +221,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "tradesmen",
+    seoDescription:
+      "The best card machines for UK tradespeople in 2026 - take deposits and payments on the go, low fees and no contract. Top picks compared.",
     name: "Tradespeople",
     h1: "Best Card Readers for Tradesmen & Sole Traders in the UK",
     image: "/images/hubs/tradesmen.jpg",
@@ -239,6 +255,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "takeaways",
+    seoDescription:
+      "The best POS systems for UK takeaways in 2026 - fast orders, phone and delivery payments and low card fees compared. Find your best-fit setup.",
     name: "Takeaways",
     h1: "Best POS Systems for Takeaways in the UK",
     intro:
@@ -266,6 +284,8 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "mobile-businesses",
+    seoDescription:
+      "The best mobile card machines for UK businesses in 2026 - take payments anywhere on mobile data, no monthly fee. Top picks compared.",
     name: "Mobile businesses",
     h1: "Best Card Readers for Mobile Businesses in the UK",
     intro:
