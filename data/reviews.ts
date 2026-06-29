@@ -7,6 +7,8 @@ export type ReviewContent = {
   slug: string;
   quickVerdict: string;
   pricingDetail: string[];
+  /** Illustrative monthly-cost worked example (flat-rate providers). */
+  workedExample?: string;
   hardwareNote: string;
   supportNote: string;
   useCases: { who: string; verdict: string }[];
@@ -18,6 +20,8 @@ export type ReviewContent = {
 export const REVIEWS: ReviewContent[] = [
   {
     slug: "sumup",
+    workedExample:
+      "on £5,000 a month at SumUp's 1.69% standard rate, processing costs roughly £85/mo (about £1,020/year) with no monthly fee. On Payments Plus (from 0.99%) the same volume can drop nearer £50/mo - worth it once you're taking steady volume.",
     quickVerdict:
       "SumUp is the default pick for sole traders, market stalls and mobile sellers who just want to take a card without a contract or monthly fee. Simple, cheap to start, and hard to get wrong. You'll outgrow it if you need full restaurant or deep retail features.",
     pricingDetail: [
@@ -52,6 +56,8 @@ export const REVIEWS: ReviewContent[] = [
   },
   {
     slug: "square",
+    workedExample:
+      "at £8,000 a month on Square's flat 1.75%, you'd pay around £140/mo in processing (about £1,680/year) with no monthly fee on the standard plan. Add a paid POS tier only if you need the extra features.",
     quickVerdict:
       "Square is the best free POS software you can get without signing a contract. The app is genuinely good, the ecosystem (online store, invoices, inventory, loyalty) is broad, and there's no monthly fee to start. It's our go-to recommendation for cafés, small retail and service businesses.",
     pricingDetail: [
@@ -82,6 +88,8 @@ export const REVIEWS: ReviewContent[] = [
   },
   {
     slug: "zettle",
+    workedExample:
+      "on £4,000 a month at Zettle's 1.75%, processing works out around £70/mo (about £840/year) with no monthly fee. Funds land in your PayPal or linked bank account within a couple of working days.",
     quickVerdict:
       "PayPal Zettle is a tidy, no-monthly-fee reader that makes most sense if you already live in the PayPal ecosystem. The app and inventory are solid for small retail and mobile selling, even if the wider ecosystem is less ambitious than Square's.",
     pricingDetail: [
@@ -141,6 +149,8 @@ export const REVIEWS: ReviewContent[] = [
   },
   {
     slug: "mypos",
+    workedExample:
+      "on £6,000 a month with a typical £15 basket (around 400 sales), a card-present rate near 1.10% + 7p works out roughly £95/mo - about £66 in percentage fees plus £28 in per-sale pence - with funds settled instantly. Always confirm your tier's exact rate.",
     quickVerdict:
       "myPOS stands out for instant settlement: your takings land in a built-in business account straight away. That, plus strong cross-border card acceptance, makes it a niche favourite - just be ready for a more complex fee structure than a single flat rate.",
     pricingDetail: [

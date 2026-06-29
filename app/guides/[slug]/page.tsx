@@ -9,7 +9,7 @@ import { AuthorBox } from "@/components/content/AuthorBox";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { articleSchema } from "@/lib/schema";
+import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { GUIDES, getGuide } from "@/data/guides";
 import { Clock } from "lucide-react";
@@ -35,13 +35,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   return (
     <>
       <JsonLd
-        data={articleSchema({
-          title: guide.title,
-          description: guide.description,
-          path,
-          datePublished: guide.lastUpdated,
-          dateModified: guide.lastUpdated,
-        })}
+        data={[
+          articleSchema({
+            title: guide.title,
+            description: guide.description,
+            path,
+            datePublished: guide.lastUpdated,
+            dateModified: guide.lastUpdated,
+          }),
+          breadcrumbSchema([{ name: "Guides", path: "/guides" }, { name: guide.title, path }]),
+          ...(guide.faqs && guide.faqs.length ? [faqSchema(guide.faqs)] : []),
+        ]}
       />
 
       <div className="border-b border-border bg-white">
@@ -62,6 +66,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[1fr_300px]">
           <article className="max-w-3xl">
+            {guide.answer && (
+              <div className="mb-6 rounded-lg border-l-4 border-accent bg-accent-soft/40 p-4">
+                <p className="text-base leading-relaxed text-navy">
+                  <strong className="font-semibold">In short:</strong> {guide.answer}
+                </p>
+              </div>
+            )}
             <p className="text-lg leading-relaxed text-navy">{guide.intro}</p>
 
             {guide.sections.map((s, i) => (

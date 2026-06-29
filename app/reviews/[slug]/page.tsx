@@ -137,6 +137,15 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <Fact label="Reader from" value={provider.cardReaderCostFrom} />
                 <Fact label="Payouts" value={provider.payoutSpeed} />
               </dl>
+              {review.workedExample && (
+                <div className="mt-4 rounded-lg border-l-4 border-accent bg-accent-soft/40 p-4 text-sm leading-relaxed text-navy">
+                  <strong className="font-semibold">Worked example:</strong> {review.workedExample}{" "}
+                  <Link href="/card-machine-fee-calculator" className="font-medium text-deepblue underline">
+                    Run your own numbers
+                  </Link>
+                  .
+                </div>
+              )}
             </section>
 
             <section>

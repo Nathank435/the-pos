@@ -12,6 +12,8 @@ export type Guide = {
   readMinutes: number;
   lastUpdated: string; // ISO
   intro: string;
+  /** 40-55 word direct answer, rendered as a boxed snippet target under the title. */
+  answer?: string;
   sections: GuideSection[];
   faqs?: { q: string; a: string }[];
   /** Internal-linking targets (commercial pages get at least 3 links per guide). */
@@ -414,6 +416,191 @@ export const GUIDES: Guide[] = [
     ],
   },
 ];
+
+
+// --- Snippet answer blocks + extra FAQs (AI-drafted, editor-reviewed) ---
+// Kept separate so the editorial entries above stay readable; merged into GUIDES below.
+const GUIDE_EXTRAS: Record<string, { answer: string; faqs: { q: string; a: string }[] }> =
+{
+  "card-machine-fees-explained": {
+    "answer": "UK card machine fees usually include a transaction fee (a percentage per sale, often around 1.75%), a monthly hardware or software cost, and sometimes an authorisation fee, terminal rental, PCI DSS compliance charge, and chargeback fees. Some providers, like SumUp and Square, charge per transaction only with no monthly fee.",
+    "faqs": [
+      {
+        "q": "Do card machine fees include VAT?",
+        "a": "It varies. Some providers quote fees excluding VAT, so a transaction rate or monthly cost can be higher than it first looks. Always check whether prices shown are inclusive or exclusive of VAT, as VAT-registered businesses can usually reclaim it on their return."
+      },
+      {
+        "q": "Can I pass card machine fees on to customers in the UK?",
+        "a": "You can add a surcharge to business and corporate cards, but UK rules ban surcharging on consumer debit and credit cards. For most small shops serving the public, that means you cannot legally charge customers extra for paying by card."
+      },
+      {
+        "q": "Are card machine fees tax deductible?",
+        "a": "Yes. Card machine transaction fees, rental and monthly costs are legitimate business expenses, so you can usually deduct them when working out taxable profit. Keep your provider statements as records for HMRC, as they show the fees taken from each payout."
+      }
+    ]
+  },
+  "what-is-a-pos-system": {
+    "answer": "A POS (point of sale) system is the combination of hardware and software a business uses to take payments and run sales. It can include a till, card reader, receipt printer and software that tracks stock, sales and reports. A card reader alone just takes payments; a POS system does more.",
+    "faqs": [
+      {
+        "q": "What does a POS system do besides take payments?",
+        "a": "A typical POS system tracks stock levels, records every sale, manages staff and shifts, prints or emails receipts, and produces sales reports. Many also handle refunds, discounts, customer details and integrate with accounting software, giving small businesses a clearer view of trade."
+      },
+      {
+        "q": "Do I need a POS system for a small shop?",
+        "a": "Not always. A very small shop or market stall may only need a card reader and a simple till. A POS system makes more sense once you carry stock, employ staff, or want detailed reporting to manage the business day to day."
+      },
+      {
+        "q": "How much does a POS system cost in the UK?",
+        "a": "Costs vary widely. Entry-level setups can start from the price of a card reader plus a low monthly software fee, while full till systems with hardware run to several hundred pounds upfront plus ongoing charges. Always check transaction fees on top."
+      }
+    ]
+  },
+  "pos-system-vs-card-reader": {
+    "answer": "A card reader simply takes card payments, usually via a small portable device paired with a phone or tablet. A POS system does that plus manages stock, sales reporting, staff and receipts. Choose a card reader if you only need to take payments; choose a POS system if you need to run the wider business.",
+    "faqs": [
+      {
+        "q": "Can a card reader work without a POS system?",
+        "a": "Yes. Most card readers work on their own through a free app on your phone or tablet, letting you take payments and send receipts without any full POS setup. This suits sole traders, market stalls and mobile businesses that mainly need to get paid."
+      },
+      {
+        "q": "Is a POS system worth it for a small business?",
+        "a": "It depends on how you trade. If you carry stock, have staff, or want detailed sales and tax reporting, a POS system saves time and reduces errors. If you just take occasional payments, a simple card reader is usually cheaper and enough."
+      },
+      {
+        "q": "Can I upgrade from a card reader to a POS system later?",
+        "a": "Usually yes. Many providers, such as SumUp, Square and Zettle, let you start with a card reader and add POS software or hardware as you grow. Staying with one provider often makes upgrading easier, as your sales data carries across."
+      }
+    ]
+  },
+  "how-to-choose-a-card-machine": {
+    "answer": "To choose a UK card machine, compare transaction fees, any monthly or rental costs, and whether you are tied to a contract. Check payout speed, the hardware type (countertop, portable or mobile), and features like refunds, tipping and reporting. Match the machine to where and how you take payments.",
+    "faqs": [
+      {
+        "q": "What should I look for in a card machine contract?",
+        "a": "Check the contract length, any early exit fees, and whether the rate is fixed or can rise. Watch for separate charges like PCI DSS compliance, terminal rental and minimum monthly fees. No-contract providers avoid most of this but may charge a higher transaction rate."
+      },
+      {
+        "q": "Which card machine is best for a mobile business?",
+        "a": "For mobile traders, a portable card reader that connects over mobile data or a phone hotspot works best, as it takes payments anywhere with signal. Look for long battery life, contactless and Apple Pay or Google Pay support, and pay-as-you-go pricing with no fixed contract."
+      },
+      {
+        "q": "Do card machines need wifi or a SIM?",
+        "a": "It depends on the type. Many small readers connect through your phone's app over wifi or mobile data. Standalone portable terminals often include a SIM or use wifi directly. Countertop machines usually plug into broadband. Check the connection method suits where you trade."
+      }
+    ]
+  },
+  "hidden-card-machine-fees": {
+    "answer": "Hidden card machine fees can include authorisation fees per transaction, PCI DSS non-compliance charges, monthly minimums, terminal rental, early exit fees, and chargeback fees when a customer disputes a payment. Some providers also charge more for premium or commercial cards. Always read the full pricing before signing up.",
+    "faqs": [
+      {
+        "q": "What is a chargeback fee?",
+        "a": "A chargeback fee is charged when a customer disputes a payment and asks their bank to reverse it. Many providers add an administration fee per chargeback on top of refunding the sale. Keeping clear receipts and proof of delivery helps you challenge unfair disputes."
+      },
+      {
+        "q": "What is a PCI DSS non-compliance fee?",
+        "a": "PCI DSS is the security standard for handling card data. Some providers charge a monthly fee if you do not complete their compliance questionnaire or meet the requirements. Pay-as-you-go providers usually build compliance in, so you avoid this charge entirely."
+      },
+      {
+        "q": "Why is my card machine charging more for some cards?",
+        "a": "Some providers charge higher rates for commercial, business or premium reward cards, and for cards issued outside the UK or EU, because they cost more to process. Flat-rate providers like Square and Zettle avoid this by charging one rate for all cards."
+      }
+    ]
+  },
+  "no-contract-card-machines": {
+    "answer": "No-contract card machines let you take card payments with no monthly fee or fixed term, paying only a percentage per transaction. UK options include SumUp, Square and Zettle. They suit low-volume, seasonal or new businesses. A contract can work out cheaper if you process high, steady card sales.",
+    "faqs": [
+      {
+        "q": "Which UK card machines have no monthly fee?",
+        "a": "SumUp, Square and Zettle all offer pay-as-you-go readers with no monthly fee or contract, charging a flat percentage per transaction instead. You buy the reader once, then only pay when you take a payment, which suits low or irregular sales."
+      },
+      {
+        "q": "When is a card machine contract worth it?",
+        "a": "A contract can be worth it if you process high, steady card volumes, as a lower transaction rate may outweigh the monthly cost. It is rarely worth it for low or seasonal trade, where pay-as-you-go with no fixed fees usually costs less overall."
+      },
+      {
+        "q": "Can I cancel a no-contract card machine anytime?",
+        "a": "Yes. With pay-as-you-go providers there is no fixed term, so you can simply stop using the reader with nothing more to pay. You keep the hardware you bought. This flexibility is the main reason new and seasonal businesses choose no-contract options."
+      }
+    ]
+  },
+  "what-is-tap-to-pay": {
+    "answer": "Tap to Pay lets you take contactless card and mobile payments directly on a phone, with no separate card machine. The customer taps their card, phone or watch on your device. Tap to Pay on iPhone and on Android suit sole traders and mobile businesses wanting to take payments with no extra hardware.",
+    "faqs": [
+      {
+        "q": "Is Tap to Pay on iPhone safe?",
+        "a": "Yes. Tap to Pay on iPhone uses the phone's built-in contactless reader and Apple's security, so card details are encrypted and not stored on the device. It meets the same payment security standards as a dedicated card machine, making it safe for everyday business use."
+      },
+      {
+        "q": "Do I need a card reader to use Tap to Pay?",
+        "a": "No. That is the main appeal. Tap to Pay turns a supported phone into the card reader itself, so customers tap their card or phone directly on yours. You just need a compatible device and an app from a provider such as SumUp, Square or Zettle."
+      },
+      {
+        "q": "What phones support Tap to Pay in the UK?",
+        "a": "Tap to Pay on iPhone works on newer iPhone models running a recent version of iOS, with a supported payment app. Many modern Android phones with NFC also support tap-to-pay through provider apps. Always check your provider lists your exact handset as compatible."
+      }
+    ]
+  },
+  "what-is-a-virtual-terminal": {
+    "answer": "A virtual terminal lets you take card payments by typing the customer's card details into a secure web page, with no physical card present. It suits phone, mail and remote orders. Because the card is not present, these payments carry a slightly higher fee and a greater fraud and chargeback risk.",
+    "faqs": [
+      {
+        "q": "Is a virtual terminal safe for taking card payments?",
+        "a": "Used properly, yes. Reputable virtual terminals are PCI DSS compliant and encrypt card data. The main risk is fraud, as you cannot check the physical card. Verify the cardholder's details, keep records, and never store full card numbers yourself to reduce chargeback risk."
+      },
+      {
+        "q": "What is the difference between a virtual terminal and a payment link?",
+        "a": "With a virtual terminal, you key in the customer's card details yourself, usually over the phone. With a payment link, you send the customer a secure link and they enter their own details. Payment links shift data entry to the customer, lowering your handling risk."
+      },
+      {
+        "q": "Do I need a website to use a virtual terminal?",
+        "a": "No. A virtual terminal runs in your provider's secure web portal, so you only need an internet connection and a browser. It is designed for businesses taking phone or mail orders, not for adding a checkout to your own website, which needs a payment gateway."
+      }
+    ]
+  },
+  "merchant-account-vs-payment-facilitator": {
+    "answer": "A merchant account is a dedicated account in your business name for processing card payments, usually giving lower rates and more control but slower setup and approval. A payment facilitator, like SumUp or Square, pools many sellers under one account, offering instant sign-up and simple pricing with less control and quicker onboarding.",
+    "faqs": [
+      {
+        "q": "Is SumUp a merchant account?",
+        "a": "No. SumUp is a payment facilitator, not a traditional merchant account. It processes your payments under its own master account, so you can start taking cards almost immediately without a separate application. The trade-off is less control and flat pricing rather than a negotiated rate."
+      },
+      {
+        "q": "Which is cheaper, a merchant account or a payment facilitator?",
+        "a": "It depends on volume. Payment facilitators have no setup hurdles and simple flat fees, which suits lower or irregular sales. A dedicated merchant account can offer lower per-transaction rates that save money once you process high, steady volumes, despite extra account and setup costs."
+      },
+      {
+        "q": "How long does it take to set up a merchant account?",
+        "a": "A traditional merchant account can take several days to a few weeks, as the provider reviews your business, trading history and risk. Payment facilitators like Square and Zettle are far quicker, often letting you sign up and take payments the same day."
+      }
+    ]
+  },
+  "how-long-do-card-payments-take-to-clear": {
+    "answer": "In the UK, card payments typically reach your bank account one to three working days after the sale, depending on the provider. Some, such as Dojo, offer fast or same-day payouts, and several providers offer instant settlement for an extra fee. Weekends and bank holidays can add a day or two.",
+    "faqs": [
+      {
+        "q": "Why do card payments take a few days to clear?",
+        "a": "The payment passes through several steps: authorisation, settlement between banks, and the provider batching and releasing funds. Each adds time. Most UK providers send payouts on working days only, so a sale made on a Friday or before a bank holiday can take longer to arrive."
+      },
+      {
+        "q": "Which card machine pays out the fastest in the UK?",
+        "a": "Dojo is known for fast, often same-day or next-day payouts including weekends. Several other providers offer instant or same-day settlement, though this usually costs extra. If quick access to funds matters, check each provider's standard payout time and any fee for faster payouts."
+      },
+      {
+        "q": "Can I get card payments paid out instantly?",
+        "a": "Some providers offer instant or same-day payouts, but this often comes with an extra fee or a small percentage charge. Standard free payouts usually take one to three working days. Weigh the cost of instant access against how urgently you need the cash flow."
+      }
+    ]
+  }
+};
+
+for (const g of GUIDES) {
+  const ex = GUIDE_EXTRAS[g.slug];
+  if (!ex) continue;
+  if (!g.answer) g.answer = ex.answer;
+  const seen = new Set((g.faqs ?? []).map((f) => f.q));
+  g.faqs = [...(g.faqs ?? []), ...ex.faqs.filter((f) => !seen.has(f.q))];
+}
 
 export function getGuide(slug: string): Guide | undefined {
   return GUIDES.find((g) => g.slug === slug);
