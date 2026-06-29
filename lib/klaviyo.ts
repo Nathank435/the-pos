@@ -32,10 +32,51 @@ function cleanProps(props: Record<string, unknown> = {}) {
   return Object.fromEntries(Object.entries(props).filter(([, v]) => v !== undefined && v !== ""));
 }
 
+/** Create or update the full profile (name, company, custom properties).
+ *  The subscription endpoint only accepts email/phone/subscriptions, so profile
+ *  attributes have to be written here. Returns true if the profile now exists. */
+async function upsertProfile(profile: KlaviyoProfile): Promise<boolean> {
+  const attributes = cleanProps({
+    email: profile.email,
+    first_name: profile.firstName,
+    organization: profile.company,
+    properties: cleanProps(profile.properties),
+  });
+  const body = JSON.stringify({ data: { type: "profile", attributes } });
+
+  let res = await fetch("https://a.klaviyo.com/api/profiles/", { method: "POST", headers: headers(), body });
+
+  // 409 = profile already exists; Klaviyo returns its id so we can PATCH it.
+  if (res.status === 409) {
+    const dup = await res.json().catch(() => null);
+    const id = dup?.errors?.[0]?.meta?.duplicate_profile_id as string | undefined;
+    if (!id) {
+      console.error("[klaviyo] 409 without duplicate id", JSON.stringify(dup));
+      return false;
+    }
+    res = await fetch(`https://a.klaviyo.com/api/profiles/${id}/`, {
+      method: "PATCH",
+      headers: headers(),
+      body: JSON.stringify({ data: { type: "profile", id, attributes } }),
+    });
+  }
+
+  if (!res.ok) {
+    console.error("[klaviyo] profile upsert failed", res.status, await res.text().catch(() => ""));
+    return false;
+  }
+  return true;
+}
+
 /** Create/update the profile and subscribe it (with consent) to the Leads list. */
 export async function klaviyoSubscribe(profile: KlaviyoProfile): Promise<boolean> {
   if (!KEY || !LIST_ID) return false;
   try {
+    // 1. Write the full profile (name, company, properties).
+    const profileOk = await upsertProfile(profile);
+    if (!profileOk) return false;
+
+    // 2. Subscribe with consent. This endpoint only takes email + subscriptions.
     const res = await fetch("https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/", {
       method: "POST",
       headers: headers(),
@@ -43,15 +84,13 @@ export async function klaviyoSubscribe(profile: KlaviyoProfile): Promise<boolean
         data: {
           type: "profile-subscription-bulk-create-job",
           attributes: {
+            custom_source: "Website lead",
             profiles: {
               data: [
                 {
                   type: "profile",
                   attributes: {
                     email: profile.email,
-                    first_name: profile.firstName,
-                    organization: profile.company,
-                    properties: cleanProps(profile.properties),
                     subscriptions: { email: { marketing: { consent: "SUBSCRIBED" } } },
                   },
                 },
@@ -62,8 +101,9 @@ export async function klaviyoSubscribe(profile: KlaviyoProfile): Promise<boolean
         },
       }),
     });
+    // Profile exists either way; a subscribe hiccup shouldn't drop the lead marker.
     if (!res.ok) console.error("[klaviyo] subscribe failed", res.status, await res.text().catch(() => ""));
-    return res.ok;
+    return true;
   } catch (err) {
     console.error("[klaviyo] subscribe error", err);
     return false;
