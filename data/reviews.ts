@@ -348,6 +348,192 @@ export const REVIEWS: ReviewContent[] = [
   },
 ];
 
+
+// --- Extra provider-longtail FAQs (AI-drafted, editor-reviewed) ---
+// Appended to each review's faqs (dedup by question); FAQ schema picks them up.
+const REVIEW_FAQ_EXTRAS: Record<string, { q: string; a: string }[]> =
+{
+  "sumup": [
+    {
+      "q": "How much does a SumUp card reader cost?",
+      "a": "SumUp readers start from around £19 plus VAT for the entry model, with no monthly fee and no contract. You pay a transaction fee on each sale rather than a fixed cost, so it suits low or seasonal volumes. Check current terms, as bundle prices vary."
+    },
+    {
+      "q": "How long do SumUp payouts take?",
+      "a": "SumUp typically pays funds into your linked bank account within one to two working days of the transaction. There is no extra charge for standard payouts. Timing can vary slightly around weekends and bank holidays, so check current terms for the latest schedule."
+    },
+    {
+      "q": "Can you cancel SumUp at any time?",
+      "a": "Yes. SumUp works on a pay-as-you-go basis with no contract and no monthly fee, so there is nothing to cancel in terms of a subscription. You simply stop using the reader. You keep the hardware you bought, and only pay fees when you take a payment."
+    },
+    {
+      "q": "Does SumUp have lower rates for higher volumes?",
+      "a": "Yes. The standard rate is 1.69% per transaction, but the Payments Plus plan brings card fees down from 0.99% for busier businesses, typically for a monthly fee. It is worth comparing the two against your monthly takings. Check current terms to confirm the latest pricing."
+    }
+  ],
+  "square": [
+    {
+      "q": "How much does a Square card reader cost?",
+      "a": "The Square contactless and chip reader starts from around £19, while the all-in-one Square Terminal is about £149. There is no monthly fee on the standard plan and no contract. You then pay 1.75% per in-person card transaction. Check current terms for the latest hardware pricing."
+    },
+    {
+      "q": "Does Square offer next-day payouts?",
+      "a": "Yes. Square typically sends funds to your bank account the next working day as standard, at no extra cost. If you need money sooner, instant payouts are available for a fee. Timing can shift around weekends and bank holidays, so check current terms."
+    },
+    {
+      "q": "Is Square good for a small business just starting out?",
+      "a": "Square suits new and small businesses well. There is no monthly fee on the standard plan, no contract, and a strong free POS app for tracking sales and stock. You pay 1.75% per in-person sale, so costs scale with your takings rather than a fixed bill."
+    }
+  ],
+  "zettle": [
+    {
+      "q": "How much is the PayPal Zettle card reader?",
+      "a": "The Zettle Reader 2 typically costs around £29, sometimes with a discounted first reader. There is no monthly fee and no contract, so after the hardware you only pay a transaction fee of 1.75% per card sale. Check current terms for the latest reader price."
+    },
+    {
+      "q": "How quickly do you get paid with PayPal Zettle?",
+      "a": "Card takings usually reach your PayPal balance or linked bank account within one to two working days. Timing can vary around weekends and bank holidays. There is no fixed monthly fee, so you only pay the 1.75% transaction charge per sale. Check current terms for details."
+    },
+    {
+      "q": "Can you cancel PayPal Zettle?",
+      "a": "Yes. Zettle is pay-as-you-go with no contract and no monthly fee, so there is no subscription to cancel. You simply stop taking payments. You keep any reader you have bought and only pay the per-transaction fee when you make a sale."
+    }
+  ],
+  "dojo": [
+    {
+      "q": "How much does a Dojo card machine cost?",
+      "a": "Dojo pricing is quote-based, with tailored transaction rates and monthly hire typically from around £15 a month. Costs depend on your card mix and volume, and a contract usually applies. Ask for a written quote and check current terms before signing so you can compare fairly."
+    },
+    {
+      "q": "Is Dojo good for a small business?",
+      "a": "Dojo can suit small businesses, especially in hospitality, thanks to fast payouts and hands-on UK support. Because rates are quote-based and a contract usually applies, it tends to make more sense once you have steady card volume. Get a tailored quote and compare against pay-as-you-go options."
+    },
+    {
+      "q": "Does Dojo pay out at weekends?",
+      "a": "Yes. Dojo offers next-day and same-day payouts, including at weekends, which helps with cash flow in busy trades like hospitality. Exact eligibility and cut-off times depend on your plan, so check current terms when you get your quote to confirm what applies to you."
+    }
+  ],
+  "mypos": [
+    {
+      "q": "What are myPOS card machine fees?",
+      "a": "myPOS card-present fees start from around 1.10% plus 7p per transaction on its lower tier, with rates depending on your plan and card types. There is a £0 entry monthly option and no fixed contract on the standard plan. Check current terms for the rates that apply to you."
+    },
+    {
+      "q": "How fast is myPOS settlement?",
+      "a": "myPOS offers instant settlement into your myPOS business account, so funds are available straight after the sale rather than waiting a day or two. You can then transfer to your own bank or use the account directly. Check current terms for any transfer fees that apply."
+    },
+    {
+      "q": "Is myPOS good for taking international payments?",
+      "a": "Yes. myPOS is a strong choice for international and European trade, supporting multiple currencies and cross-border card acceptance. Combined with instant settlement and no fixed contract on the standard plan, it suits businesses selling to overseas customers. Check current terms for supported currencies and rates."
+    }
+  ],
+  "worldpay": [
+    {
+      "q": "How much does Worldpay cost?",
+      "a": "Worldpay pricing is quote-based, often using interchange-plus, with terminal hire and contracts that are common in the industry. Costs depend on your volume and card mix. It tends to suit established, higher-volume businesses, so ask for a written quote and check current terms before committing."
+    },
+    {
+      "q": "Does Worldpay offer next-day payouts?",
+      "a": "Yes. Worldpay typically settles funds to your bank account the next working day, though exact timing depends on your agreement and cut-off times. Payouts can vary around weekends and bank holidays. Check current terms in your quote so you know the schedule that applies to your account."
+    },
+    {
+      "q": "Is Worldpay suitable for small businesses?",
+      "a": "Worldpay is generally built around established, higher-volume businesses, with quote-based pricing and contracts that are common. Smaller or newer traders may find pay-as-you-go providers simpler and cheaper. If you have steady volume, get a tailored quote and compare it carefully against the alternatives."
+    }
+  ],
+  "barclaycard": [
+    {
+      "q": "How much does Barclaycard Payments cost?",
+      "a": "Barclaycard Payments uses quote-based pricing, with contracts that are common in the sector. As a bank-backed provider, it can suit businesses wanting an established name. Costs depend on your volume and card mix, so ask for a written quote and check current terms before you commit."
+    },
+    {
+      "q": "Do you need a Barclays business account to use Barclaycard Payments?",
+      "a": "No, you do not need a Barclays business account, though having one can mean faster access to funds. Payouts are typically next working day, and quicker for Barclays account holders. Check current terms in your quote to confirm the payout timing that applies to your setup."
+    },
+    {
+      "q": "Does Barclaycard Payments do next-day payouts?",
+      "a": "Yes. Barclaycard Payments typically pays out the next working day, with faster access if you hold a Barclays business account. Exact timing depends on your agreement and cut-off times, and can vary around weekends and bank holidays. Check current terms in your quote for details."
+    }
+  ],
+  "tyl-by-natwest": [
+    {
+      "q": "How much does Tyl by NatWest cost?",
+      "a": "Tyl offers simple, blended pricing plans typically from around £15 a month, with both flexible and fixed-term options. It is aimed at small and medium businesses. Exact rates depend on your plan and card volume, so check current terms and compare plans before choosing the one that fits."
+    },
+    {
+      "q": "Do you need a NatWest account to use Tyl?",
+      "a": "No. Tyl by NatWest works with any UK business bank account, not just NatWest. It is designed to be SME-friendly with straightforward plans. Payouts are typically next working day. Check current terms to confirm the plan options and payout timing that apply to your account."
+    },
+    {
+      "q": "Does Tyl by NatWest do next-day payouts?",
+      "a": "Yes. Tyl typically settles funds to your bank account the next working day, regardless of who you bank with. Timing can vary around weekends and bank holidays and depends on cut-off times. Check current terms for the exact payout schedule on your chosen plan."
+    }
+  ],
+  "lightspeed": [
+    {
+      "q": "How much does Lightspeed POS cost?",
+      "a": "Lightspeed POS typically starts from around £59 a month, usually on an annual subscription, with pricing rising for added features and sites. It is built for retail and hospitality with deep inventory tools. Check current terms for the latest plan pricing and what each tier includes."
+    },
+    {
+      "q": "Is Lightspeed good for multi-site businesses?",
+      "a": "Yes. Lightspeed is well suited to multi-site retail and hospitality, with strong inventory management and reporting across locations. It is a fuller system than a simple card reader, so it fits established businesses needing depth. Check current terms for plan pricing and the features included at each tier."
+    },
+    {
+      "q": "How does Lightspeed handle card payments?",
+      "a": "You can take payments through Lightspeed Payments or an integrated payment partner, with the POS handling sales, stock and reporting. Card processing rates depend on the route you choose. Check current terms for the payment options and rates that apply to your setup and region."
+    }
+  ],
+  "epos-now": [
+    {
+      "q": "How much does Epos Now cost?",
+      "a": "Epos Now provides full till systems, with software typically from around £25 a month and hardware available in bundles. Contract and payment terms vary by setup. It suits businesses wanting a complete point-of-sale rather than just a reader. Check current terms for the latest pricing and bundle options."
+    },
+    {
+      "q": "Does Epos Now include card processing?",
+      "a": "Epos Now is primarily a till and POS system, with card processing offered through its payments service or integrated partners. Rates depend on the route you choose. Check current terms to confirm the processing options, fees and any contract conditions that apply to your chosen setup."
+    },
+    {
+      "q": "Is Epos Now good for retail and hospitality?",
+      "a": "Epos Now suits both retail and hospitality, offering full till systems with stock control, reporting and hardware bundles. It is a complete POS rather than a simple reader, so it fits businesses wanting more than basic card acceptance. Check current terms for pricing and contract details."
+    }
+  ],
+  "shopify-pos": [
+    {
+      "q": "How much does Shopify POS cost?",
+      "a": "Shopify POS is included with your Shopify subscription, with the more advanced POS Pro available as an added monthly cost per location. You also pay Shopify Payments rates on card sales. Check current terms for plan pricing and the POS Pro fee that applies to your store."
+    },
+    {
+      "q": "Do you need a Shopify plan to use Shopify POS?",
+      "a": "Yes. Shopify POS is designed for Shopify merchants and runs on your existing Shopify subscription, syncing online and in-person sales. If you do not already sell on Shopify, you would need a plan first. Check current terms for the plan and POS pricing that suit your business."
+    },
+    {
+      "q": "What are the card fees with Shopify POS?",
+      "a": "In-person card sales are processed through Shopify Payments at the rates set for your plan, which generally improve on higher subscription tiers. Costs depend on your plan and region. Check current terms to confirm the in-person processing rates and any monthly fees that apply to your store."
+    }
+  ],
+  "touchbistro": [
+    {
+      "q": "How much does TouchBistro cost?",
+      "a": "TouchBistro is a restaurant-first POS with subscription pricing provided on a quoted basis rather than a fixed public rate. Cost depends on your setup, number of devices and features. Ask for a tailored quote and check current terms so you can compare it against other hospitality systems."
+    },
+    {
+      "q": "Is TouchBistro good for restaurants?",
+      "a": "Yes. TouchBistro is built specifically for restaurants, with table service, menu management and floor plans at its core. It suits venues wanting hospitality-focused tools rather than a general till. Pricing is quoted, so ask for a tailored quote and check current terms before deciding."
+    },
+    {
+      "q": "How does TouchBistro handle card payments?",
+      "a": "TouchBistro takes card payments through an integrated payment partner rather than processing directly, so the POS handles orders while the partner handles the card side. Rates depend on that partner and your setup. Check current terms to confirm the payment options and fees that apply to you."
+    }
+  ]
+};
+
+for (const r of REVIEWS) {
+  const extra = REVIEW_FAQ_EXTRAS[r.slug];
+  if (!extra) continue;
+  const seen = new Set(r.faqs.map((f) => f.q));
+  r.faqs = [...r.faqs, ...extra.filter((f) => !seen.has(f.q))];
+}
+
 export function getReview(slug: string): ReviewContent | undefined {
   return REVIEWS.find((r) => r.slug === slug);
 }
