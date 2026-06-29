@@ -16,23 +16,46 @@ const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com";
 
-/** Canonical event names used across the site. */
+/** Canonical event names used across the site (GA4 / GTM taxonomy).
+ *  Primary conversions (mark as Key Events in GA4): affiliate_click, lead_submit,
+ *  quiz_complete, calculator_lead, newsletter_signup, phone_click.
+ *  Everything else is a secondary / engagement event. */
 export type AnalyticsEvent =
+  // Primary conversions
+  | "affiliate_click" // outbound click to a provider (revenue)
+  | "lead_submit" // quote/match form completed
+  | "lead_form_submit" // alias kept for back-compat
+  | "quiz_complete" // quiz finished
+  | "calculator_lead" // email captured from the calculator
+  | "newsletter_signup"
+  | "phone_click"
+  | "email_click"
+  // Secondary / engagement
   | "provider_cta_click"
-  | "affiliate_click"
   | "lead_form_start"
-  | "lead_form_submit"
+  | "lead_form_step"
   | "quiz_start"
-  | "quiz_complete"
+  | "quiz_question_answered"
+  | "calculator_start"
   | "calculator_completed"
   | "comparison_filter_used"
+  | "comparison_sort_used"
+  | "magnet_view" // lead-magnet capture form shown
+  | "magnet_submit" // lead-magnet capture form completed (quiz/calculator)
+  | "content_view" // guide / blog / review view
   | "quote_page_view"
-  | "phone_email_click";
+  | "scroll_depth"
+  | "phone_email_click"; // legacy alias
 
 type Props = Record<string, string | number | boolean | undefined>;
 
 export function track(event: AnalyticsEvent, props: Props = {}): void {
   if (typeof window === "undefined") return;
+
+  // GTM dataLayer — primary route. GTM tags forward these to GA4 (and anywhere else).
+  const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
+  w.dataLayer = w.dataLayer || [];
+  w.dataLayer.push({ event, ...props });
 
   // Plausible
   const plausible = (window as unknown as { plausible?: (e: string, o?: { props: Props }) => void }).plausible;
