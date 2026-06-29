@@ -73,8 +73,10 @@ export default function RootLayout({
         <GoogleTagManager />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Analytics />
-        <AnnouncementBar />
-        <SiteHeader />
+        <div className="sticky top-0 z-50">
+          <AnnouncementBar />
+          <SiteHeader />
+        </div>
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <ExitIntentModal />
