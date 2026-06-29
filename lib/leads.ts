@@ -5,7 +5,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { klaviyoSubscribe, klaviyoTrack } from "./klaviyo";
-import { leadValue } from "./leadValue";
+import { normalizeBusiness, normalizeTurnover, normalizePriority, turnoverValue, recommendedProvider } from "./leadTaxonomy";
 
 export type LeadSource = "quiz" | "calculator" | "quote-form";
 
@@ -78,7 +78,7 @@ export function validateLead(input: unknown): LeadValidation {
     consent: true,
     leadSource,
     sourcePage: str(d.sourcePage) || "unknown",
-    value: leadValue(monthlyTurnover),
+    value: turnoverValue(monthlyTurnover),
     name: fullName || undefined,
     businessType: str(d.businessType) || undefined,
     monthlyTurnover,
@@ -152,7 +152,18 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     }
   }
 
-  // 3. Klaviyo — subscribe profile + track the source-specific metric
+  // 3. Klaviyo — subscribe profile + track the source-specific metric.
+  // Normalise to canonical taxonomy so quiz / quote-form / calculator all write
+  // the SAME values: <field> = segment slug, <field>_label = friendly display.
+  const biz = normalizeBusiness(lead.businessType);
+  const turn = normalizeTurnover(lead.monthlyTurnover);
+  const prio = normalizePriority(lead.priority);
+  const rec = recommendedProvider({
+    quizTopMatch: lead.quizTopMatch,
+    cheapestProvider: lead.cheapestProvider,
+    businessSlug: biz?.slug,
+  });
+
   const subscribed = await klaviyoSubscribe({
     email: lead.email,
     firstName: lead.firstName,
@@ -160,15 +171,26 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     properties: {
       company_phone: lead.phone,
       lead_source: lead.leadSource,
-      business_type: lead.businessType,
-      monthly_turnover: lead.monthlyTurnover,
-      priority: lead.priority,
+      // canonical slugs (segment on these)
+      business_type: biz?.slug,
+      business_category: biz?.category,
+      monthly_turnover: turn?.slug,
+      priority: prio?.slug,
+      // friendly labels (use in email dynamic fields)
+      business_type_label: biz?.label,
+      monthly_turnover_label: turn?.label,
+      priority_label: prio?.label,
+      // personalised recommendation
+      recommended_provider: rec?.name,
+      recommended_provider_url: rec?.url,
+      // flags + context
       needs_card_machine: lead.needsCardMachine,
       needs_full_pos: lead.needsFullPOS,
       current_provider: lead.currentProvider,
       quiz_top_match: lead.quizTopMatch,
       cheapest_provider: lead.cheapestProvider,
       est_monthly_fee: lead.estMonthlyFee,
+      lead_value: lead.value,
       utm_source: lead.utmSource,
       utm_medium: lead.utmMedium,
       utm_campaign: lead.utmCampaign,
@@ -179,9 +201,11 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     stored.push("klaviyo");
     await klaviyoTrack(KLAVIYO_METRIC[lead.leadSource], lead.email, {
       lead_source: lead.leadSource,
-      business_type: lead.businessType,
-      monthly_turnover: lead.monthlyTurnover,
-      priority: lead.priority,
+      business_type: biz?.slug,
+      business_category: biz?.category,
+      monthly_turnover: turn?.slug,
+      priority: prio?.slug,
+      recommended_provider: rec?.name,
       quiz_top_match: lead.quizTopMatch,
       cheapest_provider: lead.cheapestProvider,
       est_monthly_fee: lead.estMonthlyFee,
