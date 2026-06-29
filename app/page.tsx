@@ -112,8 +112,22 @@ export default function HomePage() {
                     Compare Providers
                   </ButtonLink>
                   <ButtonLink href="/pos-systems" variant="outline" size="lg" className="w-full sm:w-auto">
-                    See Top Picks
+                    See our top picks
                   </ButtonLink>
+                </div>
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-grey">
+                  <span className="inline-flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-accent" /> Independent &amp; UK-focused
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <CheckCircle2 className="h-4 w-4 text-accent" /> We don&apos;t sell card machines
+                  </span>
+                  <Link
+                    href="/how-we-make-money"
+                    className="inline-flex items-center gap-1.5 underline decoration-border underline-offset-2 hover:text-accent"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-accent" /> How we stay unbiased
+                  </Link>
                 </div>
               </div>
 

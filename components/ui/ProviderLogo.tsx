@@ -52,7 +52,6 @@ export function ProviderLogo({
         <img
           src={src}
           alt={`${name} logo`}
-          loading="lazy"
           onError={() => setFailed(true)}
           className="h-3/5 w-auto max-w-[140px] object-contain mix-blend-multiply"
         />
