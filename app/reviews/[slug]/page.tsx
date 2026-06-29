@@ -152,12 +152,15 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {provider.hardware.length > 0 && (
                 <ul className="mt-4 divide-y divide-border rounded-lg border border-border bg-white">
                   {provider.hardware.map((h) => (
-                    <li key={h.name} className="flex items-baseline justify-between gap-3 p-4">
-                      <div>
+                    <li key={h.name} className="flex items-center justify-between gap-3 p-4">
+                      <div className="min-w-0">
                         <span className="font-semibold text-navy">{h.name}</span>
                         <span className="block text-xs text-grey">{h.note}</span>
                       </div>
-                      <span className="tabular shrink-0 font-semibold text-accent">{h.priceFrom}</span>
+                      <div className="flex shrink-0 items-center gap-3">
+                        <span className="tabular font-semibold text-accent">{h.priceFrom}</span>
+                        <ProviderCTA provider={provider} size="sm" label="Buy now" sourcePage="review-hardware" />
+                      </div>
                     </li>
                   ))}
                 </ul>
