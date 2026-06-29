@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     path: `/blog/${slug}`,
     type: "article",
     image: post.featuredImage,
+    canonical: post.canonicalUrl,
   });
 }
 

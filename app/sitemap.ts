@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
   for (const post of BLOG_POSTS) {
+    if (post.canonicalUrl) continue; // canonicalised to a money/guide page - don't list as its own URL
     entries.push({
       url: `${base}/blog/${post.slug}`,
       lastModified: new Date(post.date),

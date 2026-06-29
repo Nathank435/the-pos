@@ -7,6 +7,8 @@ export type BlogSection = { heading?: string; paragraphs: string[]; bullets?: st
 
 export type BlogPost = {
   slug: string;
+  /** If set, canonical URL points here instead of self (de-dupe vs a money/guide page). */
+  canonicalUrl?: string;
   title: string;
   excerpt: string;
   category: "Comparisons" | "Fees & saving" | "How-to" | "By business";
@@ -85,6 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "sumup-vs-square-2026",
+    canonicalUrl: "https://thepos.co.uk/compare/sumup-vs-square",
     title: "SumUp vs Square in 2026: Which Should Your Small Business Pick?",
     excerpt:
       "Two of the UK's most popular no-monthly-fee options, head to head. We break down fees, hardware and who each one actually suits.",
@@ -262,6 +265,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "no-contract-card-machines-catch",
+    canonicalUrl: "https://thepos.co.uk/guides/no-contract-card-machines",
     title: "No-Contract Card Machines: What's the Catch?",
     excerpt:
       "No-contract sounds like a no-brainer - but there are trade-offs. Here's when pay-as-you-go wins and when a contract is genuinely cheaper.",
