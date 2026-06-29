@@ -61,6 +61,11 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${montserrat.variable} ${plexMono.variable}`}>
       <body className="min-h-screen flex flex-col">
+        {/* Impact.com site verification — uses a non-standard `value` attribute (not
+            `content`), so we spread it past React's meta typings. Hoisted to <head>. */}
+        <meta
+          {...({ name: "impact-site-verification", value: "aee57657-070b-48de-926b-f0b7580d12b3" } as Record<string, string>)}
+        />
         <GoogleTagManagerNoScript />
         <GoogleTagManager />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
