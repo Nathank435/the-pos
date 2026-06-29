@@ -2,7 +2,7 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export function InlineQuoteCTA({
   title = "Not sure what you need?",
-  copy = "Tell us how your business takes payments and we'll point you towards providers that actually fit — not just the one with the loudest sales team.",
+  copy = "Tell us how your business takes payments and we'll point you towards providers that actually fit - not just the one with the loudest sales team.",
   primary = { label: "Get My POS Matches", href: "/get-pos-quotes" },
   secondary = { label: "Take the 60-second quiz", href: "/get-pos-quotes#quiz" },
 }: {

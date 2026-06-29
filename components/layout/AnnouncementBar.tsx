@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Zap, ArrowRight, X } from "lucide-react";
 import { track } from "@/lib/analytics";
 
-/** Slim promo bar above the header — drives traffic to the 60-second quiz. */
+/** Slim promo bar above the header - drives traffic to the 60-second quiz. */
 export function AnnouncementBar() {
   const [open, setOpen] = useState(true);
   if (!open) return null;

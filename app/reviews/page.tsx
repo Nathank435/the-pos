@@ -13,7 +13,7 @@ import { PROVIDERS, latestProviderUpdate } from "@/data/providers";
 export const metadata: Metadata = pageMeta({
   title: "UK POS & Payment Provider Reviews",
   description:
-    "Honest, plain-English reviews of UK POS systems and card machine providers — SumUp, Square, Zettle, Dojo, myPOS, Worldpay, Lightspeed and more.",
+    "Honest, plain-English reviews of UK POS systems and card machine providers - SumUp, Square, Zettle, Dojo, myPOS, Worldpay, Lightspeed and more.",
   path: "/reviews",
 });
 

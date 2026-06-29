@@ -97,7 +97,7 @@ export function LeadMagnetForm({ source, title, copy, submitLabel, context, onSu
           required
         />
         <span>
-          Email me my results and occasional payment tips. I can unsubscribe anytime — see the{" "}
+          Email me my results and occasional payment tips. I can unsubscribe anytime - see the{" "}
           <a href="/privacy-policy" className="font-medium text-deepblue underline">
             privacy policy
           </a>

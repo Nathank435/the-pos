@@ -7,7 +7,7 @@ import { getProviderLogo } from "@/data/providers";
 /**
  * Provider logo. Renders the real brand SVG (from data/providers.ts → PROVIDER_LOGOS)
  * inside a white tile with `mix-blend-multiply` so transparent vectors sit cleanly on
- * any background. If no logo is mapped — or the asset fails to load — it falls back to a
+ * any background. If no logo is mapped - or the asset fails to load - it falls back to a
  * tidy navy initials tile, so the UI never shows a broken image.
  */
 export function ProviderLogo({

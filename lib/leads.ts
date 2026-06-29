@@ -1,6 +1,6 @@
 /* Lead types + server-side persistence + Klaviyo sync.
  * Works with zero external services (writes to ./.leads/*.json + logs).
- * Wire Supabase / a webhook / Klaviyo via env vars — see .env.example. */
+ * Wire Supabase / a webhook / Klaviyo via env vars - see .env.example. */
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -152,7 +152,7 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     }
   }
 
-  // 3. Klaviyo — subscribe profile + track the source-specific metric.
+  // 3. Klaviyo - subscribe profile + track the source-specific metric.
   // Normalise to canonical taxonomy so quiz / quote-form / calculator all write
   // the SAME values: <field> = segment slug, <field>_label = friendly display.
   const biz = normalizeBusiness(lead.businessType);

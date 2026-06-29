@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Mono eyebrow label that sits above a heading, optionally with a section index.
- * The editorial "money-section" signature — e.g.  01 / COMPARE
+ * The editorial "money-section" signature - e.g.  01 / COMPARE
  */
 export function Kicker({
   children,

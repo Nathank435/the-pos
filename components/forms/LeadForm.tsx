@@ -138,7 +138,7 @@ export function LeadForm({ defaultProvider }: { defaultProvider?: string }) {
   }
 
   const progressLabel =
-    step === 3 ? "Last bit — where should we send your matches?" : step === 2 ? "Nearly there" : `Step ${step + 1} of 4`;
+    step === 3 ? "Last bit - where should we send your matches?" : step === 2 ? "Nearly there" : `Step ${step + 1} of 4`;
 
   return (
     <form onSubmit={submit} className="rounded-lg border border-border bg-white p-5 sm:p-7">

@@ -1,9 +1,9 @@
 /* ------------------------------------------------------------------ *
- * PROVIDER DATA — single source of truth                              *
+ * PROVIDER DATA - single source of truth                              *
  *                                                                     *
  * Every fee, rate and claim shown on the site comes from here.        *
  * Components NEVER hardcode pricing. To update a provider, edit its    *
- * entry and bump `lastChecked`. Keep `sourceUrls` accurate — they're  *
+ * entry and bump `lastChecked`. Keep `sourceUrls` accurate - they're  *
  * shown to users and protect us under ASA/CMA rules.                  *
  *                                                                     *
  * Rates below reflect publicly advertised UK pricing as noted; they   *
@@ -230,13 +230,13 @@ export const PROVIDERS: Provider[] = [
     type: "both",
     logo: "Dojo",
     summary:
-      "Built for growing businesses that want faster payouts and hands-on, sales-led support. Strong in hospitality and higher-volume retail. Rates are quote-based — read the contract and monthly structure carefully.",
+      "Built for growing businesses that want faster payouts and hands-on, sales-led support. Strong in hospitality and higher-volume retail. Rates are quote-based - read the contract and monthly structure carefully.",
     bestFor: ["Restaurants", "Pubs & bars", "Higher-volume retail", "Growing businesses"],
     notBestFor: ["Occasional or very low-volume sellers", "Anyone wanting zero commitment"],
     monthlyFeeFrom: "From ~£15/mo (quote-based)",
     transactionFeeHeadline: "Tailored rates (quote-based, often blended)",
     cardReaderCostFrom: "Hardware/payment-plan pricing (quoted)",
-    contractLength: "Contract terms vary — check carefully",
+    contractLength: "Contract terms vary - check carefully",
     payoutSpeed: "Next-day, as fast as same-day payouts",
     hasNoMonthlyFee: false,
     hasNoContractOption: false,
@@ -256,7 +256,7 @@ export const PROVIDERS: Provider[] = [
       "Popular with busy hospitality venues",
     ],
     cons: [
-      "Quote-based pricing — less upfront transparency",
+      "Quote-based pricing - less upfront transparency",
       "Contract and monthly terms need careful checking",
       "Overkill for low-volume sellers",
     ],
@@ -309,7 +309,7 @@ export const PROVIDERS: Provider[] = [
       "Range of standalone devices",
     ],
     cons: [
-      "Fee structure varies by card type — read the detail",
+      "Fee structure varies by card type - read the detail",
       "Some fees on transfers out of the myPOS account",
       "Lighter on full-POS software",
     ],
@@ -342,7 +342,7 @@ export const PROVIDERS: Provider[] = [
     monthlyFeeFrom: "Quote-based (terminal hire + fees)",
     transactionFeeHeadline: "Tailored / interchange-plus available (quoted)",
     cardReaderCostFrom: "Terminal hire (quoted)",
-    contractLength: "Contracts common — check length & exit fees",
+    contractLength: "Contracts common - check length & exit fees",
     payoutSpeed: "Typically next working day",
     hasNoMonthlyFee: false,
     hasNoContractOption: false,
@@ -393,7 +393,7 @@ export const PROVIDERS: Provider[] = [
     monthlyFeeFrom: "Quote-based",
     transactionFeeHeadline: "Tailored rates (quoted)",
     cardReaderCostFrom: "Terminal options (quoted)",
-    contractLength: "Contracts common — review terms",
+    contractLength: "Contracts common - review terms",
     payoutSpeed: "Typically next working day (faster for Barclays accounts)",
     hasNoMonthlyFee: false,
     hasNoContractOption: false,
@@ -489,7 +489,7 @@ export const PROVIDERS: Provider[] = [
     logo: "Lightspeed",
     type: "full-pos",
     summary:
-      "A serious retail/hospitality POS with strong inventory and multi-location features. More advanced and more expensive — overkill if you only need basic card payments.",
+      "A serious retail/hospitality POS with strong inventory and multi-location features. More advanced and more expensive - overkill if you only need basic card payments.",
     bestFor: ["Multi-location retail", "Hospitality groups", "Deep inventory needs"],
     notBestFor: ["Sole traders", "Anyone wanting cheap, simple payments"],
     monthlyFeeFrom: "From ~£59/mo (plan dependent)",
@@ -546,7 +546,7 @@ export const PROVIDERS: Provider[] = [
     monthlyFeeFrom: "Software from ~£25/mo (bundles vary)",
     transactionFeeHeadline: "Via Epos Now Payments or integration (quoted)",
     cardReaderCostFrom: "Till bundles (quoted, finance options)",
-    contractLength: "Contract & payment terms vary — read carefully",
+    contractLength: "Contract & payment terms vary - read carefully",
     payoutSpeed: "Depends on payments setup",
     hasNoMonthlyFee: false,
     hasNoContractOption: false,
@@ -695,7 +695,7 @@ export const PROVIDERS: Provider[] = [
  *   1. Remote vector (clean CDN SVG), or                                *
  *   2. Local asset at /public/assets/logos/<slug>.svg                   *
  * Anything missing or that fails to load falls back to a tidy initials  *
- * tile — so the UI never shows a broken image. Horizontal "ar21"        *
+ * tile - so the UI never shows a broken image. Horizontal "ar21"        *
  * lockups are fine; <ProviderLogo> contains + multiply-blends them.     *
  * ------------------------------------------------------------------ */
 export const PROVIDER_LOGOS: Partial<Record<string, string>> = {
@@ -711,7 +711,7 @@ export const PROVIDER_LOGOS: Partial<Record<string, string>> = {
   lightspeed: "/assets/logos/lightspeed.svg",
   "epos-now": "/assets/logos/epos-now.png",
   "tyl-by-natwest": "/assets/logos/tyl-by-natwest.png",
-  // TouchBistro's site logo is inline SVG (no hotlinkable file) — uses the initials
+  // TouchBistro's site logo is inline SVG (no hotlinkable file) - uses the initials
   // fallback. Drop /public/assets/logos/touchbistro.svg to enable.
   touchbistro: "/assets/logos/touchbistro.svg",
 };
@@ -732,7 +732,7 @@ export function getProviders(slugs: string[]): Provider[] {
 
 export const PROVIDER_SLUGS = PROVIDERS.map((p) => p.slug);
 
-/** Most recent lastChecked date across providers — used for "last updated" stamps. */
+/** Most recent lastChecked date across providers - used for "last updated" stamps. */
 export function latestProviderUpdate(): string {
   return PROVIDERS.map((p) => p.lastChecked).sort().at(-1) ?? "2026-06-25";
 }

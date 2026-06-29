@@ -133,7 +133,7 @@ export function QuizForm() {
     setCaptured(false);
   };
 
-  // Quiz finished — gate the full results behind the lead-magnet capture.
+  // Quiz finished - gate the full results behind the lead-magnet capture.
   if (done && !captured) {
     const preview = recommend(answers as QuizAnswers);
     return (
@@ -141,8 +141,8 @@ export function QuizForm() {
         <h2 className="font-heading text-xl font-bold text-navy">Your matches are ready 🎉</h2>
         <p className="mt-2 text-sm leading-relaxed text-grey">
           Based on your answers, <span className="font-semibold text-navy">{preview.bestOverall.provider.name}</span> looks
-          like a strong fit. Pop in your details to unlock your full results — best overall, cheapest, best no-contract
-          and software picks — plus tailored quotes.
+          like a strong fit. Pop in your details to unlock your full results - best overall, cheapest, best no-contract
+          and software picks - plus tailored quotes.
         </p>
         <div className="mt-5">
           <LeadMagnetForm

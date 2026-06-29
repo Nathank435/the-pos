@@ -56,7 +56,7 @@ type Props = Record<string, string | number | boolean | undefined>;
 export function track(event: AnalyticsEvent, props: Props = {}): void {
   if (typeof window === "undefined") return;
 
-  // GTM dataLayer — primary route. GTM tags forward these to GA4 (and anywhere else).
+  // GTM dataLayer - primary route. GTM tags forward these to GA4 (and anywhere else).
   const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
   w.dataLayer = w.dataLayer || [];
   w.dataLayer.push({ event, ...props });

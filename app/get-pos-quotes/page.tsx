@@ -12,7 +12,7 @@ import { ShieldCheck, Clock, Users } from "lucide-react";
 export const metadata: Metadata = pageMeta({
   title: "Get POS & Card Machine Quotes (UK)",
   description:
-    "Tell us how your business takes payments and we'll point you towards UK POS and card machine providers that actually fit — not just the loudest sales team.",
+    "Tell us how your business takes payments and we'll point you towards UK POS and card machine providers that actually fit - not just the loudest sales team.",
   path: "/get-pos-quotes",
 });
 
@@ -29,7 +29,7 @@ export default async function GetQuotesPage({
       <TrackView event="quote_page_view" />
       <PageHero
         title="Find the right POS provider for your business."
-        intro="Tell us how you take payments and we'll help point you towards providers that actually fit — not just the one with the loudest sales team."
+        intro="Tell us how you take payments and we'll help point you towards providers that actually fit - not just the one with the loudest sales team."
         crumbs={[{ name: "Get Quotes", path: "/get-pos-quotes" }]}
       >
         <div className="mt-5 flex flex-wrap gap-4 text-sm text-grey">
@@ -45,7 +45,7 @@ export default async function GetQuotesPage({
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-navy">Take the 60-second POS quiz</h2>
             <p className="mt-2 text-grey">
-              Answer a few questions and we'll show your best matches instantly — no email required to see results.
+              Answer a few questions and we'll show your best matches instantly - no email required to see results.
             </p>
             <div className="mt-5">
               <QuizForm />

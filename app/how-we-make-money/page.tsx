@@ -5,7 +5,7 @@ import { pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "How We Make Money",
   description:
-    "How The POS makes money — affiliate commissions and lead referrals, clearly disclosed. Providers cannot pay to change our editorial verdicts.",
+    "How The POS makes money - affiliate commissions and lead referrals, clearly disclosed. Providers cannot pay to change our editorial verdicts.",
   path: "/how-we-make-money",
 });
 

@@ -1,4 +1,4 @@
-/* Business-type hubs — editable content for /pos-systems/[slug] pages. */
+/* Business-type hubs - editable content for /pos-systems/[slug] pages. */
 
 export type BusinessType = {
   slug: string;
@@ -26,7 +26,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     imageHint: "barista espresso machine coffee shop counter, iPad POS on wooden counter",
     image: "/images/hubs/cafes.jpg",
     intro:
-      "A café POS needs to be quick, easy for staff, decent with tips, and not fall over during the Saturday morning oat-flat-white stampede. You want fast taps, simple menus and reliable card payments — not a 12-week onboarding project.",
+      "A café POS needs to be quick, easy for staff, decent with tips, and not fall over during the Saturday morning oat-flat-white stampede. You want fast taps, simple menus and reliable card payments - not a 12-week onboarding project.",
     recommendedProviders: ["square", "sumup", "zettle", "dojo"],
     whatMatters: [
       { title: "Speed at the counter", body: "Quick item buttons and contactless that taps first time during the rush." },
@@ -35,7 +35,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
       { title: "Decent reporting", body: "See your best sellers and busiest hours without exporting to a spreadsheet." },
     ],
     feesToWatch: [
-      "Flat transaction rate vs. your average ticket size — small coffees mean lots of tiny transactions",
+      "Flat transaction rate vs. your average ticket size - small coffees mean lots of tiny transactions",
       "Whether instant payouts cost extra",
       "Hardware cost for a second reader at busy times",
     ],
@@ -44,7 +44,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     faqs: [
       {
         q: "What's the cheapest way for a café to take card payments?",
-        a: "A SumUp or Square reader on pay-as-you-go has no monthly fee — you only pay a percentage per transaction. That's usually cheapest until you're taking serious volume, where a quote-based provider may beat the flat rate.",
+        a: "A SumUp or Square reader on pay-as-you-go has no monthly fee - you only pay a percentage per transaction. That's usually cheapest until you're taking serious volume, where a quote-based provider may beat the flat rate.",
       },
       {
         q: "Do I need a full till system for a café?",
@@ -64,7 +64,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     whatMatters: [
       { title: "Table & tab management", body: "Open tabs, move tables, split bills and add service charge without a maths degree." },
       { title: "Reliability under pressure", body: "Connectivity and uptime matter more than saving 0.1% on the rate." },
-      { title: "Fast payouts", body: "Cash flow is king in hospitality — next-day or same-day settlement helps." },
+      { title: "Fast payouts", body: "Cash flow is king in hospitality - next-day or same-day settlement helps." },
       { title: "Tips handling", body: "Proper tipping and tronc-friendly reporting for staff." },
     ],
     feesToWatch: [
@@ -81,7 +81,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
       },
       {
         q: "Is Dojo good for restaurants?",
-        a: "Yes — Dojo is popular in hospitality for reliable card machines, fast (even same-day) payouts and hands-on support. Just check the contract and monthly terms, as pricing is quote-based.",
+        a: "Yes - Dojo is popular in hospitality for reliable card machines, fast (even same-day) payouts and hands-on support. Just check the contract and monthly terms, as pricing is quote-based.",
       },
     ],
   },
@@ -92,7 +92,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     imageHint: "independent boutique counter retail, card reader next to folded apparel",
     image: "/images/hubs/retail.jpg",
     intro:
-      "Retail lives and dies on stock. A good retail POS tracks inventory, handles barcodes, and ideally keeps your shop and online store in sync — without charging you a fortune per sale.",
+      "Retail lives and dies on stock. A good retail POS tracks inventory, handles barcodes, and ideally keeps your shop and online store in sync - without charging you a fortune per sale.",
     recommendedProviders: ["square", "shopify-pos", "lightspeed", "zettle"],
     whatMatters: [
       { title: "Inventory management", body: "Track stock, variants and low-stock alerts across your range." },
@@ -110,7 +110,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     faqs: [
       {
         q: "What's the best POS for a small retail shop?",
-        a: "Square is the most popular all-rounder — free POS app, good inventory and no monthly fee to start. If you already use Shopify online, Shopify POS is the natural fit; for large inventories, Lightspeed.",
+        a: "Square is the most popular all-rounder - free POS app, good inventory and no monthly fee to start. If you already use Shopify online, Shopify POS is the natural fit; for large inventories, Lightspeed.",
       },
       {
         q: "Do I need inventory management built in?",
@@ -139,15 +139,15 @@ export const BUSINESS_TYPES: BusinessType[] = [
       "Payout speed if you rely on the cash quickly",
     ],
     recommendedSetup:
-      "A SumUp Solo or Zettle Terminal — standalone, SIM-connected, no monthly fee. Pair with Tap to Pay on your phone as a backup. myPOS is worth a look if you want instant access to funds.",
+      "A SumUp Solo or Zettle Terminal - standalone, SIM-connected, no monthly fee. Pair with Tap to Pay on your phone as a backup. myPOS is worth a look if you want instant access to funds.",
     faqs: [
       {
         q: "What's the best card reader for a market stall?",
-        a: "A standalone reader with its own mobile data — like the SumUp Solo or Zettle Terminal — is ideal so you're not dependent on market WiFi. Both are pay-as-you-go with no monthly fee.",
+        a: "A standalone reader with its own mobile data - like the SumUp Solo or Zettle Terminal - is ideal so you're not dependent on market WiFi. Both are pay-as-you-go with no monthly fee.",
       },
       {
         q: "Is there a card machine with no monthly fee?",
-        a: "Yes — SumUp, Square and Zettle all offer pay-as-you-go readers with no monthly fee. You buy the reader once and pay a percentage per transaction.",
+        a: "Yes - SumUp, Square and Zettle all offer pay-as-you-go readers with no monthly fee. You buy the reader once and pay a percentage per transaction.",
       },
     ],
   },
@@ -197,7 +197,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
       "Instant payout fees",
     ],
     recommendedSetup:
-      "Square is strong here — free POS, tipping and an Appointments product. SumUp or Zettle suit independents and chair-renters who just want simple card payments.",
+      "Square is strong here - free POS, tipping and an Appointments product. SumUp or Zettle suit independents and chair-renters who just want simple card payments.",
     faqs: [
       {
         q: "What's the best card machine for a salon or barber?",
@@ -225,7 +225,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
       "Payout speed for cash flow between jobs",
     ],
     recommendedSetup:
-      "SumUp is the classic tradesperson pick — cheap reader, invoices, pay-by-link and Tap to Pay, all with no monthly fee. Zettle and Square do the same job if you prefer their apps.",
+      "SumUp is the classic tradesperson pick - cheap reader, invoices, pay-by-link and Tap to Pay, all with no monthly fee. Zettle and Square do the same job if you prefer their apps.",
     faqs: [
       {
         q: "What's the best card machine for a plumber or electrician?",
@@ -233,7 +233,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
       },
       {
         q: "Can I take card payments without a card machine?",
-        a: "Yes — Tap to Pay on iPhone/Android (offered by SumUp, Square and Zettle) lets you accept contactless on your phone, and a virtual terminal lets you key in card details for phone payments.",
+        a: "Yes - Tap to Pay on iPhone/Android (offered by SumUp, Square and Zettle) lets you accept contactless on your phone, and a virtual terminal lets you key in card details for phone payments.",
       },
     ],
   },
@@ -269,7 +269,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     name: "Mobile businesses",
     h1: "Best Card Readers for Mobile Businesses in the UK",
     intro:
-      "Food vans, pop-ups, mobile groomers, event traders — if you move around, you need a reader that works on mobile data, lasts the day, and doesn't tie you to a contract.",
+      "Food vans, pop-ups, mobile groomers, event traders - if you move around, you need a reader that works on mobile data, lasts the day, and doesn't tie you to a contract.",
     recommendedProviders: ["sumup", "square", "zettle", "mypos"],
     whatMatters: [
       { title: "Mobile connectivity", body: "A standalone device with its own SIM beats hunting for WiFi." },
@@ -283,11 +283,11 @@ export const BUSINESS_TYPES: BusinessType[] = [
       "Instant access to funds if you need cash quickly",
     ],
     recommendedSetup:
-      "A SumUp Solo or Square Terminal — standalone, SIM-connected, no monthly fee. myPOS is a strong option if instant access to your takings matters.",
+      "A SumUp Solo or Square Terminal - standalone, SIM-connected, no monthly fee. myPOS is a strong option if instant access to your takings matters.",
     faqs: [
       {
         q: "What card reader works without WiFi?",
-        a: "Standalone readers with a built-in SIM — like the SumUp Solo, Zettle Terminal or myPOS Go — work on mobile data, so you don't need WiFi. Ideal for vans, markets and events.",
+        a: "Standalone readers with a built-in SIM - like the SumUp Solo, Zettle Terminal or myPOS Go - work on mobile data, so you don't need WiFi. Ideal for vans, markets and events.",
       },
     ],
   },

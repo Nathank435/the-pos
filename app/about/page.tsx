@@ -5,7 +5,7 @@ import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "About The POS",
-  description: "Who we are and why we built The POS — a plain-English UK POS and card machine comparison site.",
+  description: "Who we are and why we built The POS - a plain-English UK POS and card machine comparison site.",
   path: "/about",
 });
 
@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <InfoPage
       title="About The POS"
-      intro="We're here to help UK business owners choose how to take payments — without the sales waffle."
+      intro="We're here to help UK business owners choose how to take payments - without the sales waffle."
       crumbLabel="About"
       path="/about"
       sections={[
@@ -33,7 +33,7 @@ export default function AboutPage() {
           bullets: [
             "Plain English, not fintech buzzwords",
             "Clear about fees, contracts and the catches providers bury",
-            "Honest about who each provider suits — and who it doesn't",
+            "Honest about who each provider suits - and who it doesn't",
             "Transparent about how we make money",
           ],
         },

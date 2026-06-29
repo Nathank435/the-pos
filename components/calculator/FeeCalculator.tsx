@@ -115,7 +115,7 @@ export function FeeCalculator() {
             <LeadMagnetForm
               source="calculator"
               title="See the full breakdown"
-              copy="Unlock every provider's monthly + annual cost and your all-in rate — and we'll email you a copy."
+              copy="Unlock every provider's monthly + annual cost and your all-in rate - and we'll email you a copy."
               submitLabel="Show the full comparison"
               context={{
                 monthlyTurnover: turnoverBand(input.monthlyTurnover),

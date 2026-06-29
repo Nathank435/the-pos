@@ -1,6 +1,6 @@
 /* Quiz recommendation engine.
  * Pure, deterministic scoring over PROVIDERS. This is comparison guidance,
- * NOT financial advice — copy reflects that. */
+ * NOT financial advice - copy reflects that. */
 
 import { PROVIDERS, type Provider } from "@/data/providers";
 
@@ -77,7 +77,7 @@ function scoreProvider(p: Provider, a: QuizAnswers): Recommendation {
       score -= 3;
     }
   } else {
-    // just a card reader — penalise heavy full-POS-only systems
+    // just a card reader - penalise heavy full-POS-only systems
     if (p.type === "full-pos") score -= 4;
     if (p.hasNoMonthlyFee) {
       score += 2;
@@ -181,8 +181,8 @@ export function recommend(a: QuizAnswers): RecommendationResult {
     scored.find((r) => r.provider.slug !== bestOverall.provider.slug) ?? scored[1];
 
   const summary = `Based on your answers, ${bestOverall.provider.name} looks like the strongest overall fit${
-    bestOverall.reasons.length ? ` — ${bestOverall.reasons.join(", ")}` : ""
-  }. ${cheapest.provider.name} is worth a look if keeping costs down is the priority. This is comparison guidance, not financial advice — always check provider terms before signing.`;
+    bestOverall.reasons.length ? ` - ${bestOverall.reasons.join(", ")}` : ""
+  }. ${cheapest.provider.name} is worth a look if keeping costs down is the priority. This is comparison guidance, not financial advice - always check provider terms before signing.`;
 
   return { bestOverall, cheapest, bestNoContract, bestForSoftware, bestAlternative, summary };
 }

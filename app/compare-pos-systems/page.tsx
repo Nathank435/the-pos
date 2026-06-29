@@ -14,7 +14,7 @@ import { PROVIDERS, latestProviderUpdate } from "@/data/providers";
 export const metadata: Metadata = pageMeta({
   title: "Compare UK POS Systems & Payment Providers (2026)",
   description:
-    "Compare UK POS systems and payment providers side by side — fees, monthly costs, contracts, payout speed and features. Filter by what your business needs.",
+    "Compare UK POS systems and payment providers side by side - fees, monthly costs, contracts, payout speed and features. Filter by what your business needs.",
   path: "/compare-pos-systems",
 });
 
@@ -25,11 +25,11 @@ const FAQS = [
   },
   {
     q: "Which POS providers have no monthly fee?",
-    a: "SumUp, Square, PayPal Zettle and entry myPOS plans have no monthly fee — filter by 'No monthly fee' above to see them all.",
+    a: "SumUp, Square, PayPal Zettle and entry myPOS plans have no monthly fee - filter by 'No monthly fee' above to see them all.",
   },
   {
     q: "Can I switch payment providers easily?",
-    a: "Pay-as-you-go providers (SumUp, Square, Zettle) have no contract, so switching is simple. Quote-based providers may have a contract term and exit fees — check before signing.",
+    a: "Pay-as-you-go providers (SumUp, Square, Zettle) have no contract, so switching is simple. Quote-based providers may have a contract term and exit fees - check before signing.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ComparePOSPage() {
     <>
       <PageHero
         title="Compare UK POS Systems"
-        intro="Every provider, side by side — monthly fees, transaction rates, hardware costs, contracts and payout speed. Filter by what your business actually needs."
+        intro="Every provider, side by side - monthly fees, transaction rates, hardware costs, contracts and payout speed. Filter by what your business actually needs."
         crumbs={[{ name: "Compare POS Systems", path: "/compare-pos-systems" }]}
         lastUpdated={latestProviderUpdate()}
       />
@@ -54,7 +54,7 @@ export default function ComparePOSPage() {
         <Container>
           <InlineQuoteCTA
             title="Want it narrowed down for you?"
-            copy="Answer a few questions and we'll point you towards the providers most likely to fit your business — with tailored quotes."
+            copy="Answer a few questions and we'll point you towards the providers most likely to fit your business - with tailored quotes."
           />
         </Container>
       </Section>

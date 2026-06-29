@@ -1,6 +1,6 @@
 /* Server-side Klaviyo integration.
  * Env-gated and fail-safe: if keys are missing or a call fails, it logs and
- * returns — lead capture must never break because of Klaviyo.
+ * returns - lead capture must never break because of Klaviyo.
  *
  * Env:
  *   KLAVIYO_PRIVATE_API_KEY   (pk_...)
@@ -8,7 +8,7 @@
  */
 
 // .trim() guards against a trailing newline/space when the value is pasted into
-// a hosting dashboard — that silently corrupts the Authorization header.
+// a hosting dashboard - that silently corrupts the Authorization header.
 const KEY = process.env.KLAVIYO_PRIVATE_API_KEY?.trim();
 const LIST_ID = process.env.KLAVIYO_LEADS_LIST_ID?.trim();
 const REVISION = "2024-10-15";

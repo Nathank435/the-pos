@@ -60,7 +60,7 @@ export function NewsletterForm({ source = "footer" }: { source?: string }) {
         </button>
       </div>
       {status === "error" && (
-        <p className="mt-2 text-xs text-red-300">Something went wrong — please try again.</p>
+        <p className="mt-2 text-xs text-red-300">Something went wrong - please try again.</p>
       )}
       <p className="mt-2 text-xs text-white/45">
         Card-machine tips and the occasional deal. No spam, unsubscribe anytime.

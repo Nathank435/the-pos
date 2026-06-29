@@ -32,7 +32,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
+    default: `${SITE.name} - ${SITE.tagline}`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     siteName: SITE.name,
     url: SITE.url,
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.description,
   },
   twitter: {
     card: "summary_large_image",
     site: SITE.twitter,
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} - ${SITE.tagline}`,
     description: SITE.description,
   },
   robots: { index: true, follow: true },
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${montserrat.variable} ${plexMono.variable}`}>
       <body className="min-h-screen flex flex-col">
-        {/* Impact.com site verification — uses a non-standard `value` attribute (not
+        {/* Impact.com site verification - uses a non-standard `value` attribute (not
             `content`), so we spread it past React's meta typings. Hoisted to <head>. */}
         <meta
           {...({ name: "impact-site-verification", value: "aee57657-070b-48de-926b-f0b7580d12b3" } as Record<string, string>)}

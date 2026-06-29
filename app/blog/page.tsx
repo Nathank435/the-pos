@@ -7,7 +7,7 @@ import { pageMeta } from "@/lib/seo";
 import { postsByDate } from "@/data/blog";
 
 export const metadata: Metadata = pageMeta({
-  title: "The POS Blog — UK Card Machine & POS Tips",
+  title: "The POS Blog - UK Card Machine & POS Tips",
   description:
     "Plain-English tips, comparisons and money-saving advice on UK card machines, POS systems and payment fees for small businesses.",
   path: "/blog",
@@ -21,7 +21,7 @@ export default function BlogIndex() {
     <>
       <PageHero
         title="The POS Blog"
-        intro="Sharp, practical tips on card machines, POS systems and payment fees — written for busy UK business owners, not fintech insiders."
+        intro="Sharp, practical tips on card machines, POS systems and payment fees - written for busy UK business owners, not fintech insiders."
         crumbs={[{ name: "Blog", path: "/blog" }]}
       />
       <Section>

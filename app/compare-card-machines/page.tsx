@@ -15,7 +15,7 @@ import { PROVIDERS, latestProviderUpdate } from "@/data/providers";
 export const metadata: Metadata = pageMeta({
   title: "Best Card Machines UK: Compare Card Readers (2026)",
   description:
-    "Compare the best UK card machines and card readers for small business — SumUp, Square, Zettle, Dojo, myPOS, Worldpay and more. Prices, fees and hardware compared.",
+    "Compare the best UK card machines and card readers for small business - SumUp, Square, Zettle, Dojo, myPOS, Worldpay and more. Prices, fees and hardware compared.",
   path: "/compare-card-machines",
 });
 
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Do card machines work without WiFi?",
-    a: "Standalone readers with a built-in SIM — like the SumUp Solo, Zettle Terminal and myPOS Go — work on mobile data, so they don't need WiFi. Phone-paired readers rely on your phone's connection.",
+    a: "Standalone readers with a built-in SIM - like the SumUp Solo, Zettle Terminal and myPOS Go - work on mobile data, so they don't need WiFi. Phone-paired readers rely on your phone's connection.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function CompareCardMachinesPage() {
       <Section muted>
         <Container>
           <h2 className="font-heading text-2xl font-bold text-navy">The devices, by provider</h2>
-          <p className="mt-2 max-w-2xl text-grey">Indicative prices — always check current offers, which often discount the first reader.</p>
+          <p className="mt-2 max-w-2xl text-grey">Indicative prices - always check current offers, which often discount the first reader.</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {withHardware.map((p) => (
               <div key={p.slug} className="rounded-lg border border-border bg-white p-5">

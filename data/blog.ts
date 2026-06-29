@@ -1,7 +1,7 @@
-/* Blog posts — /blog and /blog/[slug].
+/* Blog posts - /blog and /blog/[slug].
  * Body text supports inline markdown links: [label](/internal-path).
  * Keep internal links pointing at commercial pages (reviews, comparisons,
- * hubs, calculator, quotes) and other posts — that's the whole point. */
+ * hubs, calculator, quotes) and other posts - that's the whole point. */
 
 export type BlogSection = { heading?: string; paragraphs: string[]; bullets?: string[] };
 
@@ -29,7 +29,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "card-machine-mistakes",
     title: "5 Mistakes UK Businesses Make When Choosing a Card Machine",
     excerpt:
-      "From chasing the lowest headline rate to ignoring the contract, here are the five traps that cost UK businesses money — and how to dodge them.",
+      "From chasing the lowest headline rate to ignoring the contract, here are the five traps that cost UK businesses money - and how to dodge them.",
     category: "How-to",
     author: "The POS editorial team",
     date: "2026-06-24",
@@ -37,12 +37,12 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/card-machine-mistakes.jpg",
     featuredAlt: "Close-up of a card machine on a shop counter",
     intro:
-      "Picking a card machine looks simple until the first statement lands. Here are the five mistakes we see most often — and the quick checks that save you money.",
+      "Picking a card machine looks simple until the first statement lands. Here are the five mistakes we see most often - and the quick checks that save you money.",
     sections: [
       {
         heading: "1. Chasing the lowest headline rate",
         paragraphs: [
-          "A 1.5% rate with a £25 monthly fee can cost more than a 1.75% rate with no monthly fee — it depends entirely on your volume. Run your real numbers through our [card machine fee calculator](/card-machine-fee-calculator) before you sign anything.",
+          "A 1.5% rate with a £25 monthly fee can cost more than a 1.75% rate with no monthly fee - it depends entirely on your volume. Run your real numbers through our [card machine fee calculator](/card-machine-fee-calculator) before you sign anything.",
         ],
       },
       {
@@ -54,7 +54,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "3. Forgetting about payout speed",
         paragraphs: [
-          "If your cash flow is tight, waiting 2–3 days for your money hurts. Some providers settle next-day or even same-day — see our roundup of [same-day payout providers](/blog/same-day-payouts-providers).",
+          "If your cash flow is tight, waiting 2–3 days for your money hurts. Some providers settle next-day or even same-day - see our roundup of [same-day payout providers](/blog/same-day-payouts-providers).",
         ],
       },
       {
@@ -66,14 +66,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "5. Not checking the hidden fees",
         paragraphs: [
-          "Chargebacks, PCI charges, authorisation fees — the bits that don't make the homepage. We list them all in [hidden card machine fees](/guides/hidden-card-machine-fees).",
+          "Chargebacks, PCI charges, authorisation fees - the bits that don't make the homepage. We list them all in [hidden card machine fees](/guides/hidden-card-machine-fees).",
         ],
       },
     ],
     faqs: [
       {
         q: "What's the most important thing when choosing a card machine?",
-        a: "Your total cost at your real monthly volume — not the headline rate. A no-monthly-fee provider usually wins at lower volumes; a quote-based provider can win at higher ones. Use a fee calculator to check.",
+        a: "Your total cost at your real monthly volume - not the headline rate. A no-monthly-fee provider usually wins at lower volumes; a quote-based provider can win at higher ones. Use a fee calculator to check.",
       },
     ],
     relatedPosts: ["how-to-cut-card-processing-fees", "no-contract-card-machines-catch"],
@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/sumup-vs-square-2026.jpg",
     featuredAlt: "Contactless card payment on a reader",
     intro:
-      "SumUp and Square are the default picks for UK small businesses that want card payments without a contract. They look similar on the surface — here's how to choose.",
+      "SumUp and Square are the default picks for UK small businesses that want card payments without a contract. They look similar on the surface - here's how to choose.",
     sections: [
       {
         heading: "The short version",
@@ -106,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Fees",
         paragraphs: [
-          "SumUp is 1.69% standard (from 0.99% on Payments Plus); Square is a flat 1.75% in person. Neither has a monthly fee on its standard plan. Which is cheaper depends on your volume — run it through the [fee calculator](/card-machine-fee-calculator).",
+          "SumUp is 1.69% standard (from 0.99% on Payments Plus); Square is a flat 1.75% in person. Neither has a monthly fee on its standard plan. Which is cheaper depends on your volume - run it through the [fee calculator](/card-machine-fee-calculator).",
         ],
       },
       {
@@ -122,12 +122,12 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "Is SumUp or Square better for a café?",
-        a: "Square, usually — its free POS app handles menus, tipping and reporting better. SumUp is the better pick if you only need simple card payments with the lowest possible cost.",
+        a: "Square, usually - its free POS app handles menus, tipping and reporting better. SumUp is the better pick if you only need simple card payments with the lowest possible cost.",
       },
     ],
     relatedPosts: ["card-machine-mistakes", "cafe-overpaying-card-fees"],
     relatedLinks: [
-      { label: "SumUp vs Square — full comparison", href: "/compare/sumup-vs-square" },
+      { label: "SumUp vs Square - full comparison", href: "/compare/sumup-vs-square" },
       { label: "SumUp review", href: "/reviews/sumup" },
       { label: "Square review", href: "/reviews/square" },
     ],
@@ -136,7 +136,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-to-cut-card-processing-fees",
     title: "How to Cut Your Card Processing Fees (Without Switching to a Worse Provider)",
     excerpt:
-      "Seven practical ways UK businesses can shave money off card fees — from renegotiating to picking the right plan for your volume.",
+      "Seven practical ways UK businesses can shave money off card fees - from renegotiating to picking the right plan for your volume.",
     category: "Fees & saving",
     author: "Nathan Keeble",
     date: "2026-06-16",
@@ -149,13 +149,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Know your real effective rate",
         paragraphs: [
-          "Add up everything you paid last month — transaction fees, monthly fees, hardware — and divide by your card turnover. That's your true cost. Our [fee calculator](/card-machine-fee-calculator) does it for you, and our [fees explained guide](/guides/card-machine-fees-explained) decodes the line items.",
+          "Add up everything you paid last month - transaction fees, monthly fees, hardware - and divide by your card turnover. That's your true cost. Our [fee calculator](/card-machine-fee-calculator) does it for you, and our [fees explained guide](/guides/card-machine-fees-explained) decodes the line items.",
         ],
       },
       {
         heading: "Match the plan to your volume",
         paragraphs: [
-          "Low volume? A no-monthly-fee provider like [SumUp](/reviews/sumup) or [Zettle](/reviews/zettle) almost always wins. Doing serious volume? A quote-based provider like [Dojo](/reviews/dojo) may beat a flat rate — but only if the monthly fee and contract stack up.",
+          "Low volume? A no-monthly-fee provider like [SumUp](/reviews/sumup) or [Zettle](/reviews/zettle) almost always wins. Doing serious volume? A quote-based provider like [Dojo](/reviews/dojo) may beat a flat rate - but only if the monthly fee and contract stack up.",
         ],
       },
       {
@@ -165,7 +165,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Avoid paying for instant payouts you don't need",
           "Buy your reader outright instead of renting where it's cheaper",
           "Watch premium/commercial card surcharges",
-          "Re-compare every 12 months — see the [full comparison](/compare-pos-systems)",
+          "Re-compare every 12 months - see the [full comparison](/compare-pos-systems)",
         ],
       },
     ],
@@ -195,7 +195,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: ["For market trading, the order of importance is usually:"],
         bullets: [
           "Works on its own mobile data (don't rely on market WiFi)",
-          "No monthly fee — you shouldn't pay for the weeks you don't trade",
+          "No monthly fee - you shouldn't pay for the weeks you don't trade",
           "All-day battery",
           "Cheap to buy outright",
         ],
@@ -203,14 +203,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Our picks",
         paragraphs: [
-          "The [SumUp](/reviews/sumup) Solo and [Zettle](/reviews/zettle) Terminal are standalone, SIM-connected and pay-as-you-go — ideal for stalls. If you want instant access to your takings, [myPOS](/reviews/mypos) is worth a look. See the full shortlist on our [best POS for market stalls](/pos-systems/market-stalls) page.",
+          "The [SumUp](/reviews/sumup) Solo and [Zettle](/reviews/zettle) Terminal are standalone, SIM-connected and pay-as-you-go - ideal for stalls. If you want instant access to your takings, [myPOS](/reviews/mypos) is worth a look. See the full shortlist on our [best POS for market stalls](/pos-systems/market-stalls) page.",
         ],
       },
     ],
     faqs: [
       {
         q: "What card reader works without WiFi?",
-        a: "Standalone readers with a built-in SIM — like the SumUp Solo, Zettle Terminal or myPOS Go — work on mobile data, so you don't need WiFi. Perfect for markets and events.",
+        a: "Standalone readers with a built-in SIM - like the SumUp Solo, Zettle Terminal or myPOS Go - work on mobile data, so you don't need WiFi. Perfect for markets and events.",
       },
     ],
     relatedPosts: ["sumup-vs-square-2026", "tap-to-pay-iphone-worth-it"],
@@ -224,7 +224,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "tap-to-pay-iphone-worth-it",
     title: "Tap to Pay on iPhone: Is It Good Enough to Ditch the Card Machine?",
     excerpt:
-      "Take contactless payments on your phone with no extra hardware. We look at who it suits — and where you'll still want a proper reader.",
+      "Take contactless payments on your phone with no extra hardware. We look at who it suits - and where you'll still want a proper reader.",
     category: "How-to",
     author: "The POS editorial team",
     date: "2026-06-08",
@@ -232,18 +232,18 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/tap-to-pay-iphone-worth-it.jpg",
     featuredAlt: "Person tapping a phone on a payment terminal",
     intro:
-      "Tap to Pay turns your phone into a contactless reader — no separate machine. It's brilliant for some businesses and not enough for others.",
+      "Tap to Pay turns your phone into a contactless reader - no separate machine. It's brilliant for some businesses and not enough for others.",
     sections: [
       {
         heading: "How it works",
         paragraphs: [
-          "With a supported app — [SumUp](/reviews/sumup), [Square](/reviews/square) and [Zettle](/reviews/zettle) all offer it — customers tap their card, phone or watch on your phone. There's nothing else to buy. Our [Tap to Pay guide](/guides/what-is-tap-to-pay) covers the basics.",
+          "With a supported app - [SumUp](/reviews/sumup), [Square](/reviews/square) and [Zettle](/reviews/zettle) all offer it - customers tap their card, phone or watch on your phone. There's nothing else to buy. Our [Tap to Pay guide](/guides/what-is-tap-to-pay) covers the basics.",
         ],
       },
       {
         heading: "Who it's great for",
         paragraphs: [
-          "Tradespeople, mobile sellers and pop-ups love it as a zero-hardware option — see [best card readers for tradespeople](/pos-systems/tradesmen). It's also a handy backup even if you own a reader.",
+          "Tradespeople, mobile sellers and pop-ups love it as a zero-hardware option - see [best card readers for tradespeople](/pos-systems/tradesmen). It's also a handy backup even if you own a reader.",
         ],
       },
       {
@@ -264,7 +264,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "no-contract-card-machines-catch",
     title: "No-Contract Card Machines: What's the Catch?",
     excerpt:
-      "No-contract sounds like a no-brainer — but there are trade-offs. Here's when pay-as-you-go wins and when a contract is genuinely cheaper.",
+      "No-contract sounds like a no-brainer - but there are trade-offs. Here's when pay-as-you-go wins and when a contract is genuinely cheaper.",
     category: "Fees & saving",
     author: "The POS editorial team",
     date: "2026-06-04",
@@ -272,7 +272,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/no-contract-card-machines-catch.jpg",
     featuredAlt: "Person reviewing costs with a calculator",
     intro:
-      "Nobody enjoys being tied into a multi-year deal to take a card. But 'no contract' isn't automatically the cheapest — here's the honest trade-off.",
+      "Nobody enjoys being tied into a multi-year deal to take a card. But 'no contract' isn't automatically the cheapest - here's the honest trade-off.",
     sections: [
       {
         heading: "The no-contract options",
@@ -290,7 +290,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "Are no-contract card machines worth it?",
-        a: "For low or variable volume, yes — you avoid commitment and only pay when you sell. For high, steady volume, a contracted provider with a lower rate can work out cheaper overall.",
+        a: "For low or variable volume, yes - you avoid commitment and only pay when you sell. For high, steady volume, a contracted provider with a lower rate can work out cheaper overall.",
       },
     ],
     relatedPosts: ["how-to-cut-card-processing-fees", "card-machine-mistakes"],
@@ -304,7 +304,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "cafe-overpaying-card-fees",
     title: "Why Your Café Might Be Overpaying on Card Fees",
     excerpt:
-      "Lots of small coffees means lots of tiny transactions — and that's exactly where the wrong setup quietly costs you. Here's how to fix it.",
+      "Lots of small coffees means lots of tiny transactions - and that's exactly where the wrong setup quietly costs you. Here's how to fix it.",
     category: "By business",
     author: "Nathan Keeble",
     date: "2026-05-30",
@@ -312,7 +312,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/cafe-overpaying-card-fees.jpg",
     featuredAlt: "Customer paying by card at a café counter",
     intro:
-      "A café lives on small, frequent transactions — flat whites, not furniture. That changes which provider is cheapest for you.",
+      "A café lives on small, frequent transactions - flat whites, not furniture. That changes which provider is cheapest for you.",
     sections: [
       {
         heading: "Why small tickets matter",
@@ -323,7 +323,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What works for cafés",
         paragraphs: [
-          "[Square](/reviews/square) is the popular all-rounder — free POS, tipping and quick menus. [SumUp](/reviews/sumup) is great if you just want simple, cheap payments. The full shortlist is on [best POS for cafés](/pos-systems/cafes).",
+          "[Square](/reviews/square) is the popular all-rounder - free POS, tipping and quick menus. [SumUp](/reviews/sumup) is great if you just want simple, cheap payments. The full shortlist is on [best POS for cafés](/pos-systems/cafes).",
         ],
       },
     ],
@@ -338,7 +338,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "restaurant-pos-what-matters",
     title: "Restaurant POS in 2026: What Actually Matters",
     excerpt:
-      "Tables, tabs, tips and a kitchen that's already on fire at 8pm. Here's what to prioritise in a restaurant POS — and what to ignore.",
+      "Tables, tabs, tips and a kitchen that's already on fire at 8pm. Here's what to prioritise in a restaurant POS - and what to ignore.",
     category: "By business",
     author: "The POS editorial team",
     date: "2026-05-26",
@@ -346,7 +346,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/restaurant-pos-what-matters.jpg",
     featuredAlt: "Customer paying at a restaurant counter",
     intro:
-      "A restaurant POS has a harder job than a shop till. Reliability and speed beat shaving 0.1% off the rate — here's the priority order.",
+      "A restaurant POS has a harder job than a shop till. Reliability and speed beat shaving 0.1% off the rate - here's the priority order.",
     sections: [
       {
         heading: "What to prioritise",
@@ -384,15 +384,15 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/same-day-payouts-providers.jpg",
     featuredAlt: "British pound banknotes",
     intro:
-      "You took the payment — so where's the money? Settlement speed varies a lot, and faster payouts can be worth paying for when cash flow is tight.",
+      "You took the payment - so where's the money? Settlement speed varies a lot, and faster payouts can be worth paying for when cash flow is tight.",
     sections: [
       {
         heading: "The fast movers",
         paragraphs: ["If quick access to funds matters, look at:"],
         bullets: [
-          "[myPOS](/reviews/mypos) — instant settlement to a built-in account",
-          "[Dojo](/reviews/dojo) — next-day, with as-fast-as same-day options",
-          "[Square](/reviews/square) — next working day, instant transfer for a fee",
+          "[myPOS](/reviews/mypos) - instant settlement to a built-in account",
+          "[Dojo](/reviews/dojo) - next-day, with as-fast-as same-day options",
+          "[Square](/reviews/square) - next working day, instant transfer for a fee",
         ],
       },
       {
@@ -421,7 +421,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/switching-card-machine-checklist.jpg",
     featuredAlt: "Writing a checklist on a notepad",
     intro:
-      "Switching provider can save you real money — but only if you avoid the obvious traps. Run through this before you commit.",
+      "Switching provider can save you real money - but only if you avoid the obvious traps. Run through this before you commit.",
     sections: [
       {
         heading: "Before you switch",
@@ -443,7 +443,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "Can I switch card machine providers easily?",
-        a: "Pay-as-you-go providers have no contract, so switching is simple. Contracted providers may have notice periods and exit fees — always check before you cancel, and order the new reader first to avoid downtime.",
+        a: "Pay-as-you-go providers have no contract, so switching is simple. Contracted providers may have notice periods and exit fees - always check before you cancel, and order the new reader first to avoid downtime.",
       },
     ],
     relatedPosts: ["card-machine-mistakes", "no-contract-card-machines-catch"],
@@ -457,7 +457,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "best-card-machine-small-business-uk",
     title: "Best Card Machine for Small Business UK (2026)",
     excerpt:
-      "The best UK card machines for small businesses in 2026 — by need, not by who pays us most. Fees, hardware, contracts and payouts compared in plain English.",
+      "The best UK card machines for small businesses in 2026 - by need, not by who pays us most. Fees, hardware, contracts and payouts compared in plain English.",
     category: "Comparisons",
     author: "The POS editorial team",
     date: "2026-06-29",
@@ -465,23 +465,23 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/best-card-machine-small-business-uk.jpg",
     featuredAlt: "Customer tapping a card on a card machine at a shop counter",
     intro:
-      "There's no single best card machine for every UK small business — the right one depends on what you sell, how much you take and whether you want a contract. This guide picks the strongest option for each common scenario, with the fees and catches spelled out, so you can match a reader to your business in a couple of minutes.",
+      "There's no single best card machine for every UK small business - the right one depends on what you sell, how much you take and whether you want a contract. This guide picks the strongest option for each common scenario, with the fees and catches spelled out, so you can match a reader to your business in a couple of minutes.",
     sections: [
       {
         heading: "How we picked",
         paragraphs: [
-          "We compare on the things that actually move the cost and hassle for a small business: transaction rate, monthly fee, hardware price, contract length, payout speed and the software you get. Every figure is publicly advertised UK pricing and dated on each provider's page — see our [methodology](/methodology). Some links earn us a commission, but that never changes the verdicts.",
+          "We compare on the things that actually move the cost and hassle for a small business: transaction rate, monthly fee, hardware price, contract length, payout speed and the software you get. Every figure is publicly advertised UK pricing and dated on each provider's page - see our [methodology](/methodology). Some links earn us a commission, but that never changes the verdicts.",
         ],
       },
       {
         heading: "The short answer",
         paragraphs: ["If you want the quick version:"],
         bullets: [
-          "**Best all-rounder:** [Square](/reviews/square) — free POS app, no monthly fee, room to grow.",
-          "**Cheapest, simplest:** [SumUp](/reviews/sumup) — from a £19 reader, no contract, from 0.99% on Payments Plus.",
-          "**Busy hospitality / fast payouts:** [Dojo](/reviews/dojo) — reliable machines, as-fast-as same-day settlement.",
-          "**Instant access to funds:** [myPOS](/reviews/mypos) — money lands in a built-in account in real time.",
-          "**PayPal sellers:** [PayPal Zettle](/reviews/zettle) — takings flow into your PayPal balance.",
+          "**Best all-rounder:** [Square](/reviews/square) - free POS app, no monthly fee, room to grow.",
+          "**Cheapest, simplest:** [SumUp](/reviews/sumup) - from a £19 reader, no contract, from 0.99% on Payments Plus.",
+          "**Busy hospitality / fast payouts:** [Dojo](/reviews/dojo) - reliable machines, as-fast-as same-day settlement.",
+          "**Instant access to funds:** [myPOS](/reviews/mypos) - money lands in a built-in account in real time.",
+          "**PayPal sellers:** [PayPal Zettle](/reviews/zettle) - takings flow into your PayPal balance.",
         ],
       },
       {
@@ -494,34 +494,34 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Cheapest & simplest: SumUp",
         paragraphs: [
-          "If you just want to take a card with the least cost and commitment, [SumUp](/reviews/sumup) is the classic pick — a £19 reader, no monthly fee, no contract, plus invoices and Tap to Pay. It's the go-to for [market stalls](/pos-systems/market-stalls), [tradespeople](/pos-systems/tradesmen) and mobile sellers. See also our roundup of the [best card readers for market traders](/blog/best-card-readers-market-traders).",
+          "If you just want to take a card with the least cost and commitment, [SumUp](/reviews/sumup) is the classic pick - a £19 reader, no monthly fee, no contract, plus invoices and Tap to Pay. It's the go-to for [market stalls](/pos-systems/market-stalls), [tradespeople](/pos-systems/tradesmen) and mobile sellers. See also our roundup of the [best card readers for market traders](/blog/best-card-readers-market-traders).",
         ],
       },
       {
         heading: "Busy hospitality & fast payouts: Dojo",
         paragraphs: [
-          "For a busy [restaurant](/pos-systems/restaurants), pub or higher-volume shop, [Dojo](/reviews/dojo) is built for reliability and quick cash flow — next-day, even as-fast-as same-day payouts. Pricing is quote-based, so read the contract terms, but at volume a tailored rate can beat a flat one.",
+          "For a busy [restaurant](/pos-systems/restaurants), pub or higher-volume shop, [Dojo](/reviews/dojo) is built for reliability and quick cash flow - next-day, even as-fast-as same-day payouts. Pricing is quote-based, so read the contract terms, but at volume a tailored rate can beat a flat one.",
         ],
       },
       {
         heading: "What to look for (and the catches)",
         paragraphs: ["Whatever you pick, sanity-check these before you commit:"],
         bullets: [
-          "Your **all-in cost at your real volume** — run it through the [fee calculator](/card-machine-fee-calculator).",
-          "**Contract and exit fees** — pay-as-you-go (SumUp/Square/Zettle) means no lock-in.",
-          "**Payout speed** — standard is 1–2 working days; instant usually costs extra.",
-          "**Hidden fees** — chargebacks, PCI, authorisation; see [hidden card machine fees](/guides/hidden-card-machine-fees).",
+          "Your **all-in cost at your real volume** - run it through the [fee calculator](/card-machine-fee-calculator).",
+          "**Contract and exit fees** - pay-as-you-go (SumUp/Square/Zettle) means no lock-in.",
+          "**Payout speed** - standard is 1–2 working days; instant usually costs extra.",
+          "**Hidden fees** - chargebacks, PCI, authorisation; see [hidden card machine fees](/guides/hidden-card-machine-fees).",
         ],
       },
     ],
     faqs: [
       {
         q: "What is the best card machine for a small business in the UK?",
-        a: "For most UK small businesses, Square is the best all-rounder — a free POS app with no monthly fee at 1.75% per transaction. SumUp is best if you want the cheapest, simplest pay-as-you-go reader, and Dojo suits busy hospitality wanting fast payouts.",
+        a: "For most UK small businesses, Square is the best all-rounder - a free POS app with no monthly fee at 1.75% per transaction. SumUp is best if you want the cheapest, simplest pay-as-you-go reader, and Dojo suits busy hospitality wanting fast payouts.",
       },
       {
         q: "What's the cheapest card machine for a small business?",
-        a: "SumUp and Square readers start around £19 + VAT with no monthly fee, so they're cheapest to start. On rate, SumUp's Payments Plus plan starts from 0.99% for domestic cards. The cheapest overall depends on your volume — use a fee calculator to compare.",
+        a: "SumUp and Square readers start around £19 + VAT with no monthly fee, so they're cheapest to start. On rate, SumUp's Payments Plus plan starts from 0.99% for domestic cards. The cheapest overall depends on your volume - use a fee calculator to compare.",
       },
       {
         q: "Do small businesses need a full POS or just a card reader?",
@@ -539,7 +539,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-much-does-a-card-machine-cost-uk",
     title: "How Much Does a Card Machine Cost in the UK? (2026)",
     excerpt:
-      "A full breakdown of UK card machine costs in 2026 — hardware, transaction fees, monthly charges and the hidden extras — with worked examples by turnover.",
+      "A full breakdown of UK card machine costs in 2026 - hardware, transaction fees, monthly charges and the hidden extras - with worked examples by turnover.",
     category: "Fees & saving",
     author: "Nathan Keeble",
     date: "2026-06-28",
@@ -547,15 +547,15 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/how-much-does-a-card-machine-cost-uk.jpg",
     featuredAlt: "Shop owner at the counter with a POS system",
     intro:
-      "A card machine's price tag is only part of the story. The real cost is three things stacked together — the hardware, the per-transaction fee and any monthly charge — plus a few extras providers don't put on the homepage. Here's what a card machine actually costs a UK business in 2026, with examples you can map onto your own numbers.",
+      "A card machine's price tag is only part of the story. The real cost is three things stacked together - the hardware, the per-transaction fee and any monthly charge - plus a few extras providers don't put on the homepage. Here's what a card machine actually costs a UK business in 2026, with examples you can map onto your own numbers.",
     sections: [
       {
         heading: "The three costs that make up a card machine",
         paragraphs: ["Every card machine bill comes down to:"],
         bullets: [
-          "**Hardware** — buy a reader outright (£19–£599) or hire/finance it monthly.",
-          "**Transaction fee** — a % (and sometimes a few pence) of every card sale, typically 1.4%–1.75% in person.",
-          "**Monthly fee** — £0 on pay-as-you-go providers, or a subscription on quote-based ones.",
+          "**Hardware** - buy a reader outright (£19–£599) or hire/finance it monthly.",
+          "**Transaction fee** - a % (and sometimes a few pence) of every card sale, typically 1.4%–1.75% in person.",
+          "**Monthly fee** - £0 on pay-as-you-go providers, or a subscription on quote-based ones.",
         ],
       },
       {
@@ -566,20 +566,20 @@ export const BLOG_POSTS: BlogPost[] = [
           "[Square](/reviews/square): reader from £19 + VAT, 1.75% in person, no monthly fee.",
           "[PayPal Zettle](/reviews/zettle): reader ~£29 + VAT, 1.75%, no monthly fee.",
           "[myPOS](/reviews/mypos): device from ~£19, card-present from 1.10% + 7p, instant settlement.",
-          "[Dojo](/reviews/dojo): quote-based — typically a monthly element plus a tailored rate.",
+          "[Dojo](/reviews/dojo): quote-based - typically a monthly element plus a tailored rate.",
         ],
       },
       {
         heading: "Buy outright or rent?",
         paragraphs: [
-          "Buying a reader once (the pay-as-you-go model) is usually cheaper over time and keeps you contract-free. Renting/financing a terminal spreads the cost but often ties you into a term with exit fees — common with quote-based acquirers. If you're not sure you'll stick with a provider, favour a [no-contract option](/guides/no-contract-card-machines).",
+          "Buying a reader once (the pay-as-you-go model) is usually cheaper over time and keeps you contract-free. Renting/financing a terminal spreads the cost but often ties you into a term with exit fees - common with quote-based acquirers. If you're not sure you'll stick with a provider, favour a [no-contract option](/guides/no-contract-card-machines).",
         ],
       },
       {
         heading: "Worked examples by turnover",
         paragraphs: [
-          "Say you take **£5,000/month** at 1.75% with no monthly fee — that's about **£87.50/month** in processing, plus a one-off ~£19 reader. On a quote-based provider at 1.4% + a £15 monthly fee, the same £5,000 is £70 + £15 = **£85/month** — so close it barely matters, and the no-contract option is the safer bet.",
-          "At **£30,000/month**, that 0.35% rate gap is worth ~£105/month — now the lower quote-based rate can clearly win, even with a monthly fee. The crossover depends entirely on your volume, which is exactly what our [fee calculator](/card-machine-fee-calculator) works out for you.",
+          "Say you take **£5,000/month** at 1.75% with no monthly fee - that's about **£87.50/month** in processing, plus a one-off ~£19 reader. On a quote-based provider at 1.4% + a £15 monthly fee, the same £5,000 is £70 + £15 = **£85/month** - so close it barely matters, and the no-contract option is the safer bet.",
+          "At **£30,000/month**, that 0.35% rate gap is worth ~£105/month - now the lower quote-based rate can clearly win, even with a monthly fee. The crossover depends entirely on your volume, which is exactly what our [fee calculator](/card-machine-fee-calculator) works out for you.",
         ],
       },
       {
@@ -603,7 +603,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "How much does a card machine cost per month in the UK?",
-        a: "On a pay-as-you-go provider (SumUp, Square, Zettle) there's no monthly fee — you only pay a percentage per transaction, plus a one-off reader from about £19 + VAT. Quote-based providers (e.g. Dojo) often charge a monthly fee plus terminal hire, typically from around £15/month.",
+        a: "On a pay-as-you-go provider (SumUp, Square, Zettle) there's no monthly fee - you only pay a percentage per transaction, plus a one-off reader from about £19 + VAT. Quote-based providers (e.g. Dojo) often charge a monthly fee plus terminal hire, typically from around £15/month.",
       },
       {
         q: "Is it cheaper to buy or rent a card machine?",
@@ -625,7 +625,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "square-vs-zettle",
     title: "Square vs Zettle: Which Is Better for UK Small Businesses? (2026)",
     excerpt:
-      "Square vs PayPal Zettle compared for UK small businesses — fees, hardware, POS software and payouts, with a clear verdict on who each one suits.",
+      "Square vs PayPal Zettle compared for UK small businesses - fees, hardware, POS software and payouts, with a clear verdict on who each one suits.",
     category: "Comparisons",
     author: "The POS editorial team",
     date: "2026-06-27",
@@ -633,18 +633,18 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "/images/blog/square-vs-zettle.jpg",
     featuredAlt: "Customer paying by card at a small business counter",
     intro:
-      "Square and PayPal Zettle are two of the most popular no-monthly-fee card readers in the UK — both let small businesses take card payments cheaply with no contract. They look similar, but they're built for slightly different owners. Here's how they compare on fees, hardware, software and payouts, and which one to pick.",
+      "Square and PayPal Zettle are two of the most popular no-monthly-fee card readers in the UK - both let small businesses take card payments cheaply with no contract. They look similar, but they're built for slightly different owners. Here's how they compare on fees, hardware, software and payouts, and which one to pick.",
     sections: [
       {
         heading: "Quick verdict",
         paragraphs: [
-          "Choose [Square](/reviews/square) if you want the stronger free POS ecosystem — better inventory, a free online store and room to grow. Choose [PayPal Zettle](/reviews/zettle) if you already use PayPal and want your takings to flow neatly into your PayPal balance. For most growing businesses, Square edges it; for committed PayPal sellers, Zettle is the natural fit.",
+          "Choose [Square](/reviews/square) if you want the stronger free POS ecosystem - better inventory, a free online store and room to grow. Choose [PayPal Zettle](/reviews/zettle) if you already use PayPal and want your takings to flow neatly into your PayPal balance. For most growing businesses, Square edges it; for committed PayPal sellers, Zettle is the natural fit.",
         ],
       },
       {
         heading: "Fees",
         paragraphs: [
-          "Both are pay-as-you-go with no monthly fee on their standard plans. Square is a flat **1.75%** in person; Zettle is **1.75%** on card and contactless too — so on rate alone they're level. The difference is what you get around it. Run your real numbers through the [fee calculator](/card-machine-fee-calculator) to see your all-in cost.",
+          "Both are pay-as-you-go with no monthly fee on their standard plans. Square is a flat **1.75%** in person; Zettle is **1.75%** on card and contactless too - so on rate alone they're level. The difference is what you get around it. Run your real numbers through the [fee calculator](/card-machine-fee-calculator) to see your all-in cost.",
         ],
       },
       {
@@ -656,13 +656,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "POS software",
         paragraphs: [
-          "This is where Square pulls ahead. Its free POS app includes solid inventory, a free online store, invoicing and loyalty, plus paid Restaurant and Retail tiers. Zettle's free app covers the basics well — items, basic inventory and reporting — but its wider ecosystem is less ambitious. If software matters, Square wins; if you only need simple payments, both are fine.",
+          "This is where Square pulls ahead. Its free POS app includes solid inventory, a free online store, invoicing and loyalty, plus paid Restaurant and Retail tiers. Zettle's free app covers the basics well - items, basic inventory and reporting - but its wider ecosystem is less ambitious. If software matters, Square wins; if you only need simple payments, both are fine.",
         ],
       },
       {
         heading: "Payouts & ecosystem",
         paragraphs: [
-          "Square pays out next working day (instant transfer for a fee). Zettle settles in 1–2 working days, with the bonus that funds can land in your PayPal balance — handy if you already run money through PayPal. If fast access matters more, see our roundup of [same-day payout providers](/blog/same-day-payouts-providers).",
+          "Square pays out next working day (instant transfer for a fee). Zettle settles in 1–2 working days, with the bonus that funds can land in your PayPal balance - handy if you already run money through PayPal. If fast access matters more, see our roundup of [same-day payout providers](/blog/same-day-payouts-providers).",
         ],
       },
       {
@@ -679,15 +679,15 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "Is Square or Zettle cheaper?",
-        a: "They're level on rate — both 1.75% per in-person transaction with no monthly fee. Square's reader starts slightly cheaper (£19 vs ~£29 + VAT). The better value depends on whether you'll use Square's stronger free software.",
+        a: "They're level on rate - both 1.75% per in-person transaction with no monthly fee. Square's reader starts slightly cheaper (£19 vs ~£29 + VAT). The better value depends on whether you'll use Square's stronger free software.",
       },
       {
         q: "Is Square better than Zettle?",
-        a: "For most growing businesses, yes — Square's free POS, online store and inventory are more capable. Zettle is the better choice if you're committed to PayPal and want takings in your PayPal balance.",
+        a: "For most growing businesses, yes - Square's free POS, online store and inventory are more capable. Zettle is the better choice if you're committed to PayPal and want takings in your PayPal balance.",
       },
       {
         q: "Can I use Zettle without a PayPal account?",
-        a: "You sign up through PayPal and it integrates closely with your PayPal account — that integration is the main reason to choose Zettle over Square.",
+        a: "You sign up through PayPal and it integrates closely with your PayPal account - that integration is the main reason to choose Zettle over Square.",
       },
     ],
     relatedPosts: ["sumup-vs-square-2026", "best-card-machine-small-business-uk"],

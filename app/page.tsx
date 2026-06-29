@@ -33,7 +33,7 @@ const BUSINESS_CHIPS = [
   { label: "Mobile Businesses", icon: Truck, href: "/pos-systems/mobile-businesses" },
 ];
 
-// Featured provider cards — short, curated summaries for the homepage shelf.
+// Featured provider cards - short, curated summaries for the homepage shelf.
 // (Full, sourced detail lives on each /reviews/[slug] page from data/providers.ts.)
 const FEATURED = [
   { slug: "sumup", fee: "From 1.69%", hardware: "From £19", contract: "No contract", bestFor: "Small businesses & startups" },
@@ -45,7 +45,7 @@ const FEATURED = [
 const STEPS = [
   { icon: ClipboardList, title: "Tell us about your business", body: "Answer a few quick questions about how you take payments." },
   { icon: SlidersHorizontal, title: "Compare your options", body: "We match you with the providers that actually fit." },
-  { icon: CheckCircle2, title: "Choose the best-fit setup", body: "Pick with confidence — and start saving." },
+  { icon: CheckCircle2, title: "Choose the best-fit setup", body: "Pick with confidence - and start saving." },
 ];
 
 const POPULAR = [
@@ -69,11 +69,11 @@ const PEOPLE = [
 const HOME_FAQS = [
   {
     q: "What's the best POS system for a UK small business?",
-    a: "There's no single 'best' — it depends on your business. Square is the strongest free all-rounder, SumUp is best for cheap, simple card payments, and Dojo suits busy hospitality wanting fast payouts. Use our quiz or comparison to match your needs.",
+    a: "There's no single 'best' - it depends on your business. Square is the strongest free all-rounder, SumUp is best for cheap, simple card payments, and Dojo suits busy hospitality wanting fast payouts. Use our quiz or comparison to match your needs.",
   },
   {
     q: "Which card machine has no monthly fee?",
-    a: "SumUp, Square and PayPal Zettle all offer pay-as-you-go card readers with no monthly fee — you buy the reader once and pay a percentage per transaction.",
+    a: "SumUp, Square and PayPal Zettle all offer pay-as-you-go card readers with no monthly fee - you buy the reader once and pay a percentage per transaction.",
   },
   {
     q: "How do you make money?",
@@ -105,7 +105,7 @@ export default function HomePage() {
                   Compare POS Systems &amp; Card Machines for UK Businesses
                 </h1>
                 <p className="mt-4 max-w-lg text-base leading-relaxed text-grey sm:text-lg">
-                  Find the right till, terminal and payment setup for your business — without the waffle.
+                  Find the right till, terminal and payment setup for your business - without the waffle.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <ButtonLink href="/compare-pos-systems" size="lg" className="w-full sm:w-auto">
@@ -198,7 +198,7 @@ export default function HomePage() {
               <div>
                 <h2 className="font-heading text-xl font-extrabold text-navy sm:text-2xl">Work out exactly what you'd pay</h2>
                 <p className="mt-1 text-grey">
-                  Pop in your turnover and average sale — see your monthly cost and all-in rate across the main UK
+                  Pop in your turnover and average sale - see your monthly cost and all-in rate across the main UK
                   providers in seconds.
                 </p>
               </div>
@@ -236,14 +236,14 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Built for businesses like yours — real faces */}
+      {/* Built for businesses like yours - real faces */}
       <Section muted className="py-10 sm:py-14">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">Built for businesses like yours</h2>
             <p className="mt-3 text-grey">
               From market stalls to cafés and clothing shops, we help real UK small businesses choose how to take
-              payments — in plain English.
+              payments - in plain English.
             </p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">

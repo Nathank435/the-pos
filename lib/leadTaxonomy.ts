@@ -1,4 +1,4 @@
-/* Canonical lead taxonomy — the single source of truth for the values we write
+/* Canonical lead taxonomy - the single source of truth for the values we write
  * to Klaviyo (and use for segments + dynamic email fields).
  *
  * The quiz, quote form and calculator each speak a slightly different dialect

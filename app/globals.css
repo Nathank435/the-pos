@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/* ThePOS.co.uk — brand theme (Tailwind v4 CSS-first config)          */
+/* ThePOS.co.uk - brand theme (Tailwind v4 CSS-first config)          */
 /* Clean blue/slate SaaS palette per the brand guide. Edit to re-skin. */
 /* ------------------------------------------------------------------ */
 @theme {
@@ -54,7 +54,7 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Mono eyebrow / kicker label — the editorial signature */
+/* Mono eyebrow / kicker label - the editorial signature */
 .kicker {
   font-family: var(--font-sans);
   font-size: 0.75rem;

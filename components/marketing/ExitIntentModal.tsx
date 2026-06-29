@@ -12,20 +12,20 @@ import { track } from "@/lib/analytics";
  * Timing rules are based on what actually works for exit-intent (vs. just
  * firing on the first mouse-out, which tanks conversion and annoys people):
  *
- *  1. ENGAGEMENT GATE — don't arm until the visitor has shown intent:
+ *  1. ENGAGEMENT GATE - don't arm until the visitor has shown intent:
  *     at least ENGAGE_MS on the page OR scrolled past ENGAGE_SCROLL.
  *     Firing instantly catches bouncers who never engaged; gating lifts
  *     conversion and cuts complaints.
- *  2. DESKTOP TRIGGER — cursor leaves through the TOP of the viewport
+ *  2. DESKTOP TRIGGER - cursor leaves through the TOP of the viewport
  *     (toward the tab bar / close button). Side/bottom exits are ignored.
- *  3. MOBILE TRIGGER — there's no cursor, so true exit-intent doesn't exist.
+ *  3. MOBILE TRIGGER - there's no cursor, so true exit-intent doesn't exist.
  *     We use the best available proxy: a fast UPWARD scroll (reaching for the
  *     back button / address bar) after they've scrolled down, plus a quiet
  *     time fallback so engaged readers still see it once.
- *  4. FREQUENCY CAP — show at most once, then suppress for SUPPRESS_DAYS
+ *  4. FREQUENCY CAP - show at most once, then suppress for SUPPRESS_DAYS
  *     (and permanently for this visitor once they click through). Repeated
  *     pop-ups are the #1 reason these get hated.
- *  5. EXCLUSIONS — never on the calculator itself or the lead/thank-you
+ *  5. EXCLUSIONS - never on the calculator itself or the lead/thank-you
  *     pages (they're already converting).
  * ------------------------------------------------------------------ */
 
@@ -168,11 +168,11 @@ export function ExitIntentModal() {
           </span>
 
           <h2 id="exit-intent-title" className="mt-4 font-heading text-2xl font-bold leading-tight text-navy">
-            Before you go — are you overpaying on card fees?
+            Before you go - are you overpaying on card fees?
           </h2>
           <p className="mt-2 text-grey">
             Most UK small businesses are on the wrong plan for their turnover. Pop in your numbers and see your real
-            all-in rate and the cheapest provider for you — takes about 60 seconds, no signup.
+            all-in rate and the cheapest provider for you - takes about 60 seconds, no signup.
           </p>
 
           <div className="mt-6 flex flex-col gap-2">
@@ -180,7 +180,7 @@ export function ExitIntentModal() {
               href={CALCULATOR_PATH}
               onClick={() => {
                 track("exit_intent_click", { path: pathname });
-                suppressFor(365); // converted — don't nag again
+                suppressFor(365); // converted - don't nag again
                 close("convert");
               }}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-accent px-5 font-bold tracking-tight text-white transition-colors hover:bg-[#1e3a8a]"

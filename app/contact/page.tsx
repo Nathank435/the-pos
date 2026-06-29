@@ -5,7 +5,7 @@ import { SITE, COMPANY } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Contact The POS",
-  description: "Get in touch with The POS — corrections, partnership enquiries and feedback.",
+  description: "Get in touch with The POS - corrections, partnership enquiries and feedback.",
   path: "/contact",
 });
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <InfoPage
       title="Contact Us"
-      intro="Corrections, partnership enquiries or just feedback — we'd like to hear from you."
+      intro="Corrections, partnership enquiries or just feedback - we'd like to hear from you."
       crumbLabel="Contact"
       path="/contact"
       sections={[
@@ -39,7 +39,7 @@ export default function ContactPage() {
         {
           heading: "Providers & partnerships",
           paragraphs: [
-            "If you're a provider and want to discuss a listing or partnership, get in touch — but note that commercial arrangements never change our editorial verdicts.",
+            "If you're a provider and want to discuss a listing or partnership, get in touch - but note that commercial arrangements never change our editorial verdicts.",
           ],
         },
         {

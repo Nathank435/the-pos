@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "How accurate is this fee calculator?",
-    a: "It's an estimate for comparison only. It uses each provider's headline in-person rate and known fees. Real pricing varies by card type, plan and contract — and quote-based providers (Dojo, Tyl) are shown with illustrative blended rates. Always confirm with the provider.",
+    a: "It's an estimate for comparison only. It uses each provider's headline in-person rate and known fees. Real pricing varies by card type, plan and contract - and quote-based providers (Dojo, Tyl) are shown with illustrative blended rates. Always confirm with the provider.",
   },
   {
     q: "Why does a no-monthly-fee provider sometimes win?",
@@ -33,7 +33,7 @@ export default function CalculatorPage() {
     <>
       <PageHero
         title="Card Machine Fee Calculator"
-        intro="Plug in your numbers and see what you'd pay across the main UK providers — monthly, annually, and as an all-in effective rate."
+        intro="Plug in your numbers and see what you'd pay across the main UK providers - monthly, annually, and as an all-in effective rate."
         crumbs={[{ name: "Fee Calculator", path: "/card-machine-fee-calculator" }]}
       />
       <Section>

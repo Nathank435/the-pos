@@ -16,7 +16,7 @@ export function SiteFooter() {
             <p className="mt-3 max-w-64 text-sm text-white/60">{SITE.tagline}</p>
             <div className="mt-5">
               <h3 className="font-heading text-sm font-semibold text-white">
-                Cut your card fees — get our tips
+                Cut your card fees - get our tips
               </h3>
               <p className="mt-1 mb-3 max-w-72 text-sm text-white/55">
                 Honest, independent advice on card machines and POS for UK small businesses.
@@ -55,7 +55,7 @@ export function SiteFooter() {
           </p>
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {year} {COMPANY.legalName}. All prices and rates are indicative and may change — always check provider
+              © {year} {COMPANY.legalName}. All prices and rates are indicative and may change - always check provider
               terms.
             </p>
             <p>Made for UK small businesses.</p>

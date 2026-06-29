@@ -9,7 +9,7 @@ import { GUIDES } from "@/data/guides";
 export const metadata: Metadata = pageMeta({
   title: "POS & Card Machine Guides (UK)",
   description:
-    "Plain-English guides to UK POS systems and card machines — fees explained, how to choose, no-contract options, Tap to Pay, virtual terminals and more.",
+    "Plain-English guides to UK POS systems and card machines - fees explained, how to choose, no-contract options, Tap to Pay, virtual terminals and more.",
   path: "/guides",
 });
 

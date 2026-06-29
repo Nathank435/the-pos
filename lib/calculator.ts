@@ -1,5 +1,5 @@
 /* Fee calculator logic + editable estimate rates.
- * These are simplified, single-rate estimates for comparison only — real
+ * These are simplified, single-rate estimates for comparison only - real
  * pricing varies by card type, plan and contract. Edit rates here. */
 
 export type CalcProvider = {
@@ -18,7 +18,7 @@ export const CALC_PROVIDERS: CalcProvider[] = [
   { slug: "square", name: "Square", ratePercent: 1.75, perTransactionPence: 0, monthlyFee: 0, hardwareCost: 19, note: "Flat rate, no monthly fee on standard." },
   { slug: "zettle", name: "PayPal Zettle", ratePercent: 1.75, perTransactionPence: 0, monthlyFee: 0, hardwareCost: 29, note: "No monthly fee for basic POS." },
   { slug: "mypos", name: "myPOS (lower tier)", ratePercent: 1.1, perTransactionPence: 7, monthlyFee: 0, hardwareCost: 19, note: "Varies by card type; instant settlement." },
-  { slug: "dojo", name: "Dojo (est. blended)", ratePercent: 1.4, perTransactionPence: 5, monthlyFee: 15, hardwareCost: 0, note: "Quote-based — this is a rough estimate only." },
+  { slug: "dojo", name: "Dojo (est. blended)", ratePercent: 1.4, perTransactionPence: 5, monthlyFee: 15, hardwareCost: 0, note: "Quote-based - this is a rough estimate only." },
   { slug: "tyl-by-natwest", name: "Tyl by NatWest (est.)", ratePercent: 1.5, perTransactionPence: 0, monthlyFee: 15, hardwareCost: 0, note: "Quote-based plans; estimate only." },
 ];
 
@@ -78,7 +78,7 @@ export function calculate(input: CalcInput): CalcResult {
     const diff = round2(noFeeBest.monthlyTotal - cheapest.monthlyTotal);
     if (diff > 0 && diff < 10) {
       warnings.push(
-        `${cheapest.name} only wins by about £${diff.toFixed(2)}/month at this volume — a no-monthly-fee option like ${noFeeBest.name} may be safer if your takings dip.`,
+        `${cheapest.name} only wins by about £${diff.toFixed(2)}/month at this volume - a no-monthly-fee option like ${noFeeBest.name} may be safer if your takings dip.`,
       );
     }
   }

@@ -1,4 +1,4 @@
-/** Central site configuration — edit brand strings, nav and URLs here. */
+/** Central site configuration - edit brand strings, nav and URLs here. */
 
 export const SITE = {
   name: "The POS",
@@ -6,14 +6,14 @@ export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://thepos.co.uk",
   tagline: "Compare POS systems & card machines for UK businesses",
   description:
-    "Find the right till, terminal and payment setup for your business. Compare UK POS systems, card machines, payment providers, fees and contracts in plain English — without the waffle.",
-  // Editorial entity behind the reviews — used for Organization schema & author boxes.
+    "Find the right till, terminal and payment setup for your business. Compare UK POS systems, card machines, payment providers, fees and contracts in plain English - without the waffle.",
+  // Editorial entity behind the reviews - used for Organization schema & author boxes.
   publisher: "The POS",
   email: "hello@thepos.co.uk",
   twitter: "@thepos_uk",
 } as const;
 
-/** Legal operating company — surfaced in the footer, legal pages and schema. */
+/** Legal operating company - surfaced in the footer, legal pages and schema. */
 export const COMPANY = {
   legalName: "Cracked Media Ltd",
   number: "13648057",

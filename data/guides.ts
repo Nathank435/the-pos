@@ -1,4 +1,4 @@
-/* Learning hub guides — /guides/[slug].
+/* Learning hub guides - /guides/[slug].
  * Content lives as structured sections so it renders consistently and stays
  * easy to edit. Swap to MDX later without changing the page shell.        */
 
@@ -24,7 +24,7 @@ export const GUIDES: Guide[] = [
     slug: "card-machine-fees-explained",
     title: "Card Machine Fees Explained (UK)",
     description:
-      "Transaction fees, monthly fees, hardware costs, payout charges and the sneaky extras — every card machine fee, explained in plain English.",
+      "Transaction fees, monthly fees, hardware costs, payout charges and the sneaky extras - every card machine fee, explained in plain English.",
     category: "Fees",
     readMinutes: 7,
     lastUpdated: "2026-06-25",
@@ -35,13 +35,13 @@ export const GUIDES: Guide[] = [
         heading: "1. The transaction fee",
         paragraphs: [
           "This is the percentage (and sometimes a few pence) taken from every card sale. UK pay-as-you-go providers typically sit around 1.69%–1.75% for in-person payments, while quote-based acquirers can offer lower blended or interchange-plus rates at higher volumes.",
-          "Watch for different rates by card type — premium, commercial and international cards often cost more than a standard UK debit card.",
+          "Watch for different rates by card type - premium, commercial and international cards often cost more than a standard UK debit card.",
         ],
       },
       {
         heading: "2. The monthly fee",
         paragraphs: [
-          "Pay-as-you-go providers (SumUp, Square, Zettle) charge £0 a month — you only pay per transaction. Quote-based providers (Dojo, Worldpay, Barclaycard, Tyl) often charge a monthly fee plus terminal hire.",
+          "Pay-as-you-go providers (SumUp, Square, Zettle) charge £0 a month - you only pay per transaction. Quote-based providers (Dojo, Worldpay, Barclaycard, Tyl) often charge a monthly fee plus terminal hire.",
           "A monthly fee isn't automatically bad: at higher volumes a lower transaction rate can more than pay for it. Our fee calculator works out where the crossover is.",
         ],
       },
@@ -54,7 +54,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "4. Payout / settlement charges",
         paragraphs: [
-          "Standard payouts (1–2 working days) are usually free. Instant or same-day payouts often cost extra — a flat fee or a small percentage. If cash flow is tight, factor this in.",
+          "Standard payouts (1–2 working days) are usually free. Instant or same-day payouts often cost extra - a flat fee or a small percentage. If cash flow is tight, factor this in.",
         ],
       },
       {
@@ -71,7 +71,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "So what actually matters?",
         paragraphs: [
-          "For low volumes, the transaction rate and zero monthly fee dominate — pay-as-you-go wins. For higher volumes, a slightly lower rate with a monthly fee can be cheaper overall, but only if there's no contract trap. Always check the total cost of ownership, not just the headline percentage.",
+          "For low volumes, the transaction rate and zero monthly fee dominate - pay-as-you-go wins. For higher volumes, a slightly lower rate with a monthly fee can be cheaper overall, but only if there's no contract trap. Always check the total cost of ownership, not just the headline percentage.",
         ],
       },
     ],
@@ -82,7 +82,7 @@ export const GUIDES: Guide[] = [
       },
       {
         q: "Are there card machines with no monthly fee?",
-        a: "Yes — SumUp, Square, Zettle and entry myPOS plans have no monthly fee. You buy the reader and pay a percentage per sale.",
+        a: "Yes - SumUp, Square, Zettle and entry myPOS plans have no monthly fee. You buy the reader and pay a percentage per sale.",
       },
     ],
     relatedGuides: ["hidden-card-machine-fees", "no-contract-card-machines", "how-to-choose-a-card-machine"],
@@ -102,12 +102,12 @@ export const GUIDES: Guide[] = [
     readMinutes: 5,
     lastUpdated: "2026-06-25",
     intro:
-      "POS stands for 'point of sale' — the place and the kit where you take payment and record a sale. But the term covers everything from a £19 pocket reader to a full restaurant system, so let's untangle it.",
+      "POS stands for 'point of sale' - the place and the kit where you take payment and record a sale. But the term covers everything from a £19 pocket reader to a full restaurant system, so let's untangle it.",
     sections: [
       {
         heading: "Card reader vs. full POS system",
         paragraphs: [
-          "A card reader just takes payments — tap, chip, done. A full POS system does that and also rings up items, tracks stock, manages tables or appointments, and reports on sales.",
+          "A card reader just takes payments - tap, chip, done. A full POS system does that and also rings up items, tracks stock, manages tables or appointments, and reports on sales.",
           "Most sole traders and market sellers only need a reader. Cafés, shops and restaurants usually want a fuller POS.",
         ],
       },
@@ -133,7 +133,7 @@ export const GUIDES: Guide[] = [
     faqs: [
       {
         q: "Does 'POS' mean the card machine or the software?",
-        a: "Both, loosely. 'Point of sale' refers to where you take payment — which can mean just a card reader, or a full till system with software, hardware and payments combined.",
+        a: "Both, loosely. 'Point of sale' refers to where you take payment - which can mean just a card reader, or a full till system with software, hardware and payments combined.",
       },
     ],
     relatedGuides: ["pos-system-vs-card-reader", "how-to-choose-a-card-machine", "what-is-tap-to-pay"],
@@ -147,12 +147,12 @@ export const GUIDES: Guide[] = [
     slug: "pos-system-vs-card-reader",
     title: "POS System vs Card Reader: Which Do You Need?",
     description:
-      "The difference between a simple card reader and a full POS system — and how to tell which one your UK business actually needs.",
+      "The difference between a simple card reader and a full POS system - and how to tell which one your UK business actually needs.",
     category: "Choosing",
     readMinutes: 5,
     lastUpdated: "2026-06-25",
     intro:
-      "Plenty of businesses overspend on a full POS they don't need — or outgrow a basic reader and end up duct-taping spreadsheets together. Here's how to pick the right level.",
+      "Plenty of businesses overspend on a full POS they don't need - or outgrow a basic reader and end up duct-taping spreadsheets together. Here's how to pick the right level.",
     sections: [
       {
         heading: "A card reader is enough if…",
@@ -203,7 +203,7 @@ export const GUIDES: Guide[] = [
         paragraphs: ["Run any provider through these questions before you commit:"],
         bullets: [
           "What's the all-in cost at my real monthly volume? (Use our calculator.)",
-          "Is there a monthly fee or contract — and an exit fee?",
+          "Is there a monthly fee or contract - and an exit fee?",
           "How fast do I get paid, and does instant payout cost extra?",
           "Do I need a standalone (SIM) device or is phone-paired fine?",
           "Do I need POS software (stock, tables, appointments) or just payments?",
@@ -227,12 +227,12 @@ export const GUIDES: Guide[] = [
   {
     slug: "hidden-card-machine-fees",
     title: "Hidden Card Machine Fees to Watch For",
-    description: "The card machine fees that don't make the homepage — chargebacks, PCI, authorisation and exit fees.",
+    description: "The card machine fees that don't make the homepage - chargebacks, PCI, authorisation and exit fees.",
     category: "Fees",
     readMinutes: 5,
     lastUpdated: "2026-06-25",
     intro:
-      "The advertised rate is the bit they want you to see. These are the charges that quietly turn up on the bill — and how to avoid being caught out.",
+      "The advertised rate is the bit they want you to see. These are the charges that quietly turn up on the bill - and how to avoid being caught out.",
     sections: [
       {
         heading: "The usual suspects",
@@ -263,7 +263,7 @@ export const GUIDES: Guide[] = [
   {
     slug: "no-contract-card-machines",
     title: "No-Contract Card Machines in the UK",
-    description: "Which UK card machines have no contract and no monthly fee — and when a contract is worth it anyway.",
+    description: "Which UK card machines have no contract and no monthly fee - and when a contract is worth it anyway.",
     category: "Choosing",
     readMinutes: 4,
     lastUpdated: "2026-06-25",
@@ -297,12 +297,12 @@ export const GUIDES: Guide[] = [
     readMinutes: 4,
     lastUpdated: "2026-06-25",
     intro:
-      "Tap to Pay turns your phone into a contactless card machine — no extra hardware. Here's how it works and who it suits.",
+      "Tap to Pay turns your phone into a contactless card machine - no extra hardware. Here's how it works and who it suits.",
     sections: [
       {
         heading: "How it works",
         paragraphs: [
-          "With a supported app (SumUp, Square, Zettle and others), customers tap their card, phone or watch directly on your phone. The payment runs through the app — no separate reader needed.",
+          "With a supported app (SumUp, Square, Zettle and others), customers tap their card, phone or watch directly on your phone. The payment runs through the app - no separate reader needed.",
         ],
       },
       {
@@ -327,12 +327,12 @@ export const GUIDES: Guide[] = [
     readMinutes: 4,
     lastUpdated: "2026-06-25",
     intro:
-      "A virtual terminal lets you take a payment without the card being present — handy for phone orders and remote sales.",
+      "A virtual terminal lets you take a payment without the card being present - handy for phone orders and remote sales.",
     sections: [
       {
         heading: "What it is",
         paragraphs: [
-          "It's a secure web form where you key in a customer's card details to take payment — no physical card machine required. You log in, enter the amount and card number, and process the sale.",
+          "It's a secure web form where you key in a customer's card details to take payment - no physical card machine required. You log in, enter the amount and card number, and process the sale.",
         ],
       },
       {
@@ -368,7 +368,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Traditional merchant account",
         paragraphs: [
-          "Worldpay, Barclaycard and bank acquirers give you your own merchant account. Set-up involves underwriting and takes longer, but you can negotiate bespoke rates — better at higher volumes.",
+          "Worldpay, Barclaycard and bank acquirers give you your own merchant account. Set-up involves underwriting and takes longer, but you can negotiate bespoke rates - better at higher volumes.",
         ],
       },
     ],
@@ -387,16 +387,16 @@ export const GUIDES: Guide[] = [
     readMinutes: 4,
     lastUpdated: "2026-06-25",
     intro:
-      "Took the payment — so where's the money? Settlement times vary by provider, and fast payouts can be worth paying for if cash flow is tight.",
+      "Took the payment - so where's the money? Settlement times vary by provider, and fast payouts can be worth paying for if cash flow is tight.",
     sections: [
       {
         heading: "Typical payout times",
         paragraphs: ["Standard settlement is usually 1–2 working days. Some providers are faster:"],
         bullets: [
-          "myPOS — instant settlement to your myPOS account",
-          "Dojo — next-day, with as-fast-as same-day options",
-          "Square — next working day (instant transfer for a fee)",
-          "SumUp / Zettle — typically 1–2 working days",
+          "myPOS - instant settlement to your myPOS account",
+          "Dojo - next-day, with as-fast-as same-day options",
+          "Square - next working day (instant transfer for a fee)",
+          "SumUp / Zettle - typically 1–2 working days",
         ],
       },
       {

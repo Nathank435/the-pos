@@ -26,9 +26,9 @@ export default function CookiePolicyPage() {
         {
           heading: "Cookies we use",
           bullets: [
-            "Essential — required for the site to function.",
-            "Analytics — to measure traffic and improve content (only with your consent).",
-            "Marketing/attribution — to measure referrals and ad performance (only with your consent).",
+            "Essential - required for the site to function.",
+            "Analytics - to measure traffic and improve content (only with your consent).",
+            "Marketing/attribution - to measure referrals and ad performance (only with your consent).",
           ],
         },
         {

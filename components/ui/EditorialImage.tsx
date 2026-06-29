@@ -5,12 +5,12 @@ import { ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Art-directed image frame. Renders a treated photo when `src` resolves —
+ * Art-directed image frame. Renders a treated photo when `src` resolves -
  * slightly desaturated + higher contrast, warm navy gradient at the foot for
  * editorial depth (per the brand guide's documentary aesthetic).
  *
  * When `src` is missing or fails to load, it falls back to an on-brand panel
- * (cream → soft-accent gradient) carrying the shot's context label — so layouts
+ * (cream → soft-accent gradient) carrying the shot's context label - so layouts
  * look intentional, never broken. Drop a real photo at the mapped path and it
  * appears with no code change.
  */

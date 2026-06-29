@@ -7,7 +7,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Lightweight newsletter signup → Klaviyo (same list, tagged lead_source=newsletter).
  *  Flows are filtered to quiz/calculator lead_source, so newsletter signups don't
- *  enter lead nurture — segment on lead_source=newsletter for campaign sends. */
+ *  enter lead nurture - segment on lead_source=newsletter for campaign sends. */
 export async function POST(request: Request) {
   let body: unknown;
   try {

@@ -3,7 +3,7 @@ import Script from "next/script";
 /** Google Tag Manager container ID. Override via NEXT_PUBLIC_GTM_ID if needed. */
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-MDDMXJ9T";
 
-/** The GTM <script> — load as early as practical after hydration. */
+/** The GTM <script> - load as early as practical after hydration. */
 export function GoogleTagManager() {
   return (
     <Script id="gtm-init" strategy="afterInteractive">
@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   );
 }
 
-/** The GTM <noscript> fallback — must sit immediately after the opening <body>. */
+/** The GTM <noscript> fallback - must sit immediately after the opening <body>. */
 export function GoogleTagManagerNoScript() {
   return (
     <noscript>

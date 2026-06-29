@@ -9,7 +9,7 @@ import { GUIDES } from "@/data/guides";
 
 export const metadata: Metadata = {
   ...pageMeta({
-    title: "Thanks — we've got your details",
+    title: "Thanks - we've got your details",
     description: "Thanks for your enquiry. We'll review your setup and point you towards providers that fit.",
     path: "/thanks",
   }),
@@ -25,7 +25,7 @@ export default function ThanksPage() {
           <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-soft text-accent">
             <CheckCircle2 className="h-8 w-8" />
           </span>
-          <h1 className="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">Thanks — we've got your details.</h1>
+          <h1 className="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">Thanks - we've got your details.</h1>
           <p className="mt-3 text-lg text-grey">
             We'll review your setup and point you towards providers that fit your business. In the meantime, here's some
             reading that'll help you decide.

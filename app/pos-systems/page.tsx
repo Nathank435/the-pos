@@ -11,7 +11,7 @@ import { getProvider } from "@/data/providers";
 export const metadata: Metadata = pageMeta({
   title: "Best POS Systems by Business Type (UK)",
   description:
-    "Find the best POS system and card machine for your type of business — cafés, restaurants, retail, salons, tradespeople, market stalls and more.",
+    "Find the best POS system and card machine for your type of business - cafés, restaurants, retail, salons, tradespeople, market stalls and more.",
   path: "/pos-systems",
 });
 
