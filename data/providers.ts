@@ -104,7 +104,7 @@ export const PROVIDERS: Provider[] = [
       { name: "SumUp Air", priceFrom: "£19 + VAT", note: "Entry card reader, pairs with phone app" },
       { name: "SumUp Solo", priceFrom: "£79 + VAT", note: "Standalone reader, no phone needed, SIM connectivity" },
     ],
-    affiliateUrl: "https://www.sumup.com/en-gb/card-readers/",
+    affiliateUrl: "https://tillersystems504.partnerlinks.io/auhbbs5szcov",
     quoteUrl: "/get-pos-quotes?provider=sumup",
     sourceUrls: ["https://www.sumup.com/en-gb/pricing/"],
     lastChecked: "2026-06-25",
