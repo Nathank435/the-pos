@@ -7,7 +7,15 @@ import { gbp } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Callout } from "@/components/ui/Callout";
+import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 import { track } from "@/lib/analytics";
+
+function turnoverBand(n: number): string {
+  if (n < 2000) return "Under £2,000";
+  if (n < 10000) return "£2,000–£10,000";
+  if (n < 30000) return "£10,000–£30,000";
+  return "Over £30,000";
+}
 
 export function FeeCalculator() {
   const [input, setInput] = useState<CalcInput>({
@@ -17,6 +25,7 @@ export function FeeCalculator() {
     contractMonths: 12,
   });
   const [touched, setTouched] = useState(false);
+  const [captured, setCaptured] = useState(false);
 
   const result = useMemo(() => calculate(input), [input]);
 
@@ -24,7 +33,7 @@ export function FeeCalculator() {
     setInput((prev) => ({ ...prev, ...patch }));
     if (!touched) {
       setTouched(true);
-      track("calculator_completed", { turnover: input.monthlyTurnover });
+      track("calculator_start", { turnover: input.monthlyTurnover });
     }
   };
 
@@ -101,43 +110,73 @@ export function FeeCalculator() {
           </div>
         )}
 
-        {result.warnings.map((w, i) => (
-          <Callout key={i} tone="warn" className="mt-3">
-            {w}
-          </Callout>
-        ))}
+        {!captured ? (
+          <div className="mt-4">
+            <LeadMagnetForm
+              source="calculator"
+              title="See the full breakdown"
+              copy="Unlock every provider's monthly + annual cost and your all-in rate — and we'll email you a copy."
+              submitLabel="Show the full comparison"
+              context={{
+                monthlyTurnover: turnoverBand(input.monthlyTurnover),
+                cheapestProvider: result.cheapest?.name,
+                estMonthlyFee: result.cheapest ? gbp(result.cheapest.monthlyTotal, { decimals: true }) : undefined,
+              }}
+              onSuccess={() => {
+                setCaptured(true);
+                track("calculator_lead", {
+                  monthly_turnover: turnoverBand(input.monthlyTurnover),
+                  cheapest_provider: result.cheapest?.name,
+                });
+                track("calculator_completed", {
+                  monthly_turnover: turnoverBand(input.monthlyTurnover),
+                  cheapest_provider: result.cheapest?.name,
+                  effective_rate: result.cheapest?.effectiveRate,
+                });
+              }}
+            />
+          </div>
+        ) : (
+          <>
+            {result.warnings.map((w, i) => (
+              <Callout key={i} tone="warn" className="mt-3">
+                {w}
+              </Callout>
+            ))}
 
-        <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
-          <table className="w-full min-w-[480px] text-sm">
-            <thead>
-              <tr className="border-b border-border bg-cream/60 text-left text-xs uppercase tracking-wide text-grey">
-                <th className="p-3 font-semibold">Provider</th>
-                <th className="p-3 text-right font-semibold">Processing</th>
-                <th className="p-3 text-right font-semibold">Monthly total</th>
-                <th className="p-3 text-right font-semibold">Annual</th>
-                <th className="p-3 text-right font-semibold">All-in rate</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-border">
-              {result.rows.map((r, i) => (
-                <tr key={r.slug} className={i === 0 ? "bg-accent-soft/30" : "hover:bg-cream/40"}>
-                  <td className="p-3 font-medium text-navy">{r.name}</td>
-                  <td className="tabular p-3 text-right text-grey">{gbp(r.monthlyProcessing, { decimals: true })}</td>
-                  <td className="tabular p-3 text-right font-semibold text-navy">{gbp(r.monthlyTotal, { decimals: true })}</td>
-                  <td className="tabular p-3 text-right text-grey">{gbp(r.annualTotal)}</td>
-                  <td className="tabular p-3 text-right text-navy">{r.effectiveRate.toFixed(2)}%</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
+              <table className="w-full min-w-[480px] text-sm">
+                <thead>
+                  <tr className="border-b border-border bg-cream/60 text-left text-xs uppercase tracking-wide text-grey">
+                    <th className="p-3 font-semibold">Provider</th>
+                    <th className="p-3 text-right font-semibold">Processing</th>
+                    <th className="p-3 text-right font-semibold">Monthly total</th>
+                    <th className="p-3 text-right font-semibold">Annual</th>
+                    <th className="p-3 text-right font-semibold">All-in rate</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {result.rows.map((r, i) => (
+                    <tr key={r.slug} className={i === 0 ? "bg-accent-soft/30" : "hover:bg-cream/40"}>
+                      <td className="p-3 font-medium text-navy">{r.name}</td>
+                      <td className="tabular p-3 text-right text-grey">{gbp(r.monthlyProcessing, { decimals: true })}</td>
+                      <td className="tabular p-3 text-right font-semibold text-navy">{gbp(r.monthlyTotal, { decimals: true })}</td>
+                      <td className="tabular p-3 text-right text-grey">{gbp(r.annualTotal)}</td>
+                      <td className="tabular p-3 text-right text-navy">{r.effectiveRate.toFixed(2)}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <ButtonLink href="/compare-pos-systems">Compare these providers</ButtonLink>
-          <ButtonLink href="/get-pos-quotes" variant="outline">
-            Get tailored quotes
-          </ButtonLink>
-        </div>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <ButtonLink href="/compare-pos-systems">Compare these providers</ButtonLink>
+              <ButtonLink href="/get-pos-quotes" variant="outline">
+                Get tailored quotes
+              </ButtonLink>
+            </div>
+          </>
+        )}
 
         <p className="mt-4 rounded-xl border border-border bg-white p-3 text-xs leading-relaxed text-grey">
           <strong className="text-navy">This calculator is an estimate.</strong> Actual rates can vary by card type,

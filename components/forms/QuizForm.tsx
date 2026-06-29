@@ -9,6 +9,7 @@ import { RatingStars } from "@/components/comparison/ProviderRating";
 import { ProviderCTA } from "@/components/comparison/ProviderCTA";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
@@ -107,6 +108,7 @@ export function QuizForm() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Partial<QuizAnswers>>({});
   const [done, setDone] = useState(false);
+  const [captured, setCaptured] = useState(false);
   const [started, setStarted] = useState(false);
 
   const choose = (key: QKey, value: string) => {
@@ -120,7 +122,7 @@ export function QuizForm() {
       setStep(step + 1);
     } else {
       setDone(true);
-      track("quiz_complete", { businessType: nextAnswers.businessType });
+      track("quiz_question_answered", { step: step + 1, question: QUESTIONS[step].key, answer: value });
     }
   };
 
@@ -128,9 +130,46 @@ export function QuizForm() {
     setAnswers({});
     setStep(0);
     setDone(false);
+    setCaptured(false);
   };
 
-  if (done) {
+  // Quiz finished — gate the full results behind the lead-magnet capture.
+  if (done && !captured) {
+    const preview = recommend(answers as QuizAnswers);
+    return (
+      <div className="rounded-lg border border-border bg-white p-5 sm:p-7">
+        <h2 className="font-heading text-xl font-bold text-navy">Your matches are ready 🎉</h2>
+        <p className="mt-2 text-sm leading-relaxed text-grey">
+          Based on your answers, <span className="font-semibold text-navy">{preview.bestOverall.provider.name}</span> looks
+          like a strong fit. Pop in your details to unlock your full results — best overall, cheapest, best no-contract
+          and software picks — plus tailored quotes.
+        </p>
+        <div className="mt-5">
+          <LeadMagnetForm
+            source="quiz"
+            title="Unlock your full POS matches"
+            copy="We'll show your results instantly and email you a copy."
+            submitLabel="Show my matches"
+            context={{
+              businessType: answers.businessType,
+              monthlyTurnover: answers.monthlyTurnover,
+              priority: answers.priority,
+              quizTopMatch: preview.bestOverall.provider.name,
+            }}
+            onSuccess={() => {
+              setCaptured(true);
+              track("quiz_complete", { business_type: answers.businessType, top_match: preview.bestOverall.provider.name });
+            }}
+          />
+        </div>
+        <button type="button" onClick={reset} className="mt-4 text-xs font-medium text-grey underline">
+          Start over
+        </button>
+      </div>
+    );
+  }
+
+  if (done && captured) {
     const result = recommend(answers as QuizAnswers);
     const picks = [
       { label: "Best overall match", rec: result.bestOverall, tone: "accent" as const },
