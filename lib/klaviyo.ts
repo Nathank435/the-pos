@@ -7,8 +7,10 @@
  *   KLAVIYO_LEADS_LIST_ID     (master Leads list)
  */
 
-const KEY = process.env.KLAVIYO_PRIVATE_API_KEY;
-const LIST_ID = process.env.KLAVIYO_LEADS_LIST_ID;
+// .trim() guards against a trailing newline/space when the value is pasted into
+// a hosting dashboard — that silently corrupts the Authorization header.
+const KEY = process.env.KLAVIYO_PRIVATE_API_KEY?.trim();
+const LIST_ID = process.env.KLAVIYO_LEADS_LIST_ID?.trim();
 const REVISION = "2024-10-15";
 
 export type KlaviyoProfile = {
