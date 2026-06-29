@@ -453,6 +453,250 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Get matched", href: "/get-pos-quotes" },
     ],
   },
+  {
+    slug: "best-card-machine-small-business-uk",
+    title: "Best Card Machine for Small Business UK (2026)",
+    excerpt:
+      "The best UK card machines for small businesses in 2026 — by need, not by who pays us most. Fees, hardware, contracts and payouts compared in plain English.",
+    category: "Comparisons",
+    author: "The POS editorial team",
+    date: "2026-06-29",
+    readMinutes: 10,
+    featuredImage: "/images/blog/best-card-machine-small-business-uk.jpg",
+    featuredAlt: "Customer tapping a card on a card machine at a shop counter",
+    intro:
+      "There's no single best card machine for every UK small business — the right one depends on what you sell, how much you take and whether you want a contract. This guide picks the strongest option for each common scenario, with the fees and catches spelled out, so you can match a reader to your business in a couple of minutes.",
+    sections: [
+      {
+        heading: "How we picked",
+        paragraphs: [
+          "We compare on the things that actually move the cost and hassle for a small business: transaction rate, monthly fee, hardware price, contract length, payout speed and the software you get. Every figure is publicly advertised UK pricing and dated on each provider's page — see our [methodology](/methodology). Some links earn us a commission, but that never changes the verdicts.",
+        ],
+      },
+      {
+        heading: "The short answer",
+        paragraphs: ["If you want the quick version:"],
+        bullets: [
+          "**Best all-rounder:** [Square](/reviews/square) — free POS app, no monthly fee, room to grow.",
+          "**Cheapest, simplest:** [SumUp](/reviews/sumup) — from a £19 reader, no contract, from 0.99% on Payments Plus.",
+          "**Busy hospitality / fast payouts:** [Dojo](/reviews/dojo) — reliable machines, as-fast-as same-day settlement.",
+          "**Instant access to funds:** [myPOS](/reviews/mypos) — money lands in a built-in account in real time.",
+          "**PayPal sellers:** [PayPal Zettle](/reviews/zettle) — takings flow into your PayPal balance.",
+        ],
+      },
+      {
+        heading: "Best all-rounder: Square",
+        paragraphs: [
+          "Square is the card machine we recommend most for small UK businesses, because it's the best free POS *and* a card reader in one. There's no monthly fee on the standard plan, a flat 1.75% in-person rate, and the app handles items, inventory, an online store and basic reporting out of the box.",
+          "Readers start at £19 + VAT, with the all-in-one Square Terminal (£149 + VAT) for table-side or counter use. It's especially good for [cafés](/pos-systems/cafes) and [small retail](/pos-systems/retail). Full detail in our [Square review](/reviews/square).",
+        ],
+      },
+      {
+        heading: "Cheapest & simplest: SumUp",
+        paragraphs: [
+          "If you just want to take a card with the least cost and commitment, [SumUp](/reviews/sumup) is the classic pick — a £19 reader, no monthly fee, no contract, plus invoices and Tap to Pay. It's the go-to for [market stalls](/pos-systems/market-stalls), [tradespeople](/pos-systems/tradesmen) and mobile sellers. See also our roundup of the [best card readers for market traders](/blog/best-card-readers-market-traders).",
+        ],
+      },
+      {
+        heading: "Busy hospitality & fast payouts: Dojo",
+        paragraphs: [
+          "For a busy [restaurant](/pos-systems/restaurants), pub or higher-volume shop, [Dojo](/reviews/dojo) is built for reliability and quick cash flow — next-day, even as-fast-as same-day payouts. Pricing is quote-based, so read the contract terms, but at volume a tailored rate can beat a flat one.",
+        ],
+      },
+      {
+        heading: "What to look for (and the catches)",
+        paragraphs: ["Whatever you pick, sanity-check these before you commit:"],
+        bullets: [
+          "Your **all-in cost at your real volume** — run it through the [fee calculator](/card-machine-fee-calculator).",
+          "**Contract and exit fees** — pay-as-you-go (SumUp/Square/Zettle) means no lock-in.",
+          "**Payout speed** — standard is 1–2 working days; instant usually costs extra.",
+          "**Hidden fees** — chargebacks, PCI, authorisation; see [hidden card machine fees](/guides/hidden-card-machine-fees).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the best card machine for a small business in the UK?",
+        a: "For most UK small businesses, Square is the best all-rounder — a free POS app with no monthly fee at 1.75% per transaction. SumUp is best if you want the cheapest, simplest pay-as-you-go reader, and Dojo suits busy hospitality wanting fast payouts.",
+      },
+      {
+        q: "What's the cheapest card machine for a small business?",
+        a: "SumUp and Square readers start around £19 + VAT with no monthly fee, so they're cheapest to start. On rate, SumUp's Payments Plus plan starts from 0.99% for domestic cards. The cheapest overall depends on your volume — use a fee calculator to compare.",
+      },
+      {
+        q: "Do small businesses need a full POS or just a card reader?",
+        a: "Many sole traders and market sellers only need a simple reader. Cafés, shops and restaurants usually benefit from a fuller POS (stock, tables, reporting). Square and Zettle start as readers but include free POS software you can grow into.",
+      },
+    ],
+    relatedPosts: ["sumup-vs-square-2026", "how-much-does-a-card-machine-cost-uk"],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched to a provider", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "how-much-does-a-card-machine-cost-uk",
+    title: "How Much Does a Card Machine Cost in the UK? (2026)",
+    excerpt:
+      "A full breakdown of UK card machine costs in 2026 — hardware, transaction fees, monthly charges and the hidden extras — with worked examples by turnover.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-06-28",
+    readMinutes: 9,
+    featuredImage: "/images/blog/how-much-does-a-card-machine-cost-uk.jpg",
+    featuredAlt: "Shop owner at the counter with a POS system",
+    intro:
+      "A card machine's price tag is only part of the story. The real cost is three things stacked together — the hardware, the per-transaction fee and any monthly charge — plus a few extras providers don't put on the homepage. Here's what a card machine actually costs a UK business in 2026, with examples you can map onto your own numbers.",
+    sections: [
+      {
+        heading: "The three costs that make up a card machine",
+        paragraphs: ["Every card machine bill comes down to:"],
+        bullets: [
+          "**Hardware** — buy a reader outright (£19–£599) or hire/finance it monthly.",
+          "**Transaction fee** — a % (and sometimes a few pence) of every card sale, typically 1.4%–1.75% in person.",
+          "**Monthly fee** — £0 on pay-as-you-go providers, or a subscription on quote-based ones.",
+        ],
+      },
+      {
+        heading: "Typical UK prices in 2026",
+        paragraphs: ["As a rough guide (always check current terms):"],
+        bullets: [
+          "[SumUp](/reviews/sumup): reader from £19 + VAT, 1.69% standard (from 0.99% on Payments Plus), no monthly fee.",
+          "[Square](/reviews/square): reader from £19 + VAT, 1.75% in person, no monthly fee.",
+          "[PayPal Zettle](/reviews/zettle): reader ~£29 + VAT, 1.75%, no monthly fee.",
+          "[myPOS](/reviews/mypos): device from ~£19, card-present from 1.10% + 7p, instant settlement.",
+          "[Dojo](/reviews/dojo): quote-based — typically a monthly element plus a tailored rate.",
+        ],
+      },
+      {
+        heading: "Buy outright or rent?",
+        paragraphs: [
+          "Buying a reader once (the pay-as-you-go model) is usually cheaper over time and keeps you contract-free. Renting/financing a terminal spreads the cost but often ties you into a term with exit fees — common with quote-based acquirers. If you're not sure you'll stick with a provider, favour a [no-contract option](/guides/no-contract-card-machines).",
+        ],
+      },
+      {
+        heading: "Worked examples by turnover",
+        paragraphs: [
+          "Say you take **£5,000/month** at 1.75% with no monthly fee — that's about **£87.50/month** in processing, plus a one-off ~£19 reader. On a quote-based provider at 1.4% + a £15 monthly fee, the same £5,000 is £70 + £15 = **£85/month** — so close it barely matters, and the no-contract option is the safer bet.",
+          "At **£30,000/month**, that 0.35% rate gap is worth ~£105/month — now the lower quote-based rate can clearly win, even with a monthly fee. The crossover depends entirely on your volume, which is exactly what our [fee calculator](/card-machine-fee-calculator) works out for you.",
+        ],
+      },
+      {
+        heading: "The hidden costs to check",
+        paragraphs: ["Beyond the headline price, watch for:"],
+        bullets: [
+          "Chargeback fees (often £10–£20 per dispute)",
+          "PCI compliance / non-compliance charges (more common with traditional acquirers)",
+          "Per-authorisation fees on some merchant accounts",
+          "Fees for instant payouts, and minimum monthly service charges",
+          "Higher rates on premium, commercial and international cards",
+        ],
+      },
+      {
+        heading: "How to keep the cost down",
+        paragraphs: [
+          "Know your true effective rate (total paid ÷ card turnover), match the plan to your volume, buy hardware outright where it's cheaper, and re-compare every year. Our guide on [how to cut your card processing fees](/blog/how-to-cut-card-processing-fees) goes deeper, and [card machine fees explained](/guides/card-machine-fees-explained) decodes every line item.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a card machine cost per month in the UK?",
+        a: "On a pay-as-you-go provider (SumUp, Square, Zettle) there's no monthly fee — you only pay a percentage per transaction, plus a one-off reader from about £19 + VAT. Quote-based providers (e.g. Dojo) often charge a monthly fee plus terminal hire, typically from around £15/month.",
+      },
+      {
+        q: "Is it cheaper to buy or rent a card machine?",
+        a: "Buying a reader outright is usually cheaper long-term and keeps you contract-free. Renting spreads the cost but commonly ties you into a contract with exit fees, so weigh the total cost of ownership.",
+      },
+      {
+        q: "What's the average card machine transaction fee in the UK?",
+        a: "In-person rates are usually around 1.4%–1.75%. Pay-as-you-go providers sit near 1.69%–1.75%; quote-based acquirers can be lower at higher volumes but add monthly and hardware costs.",
+      },
+    ],
+    relatedPosts: ["how-to-cut-card-processing-fees", "best-card-machine-small-business-uk"],
+    relatedLinks: [
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
+  {
+    slug: "square-vs-zettle",
+    title: "Square vs Zettle: Which Is Better for UK Small Businesses? (2026)",
+    excerpt:
+      "Square vs PayPal Zettle compared for UK small businesses — fees, hardware, POS software and payouts, with a clear verdict on who each one suits.",
+    category: "Comparisons",
+    author: "The POS editorial team",
+    date: "2026-06-27",
+    readMinutes: 8,
+    featuredImage: "/images/blog/square-vs-zettle.jpg",
+    featuredAlt: "Customer paying by card at a small business counter",
+    intro:
+      "Square and PayPal Zettle are two of the most popular no-monthly-fee card readers in the UK — both let small businesses take card payments cheaply with no contract. They look similar, but they're built for slightly different owners. Here's how they compare on fees, hardware, software and payouts, and which one to pick.",
+    sections: [
+      {
+        heading: "Quick verdict",
+        paragraphs: [
+          "Choose [Square](/reviews/square) if you want the stronger free POS ecosystem — better inventory, a free online store and room to grow. Choose [PayPal Zettle](/reviews/zettle) if you already use PayPal and want your takings to flow neatly into your PayPal balance. For most growing businesses, Square edges it; for committed PayPal sellers, Zettle is the natural fit.",
+        ],
+      },
+      {
+        heading: "Fees",
+        paragraphs: [
+          "Both are pay-as-you-go with no monthly fee on their standard plans. Square is a flat **1.75%** in person; Zettle is **1.75%** on card and contactless too — so on rate alone they're level. The difference is what you get around it. Run your real numbers through the [fee calculator](/card-machine-fee-calculator) to see your all-in cost.",
+        ],
+      },
+      {
+        heading: "Hardware",
+        paragraphs: [
+          "Square's reader starts at £19 + VAT, with a Terminal (£149 + VAT) and full Register if you grow. Zettle's Reader 2 is around £29 + VAT, with a standalone Zettle Terminal option. Square's range scales further, which matters if you expect to add a proper till station.",
+        ],
+      },
+      {
+        heading: "POS software",
+        paragraphs: [
+          "This is where Square pulls ahead. Its free POS app includes solid inventory, a free online store, invoicing and loyalty, plus paid Restaurant and Retail tiers. Zettle's free app covers the basics well — items, basic inventory and reporting — but its wider ecosystem is less ambitious. If software matters, Square wins; if you only need simple payments, both are fine.",
+        ],
+      },
+      {
+        heading: "Payouts & ecosystem",
+        paragraphs: [
+          "Square pays out next working day (instant transfer for a fee). Zettle settles in 1–2 working days, with the bonus that funds can land in your PayPal balance — handy if you already run money through PayPal. If fast access matters more, see our roundup of [same-day payout providers](/blog/same-day-payouts-providers).",
+        ],
+      },
+      {
+        heading: "Who each one suits",
+        paragraphs: [""],
+        bullets: [
+          "**Café / small retail / service business** → Square (see [best POS for cafés](/pos-systems/cafes) and [retail](/pos-systems/retail)).",
+          "**Existing PayPal seller** → Zettle.",
+          "**Wants room to grow into a full till** → Square.",
+          "**Just wants simple, cheap card payments** → either; pick by hardware preference.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Square or Zettle cheaper?",
+        a: "They're level on rate — both 1.75% per in-person transaction with no monthly fee. Square's reader starts slightly cheaper (£19 vs ~£29 + VAT). The better value depends on whether you'll use Square's stronger free software.",
+      },
+      {
+        q: "Is Square better than Zettle?",
+        a: "For most growing businesses, yes — Square's free POS, online store and inventory are more capable. Zettle is the better choice if you're committed to PayPal and want takings in your PayPal balance.",
+      },
+      {
+        q: "Can I use Zettle without a PayPal account?",
+        a: "You sign up through PayPal and it integrates closely with your PayPal account — that integration is the main reason to choose Zettle over Square.",
+      },
+    ],
+    relatedPosts: ["sumup-vs-square-2026", "best-card-machine-small-business-uk"],
+    relatedLinks: [
+      { label: "Square review", href: "/reviews/square" },
+      { label: "Zettle review", href: "/reviews/zettle" },
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
