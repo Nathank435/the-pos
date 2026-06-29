@@ -43,6 +43,9 @@ export type AnalyticsEvent =
   | "comparison_sort_used"
   | "magnet_view" // lead-magnet capture form shown
   | "magnet_submit" // lead-magnet capture form completed (quiz/calculator)
+  | "exit_intent_view" // exit-intent modal shown
+  | "exit_intent_click" // exit-intent modal CTA clicked (→ fee calculator)
+  | "exit_intent_dismiss" // exit-intent modal dismissed
   | "content_view" // guide / blog / review view
   | "quote_page_view"
   | "scroll_depth"
