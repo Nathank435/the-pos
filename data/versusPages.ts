@@ -101,6 +101,93 @@ export const VERSUS_PAGES: VersusPage[] = [
       },
     ],
   },
+  {
+    slug: "square-vs-zettle",
+    metaDescription:
+      "Square vs Zettle (2026): which card reader and POS wins for UK small businesses? Fees, payouts and who each suits, compared. Plain-English verdict.",
+    a: "square",
+    b: "zettle",
+    quickVerdict:
+      "Both are no-monthly-fee, no-contract readers at 1.75% in person. Square wins on POS software and ecosystem; Zettle makes most sense if you already live in PayPal and want takings in your PayPal balance.",
+    chooseA:
+      "Choose Square if you want the stronger free POS app - inventory, online store, invoices and loyalty - with room to grow into Square for Retail or Restaurants. Best for cafés, shops and service businesses.",
+    chooseB:
+      "Choose PayPal Zettle if you already use PayPal and want your card takings to flow straight into your PayPal balance, with a tidy reader and a simple free app. Great for pop-ups and PayPal-first sellers.",
+    bestForBusiness: [
+      { type: "Café / small retail", winner: "Square", why: "Better free POS, inventory and reporting." },
+      { type: "PayPal seller", winner: "Zettle", why: "Funds flow into your PayPal balance." },
+      { type: "Online + in-person", winner: "Square", why: "Free online store keeps stock in sync." },
+      { type: "Pop-ups / occasional", winner: "Zettle", why: "Simple, cheap reader with no commitment." },
+    ],
+    faqs: [
+      {
+        q: "Are Square and Zettle the same price?",
+        a: "Both charge 1.75% per in-person card transaction with no monthly fee on their standard plans. The differences come down to software, payouts and ecosystem rather than the headline rate.",
+      },
+      {
+        q: "Which is better, Square or Zettle?",
+        a: "For most UK small businesses Square is the stronger all-rounder thanks to its POS software and ecosystem. Zettle is the better pick if you're already invested in PayPal.",
+      },
+    ],
+  },
+  {
+    slug: "dojo-vs-square",
+    metaDescription:
+      "Dojo vs Square (2026): fast-payout card machines vs the best free POS app for UK businesses. Fees, contracts and who each suits, compared. Verdict inside.",
+    a: "dojo",
+    b: "square",
+    quickVerdict:
+      "Different tools. Dojo is built for busy hospitality and higher-volume retail that want fast payouts and hands-on support (quote-based, with a contract). Square is the free, no-contract all-rounder for cafés, shops and service businesses.",
+    chooseA:
+      "Choose Dojo if you're a busy café, bar, restaurant or higher-volume shop that wants reliable card machines, next or same-day payouts and account management - and you're comfortable with a contract and quote-based pricing.",
+    chooseB:
+      "Choose Square if you want no monthly fee, no contract and genuinely good free POS software with inventory, online store and invoices. Ideal for independents starting out or keeping costs predictable.",
+    bestForBusiness: [
+      { type: "Busy hospitality", winner: "Dojo", why: "Fast payouts, reliability and hands-on support." },
+      { type: "Café / small retail", winner: "Square", why: "Free POS, no contract, easy to run." },
+      { type: "Higher-volume retail", winner: "Dojo", why: "Tailored rates can beat a flat 1.75%." },
+      { type: "Online + in-person", winner: "Square", why: "Free online store and stock sync." },
+    ],
+    faqs: [
+      {
+        q: "Is Dojo cheaper than Square?",
+        a: "It depends on volume. Square's flat 1.75% is simple and cheap at lower volumes; Dojo's quote-based rates can undercut it at higher turnover, but come with a contract. Run your numbers in our fee calculator.",
+      },
+      {
+        q: "Does Square offer fast payouts like Dojo?",
+        a: "Square pays out next working day as standard, with instant transfer for a fee. Dojo is known for next-day and even same-day payouts, which is why busy hospitality businesses favour it.",
+      },
+    ],
+  },
+  {
+    slug: "sumup-vs-mypos",
+    metaDescription:
+      "SumUp vs myPOS (2026): two no-monthly-fee card readers for UK mobile sellers, compared on fees, payouts and features. Plain-English verdict inside.",
+    a: "sumup",
+    b: "mypos",
+    quickVerdict:
+      "Both are pay-as-you-go readers with no monthly fee. SumUp is the simplest, cheapest start; myPOS adds instant access to funds via a built-in business account, handy for cash flow and international payments.",
+    chooseA:
+      "Choose SumUp if you want the cheapest, simplest reader, the widest hardware range and a low entry rate (from 0.99% on Payments Plus). Ideal for market stalls, tradespeople and quieter sellers.",
+    chooseB:
+      "Choose myPOS if instant settlement matters - your takings land in a myPOS business account immediately - or you take international and European payments. Useful for mobile traders who need funds straight away.",
+    bestForBusiness: [
+      { type: "Market stall / mobile", winner: "SumUp", why: "Cheap, simple, widest reader range." },
+      { type: "Instant access to funds", winner: "myPOS", why: "Money settles immediately to your account." },
+      { type: "Lowest entry rate", winner: "SumUp", why: "Payments Plus from 0.99%." },
+      { type: "International payments", winner: "myPOS", why: "Strong for European and multi-currency." },
+    ],
+    faqs: [
+      {
+        q: "Is myPOS or SumUp better for getting paid quickly?",
+        a: "myPOS settles funds instantly to its built-in business account, whereas SumUp's standard payout is 1-2 working days. If same-moment access matters, myPOS leads.",
+      },
+      {
+        q: "Which is cheaper, SumUp or myPOS?",
+        a: "Both have no monthly fee on entry plans. SumUp starts from 0.99% (Payments Plus) or 1.69% standard; myPOS card-present starts around 1.10% + 7p on lower tiers. The cheapest depends on volume - check current terms.",
+      },
+    ],
+  },
 ];
 
 export function getVersus(slug: string): VersusPage | undefined {

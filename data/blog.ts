@@ -627,6 +627,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "square-vs-zettle",
+    canonicalUrl: "https://thepos.co.uk/compare/square-vs-zettle",
     title: "Square vs Zettle: Which Is Better for UK Small Businesses? (2026)",
     excerpt:
       "Square vs PayPal Zettle compared for UK small businesses - fees, hardware, POS software and payouts, with a clear verdict on who each one suits.",
