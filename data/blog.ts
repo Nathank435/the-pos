@@ -141,7 +141,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Seven practical ways UK businesses can shave money off card fees - from renegotiating to picking the right plan for your volume.",
     category: "Fees & saving",
-    author: "Nathan Keeble",
+    author: "The POS editorial team",
     date: "2026-06-16",
     readMinutes: 6,
     featuredImage: "/images/blog/how-to-cut-card-processing-fees.jpg",
@@ -310,7 +310,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Lots of small coffees means lots of tiny transactions - and that's exactly where the wrong setup quietly costs you. Here's how to fix it.",
     category: "By business",
-    author: "Nathan Keeble",
+    author: "The POS editorial team",
     date: "2026-05-30",
     readMinutes: 5,
     featuredImage: "/images/blog/cafe-overpaying-card-fees.jpg",
@@ -419,7 +419,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Thinking of moving provider? Work through this checklist first so you don't get caught by exit fees, downtime or a worse rate.",
     category: "How-to",
-    author: "Nathan Keeble",
+    author: "The POS editorial team",
     date: "2026-05-14",
     readMinutes: 6,
     featuredImage: "/images/blog/switching-card-machine-checklist.jpg",
@@ -545,7 +545,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "A full breakdown of UK card machine costs in 2026 - hardware, transaction fees, monthly charges and the hidden extras - with worked examples by turnover.",
     category: "Fees & saving",
-    author: "Nathan Keeble",
+    author: "The POS editorial team",
     date: "2026-06-28",
     readMinutes: 9,
     featuredImage: "/images/blog/how-much-does-a-card-machine-cost-uk.jpg",
