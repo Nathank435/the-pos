@@ -61,9 +61,9 @@ const TRUST = [
 ];
 
 const PEOPLE = [
-  { src: "/images/people/cafe-owner.jpg", alt: "Independent café and deli owner in her shop doorway", caption: "Café & deli owners" },
-  { src: "/images/people/shop-worker.jpg", alt: "Shop assistant folding clothes in an independent store", caption: "Independent retailers" },
-  { src: "/images/people/owner.jpg", alt: "Small business owner standing confidently", caption: "Small business owners" },
+  { src: "/images/people/cafe-owner.jpg", alt: "Independent café and deli owner in her shop doorway", caption: "Café & deli owners", href: "/pos-systems/cafes" },
+  { src: "/images/people/shop-worker.jpg", alt: "Shop assistant folding clothes in an independent store", caption: "Independent retailers", href: "/pos-systems/retail" },
+  { src: "/images/people/owner.jpg", alt: "Small business owner standing confidently", caption: "Small business owners", href: "/compare-pos-systems" },
 ];
 
 const HOME_FAQS = [
@@ -248,16 +248,28 @@ export default function HomePage() {
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {PEOPLE.map((person) => (
-              <figure key={person.src} className="overflow-hidden rounded-xl border border-border bg-white">
+              <Link
+                key={person.src}
+                href={person.href}
+                className="group block overflow-hidden rounded-xl border border-border bg-white transition-colors hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
                 <div className="aspect-[4/3] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={person.src} alt={person.alt} loading="lazy" className="h-full w-full object-cover" />
+                  <img
+                    src={person.src}
+                    alt={person.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <figcaption className="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-navy">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  {person.caption}
+                <figcaption className="flex items-center justify-between gap-2 px-4 py-3 text-sm font-semibold text-navy">
+                  <span className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                    {person.caption}
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-0.5" />
                 </figcaption>
-              </figure>
+              </Link>
             ))}
           </div>
         </Container>
