@@ -6,7 +6,6 @@ import { ProviderComparisonTable } from "@/components/comparison/ProviderCompari
 import { ProviderCard } from "@/components/comparison/ProviderCard";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
-import { DisclosureBanner } from "@/components/layout/DisclosureBanner";
 import { AuthorBox } from "@/components/content/AuthorBox";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { StickyMobileCTA } from "@/components/forms/StickyMobileCTA";
@@ -61,7 +60,6 @@ export default async function BusinessTypePage({ params }: { params: Promise<{ s
             priority
           />
 
-          <DisclosureBanner />
 
           <section>
             <h2 className="font-heading text-2xl font-bold text-navy">Our top picks for {biz.name.toLowerCase()}</h2>

@@ -11,7 +11,6 @@ import { ProsCons } from "@/components/content/ProsCons";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { AuthorBox } from "@/components/content/AuthorBox";
-import { DisclosureBanner } from "@/components/layout/DisclosureBanner";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { StickyMobileCTA } from "@/components/forms/StickyMobileCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -92,7 +91,6 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         <Container className="grid gap-10 lg:grid-cols-[1fr_320px]">
           {/* Main column */}
           <article className="space-y-10">
-            <DisclosureBanner />
 
             <section>
               <h2 className="font-heading text-2xl font-bold text-navy">Quick verdict</h2>

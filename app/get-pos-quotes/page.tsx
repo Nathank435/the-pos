@@ -3,7 +3,6 @@ import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { QuizForm } from "@/components/forms/QuizForm";
-import { DisclosureBanner } from "@/components/layout/DisclosureBanner";
 import { TrackView } from "@/components/analytics/TrackView";
 import { pageMeta } from "@/lib/seo";
 import { getProvider } from "@/data/providers";
@@ -66,7 +65,6 @@ export default async function GetQuotesPage({
               <LeadForm defaultProvider={prefilled} />
             </div>
             <div className="mt-5">
-              <DisclosureBanner />
             </div>
           </div>
         </Container>

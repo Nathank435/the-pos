@@ -3,7 +3,6 @@ import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
 import { VersusLinks } from "@/components/comparison/VersusLinks";
-import { DisclosureBanner } from "@/components/layout/DisclosureBanner";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
@@ -46,7 +45,6 @@ export default function ComparePOSPage() {
 
       <Section>
         <Container>
-          <DisclosureBanner className="mb-6" />
           <ProviderComparisonTable providers={PROVIDERS} sourcePage="compare-pos-systems" />
         </Container>
       </Section>
