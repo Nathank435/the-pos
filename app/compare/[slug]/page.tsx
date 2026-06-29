@@ -28,7 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!a || !b) return {};
   return pageMeta({
     title: `${a.name} vs ${b.name} (2026): Which Is Better for UK Businesses?`,
-    description: `${a.name} vs ${b.name} compared on fees, hardware, contracts and features. ${v.quickVerdict}`,
+    description:
+      v.metaDescription ??
+      `${a.name} vs ${b.name} (2026): fees, hardware, contracts and who each suits, compared in plain English.`,
     path: `/compare/${slug}`,
     type: "article",
   });

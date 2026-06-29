@@ -47,8 +47,9 @@ export function FeeCalculator() {
         </h2>
 
         <div className="mt-4 space-y-4">
-          <Field label="Monthly card turnover" hint="Total you take by card each month">
+          <Field htmlFor="calc-monthly-turnover" label="Monthly card turnover" hint="Total you take by card each month">
             <NumberInput
+              id="calc-monthly-turnover"
               prefix="£"
               value={input.monthlyTurnover}
               min={0}
@@ -57,8 +58,9 @@ export function FeeCalculator() {
             />
           </Field>
 
-          <Field label="Average transaction value" hint="Your typical sale size">
+          <Field htmlFor="calc-avg-transaction" label="Average transaction value" hint="Your typical sale size">
             <NumberInput
+              id="calc-avg-transaction"
               prefix="£"
               value={input.avgTransaction}
               min={1}
@@ -67,8 +69,9 @@ export function FeeCalculator() {
             />
           </Field>
 
-          <Field label="Extra monthly software fee" hint="If you pay for POS software on top">
+          <Field htmlFor="calc-software-fee" label="Extra monthly software fee" hint="If you pay for POS software on top">
             <NumberInput
+              id="calc-software-fee"
               prefix="£"
               value={input.monthlySoftwareFee}
               min={0}
@@ -77,8 +80,9 @@ export function FeeCalculator() {
             />
           </Field>
 
-          <Field label="Contract length (months)" hint="Used to spread hardware cost">
+          <Field htmlFor="calc-contract-months" label="Contract length (months)" hint="Used to spread hardware cost">
             <NumberInput
+              id="calc-contract-months"
               value={input.contractMonths}
               min={1}
               step={1}
@@ -188,13 +192,25 @@ export function FeeCalculator() {
   );
 }
 
-function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
+function Field({
+  label,
+  hint,
+  htmlFor,
+  children,
+}: {
+  label: string;
+  hint?: string;
+  htmlFor?: string;
+  children: React.ReactNode;
+}) {
   return (
-    <label className="block">
-      <span className="text-sm font-semibold text-navy">{label}</span>
+    <div className="block">
+      <label htmlFor={htmlFor} className="text-sm font-semibold text-navy">
+        {label}
+      </label>
       {hint && <span className="block text-xs text-grey">{hint}</span>}
       <div className="mt-1.5">{children}</div>
-    </label>
+    </div>
   );
 }
 
@@ -204,17 +220,21 @@ function NumberInput({
   prefix,
   min,
   step,
+  id,
 }: {
   value: number;
   onChange: (v: number) => void;
   prefix?: string;
   min?: number;
   step?: number;
+  id?: string;
 }) {
   return (
     <div className="flex items-center rounded-xl border border-border bg-cream focus-within:border-accent">
       {prefix && <span className="pl-3 text-sm font-medium text-grey">{prefix}</span>}
       <input
+        id={id}
+        name={id}
         type="number"
         inputMode="decimal"
         value={Number.isFinite(value) ? value : 0}

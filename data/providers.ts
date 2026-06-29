@@ -28,6 +28,8 @@ export type Provider = {
   logo: string;
   type: ProviderType;
   summary: string;
+  /** Bespoke ≤155-char SEO meta description for the review page. */
+  metaDescription?: string;
   bestFor: string[];
   notBestFor: string[];
 
@@ -66,6 +68,8 @@ export type Provider = {
 export const PROVIDERS: Provider[] = [
   {
     slug: "sumup",
+    metaDescription:
+      "SumUp review (2026): the cheapest, simplest card reader for UK market traders and mobile sellers. No contract, no monthly fee. Fees, pros and verdict.",
     name: "SumUp",
     logo: "SumUp",
     type: "both",
@@ -119,6 +123,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "square",
+    metaDescription:
+      "Square review (2026): the strongest free POS app for UK cafés, shops and service businesses. No monthly fee, 1.75% in person. Fees, pros and verdict.",
     name: "Square",
     logo: "Square",
     type: "both",
@@ -173,6 +179,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "zettle",
+    metaDescription:
+      "PayPal Zettle review (2026): simple, no-monthly-fee card payments for UK retailers and mobile sellers in the PayPal world. Fees, pros, cons and verdict.",
     name: "PayPal Zettle",
     logo: "Zettle",
     type: "both",
@@ -226,6 +234,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "dojo",
+    metaDescription:
+      "Dojo card machine review (2026): fast (even same-day) payouts and hospitality-grade support, but quote-based contract pricing. Fees, pros and verdict.",
     name: "Dojo",
     type: "both",
     logo: "Dojo",
@@ -279,6 +289,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "mypos",
+    metaDescription:
+      "myPOS review (2026): instant access to your funds via a built-in business account, ideal for mobile and international traders. Fees, pros and verdict.",
     name: "myPOS",
     logo: "myPOS",
     type: "both",
@@ -332,6 +344,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "worldpay",
+    metaDescription:
+      "Worldpay review (2026): a heavyweight UK acquirer for established, higher-volume businesses. Bespoke but quote-based rates. Fees, pros, cons, verdict.",
     name: "Worldpay",
     logo: "Worldpay",
     type: "both",
@@ -383,6 +397,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "barclaycard",
+    metaDescription:
+      "Barclaycard Payments review (2026): bank-backed card machines for established UK businesses. Reassuring brand, quote-based rates. Pros, cons and verdict.",
     name: "Barclaycard Payments",
     logo: "Barclaycard",
     type: "both",
@@ -434,6 +450,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "tyl-by-natwest",
+    metaDescription:
+      "Tyl by NatWest review (2026): clearer-pricing card payments for UK small and medium retail and hospitality businesses. Fees, pros, cons and verdict.",
     name: "Tyl by NatWest",
     logo: "Tyl",
     type: "both",
@@ -485,6 +503,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "lightspeed",
+    metaDescription:
+      "Lightspeed review (2026): a powerful retail and hospitality POS for multi-site businesses with deep inventory needs. Pricier. Fees, pros and verdict.",
     name: "Lightspeed",
     logo: "Lightspeed",
     type: "full-pos",
@@ -536,6 +556,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "epos-now",
+    metaDescription:
+      "Epos Now review (2026): full till systems and hardware bundles for UK retail and hospitality. Capable, but check the contracts. Fees, pros, verdict.",
     name: "Epos Now",
     logo: "Epos Now",
     type: "full-pos",
@@ -587,6 +609,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "shopify-pos",
+    metaDescription:
+      "Shopify POS review (2026): the obvious in-person till for Shopify merchants who want shop and online in sync. Fees, hardware, pros, cons, verdict.",
     name: "Shopify POS",
     logo: "Shopify",
     type: "full-pos",
@@ -639,6 +663,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "touchbistro",
+    metaDescription:
+      "TouchBistro review (2026): a restaurant-first POS built around table service, menus and floor plans. Strong for hospitality. Fees, pros and verdict.",
     name: "TouchBistro",
     logo: "TouchBistro",
     type: "full-pos",

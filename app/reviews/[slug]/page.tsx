@@ -32,7 +32,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!provider) return {};
   return pageMeta({
     title: `${provider.name} Review UK (2026): Fees, Card Readers, Pros & Cons`,
-    description: `${provider.name} review: ${provider.summary} Pricing, hardware, contracts, payouts and who it suits.`,
+    description:
+      provider.metaDescription ??
+      `${provider.name} review (2026): fees, hardware, contracts, payouts and who it suits in plain English.`,
     path: `/reviews/${slug}`,
     type: "article",
   });

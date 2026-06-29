@@ -163,14 +163,14 @@ export function ProviderComparisonTable({
           </colgroup>
           <thead>
             <tr className="border-b border-border bg-cream/60 text-left text-[11px] uppercase tracking-wide text-grey">
-              <th className="px-3 py-2.5 font-semibold">Provider</th>
-              <th className="px-3 py-2.5 font-semibold">Best for</th>
-              <th className="px-3 py-2.5 font-semibold">Monthly</th>
-              <th className="px-3 py-2.5 font-semibold">Transaction</th>
-              <th className="px-3 py-2.5 font-semibold">Reader from</th>
-              <th className="px-3 py-2.5 font-semibold">Contract</th>
-              <th className="px-3 py-2.5 font-semibold">Payouts</th>
-              <th className="px-3 py-2.5 font-semibold"></th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Provider</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Best for</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Monthly</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Transaction</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Reader from</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Contract</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold">Payouts</th>
+              <th scope="col" className="px-3 py-2.5 font-semibold"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">

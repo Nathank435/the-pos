@@ -4,6 +4,8 @@ export type VersusPage = {
   slug: string; // "sumup-vs-square"
   a: string; // provider slug
   b: string; // provider slug
+  /** Bespoke ≤155-char SEO meta description. */
+  metaDescription?: string;
   quickVerdict: string;
   chooseA: string;
   chooseB: string;
@@ -14,6 +16,8 @@ export type VersusPage = {
 export const VERSUS_PAGES: VersusPage[] = [
   {
     slug: "sumup-vs-square",
+    metaDescription:
+      "SumUp vs Square (2026): which is better for your UK business? Compare fees, hardware, contracts and who each one suits. Plain-English verdict inside.",
     a: "sumup",
     b: "square",
     quickVerdict:
@@ -41,6 +45,8 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "sumup-vs-zettle",
+    metaDescription:
+      "SumUp vs Zettle (2026): which card reader wins for UK small businesses? Fees, hardware and who each one suits, compared. Plain-English verdict inside.",
     a: "sumup",
     b: "zettle",
     quickVerdict:
@@ -68,6 +74,8 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "sumup-vs-dojo",
+    metaDescription:
+      "SumUp vs Dojo (2026): pay-as-you-go simplicity vs fast-payout power for UK businesses. Fees, contracts and verdict compared in plain English.",
     a: "sumup",
     b: "dojo",
     quickVerdict:
