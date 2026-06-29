@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
+import { VersusLinks } from "@/components/comparison/VersusLinks";
 import { DisclosureBanner } from "@/components/layout/DisclosureBanner";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
@@ -85,6 +86,12 @@ export default function CompareCardMachinesPage() {
               </div>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      <Section muted>
+        <Container>
+          <VersusLinks />
         </Container>
       </Section>
 
