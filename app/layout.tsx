@@ -6,7 +6,8 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Analytics } from "@/lib/analytics";
-import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/analytics/GoogleTagManager";
+import { ConsentModeDefault, GoogleTagManager, GoogleTagManagerNoScript } from "@/components/analytics/GoogleTagManager";
+import { CookieConsent } from "@/components/consent/CookieConsent";
 import { ExitIntentModal } from "@/components/marketing/ExitIntentModal";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -67,6 +68,7 @@ export default function RootLayout({
         <meta
           {...({ name: "impact-site-verification", value: "aee57657-070b-48de-926b-f0b7580d12b3" } as Record<string, string>)}
         />
+        <ConsentModeDefault />
         <GoogleTagManagerNoScript />
         <GoogleTagManager />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
@@ -76,6 +78,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <SiteFooter />
         <ExitIntentModal />
+        <CookieConsent />
       </body>
     </html>
   );

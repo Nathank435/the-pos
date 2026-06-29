@@ -15,7 +15,6 @@ const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com";
-const KLAVIYO_COMPANY_ID = process.env.NEXT_PUBLIC_KLAVIYO_COMPANY_ID;
 
 /** Canonical event names used across the site (GA4 / GTM taxonomy).
  *  Primary conversions (mark as Key Events in GA4): affiliate_click, lead_submit,
@@ -110,13 +109,7 @@ posthog.init('${POSTHOG_KEY}',{api_host:'${POSTHOG_HOST}'})`}
         </Script>
       )}
 
-      {KLAVIYO_COMPANY_ID && (
-        <Script
-          id="klaviyo-onsite"
-          strategy="afterInteractive"
-          src={`https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=${KLAVIYO_COMPANY_ID}`}
-        />
-      )}
+      {/* Klaviyo onsite is loaded by <CookieConsent> only after consent is granted. */}
     </>
   );
 }
