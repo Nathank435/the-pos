@@ -5,8 +5,7 @@ import { getPost } from "@/data/blog";
  * social OG for any post that doesn't set its own photo. Zero licensing, always
  * consistent, one per post. */
 
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+const size = { width: 1200, height: 630 };
 
 export async function GET(_req: Request, ctx: { params: Promise<{ slug: string }> }) {
   const { slug } = await ctx.params;
