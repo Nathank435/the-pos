@@ -15,8 +15,10 @@ export type BlogPost = {
   author: string;
   date: string; // ISO yyyy-mm-dd
   readMinutes: number;
-  featuredImage: string; // /images/blog/<slug>.jpg
-  featuredAlt: string;
+  /** Optional real photo. If omitted, an on-brand cover is auto-generated at
+   *  /blog/<slug>/cover (see blogCover()). */
+  featuredImage?: string; // /images/blog/<slug>.jpg
+  featuredAlt?: string;
   intro: string;
   sections: BlogSection[];
   faqs?: { q: string; a: string }[];
@@ -706,6 +708,12 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export function getPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
+}
+
+/** Featured image for a post: its real photo, or the auto-generated brand cover. */
+export function blogCover(post: BlogPost): { src: string; alt: string } {
+  if (post.featuredImage) return { src: post.featuredImage, alt: post.featuredAlt ?? post.title };
+  return { src: `/blog/${post.slug}/cover`, alt: post.title };
 }
 
 export const BLOG_SLUGS = BLOG_POSTS.map((p) => p.slug);

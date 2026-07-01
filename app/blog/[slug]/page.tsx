@@ -13,7 +13,7 @@ import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
-import { BLOG_POSTS, getPost } from "@/data/blog";
+import { BLOG_POSTS, getPost, blogCover } from "@/data/blog";
 import { Clock } from "lucide-react";
 
 export function generateStaticParams() {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.excerpt,
     path: `/blog/${slug}`,
     type: "article",
-    image: post.featuredImage,
+    image: blogCover(post).src,
     canonical: post.canonicalUrl,
   });
 }
@@ -40,6 +40,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   const path = `/blog/${slug}`;
+  const cover = blogCover(post);
   const related = post.relatedPosts.map(getPost).filter(Boolean);
 
   return (
@@ -51,7 +52,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           path,
           datePublished: post.date,
           dateModified: post.date,
-          image: post.featuredImage,
+          image: cover.src,
           author: post.author,
         })}
       />
@@ -78,8 +79,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <Container className="grid gap-10 lg:grid-cols-[1fr_300px]">
           <article className="max-w-3xl">
             <EditorialImage
-              src={post.featuredImage}
-              alt={post.featuredAlt}
+              src={cover.src}
+              alt={cover.alt}
               ratio="16 / 9"
               priority
               className="mb-8"

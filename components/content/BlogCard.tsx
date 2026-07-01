@@ -3,17 +3,18 @@ import { ArrowRight, Clock } from "lucide-react";
 import { EditorialImage } from "@/components/ui/EditorialImage";
 import { Badge } from "@/components/ui/Badge";
 import { formatDate } from "@/lib/utils";
-import type { BlogPost } from "@/data/blog";
+import { blogCover, type BlogPost } from "@/data/blog";
 
 export function BlogCard({ post, priority }: { post: BlogPost; priority?: boolean }) {
+  const cover = blogCover(post);
   return (
     <Link
       href={`/blog/${post.slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white transition-colors hover:border-accent"
     >
       <EditorialImage
-        src={post.featuredImage}
-        alt={post.featuredAlt}
+        src={cover.src}
+        alt={cover.alt}
         label={post.category}
         ratio="16 / 9"
         priority={priority}
