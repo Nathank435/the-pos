@@ -41,7 +41,7 @@ export default function ReviewsIndexPage() {
                     <ProviderLogo name={p.name} slug={p.slug} />
                     <div>
                       <h2 className="font-heading font-bold text-navy group-hover:text-deepblue">{p.name}</h2>
-                      <RatingStars value={p.editorialRating.overall} />
+                      <RatingStars value={p.editorialRating.overall} className="mt-0.5" />
                     </div>
                   </div>
                   <p className="mt-3 line-clamp-3 text-sm text-grey">{p.summary}</p>

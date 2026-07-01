@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 
 export function RatingStars({ value, className }: { value: number; className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-1", className)} aria-label={`${value} out of 5`}>
-      <span className="inline-flex">
+    <span className={cn("inline-flex items-center gap-1.5", className)} aria-label={`${value} out of 5`}>
+      <span className="inline-flex gap-0.5">
         {[0, 1, 2, 3, 4].map((i) => (
           <Star
             key={i}

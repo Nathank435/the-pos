@@ -14,7 +14,7 @@ export function ProviderCard({ provider, sourcePage }: { provider: Provider; sou
           <ProviderLogo name={provider.name} slug={provider.slug} />
           <div>
             <h3 className="font-heading text-base font-bold text-navy">{provider.name}</h3>
-            <RatingStars value={provider.editorialRating.overall} />
+            <RatingStars value={provider.editorialRating.overall} className="mt-0.5" />
           </div>
         </div>
       </div>

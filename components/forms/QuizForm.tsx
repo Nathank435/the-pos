@@ -198,11 +198,11 @@ export function QuizForm() {
                 <Badge tone={tone}>{label}</Badge>
                 <div className="mt-3 flex items-center gap-3">
                   <ProviderLogo name={rec.provider.name} slug={rec.provider.slug} size="sm" />
-                  <div>
-                    <Link href={`/reviews/${rec.provider.slug}`} className="font-heading font-bold text-navy hover:underline">
+                  <div className="min-w-0">
+                    <Link href={`/reviews/${rec.provider.slug}`} className="block font-heading font-bold text-navy hover:underline">
                       {rec.provider.name}
                     </Link>
-                    <RatingStars value={rec.provider.editorialRating.overall} />
+                    <RatingStars value={rec.provider.editorialRating.overall} className="mt-0.5" />
                   </div>
                 </div>
                 {rec.reasons.length > 0 && (

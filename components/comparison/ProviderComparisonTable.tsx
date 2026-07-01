@@ -208,11 +208,11 @@ export function ProviderComparisonTable({
           <div key={p.slug} className="rounded-lg border border-border bg-white p-4">
             <div className="flex items-center gap-3">
               <ProviderLogo name={p.name} slug={p.slug} size="sm" />
-              <div className="flex-1">
-                <Link href={`/reviews/${p.slug}`} className="font-heading font-bold text-navy">
+              <div className="min-w-0 flex-1">
+                <Link href={`/reviews/${p.slug}`} className="block font-heading font-bold text-navy">
                   {p.name}
                 </Link>
-                <RatingStars value={p.editorialRating.overall} />
+                <RatingStars value={p.editorialRating.overall} className="mt-0.5" />
               </div>
             </div>
             <div className="mt-2">
