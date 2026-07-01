@@ -218,13 +218,13 @@ export function ProviderComparisonTable({
             <div className="mt-2">
               <Badge tone="accent">{p.bestFor[0]}</Badge>
             </div>
-            <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
-              <Cell label="Monthly" value={p.monthlyFeeFrom} mono />
+            <dl className="mt-3 divide-y divide-border/60">
+              <Cell label="Monthly" value={p.monthlyFeeFrom} />
               <Cell label="Transaction" value={p.transactionFeeHeadline} />
-              <Cell label="Reader from" value={p.cardReaderCostFrom} mono />
+              <Cell label="Reader from" value={p.cardReaderCostFrom} />
               <Cell label="Contract" value={p.contractLength} />
               <Cell label="Payouts" value={p.payoutSpeed} />
-              <Cell label="Watch out for" value={p.cons[0]} />
+              <Cell label="Watch out for" value={p.avoidIf ?? p.cons[0]} warn />
             </dl>
             <div className="mt-4 flex items-center gap-3 border-t border-border pt-3">
               <ProviderCTA provider={p} size="sm" sourcePage={sourcePage} className="flex-1" />
@@ -245,11 +245,13 @@ export function ProviderComparisonTable({
   );
 }
 
-function Cell({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
+function Cell({ label, value, warn }: { label: string; value: string; warn?: boolean }) {
   return (
-    <div>
-      <dt className="text-xs text-grey">{label}</dt>
-      <dd className={cn("text-sm font-medium text-navy", mono && "tabular")}>{value}</dd>
+    <div className="flex items-start justify-between gap-4 py-2">
+      <dt className="shrink-0 pt-px text-xs font-medium text-grey">{label}</dt>
+      <dd className={cn("text-right text-sm font-semibold leading-snug", warn ? "text-amber" : "text-navy")}>
+        {value}
+      </dd>
     </div>
   );
 }
