@@ -31,7 +31,7 @@ export const PRIMARY_NAV: { label: string; href: string }[] = [
   { label: "POS Systems", href: "/compare-pos-systems" },
   { label: "Card Machines", href: "/compare-card-machines" },
   { label: "Fee Calculator", href: "/card-machine-fee-calculator" },
-  { label: "By Business", href: "/pos-systems" },
+  { label: "By Business Type", href: "/pos-systems" },
   { label: "Reviews", href: "/reviews" },
   { label: "Guides", href: "/guides" },
   { label: "Blog", href: "/blog" },

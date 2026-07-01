@@ -12,7 +12,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border bg-white/95 backdrop-blur">
+    <header className="border-b border-border bg-white/95 backdrop-blur max-lg:backdrop-blur-none">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" aria-label={SITE.name}>
           <BrandLogo />
@@ -38,7 +38,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="lg:hidden"
+          className="-m-2.5 inline-flex items-center justify-center p-2.5 lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

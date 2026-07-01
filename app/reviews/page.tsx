@@ -28,6 +28,14 @@ export default function ReviewsIndexPage() {
       />
       <Section>
         <Container>
+          <p className="mb-5 text-sm text-grey">
+            Scores are our own editorial ratings, based on fees, ease of use, features, support and contract
+            flexibility - not paid placement.{" "}
+            <Link href="/methodology" className="font-semibold text-deepblue hover:underline">
+              How we score
+            </Link>
+            .
+          </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[...PROVIDERS]
               .sort((a, b) => b.editorialRating.overall - a.editorialRating.overall)

@@ -107,13 +107,13 @@ export default function HomePage() {
           <div className="mt-4 rounded-2xl border border-border bg-white p-4 sm:p-5">
             <span className="block text-sm font-semibold text-navy">What kind of business are you running?</span>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {BUSINESS_PICKER.map(({ label, slug }, i) => {
+              {BUSINESS_PICKER.map(({ label, href }, i) => {
                 const Icon = TYPE_ICONS[i] ?? ShoppingBag;
                 return (
                   <Link
                     key={label}
-                    href={`/pos-systems/${slug}`}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2.5 text-sm font-medium text-navy transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
+                    href={href}
+                    className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-border px-3 py-2.5 text-sm font-medium text-navy transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
                   >
                     <Icon className="h-4 w-4 shrink-0 text-accent" />
                     {label}

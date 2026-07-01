@@ -1,13 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Zap, ArrowRight, X } from "lucide-react";
 import { track } from "@/lib/analytics";
 
-/** Slim promo bar above the header - drives traffic to the 60-second quiz. */
+const DISMISS_KEY = "tp_promo_dismissed";
+
+/** Slim promo bar above the header - drives traffic to the 60-second quiz.
+ *  Dismissal is remembered (localStorage), so it stays closed on return. */
 export function AnnouncementBar() {
   const [open, setOpen] = useState(true);
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem(DISMISS_KEY) === "1") setOpen(false);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  function dismiss() {
+    try {
+      localStorage.setItem(DISMISS_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+    setOpen(false);
+  }
+
   if (!open) return null;
 
   return (
@@ -29,7 +50,7 @@ export function AnnouncementBar() {
       <button
         type="button"
         aria-label="Dismiss"
-        onClick={() => setOpen(false)}
+        onClick={dismiss}
         className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-white/70 hover:bg-white/10 hover:text-white"
       >
         <X className="h-4 w-4" />

@@ -4,14 +4,14 @@
 
 /** Business-type quick selector → the matching hub page (real recommendations). */
 export const BUSINESS_PICKER = [
-  { label: "Café / Coffee shop", slug: "cafes" },
-  { label: "Takeaway / Food truck", slug: "takeaways" },
-  { label: "Pub / Bar", slug: "pubs-bars" },
-  { label: "Salon / Barber", slug: "salons" },
-  { label: "Retail shop", slug: "retail" },
-  { label: "Market trader", slug: "market-stalls" },
-  { label: "Mobile service", slug: "mobile-businesses" },
-  { label: "New business", slug: "restaurants" },
+  { label: "Café / Coffee shop", href: "/pos-systems/cafes" },
+  { label: "Takeaway / Food truck", href: "/pos-systems/takeaways" },
+  { label: "Pub / Bar", href: "/pos-systems/pubs-bars" },
+  { label: "Salon / Barber", href: "/pos-systems/salons" },
+  { label: "Retail shop", href: "/pos-systems/retail" },
+  { label: "Market trader", href: "/pos-systems/market-stalls" },
+  { label: "Mobile service", href: "/pos-systems/mobile-businesses" },
+  { label: "New business", href: "/get-pos-quotes" },
 ] as const;
 
 /** Opinionated provider cards for the homepage shelf. */
