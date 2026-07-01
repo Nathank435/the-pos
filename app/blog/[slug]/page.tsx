@@ -108,6 +108,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     ))}
                   </ul>
                 )}
+                {s.image && (
+                  <figure className="mt-5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={s.image.src}
+                      alt={s.image.alt}
+                      loading="lazy"
+                      className="w-full rounded-xl border border-border"
+                    />
+                    {s.image.caption && (
+                      <figcaption className="mt-2 text-xs text-grey">{s.image.caption}</figcaption>
+                    )}
+                  </figure>
+                )}
               </section>
             ))}
 
