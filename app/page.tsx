@@ -208,9 +208,13 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-5 text-sm text-grey">
-            Want the full breakdown?{" "}
+            Want the full breakdown? Read{" "}
             <Link href="/guides/hidden-card-machine-fees" className="font-semibold text-deepblue hover:underline">
-              Hidden card machine fees, explained
+              hidden card machine fees, explained
+            </Link>{" "}
+            - or skip the rental entirely with a{" "}
+            <Link href="/card-readers-no-monthly-fee" className="font-semibold text-deepblue hover:underline">
+              card reader that has no monthly fee
             </Link>
             .
           </p>

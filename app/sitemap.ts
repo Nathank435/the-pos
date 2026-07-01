@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/compare-pos-systems",
     "/compare-card-machines",
+    "/card-readers-no-monthly-fee",
     "/card-machine-fee-calculator",
     "/get-pos-quotes",
     "/reviews",

@@ -287,7 +287,7 @@ export const GUIDES: Guide[] = [
     relatedGuides: ["card-machine-fees-explained", "how-to-choose-a-card-machine", "hidden-card-machine-fees"],
     relatedLinks: [
       { label: "Compare card machines", href: "/compare-card-machines" },
-      { label: "No-monthly-fee filter on the comparison", href: "/compare-pos-systems" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
       { label: "Get tailored quotes", href: "/get-pos-quotes" },
     ],
   },
