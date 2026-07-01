@@ -19,7 +19,9 @@ export function ProviderCard({ provider, sourcePage }: { provider: Provider; sou
         </div>
       </div>
 
-      <p className="mt-3 text-sm leading-relaxed text-grey">{provider.summary}</p>
+      <p className="mt-3 border-l-2 border-accent bg-accent-soft/30 px-3 py-2 text-sm font-medium italic text-navy">
+        {provider.verdict ?? provider.summary}
+      </p>
 
       <div className="mt-4">
         <p className="text-xs font-semibold uppercase tracking-wide text-grey">Best for</p>

@@ -38,7 +38,7 @@ export default function ComparePOSPage() {
     <>
       <PageHero
         title="Compare UK POS Systems"
-        intro="Every provider, side by side - monthly fees, transaction rates, hardware costs, contracts and payout speed. Filter by what your business actually needs."
+        intro="Every UK POS system and card machine, side by side - monthly fees, transaction rates, hardware, contracts and payout speed. Pick for how you actually trade, not the shiniest terminal."
         crumbs={[{ name: "Compare POS Systems", path: "/compare-pos-systems" }]}
         lastUpdated={latestProviderUpdate()}
       />

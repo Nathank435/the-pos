@@ -30,6 +30,10 @@ export type Provider = {
   summary: string;
   /** Bespoke ≤155-char SEO meta description for the review page. */
   metaDescription?: string;
+  /** One blunt verdict sentence (brand voice). */
+  verdict?: string;
+  /** One-line "avoid if" - who this is wrong for. */
+  avoidIf?: string;
   bestFor: string[];
   notBestFor: string[];
 
@@ -68,6 +72,8 @@ export type Provider = {
 export const PROVIDERS: Provider[] = [
   {
     slug: "sumup",
+    verdict: "Dead simple and cheap to start - but you may outgrow it.",
+    avoidIf: "You need a full till, staff logins or deep reporting.",
     metaDescription:
       "SumUp review (2026): the cheapest, simplest card reader for UK market traders and mobile sellers. No contract, no monthly fee. Fees, pros and verdict.",
     name: "SumUp",
@@ -123,6 +129,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "square",
+    verdict: "The easiest all-rounder for most small businesses.",
+    avoidIf: "You're chasing the absolute lowest rate at high volume.",
     metaDescription:
       "Square review (2026): the strongest free POS app for UK cafés, shops and service businesses. No monthly fee, 1.75% in person. Fees, pros and verdict.",
     name: "Square",
@@ -179,6 +187,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "zettle",
+    verdict: "Tidy and cheap if you already live in the PayPal world.",
+    avoidIf: "You want a deep POS ecosystem or don't use PayPal.",
     metaDescription:
       "PayPal Zettle review (2026): simple, no-monthly-fee card payments for UK retailers and mobile sellers in the PayPal world. Fees, pros, cons and verdict.",
     name: "PayPal Zettle",
@@ -234,6 +244,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "dojo",
+    verdict: "Strong on rates and payouts - just read the contract first.",
+    avoidIf: "You hate contracts, sales calls or quote-based pricing.",
     metaDescription:
       "Dojo card machine review (2026): fast (even same-day) payouts and hospitality-grade support, but quote-based contract pricing. Fees, pros and verdict.",
     name: "Dojo",
@@ -289,6 +301,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "mypos",
+    verdict: "Handy if same-day cash flow beats brand familiarity.",
+    avoidIf: "You want the most familiar UK high-street name.",
     metaDescription:
       "myPOS review (2026): instant access to your funds via a built-in business account, ideal for mobile and international traders. Fees, pros and verdict.",
     name: "myPOS",
@@ -344,6 +358,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "worldpay",
+    verdict: "Built for established, higher-volume businesses - not the little guy.",
+    avoidIf: "You're low-volume or want to avoid a contract.",
     metaDescription:
       "Worldpay review (2026): a heavyweight UK acquirer for established, higher-volume businesses. Bespoke but quote-based rates. Fees, pros, cons, verdict.",
     name: "Worldpay",
@@ -397,6 +413,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "barclaycard",
+    verdict: "Reassuring and bank-backed, but quote-based and contract-heavy.",
+    avoidIf: "You want pay-as-you-go simplicity with no contract.",
     metaDescription:
       "Barclaycard Payments review (2026): bank-backed card machines for established UK businesses. Reassuring brand, quote-based rates. Pros, cons and verdict.",
     name: "Barclaycard Payments",
@@ -450,6 +468,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "tyl-by-natwest",
+    verdict: "Clearer pricing than most legacy acquirers, solid all-rounder.",
+    avoidIf: "You want zero contract or the rock-bottom rate.",
     metaDescription:
       "Tyl by NatWest review (2026): clearer-pricing card payments for UK small and medium retail and hospitality businesses. Fees, pros, cons and verdict.",
     name: "Tyl by NatWest",
@@ -503,6 +523,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "lightspeed",
+    verdict: "A powerful retail/hospitality POS - overkill if you just need a reader.",
+    avoidIf: "You only need to take card payments.",
     metaDescription:
       "Lightspeed review (2026): a powerful retail and hospitality POS for multi-site businesses with deep inventory needs. Pricier. Fees, pros and verdict.",
     name: "Lightspeed",
@@ -556,6 +578,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "epos-now",
+    verdict: "A capable full till system - but check the contract and add-on costs.",
+    avoidIf: "You want no contract or a simple pay-as-you-go reader.",
     metaDescription:
       "Epos Now review (2026): full till systems and hardware bundles for UK retail and hospitality. Capable, but check the contracts. Fees, pros, verdict.",
     name: "Epos Now",
@@ -609,6 +633,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "shopify-pos",
+    verdict: "The obvious pick if you already sell on Shopify.",
+    avoidIf: "You're not a Shopify merchant.",
     metaDescription:
       "Shopify POS review (2026): the obvious in-person till for Shopify merchants who want shop and online in sync. Fees, hardware, pros, cons, verdict.",
     name: "Shopify POS",
@@ -663,6 +689,8 @@ export const PROVIDERS: Provider[] = [
   },
   {
     slug: "touchbistro",
+    verdict: "Restaurant-first POS done properly - not for retail or mobile.",
+    avoidIf: "You run retail or just need a simple card reader.",
     metaDescription:
       "TouchBistro review (2026): a restaurant-first POS built around table service, menus and floor plans. Strong for hospitality. Fees, pros and verdict.",
     name: "TouchBistro",

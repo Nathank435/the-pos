@@ -44,7 +44,7 @@ export default function CompareCardMachinesPage() {
     <>
       <PageHero
         title="Compare Card Machines &amp; Readers"
-        intro="The best UK card machines for small business, compared on price, fees and features. From £19 pocket readers to standalone terminals with their own SIM."
+        intro="Every big UK card machine for small business, compared on the stuff that actually costs you money: fees, contracts and payout speed. The cheapest reader isn't always the cheapest once the fees start nibbling."
         crumbs={[{ name: "Card Machines", path: "/compare-card-machines" }]}
         lastUpdated={latestProviderUpdate()}
       />
