@@ -27,8 +27,8 @@ export default async function GetQuotesPage({
     <>
       <TrackView event="quote_page_view" />
       <PageHero
-        title="Find the right POS provider for your business."
-        intro="Tell us how you take payments and we'll help point you towards providers that actually fit - not just the one with the loudest sales team."
+        title="Which card machine or POS actually fits your business?"
+        intro="Answer a few quick questions about how you take payments and we'll point you toward the providers that genuinely fit - not just the one with the loudest sales team. No email needed to see your matches."
         crumbs={[{ name: "Get Quotes", path: "/get-pos-quotes" }]}
       >
         <div className="mt-5 flex flex-wrap gap-4 text-sm text-grey">

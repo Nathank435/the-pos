@@ -73,6 +73,11 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                   {provider.name} Review UK
                 </h1>
                 <p className="mt-1 text-grey">Fees, card readers, pros &amp; cons</p>
+                {provider.verdict && (
+                  <p className="mt-2 max-w-xl border-l-2 border-accent pl-3 text-sm font-medium italic text-navy">
+                    {provider.verdict}
+                  </p>
+                )}
                 <div className="mt-3 flex flex-wrap items-center gap-4">
                   <RatingStars value={provider.editorialRating.overall} />
                   <LastUpdated date={provider.lastChecked} label="Reviewed" />
