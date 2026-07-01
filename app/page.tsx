@@ -1,22 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  ChevronRight,
   Coffee,
   ShoppingBag,
   Scissors,
   Truck,
-  ClipboardList,
-  SlidersHorizontal,
-  CheckCircle2,
-  ShieldCheck,
-  MapPin,
-  Users,
   Calculator,
+  AlertTriangle,
+  Check,
+  Quote,
+  Banknote,
 } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { ProviderLogo } from "@/components/ui/ProviderLogo";
+import { ProviderCTA } from "@/components/comparison/ProviderCTA";
 import { EditorialImage } from "@/components/ui/EditorialImage";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
@@ -25,61 +24,41 @@ import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { PROVIDERS, getProvider } from "@/data/providers";
 import { GUIDES } from "@/data/guides";
 import { postsByDate } from "@/data/blog";
+import { BUSINESS_PICKER, PROVIDER_TAKES, FEE_GOTCHAS, CHOOSE_STEPS, SCENARIOS } from "@/data/homepage";
 
-const BUSINESS_CHIPS = [
-  { label: "Hospitality", icon: Coffee, href: "/pos-systems/restaurants" },
-  { label: "Retail", icon: ShoppingBag, href: "/pos-systems/retail" },
-  { label: "Salons", icon: Scissors, href: "/pos-systems/salons" },
-  { label: "Mobile Businesses", icon: Truck, href: "/pos-systems/mobile-businesses" },
-];
-
-// Featured provider cards - short, curated summaries for the homepage shelf.
-// (Full, sourced detail lives on each /reviews/[slug] page from data/providers.ts.)
-const FEATURED = [
-  { slug: "sumup", fee: "From 1.69%", hardware: "From £19", contract: "No contract", bestFor: "Small businesses & startups" },
-  { slug: "mypos", fee: "From 1.20%", hardware: "From £29", contract: "No contract", bestFor: "Low-cost & mobile businesses" },
-  { slug: "dojo", fee: "From 1.50%", hardware: "From £49", contract: "Flexible terms", bestFor: "Hospitality & high street" },
-  { slug: "square", fee: "From 1.75%", hardware: "From £29", contract: "No contract", bestFor: "Retail & omnichannel" },
-];
-
-const STEPS = [
-  { icon: ClipboardList, title: "Tell us about your business", body: "Answer a few quick questions about how you take payments." },
-  { icon: SlidersHorizontal, title: "Compare your options", body: "We match you with the providers that actually fit." },
-  { icon: CheckCircle2, title: "Choose the best-fit setup", body: "Pick with confidence - and start saving." },
-];
-
-const POPULAR = [
-  { label: "Best POS for cafés", href: "/pos-systems/cafes" },
-  { label: "Best card machine for market traders", href: "/pos-systems/market-stalls" },
-  { label: "Best payment setup for salons", href: "/pos-systems/salons" },
-];
-
-const TRUST = [
-  { icon: ShieldCheck, title: "Independent comparisons", body: "Verdicts that paid placements can't buy." },
-  { icon: MapPin, title: "UK-focused", body: "Built around UK fees, contracts and providers." },
-  { icon: Users, title: "Built for SMEs", body: "For hospitality, retail, salons and independents." },
-];
+export const metadata: Metadata = {
+  title: { absolute: "Compare UK Card Machines & POS Systems (2026) | ThePOS.co.uk" },
+  description:
+    "Blunt, plain-English comparisons of UK card machines and POS systems for cafés, shops, salons, takeaways and market traders. Real fee notes, no sales waffle.",
+  alternates: { canonical: "/" },
+};
 
 const PEOPLE = [
-  { src: "/images/people/cafe-owner.jpg", alt: "Independent café and deli owner in her shop doorway", caption: "Café & deli owners", href: "/pos-systems/cafes" },
-  { src: "/images/people/shop-worker.jpg", alt: "Shop assistant folding clothes in an independent store", caption: "Independent retailers", href: "/pos-systems/retail" },
-  { src: "/images/people/owner.jpg", alt: "Small business owner standing confidently", caption: "Small business owners", href: "/compare-pos-systems" },
+  { src: "/images/people/cafe-owner.jpg", alt: "Independent café and deli owner in her shop doorway", caption: "Cafés & delis", href: "/pos-systems/cafes" },
+  { src: "/images/people/shop-worker.jpg", alt: "Shop assistant folding clothes in an independent store", caption: "Independent shops", href: "/pos-systems/retail" },
+  { src: "/images/people/owner.jpg", alt: "Small business owner standing confidently", caption: "Salons, pubs & more", href: "/compare-pos-systems" },
 ];
 
 const HOME_FAQS = [
   {
-    q: "What's the best POS system for a UK small business?",
-    a: "There's no single 'best' - it depends on your business. Square is the strongest free all-rounder, SumUp is best for cheap, simple card payments, and Dojo suits busy hospitality wanting fast payouts. Use our quiz or comparison to match your needs.",
+    q: "What's the best card machine for a UK small business?",
+    a: "There's no single 'best' - it depends on your turnover and how you trade. SumUp is cheapest to start for low or occasional volume; Square is the easiest all-rounder with free POS software; Dojo suits busy hospitality that wants fast payouts. Use the fee calculator or quiz to match your numbers.",
   },
   {
     q: "Which card machine has no monthly fee?",
-    a: "SumUp, Square and PayPal Zettle all offer pay-as-you-go card readers with no monthly fee - you buy the reader once and pay a percentage per transaction.",
+    a: "SumUp, Square and PayPal Zettle all do pay-as-you-go readers with no monthly fee - you buy the reader once and pay a percentage per sale. Best for lower or seasonal volume where a monthly rental wouldn't pay for itself.",
   },
   {
-    q: "How do you make money?",
-    a: "We may earn commission when you click links or apply through certain providers. It doesn't cost you extra, and providers can't pay to change our verdicts. See 'How we make money' for the full picture.",
+    q: "Is the cheapest card machine actually the cheapest?",
+    a: "Not always. The cheapest card machine is rarely the cheapest once the fees start nibbling - a low headline rate with a monthly fee, PCI charge or contract can cost more than a slightly higher pay-as-you-go rate. Always compare the all-in monthly cost at your real turnover.",
+  },
+  {
+    q: "How does ThePOS make money?",
+    a: "We may earn a commission when you click through or sign up via some providers. It never costs you more, and providers can't pay for a better verdict. If something's great for cafés but rubbish for market traders, we'll say so.",
   },
 ];
+
+const TYPE_ICONS = [Coffee, Truck, Banknote, Scissors, ShoppingBag, ShoppingBag, Truck, Coffee] as const;
 
 export default function HomePage() {
   const latestGuides = GUIDES.slice(0, 3);
@@ -91,44 +70,26 @@ export default function HomePage() {
       <Section className="py-10 sm:py-14">
         <Container>
           <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-white via-white to-accent-soft/60 p-5 sm:p-10">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute right-6 top-6 hidden h-32 w-40 opacity-50 lg:block"
-              style={{
-                backgroundImage: "radial-gradient(var(--color-sky) 1.5px, transparent 1.5px)",
-                backgroundSize: "14px 14px",
-              }}
-            />
             <div className="grid items-center gap-8 lg:grid-cols-2">
               <div className="relative">
-                <h1 className="font-heading text-3xl font-extrabold leading-[1.08] text-navy sm:text-4xl lg:text-5xl">
-                  Compare POS Systems &amp; Card Machines for UK Businesses
+                <h1 className="font-heading text-3xl font-extrabold leading-[1.08] text-navy sm:text-4xl lg:text-[2.85rem]">
+                  Find the card machine that won&apos;t quietly rinse your margins
                 </h1>
                 <p className="mt-4 max-w-lg text-base leading-relaxed text-grey sm:text-lg">
-                  Find the right till, terminal and payment setup for your business - without the waffle.
+                  Compare UK POS systems, card readers and payment fees for cafés, shops, salons, takeaways and small
+                  businesses that just want a straight answer.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <ButtonLink href="/compare-pos-systems" size="lg" className="w-full sm:w-auto">
-                    Compare Providers
+                  <ButtonLink href="/compare-card-machines" size="lg" className="w-full sm:w-auto">
+                    Compare providers
                   </ButtonLink>
-                  <ButtonLink href="/pos-systems" variant="outline" size="lg" className="w-full sm:w-auto">
-                    See our top picks
+                  <ButtonLink href="/get-pos-quotes" variant="outline" size="lg" className="w-full sm:w-auto">
+                    Find my best fit
                   </ButtonLink>
                 </div>
-                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-grey">
-                  <span className="inline-flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4 text-accent" /> Independent &amp; UK-focused
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4 text-accent" /> We don&apos;t sell card machines
-                  </span>
-                  <Link
-                    href="/how-we-make-money"
-                    className="inline-flex items-center gap-1.5 underline decoration-border underline-offset-2 hover:text-accent"
-                  >
-                    <CheckCircle2 className="h-4 w-4 text-accent" /> How we stay unbiased
-                  </Link>
-                </div>
+                <p className="mt-5 text-sm font-medium text-grey">
+                  Plain-English comparisons. Real fee notes. No sales waffle.
+                </p>
               </div>
 
               <EditorialImage
@@ -143,66 +104,121 @@ export default function HomePage() {
           </div>
 
           {/* Business-type selector */}
-          <div className="mt-4 rounded-2xl border border-border bg-white p-3 sm:flex sm:items-center sm:gap-4 sm:px-5">
-            <span className="block px-2 py-2 text-sm font-semibold text-navy sm:py-0">What type of business are you?</span>
-            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-1 sm:justify-end">
-              {BUSINESS_CHIPS.map(({ label, icon: Icon, href }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-3 py-2.5 text-sm font-medium text-navy transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
-                >
-                  <Icon className="h-4 w-4 text-accent" />
-                  {label}
-                </Link>
-              ))}
+          <div className="mt-4 rounded-2xl border border-border bg-white p-4 sm:p-5">
+            <span className="block text-sm font-semibold text-navy">What kind of business are you running?</span>
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              {BUSINESS_PICKER.map(({ label, slug }, i) => {
+                const Icon = TYPE_ICONS[i] ?? ShoppingBag;
+                return (
+                  <Link
+                    key={label}
+                    href={`/pos-systems/${slug}`}
+                    className="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2.5 text-sm font-medium text-navy transition-colors hover:border-accent hover:bg-accent-soft hover:text-accent"
+                  >
+                    <Icon className="h-4 w-4 shrink-0 text-accent" />
+                    {label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* Top providers */}
+      {/* Opinionated provider cards */}
       <Section className="py-10 sm:py-14">
         <Container>
-          <div className="text-center">
-            <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">Top POS &amp; Card Machine Providers</h2>
+          <div className="max-w-2xl">
+            <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">
+              The big UK card machine &amp; POS providers, minus the spin
+            </h2>
+            <p className="mt-2 text-grey">
+              Who each one is genuinely good for - and who should walk the other way. No one opens a café because
+              they&apos;re excited about merchant fees.
+            </p>
           </div>
-          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {FEATURED.map(({ slug, fee, hardware, contract, bestFor }) => {
-              const p = getProvider(slug);
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
+            {PROVIDER_TAKES.map((t) => {
+              const p = getProvider(t.slug);
               if (!p) return null;
               return (
-                <div key={slug} className="flex flex-col rounded-xl border border-border bg-white p-5 transition-colors hover:border-accent">
-                  <div className="flex justify-center">
-                    <ProviderLogo name={p.name} slug={p.slug} size="xl" />
+                <article key={t.slug} className="flex flex-col rounded-xl border border-border bg-white p-5 transition-colors hover:border-accent">
+                  <div className="flex items-center justify-between gap-3">
+                    <ProviderLogo name={p.name} slug={p.slug} size="lg" />
+                    <div className="text-right text-xs text-grey">
+                      <div className="font-semibold text-navy">{t.fees}</div>
+                      <div>{t.contract}</div>
+                    </div>
                   </div>
                   <h3 className="sr-only">{p.name}</h3>
-                  <dl className="mt-4 space-y-2.5 text-sm">
-                    <SummaryRow label="Fees" value={fee} />
-                    <SummaryRow label="Hardware" value={hardware} />
-                    <SummaryRow label="Contract" value={contract} />
-                    <SummaryRow label="Best For" value={bestFor} />
+                  <dl className="mt-4 space-y-3 text-sm">
+                    <div className="flex gap-2.5">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                      <div>
+                        <dt className="font-semibold text-navy">Best for</dt>
+                        <dd className="text-grey">{t.bestFor}</dd>
+                      </div>
+                    </div>
+                    <div className="flex gap-2.5">
+                      <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
+                      <div>
+                        <dt className="font-semibold text-navy">Avoid if</dt>
+                        <dd className="text-grey">{t.avoidIf}</dd>
+                      </div>
+                    </div>
                   </dl>
-                  <Link
-                    href={`/reviews/${p.slug}`}
-                    className="mt-5 inline-flex items-center justify-center gap-1 border-t border-border pt-4 text-sm font-semibold text-accent hover:underline"
-                  >
-                    View Details <ChevronRight className="h-4 w-4" />
-                  </Link>
-                </div>
+                  <p className="mt-4 border-l-2 border-accent bg-accent-soft/30 px-3 py-2 text-sm font-medium italic text-navy">
+                    {t.verdict}
+                  </p>
+                  <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-border pt-4">
+                    <ProviderCTA provider={p} size="sm" label={`View ${p.name} deals`} sourcePage="home-provider-card" />
+                    <Link href={`/reviews/${p.slug}`} className="text-sm font-semibold text-deepblue hover:underline">
+                      Read the full review
+                    </Link>
+                  </div>
+                </article>
               );
             })}
           </div>
-          <div className="mt-7 text-center">
-            <ButtonLink href="/compare-pos-systems" variant="outline">
+          <div className="mt-7">
+            <ButtonLink href="/compare-card-machines" variant="outline">
               Compare all {PROVIDERS.length} providers <ArrowRight className="h-4 w-4" />
             </ButtonLink>
           </div>
         </Container>
       </Section>
 
+      {/* The fees that catch people out */}
+      <Section muted className="py-10 sm:py-14">
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">
+              The card machine fees that usually catch people out
+            </h2>
+            <p className="mt-2 text-grey">
+              The cheapest card machine is not always the cheapest once these start nibbling. Know them before you sign.
+            </p>
+          </div>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {FEE_GOTCHAS.map((f) => (
+              <div key={f.title} className="rounded-xl border border-border bg-white p-4">
+                <h3 className="font-heading text-sm font-bold text-navy">{f.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-grey">{f.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-sm text-grey">
+            Want the full breakdown?{" "}
+            <Link href="/guides/hidden-card-machine-fees" className="font-semibold text-deepblue hover:underline">
+              Hidden card machine fees, explained
+            </Link>
+            .
+          </p>
+        </Container>
+      </Section>
+
       {/* Fee calculator promo */}
-      <Section className="py-6 sm:py-8">
+      <Section className="py-6 sm:py-10">
         <Container>
           <div className="overflow-hidden rounded-2xl border border-accent/30 bg-accent-soft/40 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-8">
             <div className="flex items-start gap-4">
@@ -210,57 +226,100 @@ export default function HomePage() {
                 <Calculator className="h-6 w-6" />
               </span>
               <div>
-                <h2 className="font-heading text-xl font-extrabold text-navy sm:text-2xl">Work out exactly what you'd pay</h2>
+                <h2 className="font-heading text-xl font-extrabold text-navy sm:text-2xl">Work out what you&apos;d actually pay</h2>
                 <p className="mt-1 text-grey">
-                  Pop in your turnover and average sale - see your monthly cost and all-in rate across the main UK
-                  providers in seconds.
+                  Pop in your turnover and average sale. See your real monthly cost and all-in rate across the main UK
+                  providers - takes about 60 seconds.
                 </p>
               </div>
             </div>
             <ButtonLink href="/card-machine-fee-calculator" size="lg" className="mt-4 w-full shrink-0 sm:mt-0 sm:w-auto">
-              Try the fee calculator
+              Show me the numbers
             </ButtonLink>
           </div>
         </Container>
       </Section>
 
-      {/* How it works */}
+      {/* How to choose without getting mugged */}
       <Section className="py-10 sm:py-14">
         <Container>
-          <div className="rounded-2xl border border-border bg-accent-soft/40 p-6 sm:p-10">
-            <h2 className="text-center font-heading text-2xl font-extrabold text-navy sm:text-3xl">How It Works</h2>
-            <div className="mt-8 grid gap-8 md:grid-cols-3">
-              {STEPS.map(({ icon: Icon, title, body }, i) => (
-                <div key={title} className="relative flex flex-col items-center text-center">
-                  <span className="relative grid h-16 w-16 place-items-center rounded-full bg-white ring-1 ring-border">
-                    <Icon className="h-7 w-7 text-accent" />
-                    <span className="absolute -right-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-accent text-xs font-bold text-white">
-                      {i + 1}
-                    </span>
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="lg:sticky lg:top-28">
+              <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">
+                How to choose without getting mugged by the small print
+              </h2>
+              <p className="mt-3 text-grey">
+                Five checks that save you more than any single &quot;deal&quot;. Do these and you won&apos;t get caught out.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <ButtonLink href="/card-machine-fee-calculator" size="sm">Show me the cheapest options</ButtonLink>
+                <ButtonLink href="/get-pos-quotes" variant="outline" size="sm">Compare without the sales call</ButtonLink>
+              </div>
+            </div>
+            <ol className="space-y-3">
+              {CHOOSE_STEPS.map((s, i) => (
+                <li key={s.title} className="flex gap-4 rounded-xl border border-border bg-white p-4">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-navy text-sm font-bold text-white">
+                    {i + 1}
                   </span>
-                  <h3 className="mt-4 font-heading text-base font-bold text-navy">{title}</h3>
-                  <p className="mt-1.5 max-w-xs text-sm text-grey">{body}</p>
-                </div>
+                  <div>
+                    <h3 className="font-heading text-base font-bold text-navy">{s.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-grey">{s.body}</p>
+                  </div>
+                </li>
               ))}
-            </div>
-            <div className="mt-8 text-center">
-              <ButtonLink href="/get-pos-quotes">Get Matched</ButtonLink>
-            </div>
+            </ol>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Which one would I pick? - scenarios */}
+      <Section muted className="py-10 sm:py-14">
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">Which one would I pick?</h2>
+            <p className="mt-2 text-grey">Real situations, straight answers. Here&apos;s what we&apos;d actually go for.</p>
+          </div>
+          <div className="mt-7 space-y-3">
+            {SCENARIOS.map((sc) => (
+              <div
+                key={sc.situation}
+                className="rounded-xl border border-border bg-white p-5 sm:flex sm:items-center sm:gap-6"
+              >
+                <div className="sm:flex-1">
+                  <p className="flex items-start gap-2 font-heading text-base font-bold text-navy">
+                    <Quote className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    {sc.situation}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-grey">{sc.why}</p>
+                </div>
+                <div className="mt-4 flex shrink-0 flex-wrap gap-2 sm:mt-0">
+                  {sc.picks.map((pick) => (
+                    <Link
+                      key={pick.slug}
+                      href={`/reviews/${pick.slug}`}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-accent/40 bg-accent-soft/40 px-3 py-2 text-sm font-semibold text-accent hover:bg-accent-soft"
+                    >
+                      {pick.name} <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </Section>
 
       {/* Built for businesses like yours - real faces */}
-      <Section muted className="py-10 sm:py-14">
+      <Section className="py-10 sm:py-14">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="max-w-2xl">
             <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">Built for businesses like yours</h2>
-            <p className="mt-3 text-grey">
-              From market stalls to cafés and clothing shops, we help real UK small businesses choose how to take
-              payments - in plain English.
+            <p className="mt-2 text-grey">
+              Market stalls, cafés, salons, takeaways, shops. Real UK trade, not a SaaS demo.
             </p>
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="mt-7 grid gap-4 sm:grid-cols-3">
             {PEOPLE.map((person) => (
               <Link
                 key={person.src}
@@ -289,35 +348,31 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Popular comparisons + trust */}
-      <Section className="py-10 sm:py-14">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <h2 className="font-heading text-xl font-extrabold text-navy">Popular Comparisons</h2>
-              <ul className="mt-4 divide-y divide-border overflow-hidden rounded-xl border border-border bg-white">
-                {POPULAR.map((c) => (
-                  <li key={c.href}>
-                    <Link href={c.href} className="flex items-center justify-between gap-3 px-4 py-3.5 text-sm font-medium text-navy transition-colors hover:bg-accent-soft/50">
-                      {c.label}
-                      <ChevronRight className="h-4 w-4 text-accent" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2 className="font-heading text-xl font-extrabold text-navy">Why Businesses Trust ThePOS.co.uk</h2>
-              <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                {TRUST.map(({ icon: Icon, title, body }) => (
-                  <div key={title} className="rounded-xl border border-border bg-white p-4 text-center">
-                    <span className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-accent-soft text-accent">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <h3 className="mt-3 font-heading text-sm font-bold text-navy">{title}</h3>
-                    <p className="mt-1 text-xs text-grey">{body}</p>
-                  </div>
-                ))}
+      {/* How we make money */}
+      <Section muted className="py-10 sm:py-14">
+        <Container className="max-w-3xl">
+          <div className="rounded-2xl border border-border bg-white p-6 sm:p-8">
+            <div className="flex items-start gap-3">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-accent-soft text-accent">
+                <Banknote className="h-5 w-5" />
+              </span>
+              <div>
+                <h2 className="font-heading text-2xl font-extrabold text-navy">How ThePOS makes money</h2>
+                <p className="mt-3 leading-relaxed text-grey">
+                  Some links on this site may earn us a commission. That does not change the price you pay, and it
+                  does not mean every provider gets a glowing review. If something is better for cafés but rubbish for
+                  mobile traders, we&apos;ll say so.
+                </p>
+                <ul className="mt-4 space-y-2 text-sm text-grey">
+                  <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> Providers can&apos;t pay for a better score or ranking.</li>
+                  <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> Fees are based on publicly advertised UK pricing - and we date-stamp when we checked.</li>
+                  <li className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> Recommendations are by business type and turnover, not by who pays most.</li>
+                </ul>
+                <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold">
+                  <Link href="/how-we-make-money" className="text-deepblue hover:underline">How we make money</Link>
+                  <Link href="/methodology" className="text-deepblue hover:underline">Our methodology</Link>
+                  <Link href="/editorial-policy" className="text-deepblue hover:underline">Editorial policy</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -325,7 +380,7 @@ export default function HomePage() {
       </Section>
 
       {/* Lead CTA */}
-      <Section muted>
+      <Section>
         <Container>
           <InlineQuoteCTA />
         </Container>
@@ -375,14 +430,5 @@ export default function HomePage() {
         </Container>
       </Section>
     </>
-  );
-}
-
-function SummaryRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-baseline justify-between gap-3 border-b border-border/60 pb-2 last:border-0 last:pb-0">
-      <dt className="font-semibold text-navy">{label}</dt>
-      <dd className="text-right text-grey">{value}</dd>
-    </div>
   );
 }
