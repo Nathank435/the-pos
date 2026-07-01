@@ -56,7 +56,9 @@ export function ProviderCard({ provider, sourcePage }: { provider: Provider; sou
         </li>
         <li className="flex items-start gap-2 text-navy">
           <X className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
-          {provider.cons[0]}
+          <span>
+            <span className="font-semibold">Avoid if:</span> {provider.avoidIf ?? provider.cons[0]}
+          </span>
         </li>
       </ul>
 
