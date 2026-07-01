@@ -2,7 +2,9 @@
 
 **File to import:** `thepos-search-campaigns.csv`
 **Goal:** leads (Get Matched quiz + fee-calculator captures) and affiliate clicks.
-**Structure:** 3 campaigns · 11 ad groups · 59 keywords · 11 responsive search ads. All copy is within Google's limits (headlines ≤30, descriptions ≤90, paths ≤15).
+**Structure:** 3 campaigns · 11 ad groups · 59 keywords · **33 responsive search ads (3 per ad group)**. All copy is within Google's limits (headlines ≤30, descriptions ≤90, paths ≤15).
+
+**The 3 ads per group test different angles** (all keep the keyword in the headlines for relevance): **A** = comparison/brand, **B** = trust/independence ("we don't sell card machines"), **C** = offer/CTA (free calculator, 60-second quiz, no monthly fee). Let them run, then pause the weakest once one clearly wins on conversions.
 
 > The CSV imports **campaigns, ad groups, keywords and ads**. Budgets, bidding, locations, negatives, ad extensions and conversion tracking are **not** in the CSV (they import unreliably) — set them per the steps below. It's 15 minutes.
 
