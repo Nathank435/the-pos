@@ -12,10 +12,10 @@ export default function CookiePolicyPage() {
   return (
     <InfoPage
       title="Cookie Policy"
-      intro="This is a placeholder cookie policy. Pair it with a consent banner and review before launch (PECR/UK GDPR)."
+      intro="How we use cookies and similar technologies, and how you can control them (PECR/UK GDPR)."
       crumbLabel="Cookie policy"
       path="/cookie-policy"
-      lastUpdated="2026-06-25"
+      lastUpdated="2026-07-02"
       sections={[
         {
           heading: "What are cookies?",
@@ -26,9 +26,10 @@ export default function CookiePolicyPage() {
         {
           heading: "Cookies we use",
           bullets: [
-            "Essential - required for the site to function.",
-            "Analytics - to measure traffic and improve content (only with your consent).",
-            "Marketing/attribution - to measure referrals and ad performance (only with your consent).",
+            "Essential - required for the site to function (e.g. remembering your cookie choice).",
+            "Analytics (Google Analytics via Google Tag Manager) - to measure traffic and improve content (only with your consent).",
+            "Behaviour analytics (Microsoft Clarity) - anonymised heatmaps and session replays to understand how pages are used (only with your consent).",
+            "Marketing/attribution (Klaviyo, Google) - to measure referrals, email sign-ups and ad performance (only with your consent).",
           ],
         },
         {

@@ -13,6 +13,7 @@ import Script from "next/script";
 
 const KEY = "tp_consent";
 const KLAVIYO_COMPANY_ID = process.env.NEXT_PUBLIC_KLAVIYO_COMPANY_ID;
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || "xg9gtnydbm";
 
 type Choice = "granted" | "denied";
 
@@ -57,8 +58,10 @@ export function CookieConsent() {
     setChoice(next);
   }
 
-  // Load Klaviyo onsite only once consent is granted.
-  const klaviyoEnabled = choice === "granted" && Boolean(KLAVIYO_COMPANY_ID);
+  // Load Klaviyo onsite + Microsoft Clarity only once consent is granted.
+  const consented = choice === "granted";
+  const klaviyoEnabled = consented && Boolean(KLAVIYO_COMPANY_ID);
+  const clarityEnabled = consented && Boolean(CLARITY_ID);
 
   return (
     <>
@@ -68,6 +71,16 @@ export function CookieConsent() {
           strategy="afterInteractive"
           src={`https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=${KLAVIYO_COMPANY_ID}`}
         />
+      )}
+
+      {clarityEnabled && (
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "${CLARITY_ID}");`}
+        </Script>
       )}
 
       {choice === null && (
