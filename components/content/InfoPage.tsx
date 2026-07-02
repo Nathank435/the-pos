@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 
@@ -10,6 +11,7 @@ export function InfoPage({
   path,
   sections,
   lastUpdated,
+  contactEmail,
 }: {
   title: string;
   intro?: string;
@@ -17,6 +19,8 @@ export function InfoPage({
   path: string;
   sections: InfoSection[];
   lastUpdated?: string;
+  /** If set, renders a prominent "Email us" mailto button under the intro. */
+  contactEmail?: string;
 }) {
   return (
     <>
@@ -29,6 +33,14 @@ export function InfoPage({
       <Section>
         <Container>
           <div className="max-w-3xl space-y-8">
+            {contactEmail && (
+              <a
+                href={`mailto:${contactEmail}`}
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#1e3a8a]"
+              >
+                <Mail className="h-4 w-4" /> Email us at {contactEmail}
+              </a>
+            )}
             {sections.map((s, i) => (
               <section key={i}>
                 {s.heading && <h2 className="font-heading text-xl font-bold text-navy">{s.heading}</h2>}

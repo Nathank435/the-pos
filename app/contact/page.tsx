@@ -16,11 +16,12 @@ export default function ContactPage() {
       intro="Corrections, partnership enquiries or just feedback - we'd like to hear from you."
       crumbLabel="Contact"
       path="/contact"
+      contactEmail={SITE.email}
       sections={[
         {
           heading: "Email",
           paragraphs: [
-            `The quickest way to reach us is by email at ${SITE.email}. We read everything, though we can't always reply individually.`,
+            `The quickest way to reach us is by email at ${SITE.email} (button above). We read everything, though we can't always reply individually.`,
           ],
         },
         {

@@ -50,6 +50,13 @@ export function SiteFooter() {
 
         <div className="mt-6 space-y-2 border-t border-white/10 pt-6 text-xs text-white/50">
           <p>
+            Questions or corrections? Email us at{" "}
+            <a href={`mailto:${SITE.email}`} className="font-semibold text-white/80 underline hover:text-white">
+              {SITE.email}
+            </a>
+            .
+          </p>
+          <p>
             {SITE.domain} is operated by <span className="text-white/70">{COMPANY.legalName}</span>, a company
             registered in England &amp; Wales (no. {COMPANY.number}). Registered office: {COMPANY.addressOneLine}.
           </p>
