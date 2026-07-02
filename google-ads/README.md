@@ -1,6 +1,7 @@
 # ThePOS.co.uk — Google Ads: 3 lead-gen search campaigns
 
 **File to import:** `thepos-search-campaigns.csv`
+**Account:** every row is tagged with customer ID **156-199-1288 (Thepos.co.uk)**, so Google Ads Editor maps the import to the right account automatically — just make sure that account is downloaded in Editor first (signed in as hello@nathankeeble.com).
 **Goal:** leads (Get Matched quiz + fee-calculator captures) and affiliate clicks.
 **Structure:** 3 campaigns · 11 ad groups · 59 keywords · **33 responsive search ads (3 per ad group)**. All copy is within Google's limits (headlines ≤30, descriptions ≤90, paths ≤15).
 
