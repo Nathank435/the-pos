@@ -1363,6 +1363,453 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Compare POS systems", href: "/compare-pos-systems" },
     ],
   },
+  {
+    slug: "what-is-an-epos-system",
+    title: "What Is an EPOS System? A Plain-English Guide for UK Small Businesses",
+    excerpt:
+      "EPOS explained without the jargon: what an EPOS system actually does, what it costs, who genuinely needs one and who is fine with a £19 card reader.",
+    category: "How-to",
+    author: "The POS editorial team",
+    date: "2026-07-04",
+    readMinutes: 6,
+    featuredImage: "/images/blog/what-is-an-epos-system.webp",
+    featuredAlt: "Cashier setting up a touchscreen EPOS till on a shop counter",
+    intro:
+      "EPOS stands for electronic point of sale, and strip away the sales talk and it means one thing: a till that runs on software. If you have ever asked what is an EPOS system and got an answer full of 'seamless integrations', this is the version in plain English - what it does, what it costs, and whether you actually need one.",
+    sections: [
+      {
+        heading: "What does EPOS actually mean?",
+        paragraphs: [
+          "An EPOS system is a till powered by software instead of mechanical buttons. Usually that is a touchscreen (or an iPad) running till software, connected to a card machine, a receipt printer and a cash drawer. The software is the point: it records every sale, tracks what is selling, and takes card payments through the same screen.",
+          "You will see POS and EPOS used interchangeably. POS is the American term, EPOS the British one - same thing. If a salesperson tries to convince you they are different products, that tells you more about the salesperson than the products.",
+        ],
+      },
+      {
+        heading: "What an EPOS system actually does",
+        paragraphs: [
+          "Beyond ringing up sales, a decent EPOS system quietly does the jobs you would otherwise do badly at 11pm with a spreadsheet. The value is not the till - it is the data and the time.",
+        ],
+        bullets: [
+          "Takes card payments through an integrated card machine, so the amount is never mistyped.",
+          "Tracks stock as you sell - you find out you are low on your best seller before Saturday, not during it.",
+          "Reports what actually sells, by hour, day and product, so you order and staff accordingly.",
+          "Manages staff logins, so you know who sold what and voids are not a mystery.",
+          "Connects to other tools - accounting software, online orders, booking systems - so numbers only get typed once.",
+        ],
+      },
+      {
+        heading: "EPOS vs a card machine: which do you need?",
+        paragraphs: [
+          "This is the question that matters, because the price difference is real. A card reader takes payments, full stop - from around £19 with no monthly fee. An EPOS system takes payments and runs the business around them, usually for a monthly software fee plus hardware.",
+          "The honest test: if you sell a handful of products or your prices live in your head - market traders, mobile hairdressers, most tradespeople - a [card reader](/compare-card-machines) does the job and the EPOS subscription is money down the drain. If you carry stock, employ staff or run a busy counter, the till pays for itself. We cover the decision in more detail in [do you actually need a card machine](/blog/do-you-need-a-card-machine), and the same logic scales up.",
+        ],
+      },
+      {
+        heading: "What does an EPOS system cost?",
+        paragraphs: [
+          "Roughly: free to about £30 a month for app-based systems on an iPad (Square, SumUp POS, Zettle), £25 to £70 a month for dedicated small-business EPOS (Epos Now, Lightspeed), plus hardware from about £150 for a terminal to £500+ for a full till setup. On top of everything sits the transaction fee on every card payment - typically 1.4% to 1.75% for this bracket.",
+          "That transaction percentage usually matters more than the monthly fee once you are taking a few thousand pounds a month on cards. Run your own numbers through our [fee calculator](/card-machine-fee-calculator) before you compare monthly prices - we have seen 'free' software cost more than paid software once the rates were in. Full breakdown in [how much does a POS system cost](/blog/how-much-does-a-pos-system-cost-uk).",
+        ],
+      },
+      {
+        heading: "So do you actually need one?",
+        paragraphs: [
+          "Plenty of businesses genuinely do not, and it is telling that the people who say everyone needs EPOS are the people selling it. A one-person stall taking twenty payments a day needs a reader and a biscuit tin, not a subscription.",
+          "You are in EPOS territory when any of these are true: you carry more stock than you can count in your head, you employ staff who serve without you watching, you run a menu with modifiers and kitchen tickets, or you have caught yourself doing the same manual count twice in a week. At that point the £30 a month buys back hours, and the [right system for your business type](/pos-systems) depends on what you sell - a pub, a salon and a shop need quite different tills.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is EPOS the same as POS?",
+        a: "Yes. POS (point of sale) is the international term, EPOS (electronic point of sale) the British one. Same product category; no meaningful difference.",
+      },
+      {
+        q: "Can I run an EPOS system on an iPad?",
+        a: "Yes - Square, Zettle, SumUp POS and Lightspeed all run on iPads, and it is usually the cheapest route in. A dedicated till screen is sturdier for a busy counter, but an iPad in a decent stand is fine for most small businesses.",
+      },
+      {
+        q: "Do EPOS systems work if the internet goes down?",
+        a: "Most have an offline mode that keeps ringing sales and syncs later, but card payments usually need a connection. Ask specifically about offline card payments before you buy - answers vary more than you would expect.",
+      },
+      {
+        q: "What is the cheapest way to start?",
+        a: "A no-monthly-fee card reader (from about £19) plus the provider's free POS app. SumUp, Square and Zettle all do this. Upgrade to paid EPOS when stock or staff make it worth it - not before.",
+      },
+    ],
+    relatedPosts: [
+      "how-much-does-a-pos-system-cost-uk",
+      "epos-vs-traditional-till",
+      "do-you-need-a-card-machine",
+    ],
+    relatedLinks: [
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+      { label: "POS systems by business type", href: "/pos-systems" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "how-much-does-a-pos-system-cost-uk",
+    title: "How Much Does a POS System Cost in the UK? (2026 Breakdown)",
+    excerpt:
+      "Real UK POS system costs for 2026: hardware, monthly software, transaction fees and the extras nobody quotes - plus the cheapest routes that are not false economy.",
+    category: "Fees & saving",
+    author: "The POS editorial team",
+    date: "2026-07-03",
+    readMinutes: 7,
+    featuredImage: "/images/blog/how-much-does-a-pos-system-cost-uk.webp",
+    featuredAlt: "Close-up of a cashier ringing a sale through a point of sale touchscreen",
+    intro:
+      "How much does a POS system cost in the UK? Anywhere from £19 once to £150+ a month, which is why the question annoys people. The spread is not dishonest - it reflects four separate costs that providers quote selectively. Here is the full bill, so you can compare like with like.",
+    sections: [
+      {
+        heading: "The short answer",
+        paragraphs: [
+          "A one-person business can take card payments for a £19-£40 reader and no monthly fee, paying only a percentage per sale. A small shop or cafe running proper EPOS typically lands between £30 and £80 a month all-in for software and spread-out hardware, plus transaction fees. A multi-till hospitality setup runs £100+ a month before you have poured a pint.",
+          "Any quote you get sits somewhere on that line. The trick is knowing which of the four cost layers it includes - and which it conveniently leaves out.",
+        ],
+      },
+      {
+        heading: "The four costs that make up every POS quote",
+        paragraphs: [
+          "Every POS price is these four things added together. When a provider leads with one number, they are usually quiet about another.",
+        ],
+        bullets: [
+          "Hardware: £19-£120 for a card reader; £150-£300 for a standalone terminal; £300-£800+ for a till screen, printer and cash drawer. Watch for 'from £X a month' hardware rental that quietly outstrips buying it within a year.",
+          "Software: £0 for the free apps (Square, SumUp, Zettle) up to £70+ a month per till for dedicated EPOS (Epos Now, Lightspeed, TouchBistro). Per-till pricing matters - two tills often means two subscriptions.",
+          "Transaction fees: 1.4%-1.75% per tap for most small-business providers. This is usually the biggest number of the lot once you are trading properly.",
+          "Extras: receipt paper, kitchen printers, accounting integrations on 'higher tiers', phone support, and exit fees on contracted systems. Individually small, collectively real.",
+        ],
+      },
+      {
+        heading: "Realistic monthly totals by setup",
+        paragraphs: [
+          "Take a business doing £5,000 a month on cards at a typical 1.69% flat rate - that is £84.50 a month in transaction fees before any subscription. Now the setups:",
+        ],
+        bullets: [
+          "Reader + free app (SumUp, Square, Zettle): ~£85/month all-in at £5k of card sales, after a one-off £19-£120 for the reader. Cheapest route and genuinely fine for simple selling.",
+          "iPad EPOS on a paid plan: add £25-£40 software - ~£110-£125/month. Buys stock control, staff accounts and proper reporting.",
+          "Dedicated EPOS till (Epos Now, Lightspeed): add £40-£70 software and £400+ hardware - ~£125-£155/month plus the kit. For counters where speed and stock matter all day.",
+          "Contracted terminal + EPOS (Dojo and similar): often lower percentage rates that beat flat-rate pricing at higher volumes - but check the contract length and exit terms before signing anything.",
+        ],
+      },
+      {
+        heading: "The costs nobody puts on the pricing page",
+        paragraphs: [
+          "Three recurring offenders. First, per-till and per-location pricing - the £39 headline becomes £78 the day you add a second screen. Second, feature gating: stock control or accounting sync locked behind the next tier up, announced after you have migrated your products. Third, card rate 'reviews' on contracted providers - the rate that won you over can drift upwards a year in unless you renegotiate.",
+          "None of these are scams; they are just not volunteered. Ask all three questions before you sign and you will be ahead of most buyers. Our [switching checklist](/blog/switching-card-machine-checklist) covers what to check before you move.",
+        ],
+      },
+      {
+        heading: "Cheap vs actually good value",
+        paragraphs: [
+          "The cheapest monthly price is not the cheapest system. At low volume, no-monthly-fee wins outright: £500 of card sales a month costs you about £8.50 in fees and nothing else. But at £15,000 a month, the difference between 1.69% and a negotiated 1.1% is over £1,000 a year - a £40 subscription with better rates beats a free app comfortably.",
+          "This is exactly what our [fee calculator](/card-machine-fee-calculator) is for: put in your real monthly card turnover and average sale, and it shows the true monthly cost per provider. Two minutes there saves the classic mistake of choosing a till by its subscription price alone. If you want a shortlist matched to your business, the [60-second quiz](/get-pos-quotes) does that too.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the cheapest POS system in the UK?",
+        a: "For pure cost, a no-monthly-fee reader with its free app - SumUp, Square or Zettle - from about £19 one-off plus roughly 1.69%-1.75% per transaction. Cheapest overall depends on your volume: at higher turnover, paid plans with lower rates win.",
+      },
+      {
+        q: "Are 'free' POS systems actually free?",
+        a: "The software genuinely is; the money is made on transaction fees. That is a fair deal at low volume and an expensive one at high volume. There is no free lunch, but there is a correctly priced one for your turnover.",
+      },
+      {
+        q: "Should I rent or buy POS hardware?",
+        a: "Buy if you can. Rental spreads the cost but usually exceeds the purchase price within 12-18 months and can tie you into the provider. The exception is contracted packages where 'free' hardware is priced into decent card rates - just do the maths over the full term.",
+      },
+      {
+        q: "How much should a small cafe budget for POS?",
+        a: "Realistically £100-£160 a month all-in at typical cafe card volumes: an iPad or till, a £25-£45 software plan and transaction fees on the majority of sales being card. The fees are the biggest line, which is why the percentage matters more than the subscription.",
+      },
+    ],
+    relatedPosts: [
+      "what-is-an-epos-system",
+      "how-much-does-a-card-machine-cost-uk",
+      "how-to-cut-card-processing-fees",
+    ],
+    relatedLinks: [
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "best-pos-system-for-pubs-uk",
+    title: "Best POS System for Pubs and Bars in the UK (2026)",
+    excerpt:
+      "What a pub POS actually needs to do - tabs, speed, split bills, wet-led stock - and which systems handle a Friday night rush without falling over.",
+    category: "By business",
+    author: "The POS editorial team",
+    date: "2026-07-02",
+    readMinutes: 7,
+    featuredImage: "/images/blog/best-pos-system-for-pubs-uk.webp",
+    featuredAlt: "Bartender pulling a pint at a busy UK pub bar",
+    intro:
+      "The best POS system for a pub is the one that is still fast at 9pm on a Friday. Plenty of tills demo beautifully on a quiet Tuesday and then queue you into the ground on match day. Here is what actually matters behind a bar, and which systems we would shortlist for a UK pub in 2026.",
+    sections: [
+      {
+        heading: "What a pub till has to do (that a shop till does not)",
+        paragraphs: [
+          "Pubs are a harsher test than almost any shop. The order is spoken, not scanned; half your sales are variations ('pint of that, splash of lime'); and the customer is standing there watching every tap of the screen. Speed per order is the whole game.",
+        ],
+        bullets: [
+          "Tabs that work: open a tab against a card in seconds, add rounds from any till, settle without drama. Card pre-authorisation on tabs saves you from the classic walkout.",
+          "Split bills without maths: by item, by amount, by 'we are paying for ours' - handled at the screen, not on a beer mat.",
+          "One-tap layout for your top sellers: your five bestselling pints on the home screen, not three menus deep.",
+          "Wet-led stock: counts by the pint and the measure, not the case - so you see the gap between what the till sold and what the cellar lost.",
+          "Kitchen tickets if you do food: orders fire to the kitchen printer or screen, with allergens and course order intact.",
+        ],
+      },
+      {
+        heading: "Our shortlist for UK pubs",
+        paragraphs: [
+          "Different pubs, different right answers - a wet-led local and a gastro pub with 60 covers are not buying the same till.",
+        ],
+        bullets: [
+          "Wet-led local or small bar: [Square](/reviews/square) for Restaurants or [SumUp](/reviews/sumup) POS on an iPad. Cheap to run, fast to learn, tabs and split bills included. The pragmatic choice for most independents.",
+          "Food-led pub with a proper kitchen: [Lightspeed](/reviews/lightspeed) or [TouchBistro](/reviews/touchbistro) - stronger course management, kitchen screens and menu engineering. You pay more monthly and it is worth it at volume.",
+          "Busy multi-till operation: [Epos Now](/reviews/epos-now) or a contracted [Dojo](/reviews/dojo) package - negotiated card rates start beating flat-rate pricing once you are doing serious weekly card volume, and the hardware is built for abuse.",
+        ],
+        image: {
+          src: "/images/blog/pubs-inline.webp",
+          alt: "Customer paying by card at the table in a UK pub",
+          caption: "Pay-at-table is now the expectation, not the exception - your POS should treat it as standard.",
+        },
+      },
+      {
+        heading: "The fees question, pub edition",
+        paragraphs: [
+          "Pubs are high-volume, low-ticket businesses, which is precisely where transaction percentages bite hardest. A busy local doing £20,000 a month on cards pays about £340 a month at a flat 1.69% - and closer to £220 at a negotiated 1.1%. That £120 a month difference dwarfs any software subscription in the comparison.",
+          "So the rule for pubs specifically: below roughly £10k of monthly card sales, flat-rate no-contract providers keep life simple; above it, get a quote from a contracted provider and make the flat-rate provider's simplicity earn its premium. Run your own volumes through the [fee calculator](/card-machine-fee-calculator) - pubs are the business type where this exercise pays for itself fastest.",
+        ],
+      },
+      {
+        heading: "Hardware that survives a bar",
+        paragraphs: [
+          "Behind a bar, kit gets wet, knocked and passed between wet hands all night. Buy the spill-proof reality, not the showroom: a till screen or iPad in a proper mount at each service point, card readers that hold charge through a full shift, and a spare charged reader in the office - the £30 backup that saves a Saturday.",
+          "If you run tables, add portable readers or pay-at-table devices; walking the terminal to the table turns a 4-minute settle into 40 seconds and measurably improves tips. What you do not need on day one: customer displays, self-order kiosks or a loyalty screen. Nail speed first.",
+        ],
+      },
+      {
+        heading: "How to choose without regretting it",
+        paragraphs: [
+          "Demo any till with your own Friday-night scenario: a round of five, two added to a tab, one split three ways, one refund - timed. If the rep cannot do it quickly, your staff will not either. Then check the exit terms: month-to-month systems let you correct a mistake for free; 36-month contracts make it expensive.",
+          "Our [pub and bar POS guide](/pos-systems/pubs-bars) goes deeper on setups by pub type, or take the [60-second quiz](/get-pos-quotes) and we will shortlist against your actual volumes. And if you already suspect you are overpaying on card fees, you probably are - [here is how to check](/blog/how-to-cut-card-processing-fees).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What POS do most UK pubs use?",
+        a: "Independents increasingly run iPad systems (Square, SumUp POS, Lightspeed); food-led and multi-site pubs skew to Epos Now, TouchBistro and contracted packages from Dojo and the banks. There is no single standard - which is good news, because it keeps pricing honest.",
+      },
+      {
+        q: "Can customers keep a tab open with a card behind the bar?",
+        a: "Modern systems do this with a card pre-authorisation instead - the card is tapped once, a hold is placed, and rounds are added digitally. Safer than a stack of physical cards in a glass, and it kills the end-of-night walkout problem.",
+      },
+      {
+        q: "Do I need a separate card machine for the beer garden?",
+        a: "You need portable readers on the same system, not a separate machine. Any decent pub POS supports multiple readers syncing to one account, so garden sales hit the same reports and stock counts as the bar.",
+      },
+      {
+        q: "What should a small pub spend on POS monthly?",
+        a: "A wet-led independent can run well on £30-£60 a month of software plus transaction fees; food-led pubs typically £60-£120 across till and kitchen. If your quote is multiples of that, you are being sold features you will not use.",
+      },
+    ],
+    relatedPosts: [
+      "restaurant-pos-what-matters",
+      "how-much-does-a-pos-system-cost-uk",
+      "same-day-payouts-providers",
+    ],
+    relatedLinks: [
+      { label: "POS systems for pubs & bars", href: "/pos-systems/pubs-bars" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "pos-system-for-salons-uk",
+    title: "Choosing a POS System for Your Salon or Barbershop (UK 2026)",
+    excerpt:
+      "Salon POS without the fluff: booking integration, deposits that kill no-shows, staff splits and retail - and which systems do it for sensible money.",
+    category: "By business",
+    author: "The POS editorial team",
+    date: "2026-07-03",
+    readMinutes: 6,
+    featuredImage: "/images/blog/pos-system-for-salons-uk.webp",
+    featuredAlt: "Client paying their barber by card after a haircut",
+    intro:
+      "A salon POS earns its keep twice: at the front desk when the client pays, and days earlier when the booking, reminder and deposit stopped that appointment becoming a no-show. If you are choosing a POS system for a salon or barbershop in the UK, the till is honestly the easy half - it is the diary you are really buying.",
+    sections: [
+      {
+        heading: "The no-show maths that changes the decision",
+        paragraphs: [
+          "Start here, because it reframes the budget. A chair doing £40 cuts with three no-shows a week loses about £6,000 a year - silently, with no invoice to make it feel real. Automated SMS reminders alone typically cut no-shows dramatically, and card-on-file deposits or cancellation fees handle most of the rest.",
+          "That is why 'free till plus separate paper diary' is the expensive option, and why the right question is not 'what does the POS cost' but 'what does the booking system connected to it save'. A £30 subscription that recovers two no-shows a month has paid for itself several times over.",
+        ],
+      },
+      {
+        heading: "What actually matters in a salon POS",
+        paragraphs: [
+          "The feature list you need is short - but each item is non-negotiable once you have staff and a full book.",
+        ],
+        bullets: [
+          "Online booking with automatic reminders: clients book at 10pm from Instagram, reminders go out without anyone typing them.",
+          "Deposits and no-show protection: card captured at booking, your cancellation policy enforced automatically and politely.",
+          "Staff calendars and commission splits: each stylist's column, takings and commission tracked per service - no spreadsheet arguments on pay day.",
+          "Retail on the same screen: the aftercare product sold with the cut goes through the same basket and the same stock count.",
+          "Client history: colour formulas, patch test dates and preferences attached to the client record, not someone's memory.",
+        ],
+      },
+      {
+        heading: "Our shortlist for UK salons and barbershops",
+        paragraphs: [
+          "The market splits into payments-first systems that added booking, and booking-first systems that added payments. Both work; the right pick depends on which half of the job is harder in your shop.",
+        ],
+        bullets: [
+          "Most salons and barbershops: [Square](/reviews/square) Appointments - booking, deposits, reminders and payments in one account, free for a single calendar and sensibly priced with staff. The default pick for good reason.",
+          "Booking-led shops that live on repeat clients: a dedicated booking platform (Fresha and Treatwell are the big names) paired with its built-in payments or a [Zettle](/reviews/zettle) reader at the desk. Strongest diary features; check the marketplace commission on new-client bookings.",
+          "Keep-it-simple chairs and barbers: a [SumUp](/reviews/sumup) reader plus a lightweight booking app. Lowest cost, no subscription, entirely adequate for a two-chair shop that lives on walk-ins and regulars.",
+        ],
+      },
+      {
+        heading: "Fees and the chair-renter question",
+        paragraphs: [
+          "Salon tickets are mid-sized and card-heavy, so a flat 1.4%-1.75% is liveable for most independents - a £4,000 card month costs £56-£70 in fees. Volume discounts only become worth chasing for multi-chair salons doing serious retail alongside services. As ever, two minutes in the [fee calculator](/card-machine-fee-calculator) with your real numbers beats guessing.",
+          "If you rent chairs out, resist the urge to run everyone through one account. Each self-employed stylist taking their own payments on their own reader keeps HMRC, VAT thresholds and tips clean - and modern readers are cheap enough that 'one till to rule them all' is a false economy with tax consequences. Our [salon POS guide](/pos-systems/salons) covers the setups by salon type.",
+        ],
+      },
+      {
+        heading: "Choosing without the demo-day regret",
+        paragraphs: [
+          "Test the unglamorous paths before you commit: rebook a client for six weeks while cashing them out, apply a deposit to a colour appointment, split a service-plus-product sale between card and voucher. If any of those takes more than a few taps, the system will fight you every single day.",
+          "And check what leaving looks like - your client list and history should export cleanly. A system that holds your client book hostage was never really your system. If you want a shortlist matched to your shop, the [60-second quiz](/get-pos-quotes) will do it, or read up on [what a card machine should cost](/blog/how-much-does-a-card-machine-cost-uk) if you only need the payments half.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What POS system do most UK salons use?",
+        a: "Square Appointments and Fresha dominate the independent end; bigger salons run dedicated salon software (Phorest, Timely) with integrated payments. Barbershops skew simpler - often just a reader plus a booking app.",
+      },
+      {
+        q: "Can I take deposits for appointments?",
+        a: "Yes, and you should for anything over an hour. Booking-integrated systems capture a card at booking and either hold a deposit or enforce your cancellation fee automatically. It is the single most effective no-show fix available.",
+      },
+      {
+        q: "Do I need a full till or just a card reader?",
+        a: "If you are a one-or-two-chair shop with no retail, a £19-£40 reader and a booking app cover you. Add a proper POS when you employ staff, sell product, or your diary is busy enough that no-shows genuinely cost you.",
+      },
+      {
+        q: "How should chair renters take payments?",
+        a: "On their own readers, under their own accounts. It keeps each stylist's turnover, tips and tax separate - which matters for VAT thresholds and keeps rent disputes clean. Readers are cheap; blurred finances are not.",
+      },
+    ],
+    relatedPosts: [
+      "what-is-an-epos-system",
+      "how-much-does-a-card-machine-cost-uk",
+      "best-card-machine-small-business-uk",
+    ],
+    relatedLinks: [
+      { label: "POS systems for salons", href: "/pos-systems/salons" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "epos-vs-traditional-till",
+    title: "EPOS vs a Traditional Till: Is It Worth Upgrading?",
+    excerpt:
+      "An honest look at swapping the old cash register for EPOS: what you gain, what it costs, and the businesses where the dumb till is genuinely the right call.",
+    category: "Comparisons",
+    author: "The POS editorial team",
+    date: "2026-07-04",
+    readMinutes: 6,
+    featuredImage: "/images/blog/epos-vs-traditional-till.webp",
+    featuredAlt: "Keys of a vintage mechanical cash register",
+    intro:
+      "There are still tens of thousands of UK counters running a traditional till: keys, cash drawer, Z-report at close. If yours works, the EPOS industry's insistence that you are a dinosaur deserves scepticism - upgrading has real costs. But there is a point where the old till quietly becomes the most expensive thing in the shop. Here is how to tell which side of it you are on.",
+    sections: [
+      {
+        heading: "What the old till does well (really)",
+        paragraphs: [
+          "Credit where due: a traditional cash register is bought once, needs no subscription, no updates, no wifi, and rings sales for a decade. For a low-line business - a chippy with eight menu items, a village shop, a barber taking cash and card side by side - it does the only job a till legally must do: record the sale and hold the cash.",
+          "The honest case for keeping it: your product range is small and stable, you do not employ staff you cannot see, and you already know your numbers well enough that a report would tell you nothing new. That describes more businesses than the EPOS industry likes to admit.",
+        ],
+      },
+      {
+        heading: "What you are actually paying for the old till",
+        paragraphs: [
+          "The costs are invisible because they arrive as time and error, not invoices. The typical counter with a separate card machine mistypes amounts occasionally (always awkward to unwind), takes stock by walking the shelves, and does its bookkeeping by rekeying a paper Z-report into a spreadsheet or handing a carrier bag of them to an accountant.",
+          "Each is small. Together they are commonly several hours a week plus a steady drip of shrinkage you cannot see - the gap between what sold and what left the shelf, which a keys-and-drawer till has no way to show you. If you have staff, that gap is where it hides.",
+        ],
+        image: {
+          src: "/images/blog/epos-vs-till-inline.webp",
+          alt: "Modern touchscreen EPOS till in a restaurant",
+          caption: "The upgrade case in one line: the till stops being a drawer and starts being the shop's memory.",
+        },
+      },
+      {
+        heading: "What EPOS actually changes day-to-day",
+        paragraphs: [
+          "Not the ringing of sales - that is the same speed either way once staff know the screen. The change is everything around it:",
+        ],
+        bullets: [
+          "The card machine and till agree by design - the amount goes over automatically, so mistyped payments disappear.",
+          "Stock counts itself down as you sell; you order from a report, not a walk round the shelves.",
+          "Takings, VAT and bestsellers land in your accounting software without rekeying - Making Tax Digital stops being a chore.",
+          "Staff sales, voids and no-sales are logged per person. Most owners learn something within a month they had not known for years.",
+          "Price changes take thirty seconds from a screen, not an evening of relabelling PLUs.",
+        ],
+      },
+      {
+        heading: "The honest cost of switching",
+        paragraphs: [
+          "Money first: from roughly £30 a month (iPad plus app-based EPOS like [Square](/reviews/square) or [SumUp](/reviews/sumup) POS) to £50-£80 a month with proper hardware from the likes of [Epos Now](/reviews/epos-now) - our [POS cost breakdown](/blog/how-much-does-a-pos-system-cost-uk) has the full numbers. If you were not taking cards before, add transaction fees; if you were, you are paying those already.",
+          "The real cost is the fortnight of friction: loading products, retraining muscle memory, the first busy Saturday on the new screen. Do the product load in a quiet week, run the old till as backup for the first few days, and it is a bump rather than a crisis. Our [switching checklist](/blog/switching-card-machine-checklist) applies almost unchanged.",
+        ],
+      },
+      {
+        heading: "The verdict",
+        paragraphs: [
+          "Keep the traditional till if: your range is small and stable, you are behind the counter yourself for most trading hours, and cash is still a big share of takings. The subscription would buy you reports that confirm what you already know. That is not backwards; it is correctly sized.",
+          "Upgrade when any of these arrive: staff serving unsupervised, stock you cannot count in your head, VAT returns built from paper, or a card machine that regularly disagrees with the till. At that point EPOS is not a gadget, it is the cheaper option - the [comparison table](/compare-pos-systems) shows what each system costs, or [answer five questions](/get-pos-quotes) and we will shortlist for your counter.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I keep taking cash on an EPOS system?",
+        a: "Yes - every mainstream EPOS supports a cash drawer and cash sales alongside card. The drawer even pops the same way. EPOS changes what is recorded, not what you can accept.",
+      },
+      {
+        q: "Is a traditional till cheaper long-term?",
+        a: "On invoices, yes: no subscription, no fees on cash. In practice it depends on scale - once staff, stock and card reconciliation errors are in play, the hours and shrinkage usually cost more than £30-£50 a month. One-person, cash-heavy counters are the genuine exception.",
+      },
+      {
+        q: "Do I legally need EPOS for Making Tax Digital?",
+        a: "No - MTD requires digital VAT records and compatible software, not a specific till. But EPOS makes compliance nearly automatic, whereas a paper Z-report till means bridging spreadsheets and manual entry every quarter.",
+      },
+      {
+        q: "How long does switching from a till to EPOS take?",
+        a: "For a small shop: an afternoon to load products, a day of staff wobbliness, and about two weeks until nobody misses the old till. The product load is the real work - do it before the hardware arrives, not after.",
+      },
+    ],
+    relatedPosts: [
+      "what-is-an-epos-system",
+      "how-much-does-a-pos-system-cost-uk",
+      "switching-card-machine-checklist",
+    ],
+    relatedLinks: [
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+      { label: "POS systems by business type", href: "/pos-systems" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
