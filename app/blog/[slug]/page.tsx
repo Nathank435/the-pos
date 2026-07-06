@@ -14,7 +14,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { articleSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { BLOG_POSTS, getPost, blogCover } from "@/data/blog";
-import { Clock } from "lucide-react";
+import { AUTHOR } from "@/lib/site";
+import { Clock, Linkedin } from "lucide-react";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
@@ -65,7 +66,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <h1 className="mt-3 font-heading text-3xl font-bold leading-tight text-navy sm:text-4xl">{post.title}</h1>
             <p className="mt-3 text-lg leading-relaxed text-grey">{post.excerpt}</p>
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-grey">
-              <span>By {post.author}</span>
+              <span>
+                By{" "}
+                {post.author === AUTHOR.name ? (
+                  <a
+                    href={AUTHOR.linkedin}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-semibold text-deepblue hover:underline"
+                  >
+                    {post.author} <Linkedin className="h-3.5 w-3.5" />
+                  </a>
+                ) : (
+                  post.author
+                )}
+              </span>
               <LastUpdated date={post.date} label="Published" />
               <span className="inline-flex items-center gap-1">
                 <Clock className="h-3.5 w-3.5" /> {post.readMinutes} min read
@@ -132,6 +147,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <FAQAccordion faqs={post.faqs} />
                 </div>
               </section>
+            )}
+
+            {post.author === AUTHOR.name && (
+              <aside className="mt-10 flex items-start gap-4 rounded-lg border border-border bg-cream/60 p-5">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy font-heading text-lg font-bold text-white">
+                  {AUTHOR.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </span>
+                <div>
+                  <p className="font-heading font-bold text-navy">
+                    {AUTHOR.name} <span className="font-sans text-sm font-normal text-grey">- {AUTHOR.role}</span>
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-grey">{AUTHOR.bio}</p>
+                  <a
+                    href={AUTHOR.linkedin}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-deepblue hover:underline"
+                  >
+                    <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+                  </a>
+                </div>
+              </aside>
             )}
           </article>
 

@@ -1,5 +1,5 @@
 /* JSON-LD schema builders. Output is injected via <JsonLd>. */
-import { SITE, COMPANY } from "./site";
+import { SITE, COMPANY, AUTHOR } from "./site";
 import type { Provider } from "@/data/providers";
 
 type Json = Record<string, unknown>;
@@ -82,7 +82,10 @@ export function articleSchema(input: {
     datePublished: input.datePublished,
     dateModified: input.dateModified,
     ...(input.image ? { image: `${SITE.url}${input.image}` } : {}),
-    author: { "@type": input.author ? "Person" : "Organization", name: input.author || SITE.publisher },
+    author:
+      input.author === AUTHOR.name
+        ? { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/about`, sameAs: [AUTHOR.linkedin] }
+        : { "@type": input.author ? "Person" : "Organization", name: input.author || SITE.publisher },
     publisher: { "@type": "Organization", name: SITE.publisher },
   };
 }

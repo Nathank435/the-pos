@@ -40,7 +40,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "How to Take Card Payments as a Small Business (UK 2026)",
   "excerpt": "How to take card payments as a UK small business in 2026, with the main options, real fees, setup times and a plain recommendation for most starters.",
   "category": "How-to",
-  "author": "The POS editorial team",
+  "author": "Nathan Keeble",
   "date": "2026-06-30",
   "readMinutes": 6,
   "featuredImage": "/images/blog/how-to-take-card-payments-uk.webp",
@@ -160,7 +160,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Card Machine Fees Compared: SumUp vs Square vs Zettle vs Dojo (2026)",
   "excerpt": "Card machine fees compared for UK small businesses: SumUp, Square, Zettle and Dojo side by side, plus the sneaky extras that decide who's actually cheapest for you.",
   "category": "Fees & saving",
-  "author": "The POS editorial team",
+  "author": "Nathan Keeble",
   "date": "2026-06-30",
   "readMinutes": 7,
   "featuredImage": "/images/blog/card-machine-fees-compared.webp",
@@ -288,7 +288,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "The Cheapest Way to Take Card Payments (UK 2026)",
   "excerpt": "The cheapest way to take card payments in the UK depends on your volume. We rank the cheapest card readers and show the true all-in cost.",
   "category": "Fees & saving",
-  "author": "The POS editorial team",
+  "author": "Nathan Keeble",
   "date": "2026-06-30",
   "readMinutes": 7,
   "featuredImage": "/images/blog/cheapest-way-to-take-card-payments.webp",
@@ -428,7 +428,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Best Card Machine for a Food Truck or Street Food Business (UK 2026)",
   "excerpt": "Choosing a card machine for a food truck? We cut through the sales patter and pick the best mobile card readers for UK street food traders in 2026.",
   "category": "By business",
-  "author": "The POS editorial team",
+  "author": "Nathan Keeble",
   "date": "2026-06-30",
   "readMinutes": 7,
   "featuredImage": "/images/blog/card-machine-for-food-truck.webp",
@@ -568,7 +568,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Do You Need a Card Machine? Card vs Cash for UK Small Businesses (2026)",
   "excerpt": "Wondering if you need a card machine? For most UK small businesses in 2026 the answer is yes, but here's the honest cash vs card breakdown before you commit.",
   "category": "How-to",
-  "author": "The POS editorial team",
+  "author": "Nathan Keeble",
   "date": "2026-06-30",
   "readMinutes": 7,
   "featuredImage": "/images/blog/do-you-need-a-card-machine.webp",
@@ -694,7 +694,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "From chasing the lowest headline rate to ignoring the contract, here are the five traps that cost UK businesses money - and how to dodge them.",
     category: "How-to",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-24",
     readMinutes: 6,
     featuredImage: "/images/blog/card-machine-mistakes.jpg",
@@ -753,7 +753,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Two of the UK's most popular no-monthly-fee options, head to head. We break down fees, hardware and who each one actually suits.",
     category: "Comparisons",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-20",
     readMinutes: 7,
     featuredImage: "/images/blog/sumup-vs-square-2026.jpg",
@@ -802,7 +802,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Seven practical ways UK businesses can shave money off card fees - from renegotiating to picking the right plan for your volume.",
     category: "Fees & saving",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-16",
     readMinutes: 6,
     featuredImage: "/images/blog/how-to-cut-card-processing-fees.jpg",
@@ -846,7 +846,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Market stalls need a reader that works on mobile data, lasts all day and costs nothing when you're not trading. Here's what to look for.",
     category: "By business",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-12",
     readMinutes: 5,
     featuredImage: "/images/blog/best-card-readers-market-traders.jpg",
@@ -890,7 +890,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Take contactless payments on your phone with no extra hardware. We look at who it suits - and where you'll still want a proper reader.",
     category: "How-to",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-08",
     readMinutes: 5,
     featuredImage: "/images/blog/tap-to-pay-iphone-worth-it.jpg",
@@ -931,7 +931,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "No-contract sounds like a no-brainer - but there are trade-offs. Here's when pay-as-you-go wins and when a contract is genuinely cheaper.",
     category: "Fees & saving",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-04",
     readMinutes: 5,
     featuredImage: "/images/blog/no-contract-card-machines-catch.jpg",
@@ -971,7 +971,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Lots of small coffees means lots of tiny transactions - and that's exactly where the wrong setup quietly costs you. Here's how to fix it.",
     category: "By business",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-05-30",
     readMinutes: 5,
     featuredImage: "/images/blog/cafe-overpaying-card-fees.jpg",
@@ -1005,7 +1005,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Tables, tabs, tips and a kitchen that's already on fire at 8pm. Here's what to prioritise in a restaurant POS - and what to ignore.",
     category: "By business",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-05-26",
     readMinutes: 6,
     featuredImage: "/images/blog/restaurant-pos-what-matters.jpg",
@@ -1043,7 +1043,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Standard settlement is 1–2 working days. If cash flow is tight, here are the providers that get your money to you sooner.",
     category: "Comparisons",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-05-20",
     readMinutes: 5,
     featuredImage: "/images/blog/same-day-payouts-providers.jpg",
@@ -1080,7 +1080,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Thinking of moving provider? Work through this checklist first so you don't get caught by exit fees, downtime or a worse rate.",
     category: "How-to",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-05-14",
     readMinutes: 6,
     featuredImage: "/images/blog/switching-card-machine-checklist.jpg",
@@ -1124,7 +1124,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "The best UK card machines for small businesses in 2026 - by need, not by who pays us most. Fees, hardware, contracts and payouts compared in plain English.",
     category: "Comparisons",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-29",
     readMinutes: 10,
     featuredImage: "/images/blog/best-card-machine-small-business-uk.jpg",
@@ -1206,7 +1206,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "A full breakdown of UK card machine costs in 2026 - hardware, transaction fees, monthly charges and the hidden extras - with worked examples by turnover.",
     category: "Fees & saving",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-28",
     readMinutes: 9,
     featuredImage: "/images/blog/how-much-does-a-card-machine-cost-uk.jpg",
@@ -1293,7 +1293,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Square vs PayPal Zettle compared for UK small businesses - fees, hardware, POS software and payouts, with a clear verdict on who each one suits.",
     category: "Comparisons",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-06-27",
     readMinutes: 8,
     featuredImage: "/images/blog/square-vs-zettle.jpg",
@@ -1369,7 +1369,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "EPOS explained without the jargon: what an EPOS system actually does, what it costs, who genuinely needs one and who is fine with a £19 card reader.",
     category: "How-to",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-07-04",
     readMinutes: 6,
     featuredImage: "/images/blog/what-is-an-epos-system.webp",
@@ -1454,7 +1454,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Real UK POS system costs for 2026: hardware, monthly software, transaction fees and the extras nobody quotes - plus the cheapest routes that are not false economy.",
     category: "Fees & saving",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-07-03",
     readMinutes: 7,
     featuredImage: "/images/blog/how-much-does-a-pos-system-cost-uk.webp",
@@ -1543,7 +1543,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "What a pub POS actually needs to do - tabs, speed, split bills, wet-led stock - and which systems handle a Friday night rush without falling over.",
     category: "By business",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-07-02",
     readMinutes: 7,
     featuredImage: "/images/blog/best-pos-system-for-pubs-uk.webp",
@@ -1637,7 +1637,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Salon POS without the fluff: booking integration, deposits that kill no-shows, staff splits and retail - and which systems do it for sensible money.",
     category: "By business",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-07-03",
     readMinutes: 6,
     featuredImage: "/images/blog/pos-system-for-salons-uk.webp",
@@ -1726,7 +1726,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "An honest look at swapping the old cash register for EPOS: what you gain, what it costs, and the businesses where the dumb till is genuinely the right call.",
     category: "Comparisons",
-    author: "The POS editorial team",
+    author: "Nathan Keeble",
     date: "2026-07-04",
     readMinutes: 6,
     featuredImage: "/images/blog/epos-vs-traditional-till.webp",

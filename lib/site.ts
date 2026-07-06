@@ -13,6 +13,14 @@ export const SITE = {
   twitter: "@thepos_uk",
 } as const;
 
+/** Named author for blog posts - byline, author box and Person schema (E-E-A-T). */
+export const AUTHOR = {
+  name: "Nathan Keeble",
+  role: "Founder, The POS",
+  linkedin: "https://www.linkedin.com/in/nathan-keeble-a06057b3",
+  bio: "Nathan is the founder of The POS and director of Cracked Media Ltd. He's spent the last decade in digital marketing and ecommerce, and now spends it comparing card machine fees so you don't have to.",
+} as const;
+
 /** Legal operating company - surfaced in the footer, legal pages and schema. */
 export const COMPANY = {
   legalName: "Cracked Media Ltd",
