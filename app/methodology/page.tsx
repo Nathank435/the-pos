@@ -49,7 +49,7 @@ export default function MethodologyPage() {
           heading: "Inclusion policy & commercial relationships",
           paragraphs: [
             "We cover the providers UK small businesses actually shortlist - by market share, search interest and reader questions. Being included is not a commercial arrangement, and no provider can pay to be added, removed or re-scored.",
-            "For transparency: we currently have affiliate partnerships with SumUp and myPOS. Square, Zettle, Dojo, Worldpay, Barclaycard, Tyl by NatWest, Lightspeed, Epos Now, Shopify POS and TouchBistro are linked with no commercial relationship - those reviews are unpaid. This list changes as partnerships change, and we keep it current.",
+            "For transparency: we currently have affiliate partnerships with SumUp, myPOS and Shopify POS. Square, Zettle, Dojo, Worldpay, Barclaycard, Tyl by NatWest, Lightspeed, Epos Now and TouchBistro are linked with no commercial relationship - those reviews are unpaid. This list changes as partnerships change, and we keep it current.",
           ],
         },
         {

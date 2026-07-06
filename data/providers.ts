@@ -726,7 +726,7 @@ export const PROVIDERS: Provider[] = [
       { name: "Shopify Tap & Chip / WisePad", priceFrom: "From ~£49", note: "Card reader pairs with Shopify POS app" },
       { name: "Shopify POS Go", priceFrom: "Quoted", note: "All-in-one handheld scanner + reader" },
     ],
-    affiliateUrl: "https://www.shopify.com/uk/pos",
+    affiliateUrl: "https://shopify.pxf.io/6kxgVK",
     quoteUrl: "/get-pos-quotes?provider=shopify-pos",
     sourceUrls: ["https://www.shopify.com/uk/pos"],
     lastChecked: "2026-06-25",

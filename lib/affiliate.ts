@@ -13,7 +13,9 @@ export function buildAffiliateUrl(provider: Provider, ctx: AffiliateContext): st
   if (!raw) return `/reviews/${provider.slug}`;
   try {
     const url = new URL(raw);
-    url.searchParams.set("subid", [ctx.pageType, ctx.slug ?? provider.slug, ctx.position].join("-"));
+    // impact.com tracking domains (e.g. shopify.pxf.io) read subId1; others get a generic subid.
+    const param = url.hostname.endsWith("pxf.io") ? "subId1" : "subid";
+    url.searchParams.set(param, [ctx.pageType, ctx.slug ?? provider.slug, ctx.position].join("-"));
     return url.toString();
   } catch {
     return raw;
