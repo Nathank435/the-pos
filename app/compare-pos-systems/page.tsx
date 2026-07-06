@@ -49,11 +49,7 @@ export default function ComparePOSPage() {
 
       <Section>
         <Container>
-          <TrustStrip className="-mt-2 mb-5" />
-        </Container>
-      </Section>
-      <Section>
-        <Container>
+          <TrustStrip className="mb-6" />
           <ProviderComparisonTable providers={PROVIDERS} sourcePage="compare-pos-systems" />
         </Container>
       </Section>

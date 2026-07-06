@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { latestProviderUpdate, PROVIDERS } from "@/data/providers";
 
 /** One-line reasons-to-believe strip for the homepage and commercial pages. */
-export function TrustStrip({ className = "" }: { className?: string }) {
+export function TrustStrip({ className = "", count }: { className?: string; count?: number }) {
   const date = new Date(latestProviderUpdate()).toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
@@ -15,7 +15,7 @@ export function TrustStrip({ className = "" }: { className?: string }) {
         <Check className="h-3.5 w-3.5 text-accent" /> Prices checked {date}
       </span>
       <span className="inline-flex items-center gap-1">
-        <Check className="h-3.5 w-3.5 text-accent" /> {PROVIDERS.length} providers compared
+        <Check className="h-3.5 w-3.5 text-accent" /> {count ?? PROVIDERS.length} providers compared
       </span>
       <span className="inline-flex items-center gap-1">
         <Check className="h-3.5 w-3.5 text-accent" />

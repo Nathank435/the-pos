@@ -55,11 +55,7 @@ export default function CompareCardMachinesPage() {
 
       <Section>
         <Container>
-          <TrustStrip className="-mt-2 mb-5" />
-        </Container>
-      </Section>
-      <Section>
-        <Container>
+          <TrustStrip count={HARDWARE_PROVIDERS.length} className="mb-6" />
           <ProviderComparisonTable providers={HARDWARE_PROVIDERS} sourcePage="compare-card-machines" />
         </Container>
       </Section>
