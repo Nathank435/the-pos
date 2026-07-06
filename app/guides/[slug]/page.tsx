@@ -9,7 +9,7 @@ import { AuthorBox } from "@/components/content/AuthorBox";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { articleSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { GUIDES, getGuide } from "@/data/guides";
 import { Clock } from "lucide-react";
@@ -43,8 +43,6 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             datePublished: guide.lastUpdated,
             dateModified: guide.lastUpdated,
           }),
-          breadcrumbSchema([{ name: "Guides", path: "/guides" }, { name: guide.title, path }]),
-          ...(guide.faqs && guide.faqs.length ? [faqSchema(guide.faqs)] : []),
         ]}
       />
 

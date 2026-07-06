@@ -11,8 +11,15 @@ export function organizationSchema(): Json {
     name: SITE.publisher,
     legalName: COMPANY.legalName,
     url: SITE.url,
+    logo: `${SITE.url}/icon.svg`,
+    foundingDate: "2021",
     description: SITE.description,
     email: SITE.email,
+    sameAs: [
+      `https://x.com/${SITE.twitter.replace("@", "")}`,
+      AUTHOR.linkedin,
+      `https://find-and-check.company-information.service.gov.uk/company/${COMPANY.number}`,
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: `${COMPANY.addressLines[0]}, ${COMPANY.addressLines[1]}`,
@@ -86,7 +93,7 @@ export function articleSchema(input: {
       input.author === AUTHOR.name
         ? { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/about`, sameAs: [AUTHOR.linkedin] }
         : { "@type": input.author ? "Person" : "Organization", name: input.author || SITE.publisher },
-    publisher: { "@type": "Organization", name: SITE.publisher },
+    publisher: { "@type": "Organization", name: SITE.publisher, logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` } },
   };
 }
 
@@ -99,6 +106,16 @@ export function reviewSchema(provider: Provider, path: string): Json {
       "@type": "Product",
       name: provider.name,
       description: provider.summary,
+      brand: { "@type": "Brand", name: provider.name },
+      ...(provider.logo ? { image: provider.logo.startsWith("http") ? provider.logo : `${SITE.url}${provider.logo}` } : {}),
+    },
+    positiveNotes: {
+      "@type": "ItemList",
+      itemListElement: provider.pros.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p })),
+    },
+    negativeNotes: {
+      "@type": "ItemList",
+      itemListElement: provider.cons.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c })),
     },
     reviewRating: {
       "@type": "Rating",
@@ -106,9 +123,37 @@ export function reviewSchema(provider: Provider, path: string): Json {
       bestRating: 5,
       worstRating: 1,
     },
-    author: { "@type": "Organization", name: SITE.publisher },
-    publisher: { "@type": "Organization", name: SITE.publisher },
+    author: { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/authors/nathan-keeble`, sameAs: [AUTHOR.linkedin] },
+    publisher: { "@type": "Organization", name: SITE.publisher, logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` } },
     url: `${SITE.url}${path}`,
     datePublished: provider.lastChecked,
+  };
+}
+
+/** Ranked provider list for comparison pages - carousel/AI-citation eligibility. */
+export function providerItemListSchema(providers: Provider[]): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: providers.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.name,
+      url: `${SITE.url}/reviews/${p.slug}`,
+    })),
+  };
+}
+
+/** The fee calculator as a free FinanceApplication. */
+export function calculatorSchema(path: string): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Card Machine Fee Calculator UK",
+    url: `${SITE.url}${path}`,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: 0, priceCurrency: "GBP" },
+    publisher: { "@type": "Organization", name: SITE.publisher },
   };
 }

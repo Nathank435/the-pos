@@ -14,7 +14,7 @@ import { AuthorBox } from "@/components/content/AuthorBox";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { StickyMobileCTA } from "@/components/forms/StickyMobileCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { reviewSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { reviewSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { PROVIDERS, getProvider, getProviders } from "@/data/providers";
 import { getReview } from "@/data/reviews";
@@ -54,11 +54,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
   return (
     <>
       <JsonLd
-        data={[
-          reviewSchema(provider, path),
-          breadcrumbSchema([{ name: "Reviews", path: "/reviews" }, { name: provider.name, path }]),
-          ...(review.faqs.length ? [faqSchema(review.faqs)] : []),
-        ]}
+        data={[reviewSchema(provider, path)]}
       />
 
       {/* Header */}

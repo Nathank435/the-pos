@@ -21,7 +21,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
 import { BlogCard } from "@/components/content/BlogCard";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
-import { PROVIDERS, getProvider } from "@/data/providers";
+import { PROVIDERS, getProvider, CARD_MACHINE_PROVIDERS } from "@/data/providers";
 import { GUIDES } from "@/data/guides";
 import { postsByDate } from "@/data/blog";
 import { BUSINESS_PICKER, PROVIDER_TAKES, FEE_GOTCHAS, CHOOSE_STEPS, SCENARIOS } from "@/data/homepage";
@@ -182,7 +182,7 @@ export default function HomePage() {
           </div>
           <div className="mt-7">
             <ButtonLink href="/compare-card-machines" variant="outline">
-              Compare all {PROVIDERS.length} providers <ArrowRight className="h-4 w-4" />
+              Compare all {CARD_MACHINE_PROVIDERS.length} card machine providers <ArrowRight className="h-4 w-4" />
             </ButtonLink>
           </div>
         </Container>

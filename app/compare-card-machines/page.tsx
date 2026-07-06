@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { providerItemListSchema } from "@/lib/schema";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
 import { VersusLinks } from "@/components/comparison/VersusLinks";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
@@ -10,7 +12,7 @@ import { ProviderLogo } from "@/components/ui/ProviderLogo";
 import { ProviderCTA } from "@/components/comparison/ProviderCTA";
 import { StickyMobileCTA } from "@/components/forms/StickyMobileCTA";
 import { pageMeta } from "@/lib/seo";
-import { PROVIDERS, latestProviderUpdate } from "@/data/providers";
+import { PROVIDERS, CARD_MACHINE_PROVIDERS, latestProviderUpdate } from "@/data/providers";
 
 export const metadata: Metadata = pageMeta({
   title: "Best Card Machines UK: Compare Card Readers (2026)",
@@ -35,16 +37,17 @@ const FAQS = [
 ];
 
 // Providers that sell physical card machines (exclude software-only POS).
-const HARDWARE_PROVIDERS = PROVIDERS.filter((p) => p.type !== "full-pos" || p.hardware.length > 1);
+const HARDWARE_PROVIDERS = CARD_MACHINE_PROVIDERS;
 
 export default function CompareCardMachinesPage() {
   const withHardware = PROVIDERS.filter((p) => p.hardware.length > 0);
 
   return (
     <>
+      <JsonLd data={providerItemListSchema(HARDWARE_PROVIDERS)} />
       <PageHero
         title="Compare Card Machines &amp; Readers"
-        intro="Every big UK card machine for small business, compared on the stuff that actually costs you money: fees, contracts and payout speed. The cheapest reader isn't always the cheapest once the fees start nibbling."
+        intro="Every big UK card machine for small business, compared on the stuff that actually costs you money: fees, contracts and payout speed. Cheap reader, expensive habit - it's the all-in rate that decides what you actually pay."
         crumbs={[{ name: "Card Machines", path: "/compare-card-machines" }]}
         lastUpdated={latestProviderUpdate()}
       />

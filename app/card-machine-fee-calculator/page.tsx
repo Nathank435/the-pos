@@ -5,6 +5,8 @@ import { FeeCalculator } from "@/components/calculator/FeeCalculator";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { calculatorSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
   title: "Card Machine Fee Calculator (UK)",
@@ -31,6 +33,7 @@ const FAQS = [
 export default function CalculatorPage() {
   return (
     <>
+      <JsonLd data={calculatorSchema("/card-machine-fee-calculator")} />
       <PageHero
         title="Card Machine Fee Calculator"
         intro="Plug in your numbers and see what you'd pay across the main UK providers - monthly, annually, and as an all-in effective rate."

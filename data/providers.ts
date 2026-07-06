@@ -72,7 +72,7 @@ export type Provider = {
 export const PROVIDERS: Provider[] = [
   {
     slug: "sumup",
-    verdict: "Dead simple and cheap to start - but you may outgrow it.",
+    verdict: "Cheap to start, nothing to cancel - but you may outgrow it.",
     avoidIf: "You need a full till, staff logins or deep reporting.",
     metaDescription:
       "SumUp review (2026): the cheapest, simplest card reader for UK market traders and mobile sellers. No contract, no monthly fee. Fees, pros and verdict.",
@@ -785,6 +785,9 @@ export function getProviders(slugs: string[]): Provider[] {
 }
 
 export const PROVIDER_SLUGS = PROVIDERS.map((p) => p.slug);
+
+/** Providers shown on /compare-card-machines - keep homepage counts in sync with this. */
+export const CARD_MACHINE_PROVIDERS = PROVIDERS.filter((p) => p.type !== "full-pos" || p.hardware.length > 1);
 
 /** Most recent lastChecked date across providers - used for "last updated" stamps. */
 export function latestProviderUpdate(): string {

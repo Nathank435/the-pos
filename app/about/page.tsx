@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <InfoPage
       title="About The POS"
-      intro="We're here to help UK business owners choose how to take payments - without the sales waffle."
+      intro="We're here to help UK business owners choose how to take payments - straight answers, no scripts."
       crumbLabel="About"
       path="/about"
       sections={[

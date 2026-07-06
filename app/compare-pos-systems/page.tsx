@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { providerItemListSchema } from "@/lib/schema";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
 import { VersusLinks } from "@/components/comparison/VersusLinks";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
@@ -36,6 +38,7 @@ const FAQS = [
 export default function ComparePOSPage() {
   return (
     <>
+      <JsonLd data={providerItemListSchema(PROVIDERS)} />
       <PageHero
         title="Compare UK POS Systems"
         intro="Every UK POS system and card machine, side by side - monthly fees, transaction rates, hardware, contracts and payout speed. Pick for how you actually trade, not the shiniest terminal."
