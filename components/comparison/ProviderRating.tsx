@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export function RatingStars({ value, className }: { value: number; className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-1.5", className)} aria-label={`${value} out of 5`}>
+    <span className={cn("inline-flex items-center gap-1.5 whitespace-nowrap", className)} aria-label={`${value} out of 5`}>
       <span className="inline-flex gap-0.5">
         {[0, 1, 2, 3, 4].map((i) => (
           <Star
@@ -16,7 +16,7 @@ export function RatingStars({ value, className }: { value: number; className?: s
           />
         ))}
       </span>
-      <span className="tabular text-sm font-semibold text-navy">{value.toFixed(1)}</span>
+      <span className="tabular shrink-0 text-sm font-semibold text-navy">{value.toFixed(1)}</span>
     </span>
   );
 }
