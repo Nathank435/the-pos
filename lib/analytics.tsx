@@ -38,6 +38,9 @@ export type AnalyticsEvent =
   | "quiz_question_answered"
   | "calculator_start"
   | "calculator_completed"
+  | "calc_results_view" // full breakdown table rendered (winner param)
+  | "calc_email_submit" // optional post-results email card
+  | "quiz_result_click" // provider clicked from quiz results
   | "comparison_filter_used"
   | "comparison_sort_used"
   | "magnet_view" // lead-magnet capture form shown

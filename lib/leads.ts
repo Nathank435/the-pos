@@ -34,6 +34,8 @@ export type LeadPayload = {
   quizTopMatch?: string;
   cheapestProvider?: string;
   estMonthlyFee?: string;
+  /** Split consent: true only if the optional marketing box was ticked. */
+  marketingOptIn?: boolean;
   // attribution
   utmSource?: string;
   utmMedium?: string;
@@ -58,8 +60,10 @@ export function validateLead(input: unknown): LeadValidation {
   const company = str(d.company) || str(d.businessName);
   const email = str(d.email);
 
-  if (!firstName) errors.push("First name is required.");
-  if (!company) errors.push("Company name is required.");
+  // Calculator capture is email-only (ungated results); other sources need full identity.
+  const emailOnly = str(d.leadSource) === "calculator";
+  if (!firstName && !emailOnly) errors.push("First name is required.");
+  if (!company && !emailOnly) errors.push("Company name is required.");
   if (!EMAIL_RE.test(email)) errors.push("A valid email is required.");
   if (!bool(d.consent)) errors.push("Consent is required to proceed.");
 
@@ -92,6 +96,7 @@ export function validateLead(input: unknown): LeadValidation {
     quizTopMatch: str(d.quizTopMatch) || undefined,
     cheapestProvider: str(d.cheapestProvider) || undefined,
     estMonthlyFee: str(d.estMonthlyFee) || undefined,
+    marketingOptIn: d.marketingOptIn === undefined ? undefined : bool(d.marketingOptIn),
     utmSource: str(d.utmSource) || undefined,
     utmMedium: str(d.utmMedium) || undefined,
     utmCampaign: str(d.utmCampaign) || undefined,
@@ -171,6 +176,7 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     properties: {
       company_phone: lead.phone,
       lead_source: lead.leadSource,
+      marketing_opt_in: lead.marketingOptIn,
       // canonical slugs (segment on these)
       business_type: biz?.slug,
       business_category: biz?.category,

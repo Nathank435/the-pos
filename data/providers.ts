@@ -64,7 +64,9 @@ export type Provider = {
   affiliateUrl?: string;
   quoteUrl?: string;
   sourceUrls: string[];
-  lastChecked: string; // ISO yyyy-mm-dd
+  lastChecked: string; // ISO yyyy-mm-dd - price verification date
+  lastChanged: string; // ISO yyyy-mm-dd - last substantive edit
+  changelog: { date: string; note: string }[];
 
   editorialRating: EditorialRating;
 };
@@ -118,6 +120,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=sumup",
     sourceUrls: ["https://www.sumup.com/en-gb/pricing/"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.4,
       value: 4.5,
@@ -176,6 +183,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=square",
     sourceUrls: ["https://squareup.com/gb/en/pricing"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.5,
       value: 4.4,
@@ -233,6 +245,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=zettle",
     sourceUrls: ["https://www.zettle.com/gb/pricing"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.2,
       value: 4.3,
@@ -290,6 +307,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=dojo",
     sourceUrls: ["https://dojo.tech/card-machines/"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.1,
       value: 3.8,
@@ -347,6 +369,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=mypos",
     sourceUrls: ["https://www.mypos.com/en-gb/pricing"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.0,
       value: 4.1,
@@ -402,6 +429,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=worldpay",
     sourceUrls: ["https://www.worldpay.com/en-gb/products/in-person-payments"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 3.7,
       value: 3.6,
@@ -457,6 +489,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=barclaycard",
     sourceUrls: ["https://www.barclaycard.co.uk/business/accepting-payments/card-readers-and-machines"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 3.7,
       value: 3.6,
@@ -512,6 +549,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=tyl-by-natwest",
     sourceUrls: ["https://www.tylbynatwest.com/card-readers"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 3.9,
       value: 3.8,
@@ -567,6 +609,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=lightspeed",
     sourceUrls: ["https://www.lightspeedhq.co.uk/pos/"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.1,
       value: 3.6,
@@ -622,6 +669,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=epos-now",
     sourceUrls: ["https://www.eposnow.com/uk/pricing/"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 3.6,
       value: 3.5,
@@ -678,6 +730,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=shopify-pos",
     sourceUrls: ["https://www.shopify.com/uk/pos"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 4.0,
       value: 3.8,
@@ -733,6 +790,11 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=touchbistro",
     sourceUrls: ["https://www.touchbistro.com/pricing/"],
     lastChecked: "2026-06-25",
+    lastChanged: "2026-06-29",
+    changelog: [
+      { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
+      { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
+    ],
     editorialRating: {
       overall: 3.8,
       value: 3.6,

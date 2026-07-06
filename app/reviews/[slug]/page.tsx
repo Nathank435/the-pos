@@ -76,11 +76,11 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 )}
                 <div className="mt-3 flex flex-wrap items-center gap-4">
                   <RatingStars value={provider.editorialRating.overall} />
-                  <LastUpdated date={provider.lastChecked} label="Reviewed" />
+                  <LastUpdated date={provider.lastChanged} label="Updated" />
                 </div>
               </div>
             </div>
-            <ProviderCTA provider={provider} size="lg" sourcePage="review-header" />
+            <ProviderCTA provider={provider} size="lg" sourcePage="review-header" position="hero" reassure />
           </div>
           <div className="mt-4">
             <BestForTags tags={provider.bestFor} />
@@ -251,7 +251,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                   </div>
                 </div>
                 <div className="mt-4">
-                  <ProviderCTA provider={provider} sourcePage="review-verdict" />
+                  <ProviderCTA provider={provider} sourcePage="review-verdict" position="verdict" reassure />
                 </div>
               </div>
             </section>
@@ -283,7 +283,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               </div>
             </div>
             <MethodologyBox />
-            <AuthorBox lastUpdated={provider.lastChecked} />
+            <AuthorBox lastUpdated={provider.lastChanged} />
             <div className="rounded-lg border border-border bg-white p-4 text-sm">
               <p className="font-semibold text-navy">Keep comparing</p>
               <ul className="mt-2 space-y-1.5">
@@ -296,7 +296,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         </Container>
       </Section>
 
-      <StickyMobileCTA />
+      <StickyMobileCTA provider={provider} />
     </>
   );
 }

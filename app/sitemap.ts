@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
-import { PROVIDER_SLUGS, latestProviderUpdate } from "@/data/providers";
+import { PROVIDER_SLUGS, latestProviderUpdate, PROVIDERS } from "@/data/providers";
 import { BUSINESS_TYPE_SLUGS } from "@/data/businessTypes";
 import { VERSUS_SLUGS } from "@/data/versusPages";
 import { GUIDE_SLUGS, GUIDES } from "@/data/guides";
@@ -29,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/cookie-policy",
     "/terms",
+    "/changelog",
+    "/authors/nathan-keeble",
   ];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
@@ -38,8 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1 : 0.8,
   }));
 
-  for (const slug of PROVIDER_SLUGS) {
-    entries.push({ url: `${base}/reviews/${slug}`, lastModified: updated, changeFrequency: "monthly", priority: 0.7 });
+  for (const p of PROVIDERS) {
+    entries.push({ url: `${base}/reviews/${p.slug}`, lastModified: new Date(p.lastChanged), changeFrequency: "monthly", priority: 0.7 });
   }
   for (const slug of BUSINESS_TYPE_SLUGS) {
     entries.push({ url: `${base}/pos-systems/${slug}`, lastModified: updated, changeFrequency: "monthly", priority: 0.7 });

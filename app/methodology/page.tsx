@@ -34,9 +34,22 @@ export default function MethodologyPage() {
           ],
         },
         {
-          heading: "How ratings work",
+          heading: "How ratings work: the weights",
           paragraphs: [
-            "Each provider gets an overall score out of 5, built from the five criteria above. Scores reflect our editorial judgement against typical UK small-business needs - not paid placement.",
+            "Each provider gets an overall score out of 5, built from the five criteria with these weights: Value 30%, Ease of use 20%, Features 20%, Support 15%, Contract flexibility 15%. Cost carries the most weight because it's the thing you can't undo with training or patience.",
+          ],
+          bullets: [
+            "A 5 on Value means transparent pricing that's competitive at typical small-business volumes with no gotcha fees. A 2 means opaque or quote-only pricing that regularly works out expensive.",
+            "A 5 on Contract flexibility means genuinely no contract, cancel any time. A 2 means 12+ month terms, auto-renewal or meaningful exit fees.",
+            "A 5 on Support means real humans on UK hours across phone and chat. A 2 means email-only or outsourced scripts.",
+            "Scores reflect our editorial judgement against typical UK small-business needs - not paid placement.",
+          ],
+        },
+        {
+          heading: "Inclusion policy & commercial relationships",
+          paragraphs: [
+            "We cover the providers UK small businesses actually shortlist - by market share, search interest and reader questions. Being included is not a commercial arrangement, and no provider can pay to be added, removed or re-scored.",
+            "For transparency: we currently have affiliate partnerships with SumUp and myPOS. Square, Zettle, Dojo, Worldpay, Barclaycard, Tyl by NatWest, Lightspeed, Epos Now, Shopify POS and TouchBistro are linked with no commercial relationship - those reviews are unpaid. This list changes as partnerships change, and we keep it current.",
           ],
         },
         {

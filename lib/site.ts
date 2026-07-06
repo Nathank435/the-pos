@@ -92,6 +92,7 @@ export const FOOTER_NAV: { title: string; links: { label: string; href: string }
       { label: "About", href: "/about" },
       { label: "How we make money", href: "/how-we-make-money" },
       { label: "Methodology", href: "/methodology" },
+      { label: "Price & review changelog", href: "/changelog" },
       { label: "Contact", href: "/contact" },
     ],
   },

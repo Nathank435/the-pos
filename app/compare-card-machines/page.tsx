@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
+import { TrustStrip } from "@/components/content/TrustStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { providerItemListSchema } from "@/lib/schema";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
@@ -52,6 +53,11 @@ export default function CompareCardMachinesPage() {
         lastUpdated={latestProviderUpdate()}
       />
 
+      <Section>
+        <Container>
+          <TrustStrip className="-mt-2 mb-5" />
+        </Container>
+      </Section>
       <Section>
         <Container>
           <ProviderComparisonTable providers={HARDWARE_PROVIDERS} sourcePage="compare-card-machines" />

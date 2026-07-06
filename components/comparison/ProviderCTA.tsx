@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import type { Provider } from "@/data/providers";
+import { buildAffiliateUrl, type AffiliateContext } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,8 @@ export function ProviderCTA({
   label,
   className,
   sourcePage = "unknown",
+  position = "card",
+  reassure = false,
 }: {
   provider: Provider;
   size?: "sm" | "md" | "lg";
@@ -20,9 +23,15 @@ export function ProviderCTA({
   label?: string;
   className?: string;
   sourcePage?: string;
+  position?: AffiliateContext["position"];
+  /** Show the "same price as going direct" line under the button. */
+  reassure?: boolean;
 }) {
-  const href = provider.affiliateUrl || provider.quoteUrl || "/get-pos-quotes";
   const isAffiliate = Boolean(provider.affiliateUrl);
+  const pageType = (["review", "comparison", "calculator", "home", "vs", "hub", "guide"].find((t) =>
+    sourcePage.includes(t === "comparison" ? "compare" : t)
+  ) ?? "review") as AffiliateContext["position"] extends never ? never : AffiliateContext["pageType"];
+  const href = isAffiliate || provider.quoteUrl ? buildAffiliateUrl(provider, { pageType, position }) : "/get-pos-quotes";
 
   const base =
     "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2";
@@ -33,7 +42,7 @@ export function ProviderCTA({
   };
   const sizes = { sm: "h-9 px-3 text-sm", md: "h-11 px-5 text-sm", lg: "h-12 px-6 text-base" };
 
-  return (
+  const anchor = (
     <a
       href={href}
       target={isAffiliate ? "_blank" : undefined}
@@ -42,11 +51,27 @@ export function ProviderCTA({
       data-provider={provider.slug}
       onClick={() => {
         track("provider_cta_click", { provider: provider.slug, source: sourcePage });
-        if (isAffiliate) track("affiliate_click", { provider: provider.slug, source: sourcePage });
+        if (isAffiliate)
+          track("affiliate_click", {
+            provider: provider.slug,
+            page_type: pageType,
+            position,
+            page_path: typeof window !== "undefined" ? window.location.pathname : sourcePage,
+          });
       }}
     >
       {label || `Visit ${provider.name}`}
       {isAffiliate && <ExternalLink className="h-4 w-4" />}
     </a>
+  );
+
+  if (!reassure) return anchor;
+  return (
+    <span className="inline-flex flex-col items-start gap-1">
+      {anchor}
+      <span className="text-[11px] leading-snug text-grey">
+        Same price as going direct - the provider pays us, not you.
+      </span>
+    </span>
   );
 }

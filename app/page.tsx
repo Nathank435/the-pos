@@ -21,6 +21,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
 import { BlogCard } from "@/components/content/BlogCard";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
+import { TrustStrip } from "@/components/content/TrustStrip";
 import { PROVIDERS, getProvider, CARD_MACHINE_PROVIDERS } from "@/data/providers";
 import { GUIDES } from "@/data/guides";
 import { postsByDate } from "@/data/blog";
@@ -90,6 +91,7 @@ export default function HomePage() {
                 <p className="mt-5 text-sm font-medium text-grey">
                   Plain-English comparisons. Real fee notes. No sales waffle.
                 </p>
+                <TrustStrip className="mt-3" />
               </div>
 
               <EditorialImage
