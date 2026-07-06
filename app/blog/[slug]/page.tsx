@@ -151,12 +151,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {post.author === AUTHOR.name && (
               <aside className="mt-10 flex items-start gap-4 rounded-lg border border-border bg-cream/60 p-5">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy font-heading text-lg font-bold text-white">
-                  {AUTHOR.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={AUTHOR.photo}
+                  alt={AUTHOR.name}
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-heading font-bold text-navy">
                     {AUTHOR.name} <span className="font-sans text-sm font-normal text-grey">- {AUTHOR.role}</span>

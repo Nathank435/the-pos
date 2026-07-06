@@ -7,12 +7,14 @@ import { LastUpdated } from "./LastUpdated";
 export function AuthorBox({ lastUpdated }: { lastUpdated: string }) {
   return (
     <div className="flex items-center gap-4 rounded-lg border border-border bg-white p-4">
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy font-heading text-lg font-bold text-white">
-        {AUTHOR.name
-          .split(" ")
-          .map((n) => n[0])
-          .join("")}
-      </span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={AUTHOR.photo}
+        alt={AUTHOR.name}
+        width={48}
+        height={48}
+        className="h-12 w-12 shrink-0 rounded-full object-cover"
+      />
       <div className="min-w-0">
         <p className="font-heading text-sm font-semibold text-navy">
           Reviewed by{" "}

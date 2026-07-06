@@ -91,7 +91,7 @@ export function articleSchema(input: {
     ...(input.image ? { image: `${SITE.url}${input.image}` } : {}),
     author:
       input.author === AUTHOR.name
-        ? { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/about`, sameAs: [AUTHOR.linkedin] }
+        ? { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/authors/nathan-keeble`, image: `${SITE.url}${AUTHOR.photo}`, sameAs: [AUTHOR.linkedin] }
         : { "@type": input.author ? "Person" : "Organization", name: input.author || SITE.publisher },
     publisher: { "@type": "Organization", name: SITE.publisher, logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` } },
   };
@@ -123,7 +123,7 @@ export function reviewSchema(provider: Provider, path: string): Json {
       bestRating: 5,
       worstRating: 1,
     },
-    author: { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/authors/nathan-keeble`, sameAs: [AUTHOR.linkedin] },
+    author: { "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role, url: `${SITE.url}/authors/nathan-keeble`, image: `${SITE.url}${AUTHOR.photo}`, sameAs: [AUTHOR.linkedin] },
     publisher: { "@type": "Organization", name: SITE.publisher, logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` } },
     url: `${SITE.url}${path}`,
     datePublished: provider.lastChecked,

@@ -18,6 +18,7 @@ export const AUTHOR = {
   name: "Nathan Keeble",
   role: "Founder, The POS",
   linkedin: "https://www.linkedin.com/in/nathan-keeble-a06057b3",
+  photo: "/images/authors/nathan-keeble.webp",
   bio: "Nathan is the founder of The POS and director of Cracked Media Ltd. He's spent the last decade in digital marketing and ecommerce, and now spends it comparing card machine fees so you don't have to.",
 } as const;
 

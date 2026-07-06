@@ -28,6 +28,7 @@ export default function AuthorPage() {
             jobTitle: AUTHOR.role,
             description: AUTHOR.bio,
             url: `${SITE.url}/authors/nathan-keeble`,
+            image: `${SITE.url}${AUTHOR.photo}`,
             sameAs: [AUTHOR.linkedin],
             worksFor: { "@type": "Organization", name: COMPANY.legalName },
           },
@@ -37,9 +38,14 @@ export default function AuthorPage() {
         <Container className="py-8 sm:py-12">
           <Breadcrumbs items={[{ name: "Authors", path: "/authors/nathan-keeble" }]} />
           <div className="mt-5 flex items-start gap-5">
-            <span className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-navy font-heading text-3xl font-bold text-white">
-              NK
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={AUTHOR.photo}
+              alt={AUTHOR.name}
+              width={80}
+              height={80}
+              className="h-20 w-20 shrink-0 rounded-full object-cover"
+            />
             <div>
               <h1 className="font-heading text-3xl font-bold text-navy sm:text-4xl">{AUTHOR.name}</h1>
               <p className="mt-1 text-grey">{AUTHOR.role}</p>
