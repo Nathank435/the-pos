@@ -1810,6 +1810,390 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
     ],
   },
+  {
+    slug: "can-you-charge-for-card-payments",
+    title: "Can You Charge Customers for Card Payments in the UK? (2026 Rules)",
+    excerpt:
+      "Card surcharges on consumer cards have been banned in the UK since 2018 - but minimum spends and cash discounts are legal. The rules, the exceptions and the smarter fix.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-07-06",
+    readMinutes: 5,
+    featuredImage: "/images/blog/can-you-charge-for-card-payments.webp",
+    featuredAlt: "Customer tapping a bank card on a payment terminal",
+    intro:
+      "Short answer: no - you cannot charge customers extra for paying by consumer debit or credit card in the UK, and that has been the law since January 2018. But minimum card spends are legal, cash discounts are legal, and business cards are a genuine exception. Here is where the line actually sits, and what to do about fees instead.",
+    sections: [
+      {
+        heading: "The rule: no surcharges on consumer cards",
+        paragraphs: [
+          "Since 13 January 2018, UK businesses cannot add a surcharge for payments made with consumer debit or credit cards - that includes Visa, Mastercard and Amex consumer cards, and applies in person, online and over the phone. The ban came from the Consumer Rights (Payment Surcharges) Regulations, updated when PSD2 landed.",
+          "That 50p 'card fee' some takeaways still add to a card payment? Not legal on consumer cards. Trading Standards enforces it, and beyond the legal risk, customers know the rule well enough now that a sneaky surcharge reads as a reason not to come back.",
+        ],
+      },
+      {
+        heading: "What you CAN legally do",
+        paragraphs: ["The ban is narrower than most people think. All of these remain perfectly legal:"],
+        bullets: [
+          "Minimum card spend: '£5 minimum on card' is allowed - you can refuse small card payments entirely. Just display it clearly before the till.",
+          "Cash discounts: charging less for cash is legal (it's framed as a discount, not a surcharge). Same maths, different direction, different legal outcome.",
+          "Surcharging business and corporate cards: commercial cards are outside the consumer ban - you may pass on your actual cost, and no more. Most small businesses don't bother because tills can't reliably tell card types apart.",
+          "A genuine booking or service fee that applies however the customer pays - it just cannot vary by payment method.",
+        ],
+      },
+      {
+        heading: "The smarter fix: cut the fee, don't pass it on",
+        paragraphs: [
+          "The urge to surcharge usually means your card fees feel too high - and that's fixable at the source. A typical shop doing £5,000 a month on cards at 1.75% pays £87.50; at a negotiated 1.4% it's £70, and the gap widens with volume. That's the surcharge you wanted, recovered without annoying a single customer.",
+          "Two minutes in the [fee calculator](/card-machine-fee-calculator) with your real turnover shows what each provider would actually cost you - and if you haven't reviewed your rate since signing up, [here's how to cut it](/blog/how-to-cut-card-processing-fees). Minimum spends handle the painful end (a 1.69% fee on a £1.20 chocolate bar genuinely hurts); better rates handle the rest.",
+        ],
+      },
+      {
+        heading: "What about 'card machine surcharge' apps and settings?",
+        paragraphs: [
+          "Some terminals and POS apps still ship with a surcharge feature - usually built for markets outside the UK where surcharging is legal. The feature existing on your machine does not make it legal to use on UK consumer cards. If a provider's rep suggests switching it on to 'offset fees', that tells you something about the rep.",
+          "The exception you'll see in the wild: business-to-business suppliers surcharging corporate cards at cost. That's legitimate - but if you're a cafe, shop or salon serving the public, assume every card in front of you is a consumer card and price accordingly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I add a 50p fee for card payments under £5?",
+        a: "No - that's a surcharge on a consumer card, which is banned. What you can do instead is set a £5 minimum card spend, or price the small items so the margin survives a card fee.",
+      },
+      {
+        q: "Can I offer a discount for paying cash?",
+        a: "Yes. Discounting cash is legal; surcharging cards is not. Display it clearly and apply it consistently.",
+      },
+      {
+        q: "Do the rules apply to PayPal, Apple Pay and Google Pay?",
+        a: "Yes - the ban covers the payment methods consumers commonly use, including cards inside mobile wallets. If a consumer is paying, adding a fee for the payment method is off the table.",
+      },
+      {
+        q: "What happens if a business surcharges anyway?",
+        a: "Customers can demand the surcharge back, and Trading Standards can act. In practice the bigger cost is reputational - the rule has been in force since 2018 and customers know it.",
+      },
+    ],
+    relatedPosts: [
+      "how-to-cut-card-processing-fees",
+      "card-machine-fees-compared",
+      "pci-compliance-fees-uk",
+    ],
+    relatedLinks: [
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
+  {
+    slug: "can-a-business-refuse-cash-uk",
+    title: "Can a Business Legally Refuse Cash in the UK? (Going Cashless in 2026)",
+    excerpt:
+      "Yes - UK businesses can legally refuse cash, and 'legal tender' doesn't mean what most people think. What the law says, and whether going card-only is actually a good idea.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-05",
+    readMinutes: 5,
+    featuredImage: "/images/blog/can-a-business-refuse-cash-uk.webp",
+    featuredAlt: "Business owner counting cash takings at a desk",
+    intro:
+      "Yes - a UK business can legally refuse cash. 'Legal tender' is one of the most misunderstood phrases in British life, and it does not force any shop to accept notes and coins. But whether you legally can go cashless and whether you commercially should are two different questions. Here are both answers.",
+    sections: [
+      {
+        heading: "The law: you can refuse cash",
+        paragraphs: [
+          "There is no UK law requiring a business to accept cash. A shop sale is a contract, and you're free to set the terms - including 'card only'. Refusing cash before a sale happens is entirely legal, the same way a vending machine legally refuses £50 notes.",
+          "'Legal tender' has a narrow technical meaning: it's about settling a court-recognised debt - if you owe money and offer legal tender, you can't then be sued for non-payment. Buying a coffee isn't a debt; you're negotiating a sale, and the seller sets the terms. That's why 'but it's legal tender!' has no force at the till.",
+        ],
+      },
+      {
+        heading: "Why businesses go card-only",
+        paragraphs: [
+          "The case for cashless is mostly about time and risk, and it's stronger than most owners expect once they cost it honestly:",
+        ],
+        bullets: [
+          "Cashing up, floats, change runs and banking visits: typically 3-5 hours a week for a busy counter. That's paid time.",
+          "Banks increasingly charge small businesses to deposit cash - often 0.5%-1% of the amount. Cash has a processing fee too; it's just hidden.",
+          "Theft and shrinkage risk drops to near zero - no till skimming, no closing-time walk to the bank.",
+          "Every sale lands in reports automatically, which makes VAT, reconciliation and staffing decisions cleaner.",
+        ],
+      },
+      {
+        heading: "Why you might keep taking cash anyway",
+        paragraphs: [
+          "Cash still matters to real customers: older people, kids, anyone budgeting hard, and anyone whose bank is having a bad day. Roughly one in five UK payments is still cash, and it skews towards exactly the local, habitual customers a small business lives on. A pub or cafe that goes card-only is quietly telling some regulars they're not welcome.",
+          "There's also resilience: when the internet fails or a provider has an outage, cash is the payment method that still works. Plenty of card-only businesses discovered this the hard way during past outages. If you do go cashless, have an offline plan - even if it's just a notebook and trust.",
+        ],
+      },
+      {
+        heading: "If you go card-only, do it properly",
+        paragraphs: [
+          "Signage before the order, not at the till - 'Card payments only' at the door and on the menu removes the awkward moment entirely. Make sure your setup can actually carry the load: a [reader with a backup](/compare-card-machines), Tap to Pay on a phone as the emergency fallback, and payouts fast enough that going cashless doesn't create a cash-flow gap - see [which providers pay out same-day](/blog/same-day-payouts-providers).",
+          "And if the maths is the deciding factor, run it: cashless means every sale carries a card fee, so a business moving £3,000 of monthly cash sales onto cards adds roughly £50/month in fees at typical rates - against the hours and deposit charges saved. The [fee calculator](/card-machine-fee-calculator) gives you your number in two minutes.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it discrimination to refuse cash?",
+        a: "It's not unlawful discrimination in the legal sense - payment method isn't a protected characteristic. But it does exclude some customers in practice, which is a commercial decision worth making deliberately rather than by default.",
+      },
+      {
+        q: "Can a pub or restaurant refuse cash after I've eaten?",
+        a: "This is the interesting edge case - once you've consumed the meal, a debt arguably exists, and refusing legal tender for a debt gets murky. In practice businesses displaying 'card only' clearly before you order avoid the problem entirely.",
+      },
+      {
+        q: "Do market traders have to take cash?",
+        a: "No - same rules. Though in practice most market traders find refusing cash costs real sales; a £19 card reader alongside the cash tin covers both crowds.",
+      },
+      {
+        q: "Can I refuse £50 notes but take other cash?",
+        a: "Yes. You can set any payment terms you like before the sale - card only, no £50s, exact change after 9pm. Clarity beats confrontation: put it on a sign.",
+      },
+    ],
+    relatedPosts: [
+      "same-day-payouts-providers",
+      "do-you-need-a-card-machine",
+      "how-to-take-card-payments-uk",
+    ],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "card-reader-vs-card-machine",
+    title: "Card Reader vs Card Machine: What's the Difference (and Which Do You Need)?",
+    excerpt:
+      "Card reader, card machine, terminal, PDQ - the industry uses four names for two products. What each one actually is, the real price difference, and which fits your counter.",
+    category: "Comparisons",
+    author: "Nathan Keeble",
+    date: "2026-07-05",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-reader-vs-card-machine.webp",
+    featuredAlt: "Close-up of a compact contactless card reader",
+    intro:
+      "Card reader vs card machine sounds like a distinction invented to confuse you, and honestly - it half is. They both take card payments at the same rates. The real differences are size, independence and price: one needs your phone, one doesn't. Here's the plain-English split and which one your business actually needs.",
+    sections: [
+      {
+        heading: "The two products behind the four names",
+        paragraphs: [
+          "A card reader is the small, pocketable device (SumUp Air, Square Reader, Zettle Reader) that pairs with the app on your phone or tablet. The phone provides the screen, the internet and the receipt; the reader just handles the card. Typically £19-£40 one-off.",
+          "A card machine (also called a card terminal or, if your rep is over 50, a PDQ) is the standalone unit with its own screen, SIM/WiFi connection and often a receipt printer - SumUp Solo, Square Terminal, Dojo Go, the classic pub Ingenico. It works without a phone. Typically £99-£300 to buy, or rented into a contract.",
+        ],
+      },
+      {
+        heading: "What actually differs day to day",
+        paragraphs: ["Same fees, same taps, same banks - the differences are practical:"],
+        bullets: [
+          "Independence: a machine works if your phone dies, gets left in the van, or is busy taking a booking. A reader is hostage to the phone it's paired with.",
+          "Speed at a busy counter: a machine is one-device muscle memory. Reader-plus-phone means two things to charge, hold and not drop into a sink.",
+          "Receipts: machines often print; readers email or text. Trades and cafes rarely miss paper, restaurants and older customers sometimes do.",
+          "Price: £19 vs £150+ buys a lot of flat whites. If cash flow is tight, the reader wins and can be upgraded later - most providers let you keep the same account.",
+          "Battery and signal: machines with their own SIM keep working when the venue WiFi is rubbish - worth real money at markets and festivals.",
+        ],
+      },
+      {
+        heading: "Which one for which business",
+        paragraphs: [
+          "Get a reader if you're mobile, low-volume or starting out: market stalls, mobile hairdressers, tradespeople invoicing at the door, weekend sellers. The £19 [no-monthly-fee readers](/card-readers-no-monthly-fee) are genuinely all most one-person businesses need - and [Tap to Pay on your phone](/blog/tap-to-pay-iphone-worth-it) can even replace the reader itself for the lightest use.",
+          "Get a machine if you run a fixed, busy counter: cafes at rush hour, pubs, shops with staff. The £150 one-off disappears against the time saved not faffing with Bluetooth pairing mid-queue. And if you're taking serious volume, the machine decision usually arrives bundled with the [POS system question](/blog/what-is-an-epos-system) anyway.",
+        ],
+      },
+      {
+        heading: "The catch to watch: 'free' machines on contracts",
+        paragraphs: [
+          "The £0-upfront card machine usually comes attached to a 12-48 month contract with monthly fees - by month 18 you've paid for that 'free' terminal several times over. It can still be worth it when it comes with genuinely lower rates at high volume, but do the full-term maths before signing. Our piece on [no-contract card machines](/blog/no-contract-card-machines-catch) covers the trade-off properly.",
+          "Rule of thumb: buy hardware outright when you can, and make monthly fees earn their keep through lower percentage rates - which you can check against your own numbers in the [fee calculator](/card-machine-fee-calculator).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Are the transaction fees different between readers and machines?",
+        a: "Usually no - SumUp, Square and Zettle charge the same rate whichever device you use. Contracted machines from acquirers can come with negotiated (often lower) rates, but that's the contract, not the hardware.",
+      },
+      {
+        q: "What does PDQ stand for?",
+        a: "'Process Data Quickly' - 1990s banking jargon for a card terminal. If a salesperson says PDQ, they mean a standalone card machine, usually the contracted kind.",
+      },
+      {
+        q: "Can I start with a reader and upgrade to a machine later?",
+        a: "Yes, and it's the sensible path - SumUp, Square and Zettle all let you add or swap hardware on the same account, so your reporting and payouts don't change.",
+      },
+      {
+        q: "Do card readers work without internet?",
+        a: "They need the paired phone's data or WiFi. Standalone machines with a SIM are the answer for bad-signal venues - some also queue offline payments, but check the provider's rules on offline limits and liability first.",
+      },
+    ],
+    relatedPosts: [
+      "card-machine-for-sole-traders",
+      "how-much-does-a-card-machine-cost-uk",
+      "no-contract-card-machines-catch",
+    ],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "card-machine-for-sole-traders",
+    title: "The Best Card Machine for Sole Traders (UK 2026)",
+    excerpt:
+      "Sole traders don't need contracts, monthly fees or a business bank account to take cards. The setups that fit one-person businesses, and the traps to skip.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-06",
+    readMinutes: 6,
+    featuredImage: "/images/blog/card-machine-for-sole-traders.webp",
+    featuredAlt: "Sole trader smiling at her market stall counter",
+    intro:
+      "The best card machine for a sole trader is almost always the cheapest one with no strings: a £19-£40 reader, no monthly fee, no contract, paying a flat rate only when you actually sell. One-person businesses are exactly who the no-monthly-fee providers were built for - here's the setup that fits, and the sales pitches to walk past.",
+    sections: [
+      {
+        heading: "What sole traders actually need (and don't)",
+        paragraphs: [
+          "Your needs are gloriously simple: take the payment, see the money quickly, keep records tidy for the tax return. You do not need stock modules, staff logins, table maps or a 'merchant services relationship' - you need a reader that works and a fee you understand.",
+        ],
+        bullets: [
+          "No monthly fee: pay per transaction only. A quiet January costs you nothing.",
+          "No contract: if the provider annoys you, leave. This keeps everyone honest.",
+          "Flat, published rate: 1.69%-1.75% you can see on a pricing page beats a 'custom quote' you can't.",
+          "Fast payouts: next-day as standard; same-day options exist if cash flow is tight.",
+          "Works where you work: van, doorstep, stall, kitchen table - phone pairing or built-in SIM.",
+        ],
+      },
+      {
+        heading: "The three to shortlist",
+        paragraphs: ["For most sole traders the honest shortlist is three names, and you'd be fine with any of them:"],
+        bullets: [
+          "[SumUp](/reviews/sumup) - cheapest entry (£19 reader, 1.69%), dead-simple app, the default for market traders and mobile hairdressers. Payments Plus drops the rate further if you're doing volume.",
+          "[Square](/reviews/square) - same idea (£19, 1.75%) with the strongest free extras: invoicing, a free online store, appointments. Best if you invoice or want to sell online too.",
+          "[PayPal Zettle](/reviews/zettle) - £29 reader, 1.75%, takings land in your PayPal balance. The pick if your business already lives on PayPal.",
+        ],
+      },
+      {
+        heading: "Do you need a business bank account?",
+        paragraphs: [
+          "Legally, no - sole traders can trade through a personal account (limited companies can't). Practically, most card providers' terms want an account in the name you trade under, and a separate account makes your Self Assessment dramatically less painful. The free business accounts (Starling, Monzo, Tide) take minutes to open and keep card takings cleanly separated from your groceries.",
+          "One habit worth building from day one: let the card takings tell the story. Every payment through the reader is a dated, amounted record HMRC can follow - which is exactly what you want when the tax return lands, and it pairs neatly with [how to take card payments as a small business](/blog/how-to-take-card-payments-uk).",
+        ],
+      },
+      {
+        heading: "The traps aimed at sole traders",
+        paragraphs: [
+          "You're the target market for two bad deals. First, the contracted terminal: a rep offers a 'free' machine and lower headline rate, attached to an 18-month term with monthly fees, PCI charges and an exit clause - at sole-trader volumes the maths almost never works; [here's the catch explained](/blog/no-contract-card-machines-catch). Second, the POS upsell: you don't need £30/month of till software to sell at a stall.",
+          "Run your real numbers - even £800 of card sales a month costs about £14 in fees at 1.69% - through the [fee calculator](/card-machine-fee-calculator) before believing any pitch. And if your volume genuinely grows to the point where quotes beat flat rates, congratulations: that's a nice problem, and the switch takes an afternoon.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I take card payments as a sole trader without registering a company?",
+        a: "Yes - SumUp, Square and Zettle all onboard sole traders with your name, address and basic ID. No limited company needed, and setup is same-day.",
+      },
+      {
+        q: "What's the cheapest way for a sole trader to take cards?",
+        a: "Tap to Pay on the phone you already own (no hardware at all), or a £19 SumUp/Square reader with no monthly fee. Beyond that, cheapest depends on volume - run your numbers through the calculator.",
+      },
+      {
+        q: "Do I have to declare card takings to HMRC?",
+        a: "Yes - card takings are income like any other, and providers report to HMRC under UK rules for payment platforms. The upside: your reader's records basically write that part of your tax return for you.",
+      },
+      {
+        q: "What if I only sell occasionally - weekends and fairs?",
+        a: "No-monthly-fee is built for exactly this: zero sales, zero cost. Keep the reader charged in a drawer and it costs nothing until the next fair.",
+      },
+    ],
+    relatedPosts: [
+      "card-reader-vs-card-machine",
+      "best-card-readers-market-traders",
+      "cheapest-way-to-take-card-payments",
+    ],
+    relatedLinks: [
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "SumUp review", href: "/reviews/sumup" },
+    ],
+  },
+  {
+    slug: "pci-compliance-fees-uk",
+    title: "PCI Compliance Fees Explained: The Sneaky Charge on Your Card Machine Bill",
+    excerpt:
+      "PCI DSS fees add £30-£500 a year to many UK card machine bills - and the 'non-compliance' version is pure penalty. What PCI actually is, who charges for it, and how to stop paying.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-07-06",
+    readMinutes: 6,
+    featuredImage: "/images/blog/pci-compliance-fees-uk.webp",
+    featuredAlt: "Business owner checking a card statement at a laptop",
+    intro:
+      "Somewhere on many UK card machine statements sits a line like 'PCI DSS compliance: £4.95' - and next to it, on the unlucky ones, 'PCI non-compliance: £30'. Most owners pay both for years without knowing what they are. Here's what PCI actually is, why some providers charge for it and some don't, and the ten-minute job that stops the penalty version dead.",
+    sections: [
+      {
+        heading: "What PCI DSS actually is",
+        paragraphs: [
+          "PCI DSS (Payment Card Industry Data Security Standard) is the card schemes' security rulebook - Visa and Mastercard's requirements for anyone who handles card payments, covering things like not writing card numbers down and keeping terminals physically secure. Every business taking cards has to comply with it. That part is not optional and not a scam.",
+          "For a typical small shop using a modern terminal, 'complying' mostly means answering an annual self-assessment questionnaire (SAQ) honestly - your terminal does the heavy cryptographic lifting. The standard is real; what varies wildly is whether you're charged for the paperwork.",
+        ],
+      },
+      {
+        heading: "The two fees hiding on your statement",
+        paragraphs: [
+          "Traditional acquirers (the contracted-terminal world: Worldpay, Barclaycard, takepayments and friends) typically charge two distinct things:",
+        ],
+        bullets: [
+          "PCI compliance fee: £2.50-£6 a month just for administering the programme - the portal, the questionnaire, sometimes scanning tools. £30-£70 a year for a form.",
+          "PCI NON-compliance fee: £15-£40+ a month charged when you haven't completed that questionnaire. This is the expensive one - it's a penalty dressed as a service, and plenty of businesses pay it for years simply because nobody told them the form existed.",
+          "Modern flat-rate providers (SumUp, Square, Zettle, Dojo) roll PCI into the headline rate: no separate fee, no questionnaire chasing, nothing to forget. It's one of the quiet reasons their pricing is easier to trust.",
+        ],
+      },
+      {
+        heading: "The ten-minute fix if you're being charged",
+        paragraphs: [
+          "First, read your last statement and find both lines - many owners discover the non-compliance fee only when they go looking. If it's there, log into your provider's PCI portal (the name is on the statement - commonly Sysnet/VikingCloud or similar), complete the SAQ, and the penalty fee stops from the next cycle. It genuinely takes about ten minutes for a standard terminal setup.",
+          "Then diarise it annually - the questionnaire expires every 12 months and the fee quietly returns when it does. If your provider charges a compliance fee AND makes the portal miserable, add it to the evidence pile for switching: our [switching checklist](/blog/switching-card-machine-checklist) covers exit timing, and the [fee calculator](/card-machine-fee-calculator) will tell you whether a flat-rate provider beats your all-in cost once PCI, terminal rental and minimum monthly service charges are counted.",
+        ],
+      },
+      {
+        heading: "Can you avoid PCI fees entirely?",
+        paragraphs: [
+          "Yes - by using a provider that absorbs them. None of the major no-monthly-fee providers charge separate PCI fees, which changes the comparison maths more than people realise: a 'cheap' 1.2% contracted rate plus £5 PCI plus £15 terminal rental can cost a low-volume business more than a flat 1.69% with nothing else on the bill. This is exactly the [hidden-fees pattern](/guides/card-machine-fees-explained) that makes headline rates so misleading.",
+          "To be clear: you can't avoid PCI compliance - handling cards safely is the deal. You can absolutely avoid paying £200 a year in fees and penalties for it. If your statement says otherwise, that's a provider choice, not an industry requirement.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a PCI compliance fee a scam?",
+        a: "It's legal and disclosed in contracts - but it's a fee for administering a form, and plenty of providers manage without charging it. The non-compliance penalty version is the one to attack immediately: complete the SAQ and it stops.",
+      },
+      {
+        q: "Do SumUp, Square and Zettle charge PCI fees?",
+        a: "No separate PCI fees - compliance is handled within their flat rate. It's one of the genuine advantages of the no-monthly-fee providers for small businesses.",
+      },
+      {
+        q: "What happens if I just ignore PCI completely?",
+        a: "You'll pay non-compliance fees indefinitely, and if card data is ever compromised your liability is far worse without compliance in place. Ten minutes on the questionnaire is the cheap side of that trade in every scenario.",
+      },
+      {
+        q: "How do I know if I'm paying PCI fees now?",
+        a: "Check a recent monthly statement for lines containing 'PCI', 'DSS', 'compliance' or 'data security'. Contracted terminals: probably yes. Flat-rate readers: no. If you can't tell, that itself is a statement about your provider's transparency.",
+      },
+    ],
+    relatedPosts: [
+      "how-to-cut-card-processing-fees",
+      "can-you-charge-for-card-payments",
+      "switching-card-machine-checklist",
+    ],
+    relatedLinks: [
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
