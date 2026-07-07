@@ -152,7 +152,7 @@ export function ProviderComparisonTable({
       <div className="hidden rounded-lg border border-border bg-white lg:block">
         <table className="w-full table-fixed text-[13px] leading-snug">
           <colgroup>
-            <col style={{ width: "200px" }} />
+            <col style={{ width: "240px" }} />
             <col style={{ width: "11%" }} />
             <col style={{ width: "12%" }} />
             <col style={{ width: "17%" }} />

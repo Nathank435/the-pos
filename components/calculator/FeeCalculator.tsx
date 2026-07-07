@@ -74,9 +74,9 @@ export function FeeCalculator() {
   };
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[360px_1fr]">
+    <div className="grid gap-6 lg:grid-cols-[360px_minmax(0,1fr)]">
       {/* Inputs */}
-      <div className="rounded-lg border border-border bg-white p-5">
+      <div className="min-w-0 rounded-lg border border-border bg-white p-5">
         <h2 className="flex items-center gap-2 font-heading text-lg font-bold text-navy">
           <CalcIcon className="h-5 w-5 text-accent" />
           Your numbers
@@ -133,7 +133,7 @@ export function FeeCalculator() {
       </div>
 
       {/* Results - full table, no gate, no email required */}
-      <div>
+      <div className="min-w-0">
         {result.cheapest && (
           <div className="rounded-lg border border-[#bfdbfe] bg-accent-soft/50 p-5">
             <p className="text-sm font-semibold text-[#1e40af]">Lowest estimated monthly cost</p>
@@ -156,7 +156,7 @@ export function FeeCalculator() {
           </Callout>
         ))}
 
-        <div className="mt-4 overflow-x-auto rounded-lg border border-border bg-white">
+        <div className="mt-4 max-w-full overflow-x-auto rounded-lg border border-border bg-white">
           <table className="w-full min-w-[560px] text-sm">
             <thead>
               <tr className="border-b border-border bg-cream/60 text-left text-xs uppercase tracking-wide text-grey">

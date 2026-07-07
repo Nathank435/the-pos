@@ -31,7 +31,7 @@ export function ProviderLogo({
     if (img && img.complete && img.naturalWidth === 0) setFailed(true);
   }, [src]);
 
-  const heights = { sm: "h-8", md: "h-10", lg: "h-12", xl: "h-16 px-4" };
+  const heights = { sm: "h-8 w-[72px] overflow-hidden", md: "h-10", lg: "h-12", xl: "h-16 px-4" };
   const initialSizes = {
     sm: "h-8 w-8 text-xs",
     md: "h-10 w-10 text-sm",
@@ -53,7 +53,7 @@ export function ProviderLogo({
           src={src}
           alt={`${name} logo`}
           onError={() => setFailed(true)}
-          className="h-3/5 w-auto max-w-[140px] object-contain mix-blend-multiply"
+          className={size === "sm" ? "h-3/5 w-auto max-w-full object-contain mix-blend-multiply" : "h-3/5 w-auto max-w-[140px] object-contain mix-blend-multiply"}
         />
       </span>
     );
