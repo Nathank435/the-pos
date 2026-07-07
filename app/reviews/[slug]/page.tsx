@@ -96,6 +96,22 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             <section>
               <h2 className="font-heading text-2xl font-bold text-navy">Quick verdict</h2>
               <p className="mt-3 leading-relaxed text-grey">{review.quickVerdict}</p>
+              {review.image && (
+                <figure className="mt-5">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={review.image.src}
+                    alt={review.image.alt}
+                    width={640}
+                    height={240}
+                    loading="lazy"
+                    className="w-full rounded-lg border border-border object-cover"
+                  />
+                  {review.image.caption && (
+                    <figcaption className="mt-2 text-xs text-grey">{review.image.caption}</figcaption>
+                  )}
+                </figure>
+              )}
             </section>
 
             <section className="grid gap-4 sm:grid-cols-2">

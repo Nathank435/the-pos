@@ -9,6 +9,8 @@ export type ReviewContent = {
   pricingDetail: string[];
   /** Illustrative monthly-cost worked example (flat-rate providers). */
   workedExample?: string;
+  /** Optional product photo (WebP), rendered under the quick verdict. */
+  image?: { src: string; alt: string; caption?: string };
   hardwareNote: string;
   supportNote: string;
   useCases: { who: string; verdict: string }[];
@@ -20,6 +22,11 @@ export type ReviewContent = {
 export const REVIEWS: ReviewContent[] = [
   {
     slug: "sumup",
+    image: {
+      src: "/images/providers/sumup-pos-cafe.webp",
+      alt: "SumUp iPad POS on a wooden stand with an Air card reader on a cafe counter",
+      caption: "The typical SumUp cafe setup: iPad POS on a stand, Air reader beside the till. Image: SumUp.",
+    },
     workedExample:
       "on £5,000 a month at SumUp's 1.69% standard rate, processing costs roughly £85/mo (about £1,020/year) with no monthly fee. On Payments Plus (from 0.99%) the same volume can drop nearer £50/mo - worth it once you're taking steady volume.",
     quickVerdict:

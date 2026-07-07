@@ -120,8 +120,9 @@ export const PROVIDERS: Provider[] = [
     quoteUrl: "/get-pos-quotes?provider=sumup",
     sourceUrls: ["https://www.sumup.com/en-gb/pricing/"],
     lastChecked: "2026-06-25",
-    lastChanged: "2026-06-29",
+    lastChanged: "2026-07-07",
     changelog: [
+      { date: "2026-07-07", note: "Added product photography of the SumUp iPad POS and Air reader setup." },
       { date: "2026-06-29", note: "Review deepened: worked cost examples and long-tail FAQs added." },
       { date: "2026-06-25", note: "Initial review published; prices verified against provider pricing pages." },
     ],
