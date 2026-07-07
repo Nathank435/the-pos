@@ -66,7 +66,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
     image: "/images/hubs/restaurants.jpg",
     intro:
       "A restaurant POS has to handle tables, tabs, coursing, tips and a kitchen that's already on fire at 8pm. You want something staff can learn fast and that won't drop payments mid-service.",
-    recommendedProviders: ["dojo", "square", "touchbistro", "lightspeed"],
+    recommendedProviders: ["dojo", "square", "toast", "lightspeed"],
     whatMatters: [
       { title: "Table & tab management", body: "Open tabs, move tables, split bills and add service charge without a maths degree." },
       { title: "Reliability under pressure", body: "Connectivity and uptime matter more than saving 0.1% on the rate." },
@@ -79,11 +79,11 @@ export const BUSINESS_TYPES: BusinessType[] = [
       "Hardware finance terms on full till bundles",
     ],
     recommendedSetup:
-      "For table service, a hospitality-grade POS (TouchBistro or Square for Restaurants) paired with a fast-payout card machine like Dojo is a strong combo. Lightspeed suits larger or multi-site operations.",
+      "For table service, a hospitality-grade POS (Toast or Square for Restaurants) paired with a fast-payout card machine like Dojo is a strong combo. Lightspeed suits larger or multi-site operations.",
     faqs: [
       {
         q: "What POS do most independent restaurants use?",
-        a: "Square for Restaurants and TouchBistro are popular with independents for table management, while Dojo is widely used for the card machine and fast payouts. Bigger groups often run Lightspeed.",
+        a: "Square for Restaurants and Toast are popular with independents for table management, while Dojo is widely used for the card machine and fast payouts. Bigger groups often run Lightspeed.",
       },
       {
         q: "Is Dojo good for restaurants?",

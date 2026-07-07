@@ -1476,7 +1476,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         bullets: [
           "Hardware: £19-£120 for a card reader; £150-£300 for a standalone terminal; £300-£800+ for a till screen, printer and cash drawer. Watch for 'from £X a month' hardware rental that quietly outstrips buying it within a year.",
-          "Software: £0 for the free apps (Square, SumUp, Zettle) up to £70+ a month per till for dedicated EPOS (Epos Now, Lightspeed, TouchBistro). Per-till pricing matters - two tills often means two subscriptions.",
+          "Software: £0 for the free apps (Square, SumUp, Zettle) up to £70+ a month per till for dedicated EPOS (Epos Now, Lightspeed, Toast). Per-till pricing matters - two tills often means two subscriptions.",
           "Transaction fees: 1.4%-1.75% per tap for most small-business providers. This is usually the biggest number of the lot once you are trading properly.",
           "Extras: receipt paper, kitchen printers, accounting integrations on 'higher tiers', phone support, and exit fees on contracted systems. Individually small, collectively real.",
         ],
@@ -1571,7 +1571,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         bullets: [
           "Wet-led local or small bar: [Square](/reviews/square) for Restaurants or [SumUp](/reviews/sumup) POS on an iPad. Cheap to run, fast to learn, tabs and split bills included. The pragmatic choice for most independents.",
-          "Food-led pub with a proper kitchen: [Lightspeed](/reviews/lightspeed) or [TouchBistro](/reviews/touchbistro) - stronger course management, kitchen screens and menu engineering. You pay more monthly and it is worth it at volume.",
+          "Food-led pub with a proper kitchen: [Lightspeed](/reviews/lightspeed) or [Toast](/reviews/toast) - stronger course management, kitchen screens and menu engineering. You pay more monthly and it is worth it at volume.",
           "Busy multi-till operation: [Epos Now](/reviews/epos-now) or a contracted [Dojo](/reviews/dojo) package - negotiated card rates start beating flat-rate pricing once you are doing serious weekly card volume, and the hardware is built for abuse.",
         ],
         image: {
@@ -1605,7 +1605,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         q: "What POS do most UK pubs use?",
-        a: "Independents increasingly run iPad systems (Square, SumUp POS, Lightspeed); food-led and multi-site pubs skew to Epos Now, TouchBistro and contracted packages from Dojo and the banks. There is no single standard - which is good news, because it keeps pricing honest.",
+        a: "Independents increasingly run iPad systems (Square, SumUp POS, Lightspeed); food-led and multi-site pubs skew to Epos Now, Toast and contracted packages from Dojo and the banks. There is no single standard - which is good news, because it keeps pricing honest.",
       },
       {
         q: "Can customers keep a tab open with a card behind the bar?",

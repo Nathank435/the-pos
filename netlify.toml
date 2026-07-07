@@ -44,3 +44,8 @@
 #   to = "/guides/some-guide"
 #   status = 301
 # ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/reviews/touchbistro"
+  to = "/reviews/toast"
+  status = 301

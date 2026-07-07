@@ -323,26 +323,26 @@ export const REVIEWS: ReviewContent[] = [
     ],
   },
   {
-    slug: "touchbistro",
+    slug: "toast",
     quickVerdict:
-      "TouchBistro is a restaurant-first POS built around table service, menus and floor plans. If you run a full-service venue it's purpose-built for the job; it's not intended for retail or simple mobile card payments.",
+      "Toast is a restaurant-only platform: purpose-built terminals and handhelds, kitchen displays, online ordering and integrated payments in one system. For a full-service venue it's one of the most complete setups you can buy - just go in with eyes open on the contract and the payments lock-in.",
     pricingDetail: [
-      "Subscription-based, quoted to your venue.",
-      "Payments handled via an integrated partner.",
-      "iPad-based hardware; subscription terms vary.",
+      "Plans quoted to your venue - no published UK price list.",
+      "Card payments go through integrated Toast Payments at quoted rates - you can't bring your own acquirer.",
+      "Purpose-built Android hardware (Flex terminals, Go 2 handhelds), usually bundled into the quote.",
     ],
-    hardwareNote: "Runs on iPad with printers and kitchen display options for full table service.",
-    supportNote: "Hospitality-focused onboarding and support.",
+    hardwareNote: "Purpose-built kit rather than iPads: spill-resistant Flex terminals and Toast Go 2 handhelds for order-and-pay at the table, all kitchen-synced.",
+    supportNote: "Hospitality-focused onboarding and 24/7 support; UK operation is newer than the US mothership.",
     useCases: [
-      { who: "Full-service restaurant", verdict: "Excellent - floor plans, coursing and tips." },
-      { who: "Café with table service", verdict: "Good - strong menu and table handling." },
-      { who: "Retail shop", verdict: "Not suited - it's hospitality-only." },
+      { who: "Full-service restaurant", verdict: "Excellent - handheld ordering, coursing, KDS and tips in one system." },
+      { who: "Multi-site group", verdict: "Strong - central menus and reporting are where Toast pulls ahead." },
+      { who: "Retail shop or market stall", verdict: "Not suited - it's hospitality-only." },
     ],
     alternatives: ["square", "lightspeed", "dojo"],
     faqs: [
       {
-        q: "Is TouchBistro only for restaurants?",
-        a: "It's designed for restaurants and table-service hospitality. Retailers and mobile sellers should look at Square, Shopify POS or a simple reader instead.",
+        q: "Is Toast only for restaurants?",
+        a: "Yes - it's designed for restaurants and table-service hospitality, and that focus is its strength. Retailers and mobile sellers should look at Square, Shopify POS or a simple reader instead.",
       },
     ],
   },
@@ -511,18 +511,18 @@ const REVIEW_FAQ_EXTRAS: Record<string, { q: string; a: string }[]> =
       "a": "In-person card sales are processed through Shopify Payments at the rates set for your plan, which generally improve on higher subscription tiers. Costs depend on your plan and region. Check current terms to confirm the in-person processing rates and any monthly fees that apply to your store."
     }
   ],
-  "touchbistro": [
+  "toast": [
     {
-      "q": "How much does TouchBistro cost?",
-      "a": "TouchBistro is a restaurant-first POS with subscription pricing provided on a quoted basis rather than a fixed public rate. Cost depends on your setup, number of devices and features. Ask for a tailored quote and check current terms so you can compare it against other hospitality systems."
+      "q": "How much does Toast POS cost in the UK?",
+      "a": "Toast quotes pricing per venue rather than publishing a UK price list - the quote bundles software plans, purpose-built hardware and card processing through Toast Payments. Get the full-term cost in writing (including the contract length) so you can compare it properly against other hospitality systems."
     },
     {
-      "q": "Is TouchBistro good for restaurants?",
-      "a": "Yes. TouchBistro is built specifically for restaurants, with table service, menu management and floor plans at its core. It suits venues wanting hospitality-focused tools rather than a general till. Pricing is quoted, so ask for a tailored quote and check current terms before deciding."
+      "q": "Can I use my own card machine with Toast?",
+      "a": "No - card payments run through integrated Toast Payments at rates quoted to your venue. That integration is part of why the system works so smoothly, but it also means you can't shop around on card fees later. Negotiate the rate before you sign, not after."
     },
     {
-      "q": "How does TouchBistro handle card payments?",
-      "a": "TouchBistro takes card payments through an integrated payment partner rather than processing directly, so the POS handles orders while the partner handles the card side. Rates depend on that partner and your setup. Check current terms to confirm the payment options and fees that apply to you."
+      "q": "Is Toast available in the UK?",
+      "a": "Yes - Toast launched in the UK and sells through pos.toasttab.com/uk, with UK onboarding and support. It's a newer UK operation than its huge US business, so ask about local support hours and installation lead times for your area."
     }
   ]
 };
