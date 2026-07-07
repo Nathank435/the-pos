@@ -2194,6 +2194,316 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Compare card machines", href: "/compare-card-machines" },
     ],
   },
+  {
+    slug: "card-tips-uk-law",
+    title: "Card Tips and the UK Tipping Law: What Your Business Must Do",
+    excerpt:
+      "Since October 2024, 100% of tips must reach your staff - and you can't deduct card fees from them. What the Employment (Allocation of Tips) Act means for your till setup.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-07",
+    readMinutes: 6,
+    featuredImage: "/images/blog/card-tips-uk-law.webp",
+    featuredAlt: "Waitress serving a customer at a restaurant table",
+    intro:
+      "Since 1 October 2024, the Employment (Allocation of Tips) Act has made one thing unambiguous: 100% of tips belong to your staff, however they're paid. And here's the bit that catches card-heavy businesses out - you cannot deduct the card processing fee from a card tip. If your POS prompts for tips (and it should), here's what the law requires and how to set it up properly.",
+    sections: [
+      {
+        heading: "What the law actually says",
+        paragraphs: [
+          "The Employment (Allocation of Tips) Act 2023 came into force on 1 October 2024 across England, Scotland and Wales. It covers tips, gratuities and service charges - cash and card alike - wherever the employer controls them.",
+        ],
+        bullets: [
+          "100% to workers: every penny of tips must be passed on, with no deductions. Card fees, admin costs, breakage charges - none of it can come out of the tip.",
+          "Fair allocation: tips must be shared fairly and transparently, following the statutory Code of Practice. 'The manager keeps the card tips' is now a legal problem, not just a morale one.",
+          "Paid promptly: tips must reach workers by the end of the month following the month they were received.",
+          "Written policy + records: if your business takes tips more than occasionally, you need a written tips policy staff can see, and three years of records of how tips were allocated. Workers have the right to request those records.",
+          "Agency staff count too: agency workers get the same treatment as employees.",
+        ],
+      },
+      {
+        heading: "The card-fee trap",
+        paragraphs: [
+          "Before the Act, some businesses knocked the ~1.7% processing fee off card tips - a £10 tip arrived as £9.83. That's now explicitly not allowed: the worker must receive the full £10, and the business absorbs the card fee as a cost of trading.",
+          "It's a small number per tip and a real number per year, so account for it: a venue processing £2,000 of card tips a month eats roughly £34/month in fees on tips alone at a flat 1.69% rate. If that stings, the answer is [negotiating your overall card rate](/blog/how-to-cut-card-processing-fees) - not clipping tips, which now carries employment-tribunal risk.",
+        ],
+      },
+      {
+        heading: "Setting up tipping on your POS properly",
+        paragraphs: [
+          "Card tips only work if the till asks. The mainstream systems - Square, SumUp, Zettle, Dojo and the restaurant platforms - all support tip prompts on the payment screen, and pay-at-table devices lift tips measurably because the prompt appears at the natural moment.",
+          "Configuration that works in practice: percentage options (10%/12.5%/15%) rather than fixed amounts for table service, a custom-amount option, and 'no tip' visible without shame-scrolling. Make sure tips are recorded separately from sales in your reports - you need that split for the allocation records the law requires, and your accountant needs it because tips aren't your revenue.",
+        ],
+      },
+      {
+        heading: "Distributing fairly: the tronc question",
+        paragraphs: [
+          "For pubs, restaurants and salons with teams, a tronc - an arrangement where an independent 'troncmaster' allocates tips by agreed rules - remains the cleanest way to comply. Run properly, a tronc also keeps tips free of employer and employee National Insurance (income tax still applies via PAYE), which means more of the tip lands in pockets.",
+          "Smaller teams don't need the formality, but they do need the written policy: who shares (kitchen included?), in what proportions, and when it's paid. Write it down, share it, keep the records. If you're choosing a till for a tips-heavy business, our [pub POS guide](/blog/best-pos-system-for-pubs-uk) and [salon POS guide](/blog/pos-system-for-salons-uk) cover the systems that handle tip reporting well.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I deduct card processing fees from card tips?",
+        a: "No. Since 1 October 2024 tips must be passed to workers in full - the business absorbs the card fee. Deducting it risks an employment tribunal claim, and tribunals can order compensation.",
+      },
+      {
+        q: "Does the tipping law cover service charges?",
+        a: "Yes - discretionary and mandatory service charges controlled by the employer are treated like tips: 100% to workers, allocated fairly. If you add a 12.5% service charge, it belongs to the team.",
+      },
+      {
+        q: "Do card tips get taxed?",
+        a: "Tips are taxable income for the worker. Paid through payroll they go through PAYE; through a properly run independent tronc, income tax applies but National Insurance generally doesn't - which is why bigger venues use one. Take payroll advice on your specific setup.",
+      },
+      {
+        q: "Do I need a written tips policy?",
+        a: "If your business receives tips more than occasionally, yes - a written policy available to all staff, plus records of how every tip was allocated, kept for three years. A one-page policy covers most small venues.",
+      },
+    ],
+    relatedPosts: [
+      "best-pos-system-for-pubs-uk",
+      "pos-system-for-salons-uk",
+      "how-to-cut-card-processing-fees",
+    ],
+    relatedLinks: [
+      { label: "POS systems for pubs & bars", href: "/pos-systems/pubs-bars" },
+      { label: "POS systems for restaurants", href: "/pos-systems/restaurants" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "chargebacks-uk-small-business",
+    title: "Chargebacks: What UK Small Businesses Actually Need to Know",
+    excerpt:
+      "A chargeback claws the money back out of your account first and asks questions later. How the process works, what it costs, and the habits that stop most of them.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-07",
+    readMinutes: 6,
+    featuredImage: "/images/blog/chargebacks-uk-small-business.webp",
+    featuredAlt: "Business owner checking a card payment dispute on his phone",
+    intro:
+      "A chargeback is a card payment pulled back out of your account by the customer's bank - money you thought was yours, gone while the dispute is decided. For most small businesses they're rare, which is exactly why the first one is so disorienting. Here's how the process actually works in the UK, what it costs, and the unglamorous habits that prevent most of them.",
+    sections: [
+      {
+        heading: "What a chargeback is (and isn't)",
+        paragraphs: [
+          "A chargeback is the card schemes' dispute process: the customer goes to their bank claiming a transaction was fraudulent, wrong, or not what they paid for; the bank reverses the payment while the claim is examined; your provider passes the debit - and usually an admin fee - to you. You then get a window to submit evidence ('representment') if you want to fight it.",
+          "It is not the same as a refund (which you control), and it's not Section 75 (a separate legal claim against credit card issuers for purchases over £100). Customers typically have up to 120 days from the transaction - or from when they expected delivery - to dispute, so a chargeback can land months after you banked the money.",
+        ],
+      },
+      {
+        heading: "What it costs you",
+        paragraphs: ["Three costs stack up, and only the first one is obvious:"],
+        bullets: [
+          "The transaction amount - clawed back immediately, before any decision. If you lose, it's gone; win, and it's returned.",
+          "The admin fee - traditional acquirers commonly charge £15-£45 per chargeback, win or lose. Some flat-rate providers are kinder (Square, notably, doesn't charge chargeback fees) - check your provider's rate card before you need to.",
+          "The pattern penalty - the one that really matters. A high chargeback ratio (roughly above 1% of transactions) gets you flagged by the schemes, and providers respond with held funds, higher rates or closed accounts. One chargeback is a Tuesday; a pattern is a threat to your ability to take cards.",
+        ],
+      },
+      {
+        heading: "How to win the ones you fight",
+        paragraphs: [
+          "For in-person payments you hold the strongest card there is: chip-and-PIN and contactless transactions shift fraud liability to the bank in most cases, so 'I didn't make this payment' disputes on tapped transactions rarely stick. Respond to the evidence request with the receipt data from your POS and let the process work.",
+          "For online, phone and invoice payments the burden is on you, so the evidence is the business model: proof of delivery with signature, the customer's order confirmation, your refund policy as shown at checkout, and any correspondence. Submit inside the deadline - a strong case filed late is a lost case. And pick your battles: fighting a £12 dispute costs more attention than it returns; fighting a £600 one with delivery proof is usually worth the twenty minutes.",
+        ],
+      },
+      {
+        heading: "The habits that prevent most chargebacks",
+        paragraphs: [
+          "Most disputes aren't fraud - they're confusion or frustration taking the path of least resistance. Which means they're preventable:",
+        ],
+        bullets: [
+          "Fix your billing descriptor: if your card statements say your Ltd company name instead of your trading name, customers genuinely don't recognise the charge. This single fix prevents a surprising share of disputes.",
+          "Make refunds easy and fast: a customer who can get a refund from you in one message has no reason to call their bank. Being difficult about refunds is how you convert £20 refunds into £45 chargeback fees.",
+          "Issue receipts every time - digital or paper. The receipt is both the customer's memory and your evidence.",
+          "For deliveries: tracked shipping on anything you'd mind losing, and keep the proof for six months.",
+          "Answer your phone and emails. 'Couldn't reach the merchant' appears in dispute reasons constantly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does a customer have to raise a chargeback?",
+        a: "Typically up to 120 days under scheme rules - from the transaction date, or from when goods/services were expected. In practice most land within a few weeks; budget mentally for the stragglers.",
+      },
+      {
+        q: "Can I refuse a refund and just fight the chargeback instead?",
+        a: "You can, and you'll usually regret it - the chargeback costs you the amount, possibly an admin fee, and a mark on your ratio, even when you win. A refund you control is nearly always cheaper than a dispute you don't.",
+      },
+      {
+        q: "Do chargebacks apply to contactless and chip-and-PIN payments?",
+        a: "They can be raised, but fraud-based disputes on chip/PIN and contactless usually fail because liability sits with the bank once the card was verified in person. Card-present businesses see far fewer successful chargebacks than online sellers.",
+      },
+      {
+        q: "What's an acceptable chargeback rate?",
+        a: "As close to zero as possible; the schemes start caring around 1% of transactions. A typical small shop sees a handful a year at most - if you're seeing several a month, treat it as a process problem, not bad luck.",
+      },
+    ],
+    relatedPosts: [
+      "can-you-charge-for-card-payments",
+      "pci-compliance-fees-uk",
+      "same-day-payouts-providers",
+    ],
+    relatedLinks: [
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "are-card-machine-fees-tax-deductible",
+    title: "Are Card Machine Fees Tax Deductible in the UK? (Yes - Here's How)",
+    excerpt:
+      "Card processing fees are an allowable business expense - but the VAT picture surprises people. What you can deduct, what you can reclaim, and the records HMRC wants.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-07-07",
+    readMinutes: 5,
+    featuredImage: "/images/blog/are-card-machine-fees-tax-deductible.webp",
+    featuredAlt: "Tax paperwork, receipts and a calculator on a desk",
+    intro:
+      "Yes - card machine fees are tax deductible in the UK. Processing fees, monthly terminal charges and the reader itself are all allowable business expenses, which softens the sting of that 1.69% a little. The part that trips people up is VAT, where card fees behave differently from most business costs. Here's the plain-English picture (with the obvious caveat: your accountant knows your situation, we don't).",
+    sections: [
+      {
+        heading: "What you can deduct against your profits",
+        paragraphs: [
+          "Card costs pass HMRC's 'wholly and exclusively for business' test easily - taking payments is about as core to trading as it gets. That goes for sole traders on Self Assessment and limited companies alike.",
+        ],
+        bullets: [
+          "Transaction fees: the 1.4%-1.75% skimmed off every sale. Your provider's monthly statement is the record.",
+          "Monthly charges: terminal rental, POS software subscriptions, minimum service charges, PCI fees (though read our [PCI piece](/blog/pci-compliance-fees-uk) before accepting you should be paying those).",
+          "Hardware: the £19 reader is a straightforward expense; bigger till setups are typically claimed via capital allowances - in practice the Annual Investment Allowance usually gives full relief in year one anyway.",
+          "Related costs: receipt paper, spare chargers, even the chargeback admin fees nobody enjoys.",
+        ],
+      },
+      {
+        heading: "The VAT quirk that surprises everyone",
+        paragraphs: [
+          "Here's the one worth knowing before your first VAT return: card processing fees are generally exempt from VAT, because payment processing is a financial service. Your SumUp or Worldpay statement doesn't have VAT hiding in it - which means there's no input VAT to reclaim on the fees, even if you're VAT-registered. People go hunting for a VAT receipt for their card fees; there isn't one, and that's normal.",
+          "Hardware and software are different: the card reader, the till, and POS software subscriptions are standard-rated, so VAT-registered businesses can reclaim the VAT on those in the usual way. Keep the invoices - the reader's VAT invoice from the provider, not just the payment confirmation.",
+        ],
+      },
+      {
+        heading: "The records that make this painless",
+        paragraphs: [
+          "Your card provider is quietly generating most of your evidence: monthly statements itemise fees to the penny, and every transaction is dated and logged. Download the statements monthly (don't rely on the provider keeping years of history in your dashboard), and make sure your bookkeeping records gross sales and fees separately - sales of £5,000 with £85 of fees, not net takings of £4,915. That split matters for both accuracy and VAT.",
+          "If you're doing your own books, the accounting integrations on modern POS systems push this automatically - one of the genuine arguments for [proper EPOS](/blog/what-is-an-epos-system) once you're VAT-registered and inside Making Tax Digital. And if your fees feel big enough to notice at tax time, that's your cue to check you're not overpaying in the first place: two minutes in the [fee calculator](/card-machine-fee-calculator) tells you.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can I claim card fees if I'm a sole trader using the trading allowance?",
+        a: "Not both - the £1,000 trading allowance replaces claiming actual expenses. Once your costs (card fees included) exceed £1,000, claiming actual expenses is usually better. Compare both ways or ask your accountant.",
+      },
+      {
+        q: "Is there VAT on SumUp, Square or Zettle fees?",
+        a: "Transaction processing fees are generally VAT-exempt financial services - no VAT charged, nothing to reclaim. Hardware and paid software subscriptions do carry VAT, which VAT-registered businesses can reclaim with a proper invoice.",
+      },
+      {
+        q: "Can I put my card reader through the business if I also use the account for personal sales?",
+        a: "The business proportion, yes. But mixing business and personal through one card account creates exactly the muddle HMRC dislikes - a separate account for the business costs nothing and makes every claim cleaner.",
+      },
+      {
+        q: "Do I need to keep card machine statements for HMRC?",
+        a: "Yes - normally at least 5 years after the 31 January deadline for sole traders, 6 years for companies. Download monthly PDFs rather than trusting the provider's portal to hold history forever.",
+      },
+    ],
+    relatedPosts: [
+      "pci-compliance-fees-uk",
+      "how-to-cut-card-processing-fees",
+      "card-machine-for-sole-traders",
+    ],
+    relatedLinks: [
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
+  {
+    slug: "free-pos-software-uk",
+    title: "Free POS Software: What You Actually Get (UK 2026)",
+    excerpt:
+      "Square, SumUp and Zettle all give away genuinely capable till software. What free really includes, where the paid tiers start, and who never needs to upgrade.",
+    category: "Comparisons",
+    author: "Nathan Keeble",
+    date: "2026-07-07",
+    readMinutes: 6,
+    featuredImage: "/images/blog/free-pos-software-uk.webp",
+    featuredAlt: "Cashier using a point of sale system at a cafe counter",
+    intro:
+      "Free POS software in the UK is genuinely free and genuinely good - Square, SumUp and Zettle all give away till software that would have cost £50 a month a decade ago. The catch isn't hidden; it's structural: they make their money on the 1.69%-1.75% per transaction, so the software is the shop window. Here's exactly what free gets you, where the paywalls sit, and who genuinely never needs to pay.",
+    sections: [
+      {
+        heading: "What the free tiers actually include",
+        paragraphs: [
+          "All three of the big free systems cover the fundamentals properly - this isn't crippleware:",
+        ],
+        bullets: [
+          "[Square](/reviews/square) POS: the most complete free till in the UK - unlimited products, basic inventory with low-stock alerts, digital receipts, refunds, reporting, plus a free online store and invoicing. Free versions of its Restaurants, Retail and Appointments apps too.",
+          "[SumUp](/reviews/sumup) POS app: product catalogue, variations, receipts, sales reports and VAT rates - everything a stall, cafe or salon chair needs on a phone or tablet.",
+          "[Zettle](/reviews/zettle) POS: solid product library, stock tracking, staff via PayPal integration, decent reporting. The natural pick if your money already lives in PayPal.",
+          "The honourable mention: [Shopify POS](/reviews/shopify-pos) Lite comes bundled with any Shopify subscription - not standalone-free, but effectively free for existing Shopify merchants selling in person.",
+        ],
+      },
+      {
+        heading: "Where the paywalls actually sit",
+        paragraphs: [
+          "The upgrade lines are consistent across providers, and they're drawn where businesses stop being simple:",
+        ],
+        bullets: [
+          "Advanced inventory: multi-location stock, purchase orders, supplier management - paid (Square for Retail Plus, and the point where many shops jump to Epos Now or Lightspeed).",
+          "Staff controls: individual logins, permissions and timecards beyond the basics - paid tiers, typically per-till or per-location pricing.",
+          "Hospitality depth: coursing, kitchen displays, floor plans and menu engineering - free tiers take orders; paid tiers run a kitchen (Square for Restaurants Plus, or the dedicated platforms like Toast).",
+          "Serious reporting: comparative periods, category margins, API access - paid everywhere.",
+        ],
+      },
+      {
+        heading: "Who never needs to upgrade (and who's kidding themselves)",
+        paragraphs: [
+          "Never need to pay: market traders, mobile hairdressers, tradespeople, coffee vans, small cafes with simple menus, and anyone whose till mostly rings sales and takes payments. The free tiers were built for you, and the providers earn plenty from your transaction fees. Pair one with a [£19 reader](/card-readers-no-monthly-fee) and stop reading pricing pages.",
+          "Kidding themselves: shops that count stock weekly by hand while refusing a £30/month plan that would automate it, and food-led venues running a kitchen off a free order-taking app. The test isn't turnover, it's friction - the moment you build a spreadsheet to compensate for the free tier, the paid tier has become the cheaper option. Our [POS cost breakdown](/blog/how-much-does-a-pos-system-cost-uk) prices the upgrade paths honestly.",
+        ],
+      },
+      {
+        heading: "The 'free' that isn't: trials and bundled hardware",
+        paragraphs: [
+          "Be careful with two lookalikes. 'Free trial' EPOS (Epos Now, Lightspeed and friends) is paid software with a fortnight's grace - fine products, but you're choosing a subscription, so evaluate them as one. And 'free terminal included' offers from contracted providers bake the hardware into a 12-48 month agreement - the terminal is free the way a phone is free on a £60/month contract.",
+          "Genuinely free means: download the app today, pay only when you sell. If a rep needs your phone number before you can see the price, it isn't this category. When you're weighing free against paid for your specific setup, the [comparison table](/compare-pos-systems) shows every system's real all-in costs side by side.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What's the best free POS software in the UK?",
+        a: "Square, for most businesses - its free tier is the deepest (inventory, online store, invoicing, industry-specific apps). SumUp wins on simplicity and reader price; Zettle if you're PayPal-centric. All three are legitimate, not trials.",
+      },
+      {
+        q: "How do free POS providers make money?",
+        a: "Transaction fees - typically 1.69%-1.75% per card payment - plus paid software tiers and hardware. The model is honest: free software brings you in, your card volume pays for it.",
+      },
+      {
+        q: "Can I use free POS software without their card reader?",
+        a: "Mostly the software and payments come as a pair - that's the deal that makes it free. You can usually record cash sales regardless, but card payments route through the provider's own processing.",
+      },
+      {
+        q: "Is free POS software good enough for a shop with staff?",
+        a: "For two or three trusted staff and a simple range, often yes. Once you need individual logins, permissions and multi-location stock, you're in paid-tier territory - roughly £25-£70 a month depending on the system.",
+      },
+    ],
+    relatedPosts: [
+      "what-is-an-epos-system",
+      "how-much-does-a-pos-system-cost-uk",
+      "epos-vs-traditional-till",
+    ],
+    relatedLinks: [
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Square review", href: "/reviews/square" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
