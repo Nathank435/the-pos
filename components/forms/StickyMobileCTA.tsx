@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Star, X, ExternalLink } from "lucide-react";
 import type { Provider } from "@/data/providers";
-import { buildAffiliateUrl } from "@/lib/affiliate";
+import { buildAffiliateUrl, affiliateClickProps } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
 
 /** Sticky bottom CTA on mobile for high-intent pages.
@@ -47,14 +47,7 @@ export function StickyMobileCTA({ provider }: { provider?: Provider }) {
               href={buildAffiliateUrl(provider, { pageType: "review", position: "sticky" })}
               target="_blank"
               rel="sponsored nofollow noopener"
-              onClick={() =>
-                track("affiliate_click", {
-                  provider: provider.slug,
-                  page_type: "review",
-                  position: "sticky",
-                  page_path: `/reviews/${provider.slug}`,
-                })
-              }
+              onClick={() => track("affiliate_click", affiliateClickProps(provider, { pageType: "review", position: "sticky" }))}
               className="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-accent py-3 text-center text-sm font-bold text-white"
             >
               See {provider.name}&apos;s prices <ExternalLink className="h-3.5 w-3.5" />

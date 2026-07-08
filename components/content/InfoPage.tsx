@@ -36,7 +36,7 @@ export function InfoPage({
             {contactEmail && (
               <a
                 href={`mailto:${contactEmail}`}
-                className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#1e3a8a]"
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-hover"
               >
                 <Mail className="h-4 w-4" /> Email us at {contactEmail}
               </a>

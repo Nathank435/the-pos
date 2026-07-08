@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <p className="mt-1.5 text-sm text-grey">Take the 60-second quiz and we'll point you to providers that fit.</p>
               <Link
                 href="/get-pos-quotes#quiz"
-                className="mt-3 inline-flex h-10 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-white hover:bg-[#1e3a8a]"
+                className="mt-3 inline-flex h-10 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-white hover:bg-accent-hover"
               >
                 Find my match
               </Link>

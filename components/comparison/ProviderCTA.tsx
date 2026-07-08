@@ -2,7 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import type { Provider } from "@/data/providers";
-import { buildAffiliateUrl, type AffiliateContext } from "@/lib/affiliate";
+import { buildAffiliateUrl, affiliateClickProps, pageTypeFromSource, type AffiliateContext } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
@@ -28,15 +28,13 @@ export function ProviderCTA({
   reassure?: boolean;
 }) {
   const isAffiliate = Boolean(provider.affiliateUrl);
-  const pageType = (["review", "comparison", "calculator", "home", "vs", "hub", "guide"].find((t) =>
-    sourcePage.includes(t === "comparison" ? "compare" : t)
-  ) ?? "review") as AffiliateContext["position"] extends never ? never : AffiliateContext["pageType"];
-  const href = isAffiliate || provider.quoteUrl ? buildAffiliateUrl(provider, { pageType, position }) : "/get-pos-quotes";
+  const ctx: AffiliateContext = { pageType: pageTypeFromSource(sourcePage), position };
+  const href = isAffiliate || provider.quoteUrl ? buildAffiliateUrl(provider, ctx) : "/get-pos-quotes";
 
   const base =
     "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2";
   const variants = {
-    primary: "bg-accent text-white hover:bg-[#1e3a8a]",
+    primary: "bg-accent text-white hover:bg-accent-hover",
     secondary: "bg-navy text-white hover:bg-deepblue",
     outline: "border border-border bg-white text-navy hover:bg-cream",
   };
@@ -51,13 +49,7 @@ export function ProviderCTA({
       data-provider={provider.slug}
       onClick={() => {
         track("provider_cta_click", { provider: provider.slug, source: sourcePage });
-        if (isAffiliate)
-          track("affiliate_click", {
-            provider: provider.slug,
-            page_type: pageType,
-            position,
-            page_path: typeof window !== "undefined" ? window.location.pathname : sourcePage,
-          });
+        if (isAffiliate) track("affiliate_click", affiliateClickProps(provider, ctx));
       }}
     >
       {label || `Visit ${provider.name}`}

@@ -2,13 +2,15 @@
   "name": "thepos",
   "version": "0.1.0",
   "private": true,
-  "description": "The POS — compare UK POS systems, card machines and payment providers.",
+  "description": "The POS \u2014 compare UK POS systems, card machines and payment providers.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate": "node --experimental-strip-types --no-warnings scripts/validate-content.mjs",
+    "prebuild": "npm run validate"
   },
   "dependencies": {
     "clsx": "2.1.1",

@@ -21,3 +21,24 @@ export function buildAffiliateUrl(provider: Provider, ctx: AffiliateContext): st
     return raw;
   }
 }
+
+/** Derive the analytics page_type from a legacy sourcePage string ("review-header",
+ *  "compare-card-machines", …). Kept here so every CTA reports the same taxonomy. */
+export function pageTypeFromSource(sourcePage: string): AffiliateContext["pageType"] {
+  if (sourcePage.includes("compare")) return "comparison";
+  for (const t of ["calculator", "home", "vs", "hub", "guide"] as const) {
+    if (sourcePage.includes(t)) return t;
+  }
+  return "review";
+}
+
+/** One shape for every affiliate_click event - keeps GA4 params consistent
+ *  across the CTA button, sticky bar and calculator rows. */
+export function affiliateClickProps(provider: Provider, ctx: AffiliateContext) {
+  return {
+    provider: provider.slug,
+    page_type: ctx.pageType,
+    position: ctx.position,
+    page_path: typeof window !== "undefined" ? window.location.pathname : "",
+  };
+}

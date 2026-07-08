@@ -8,7 +8,8 @@
   --color-cream: #f8fafc;        /* Off White  #F8FAFC (page bg)        */
   --color-navy: #0f172a;         /* Navy       #0F172A (ink)            */
   --color-deepblue: #1e40af;     /* Blue 800   (links / secondary)      */
-  --color-accent: #1d4ed8;       /* Primary Blue #1D4ED8 (CTAs/accent)  */
+  --color-accent: #1d4ed8;
+  --color-accent-hover: #1e3a8a;       /* Primary Blue #1D4ED8 (CTAs/accent)  */
   --color-accent-soft: #dbeafe;  /* Soft blue tint                      */
   --color-sky: #60a5fa;          /* Sky Blue   #60A5FA                  */
   --color-amber: #f5b84b;        /* Warning amber (catch-out boxes)     */

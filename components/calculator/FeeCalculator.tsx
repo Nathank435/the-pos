@@ -7,7 +7,7 @@ import { gbp } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Callout } from "@/components/ui/Callout";
-import { buildAffiliateUrl } from "@/lib/affiliate";
+import { buildAffiliateUrl, affiliateClickProps } from "@/lib/affiliate";
 import { PROVIDERS } from "@/data/providers";
 import { track } from "@/lib/analytics";
 
@@ -189,15 +189,8 @@ export function FeeCalculator() {
                           href={buildAffiliateUrl(provider, { pageType: "calculator", position: "row" })}
                           target="_blank"
                           rel="sponsored nofollow noopener"
-                          onClick={() =>
-                            track("affiliate_click", {
-                              provider: provider.slug,
-                              page_type: "calculator",
-                              position: "row",
-                              page_path: "/card-machine-fee-calculator",
-                            })
-                          }
-                          className="inline-flex items-center gap-1 whitespace-nowrap rounded-md bg-accent px-2.5 py-1.5 text-xs font-bold text-white hover:bg-[#1e3a8a]"
+                          onClick={() => track("affiliate_click", affiliateClickProps(provider, { pageType: "calculator", position: "row" }))}
+                          className="inline-flex items-center gap-1 whitespace-nowrap rounded-md bg-accent px-2.5 py-1.5 text-xs font-bold text-white hover:bg-accent-hover"
                         >
                           Visit <ExternalLink className="h-3 w-3" />
                         </a>
@@ -317,7 +310,7 @@ function EmailResultsCard({
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="shrink-0 rounded-md bg-accent px-4 py-2.5 text-sm font-bold text-white hover:bg-[#1e3a8a] disabled:opacity-60"
+          className="shrink-0 rounded-md bg-accent px-4 py-2.5 text-sm font-bold text-white hover:bg-accent-hover disabled:opacity-60"
         >
           {state === "submitting" ? "Sending…" : "Send my results"}
         </button>
