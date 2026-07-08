@@ -2504,6 +2504,382 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Square review", href: "/reviews/square" },
     ],
   },
+  {
+    slug: "epos-systems-sheffield",
+    title: "EPOS & POS Systems in Sheffield: A Local's Guide (2026)",
+    excerpt:
+      "The POS is based in Sheffield, so this one's personal: what Steel City businesses actually need from an EPOS system, and why buying local rarely beats buying right.",
+    category: "Comparisons",
+    author: "Nathan Keeble",
+    date: "2026-07-08",
+    readMinutes: 6,
+    featuredImage: "/images/blog/epos-systems-sheffield.webp",
+    featuredAlt: "Independent shops along a UK high street",
+    intro:
+      "Looking for an EPOS system in Sheffield? Declaration of interest: The POS is a Sheffield business - we're registered on Ecclesall Road South - so this guide is written from inside the city, not from a London content farm. The short version: the best EPOS for a Sheffield business is almost never a 'Sheffield EPOS supplier'; it's the right national system set up well for how you trade, from Kelham Island to Crystal Peaks.",
+    sections: [
+      {
+        heading: "The Sheffield EPOS market, honestly",
+        paragraphs: [
+          "Search 'EPOS Sheffield' and you'll find a mix of local resellers, national dealers with a Sheffield landing page, and the big self-serve systems. The resellers sell hardware bundles with support contracts; the dealers sell whatever earns the best margin that quarter; and the self-serve systems (Square, SumUp, Zettle, Epos Now) sell direct with published pricing.",
+          "Our honest take as locals: the self-serve route wins for most of the city's independents. Modern EPOS is installed by unboxing it - there's no engineer visit to justify a reseller markup, support is remote for everyone anyway, and published pricing beats a quote you can't compare. The exceptions are complex hospitality fits-outs and multi-site operations, where a specialist installer earns their fee.",
+        ],
+      },
+      {
+        heading: "What Sheffield businesses actually run",
+        paragraphs: [
+          "Walk the independent quarters and you'll see the same handful of systems on counters. Around Division Street, Abbeydale Road and Sharrow Vale it's overwhelmingly iPad-and-reader setups - [Square](/reviews/square) and [SumUp](/reviews/sumup) dominate cafes and indie retail. Kelham Island's food-and-drink operators skew to hospitality systems with kitchen screens, and the city's pubs split between iPad tills and contracted packages from [Dojo](/reviews/dojo) and the banks.",
+          "That pattern isn't fashion - it's the fee maths working itself out. Low-to-mid volume independents do best on no-monthly-fee flat rates; the busy food-led venues justify subscriptions and negotiated card rates. Run your own numbers through our [fee calculator](/card-machine-fee-calculator) and you'll land in the right camp in two minutes.",
+        ],
+      },
+      {
+        heading: "Choosing by trade, Sheffield edition",
+        paragraphs: ["The right system depends on what you do, not what postcode you do it in - but here's the local shortcut by trade:"],
+        bullets: [
+          "Cafes and coffee shops (Ecclesall Road, Division Street, Abbeydale Road): iPad EPOS + fast reader - [our Sheffield cafe guide](/blog/pos-sheffield-cafes) covers it.",
+          "Market and street traders (Moor Market, Sharrow Vale, Peddler): no-monthly-fee reader, offline-tolerant - [Sheffield market trader guide](/blog/card-machine-sheffield-market-traders).",
+          "Salons and barbers (Ecclesall Road, West Street, Hillsborough): booking-integrated POS beats a bare till - [Sheffield salon guide](/blog/card-payments-sheffield-salons-barbers).",
+          "Street food and events (Peddler Night Market, Tramlines, the food halls): battery, signal and speed decide everything - [street food guide](/blog/sheffield-street-food-card-payments).",
+          "Restaurants and food-led pubs: hospitality-grade systems with kitchen screens - see our [restaurant hub](/pos-systems/restaurants) and [pub POS guide](/blog/best-pos-system-for-pubs-uk).",
+        ],
+      },
+      {
+        heading: "Does 'local support' matter?",
+        paragraphs: [
+          "It's the reseller pitch: 'we're Sheffield-based, we'll come out to you.' Worth something for a six-till venue with kitchen printers and a cellar full of cabling - genuinely. Worth very little for a cafe with an iPad and a reader, where every mainstream provider's support is a phone app and a replacement device in the post, and the 'local' support contract costs more per year than the hardware.",
+          "The better local advantage is knowing how Sheffield trades: quiet Mondays, student-calendar swings, match days at Bramall Lane and Hillsborough, festival spikes in July. Pick a system with no monthly fee or a rolling contract and those rhythms cost you nothing in the slow weeks. That flexibility - not an engineer's van - is what actually protects a Sheffield independent.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Who supplies EPOS systems in Sheffield?",
+        a: "A mix of local resellers, national dealers and the self-serve systems (Square, SumUp, Zettle, Epos Now) that ship direct. For most independents the self-serve route is cheaper and just as capable - resellers earn their keep mainly on complex multi-till hospitality installs.",
+      },
+      {
+        q: "What do Sheffield market traders use to take cards?",
+        a: "Mostly no-monthly-fee readers - SumUp and Square dominate. A £19-£40 reader with a flat rate suits stall volumes, and there's nothing to pay in quiet months.",
+      },
+      {
+        q: "Is there an EPOS showroom in Sheffield I can visit?",
+        a: "Some resellers demo hardware, but honestly the fastest way to trial modern EPOS is a free app on an iPad today - Square, SumUp and Zettle all let you build your product list and mock-sell before spending anything.",
+      },
+      {
+        q: "Are you actually based in Sheffield?",
+        a: "Yes - The POS is operated by Cracked Media Ltd, registered on Ecclesall Road South, Sheffield S11. We compare national providers because that's what wins for local businesses, but we're writing from inside the city.",
+      },
+    ],
+    relatedPosts: [
+      "card-machine-sheffield-market-traders",
+      "pos-sheffield-cafes",
+      "what-is-an-epos-system",
+    ],
+    relatedLinks: [
+      { label: "Compare POS systems", href: "/compare-pos-systems" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "card-machine-sheffield-market-traders",
+    title: "Card Machines for Sheffield Market Traders: Moor Market to Sharrow Vale",
+    excerpt:
+      "What actually works on a Sheffield stall: readers that survive a full day, signal realities indoors at the Moor Market, and why no-monthly-fee is non-negotiable for traders.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-08",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-machine-sheffield-market-traders.webp",
+    featuredAlt: "Fresh fruit and vegetables on a market stall",
+    intro:
+      "If you trade at the Moor Market, Sharrow Vale's street markets or any of Sheffield's pop-ups, the card machine question has a short answer: a no-monthly-fee reader, fully charged, with a backup plan for bad signal. Cash-only stalls in this city are leaving money on the table - here's the setup that works for Sheffield traders, from a comparison site based up the road.",
+    sections: [
+      {
+        heading: "Why no-monthly-fee is the only sane choice for a stall",
+        paragraphs: [
+          "Market trading is seasonal, weather-dependent and honest about it. A contracted terminal with a monthly fee charges you the same in a rained-off January as a heaving December - a no-monthly-fee reader charges you only when you sell. For typical stall volumes the maths isn't close: £1,500 of card sales a month costs about £25 in flat-rate fees and nothing else.",
+          "The shortlist is the familiar one: [SumUp](/reviews/sumup) (£19 reader, 1.69%) is the market-trader default for a reason, [Square](/reviews/square) matches it with stronger free software, and [Zettle](/reviews/zettle) suits PayPal households. Any of the three will do a Sheffield stall proud - the full comparison is on our [no-monthly-fee page](/card-readers-no-monthly-fee).",
+        ],
+      },
+      {
+        heading: "The indoor-market signal problem",
+        paragraphs: [
+          "Phone-paired readers depend on your phone's data, and big indoor market halls - steel-framed buildings with thick walls - are exactly where data gets patchy. Traders at indoor markets everywhere know the mid-transaction spinner of doom.",
+          "Three fixes, in order of cost: check whether the market's public or trader WiFi is usable and pair to that; try a different network (coverage varies wildly by operator inside big buildings - ask the stall next door what they're on); or spend on a standalone reader with its own SIM (SumUp Solo, from around £79) which picks the strongest network itself. If you're taking hundreds of pounds a day, the SIM reader pays for itself the first time the queue doesn't walk.",
+        ],
+      },
+      {
+        heading: "A Sheffield trader's practical kit list",
+        paragraphs: ["What the well-run stalls actually carry:"],
+        bullets: [
+          "The reader, charged the night before - and a power bank; a full market day outlasts most reader batteries when it's busy.",
+          "A visible 'cards welcome' sign - it measurably lifts spend because browsers don't have to check their pockets first.",
+          "The cash tin anyway: roughly one in five UK payments is still cash, and market crowds skew higher. Take both.",
+          "A price point that survives fees: at 1.69%, a £3 item gives up 5p - price with that in mind rather than resenting it.",
+          "Your reader's app reports at the end of each market - takings by day tells you which pitches earn their fee.",
+        ],
+      },
+      {
+        heading: "Weekend and seasonal traders: your costs are zero until you sell",
+        paragraphs: [
+          "Sharrow Vale's markets, Christmas markets and one-off pitches suit occasional traders, and this is where no-monthly-fee genuinely shines: the reader sits in a drawer costing nothing between events. There's no minimum usage, no dormancy fee, nothing to cancel.",
+          "If you're weighing up whether card acceptance is worth it at all for a few markets a year, our [sole trader guide](/blog/card-machine-for-sole-traders) runs the numbers - but the short answer is that a £19 one-off has usually repaid itself by the second market. Want a shortlist matched to how you trade? The [60-second quiz](/get-pos-quotes) does exactly that.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What card machine do traders at the Moor Market use?",
+        a: "Predominantly no-monthly-fee readers - SumUp and Square are everywhere on UK indoor markets. Traders in patchy-signal spots inside the hall tend to upgrade to SIM-equipped standalone readers.",
+      },
+      {
+        q: "Do I need a different card machine for outdoor markets?",
+        a: "No - the same reader works. Outdoors your phone signal is usually better than inside a market hall; your real enemies are battery and rain. Power bank, zip-lock bag, done.",
+      },
+      {
+        q: "What happens if the signal dies mid-payment?",
+        a: "The payment either fails cleanly (customer retries) or queues, depending on the provider's offline rules. Know your provider's policy before you rely on it, and check offline-payment liability - if it later declines, that's usually on you.",
+      },
+      {
+        q: "Is it worth taking cards for a £2.50 average sale?",
+        a: "Yes - the fee on £2.50 at 1.69% is about 4p, and the sales you'd lose by being cash-only cost far more. Consider a modest minimum card spend if tiny transactions genuinely bother you; that's legal.",
+      },
+    ],
+    relatedPosts: [
+      "epos-systems-sheffield",
+      "best-card-readers-market-traders",
+      "card-machine-for-sole-traders",
+    ],
+    relatedLinks: [
+      { label: "POS for market stalls", href: "/pos-systems/market-stalls" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "pos-sheffield-cafes",
+    title: "POS Systems for Sheffield Cafes: What the Indies Actually Run",
+    excerpt:
+      "Sheffield's independent coffee scene runs on iPad tills and flat-rate readers. What to copy, what to skip, and the fee maths at real cafe volumes.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-08",
+    readMinutes: 5,
+    featuredImage: "/images/blog/pos-sheffield-cafes.webp",
+    featuredAlt: "Barista preparing coffee behind a cafe counter",
+    intro:
+      "Sheffield's independent cafe scene - Division Street through Sharrow Vale to Abbeydale Road - has quietly standardised its tills: an iPad running free POS software, a flat-rate card reader, and not much else. That's not laziness; it's the right answer for most counters. Here's what the city's indies actually run, and when a cafe genuinely needs more.",
+    sections: [
+      {
+        heading: "The standard Sheffield indie setup (and why it won)",
+        paragraphs: [
+          "The typical setup: [Square](/reviews/square) or [SumUp](/reviews/sumup) on an iPad, a reader beside the machine, digital receipts, done. Software cost: £0. Card cost: 1.69%-1.75% flat. It won because cafes are high-frequency, low-ticket businesses where speed and simplicity beat features - and because nobody opening a cafe has spare capital for a £2,000 till.",
+          "At typical volumes the flat rate is liveable: a cafe doing £8,000 a month on cards pays roughly £135-£140 in fees. When card volume grows well past £10k/month, negotiated rates start beating flat pricing - that's the point to get quotes and run them through the [fee calculator](/card-machine-fee-calculator), not before.",
+        ],
+      },
+      {
+        heading: "Where free stops being enough",
+        paragraphs: ["Three growth points push Sheffield cafes off the free tier, usually in this order:"],
+        bullets: [
+          "Staff you don't watch: individual logins and permissions live on paid plans (~£25-£40/month). Worth it the week you stop being behind the counter every shift.",
+          "Food beyond toasties: proper kitchen tickets, modifiers and coursing want a hospitality plan - Square for Restaurants, or a dedicated system if the kitchen is the business.",
+          "A second site: multi-location stock and reporting is paid-tier everywhere. (It's also the moment contracted card rates become negotiable - use the leverage.)",
+        ],
+      },
+      {
+        heading: "Sheffield-specific realities",
+        paragraphs: [
+          "Two local rhythms worth planning around. First, the student calendar: cafes near the universities and along Ecclesall Road live and die by term time, which is another argument for costs that flex with revenue - no-monthly-fee setups don't punish the summer trough. Second, match days and events: if you're anywhere near Bramall Lane, Hillsborough or a Tramlines route, your Saturday can double - make sure your reader isn't the bottleneck (a backup reader is £19 of insurance).",
+          "And learn from the city's food halls: the vendors at Kommune and Cambridge Street Collective run lean, fast, card-first counters because throughput is everything. A cafe till should pass the same test - if ringing a flat white and a bake takes more than three taps, the setup is wrong. Our [cafe hub](/pos-systems/cafes) goes deeper on the full stack.",
+        ],
+      },
+      {
+        heading: "Our recommendation, plainly",
+        paragraphs: [
+          "Opening or running a straightforward Sheffield cafe: Square on an iPad with a Square reader - the free tier's inventory, reporting and (free) online ordering cover an independent completely, and you can add the Restaurants app later without changing provider. If every pound of setup cost matters, SumUp gets you trading for £19.",
+          "Already trading and suspicious of your costs? Check your effective rate against the [comparison table](/compare-card-machines) - cafes that signed a contracted terminal deal in a hurry are the businesses we most often see overpaying, and [switching](/blog/switching-card-machine-checklist) is less painful than the rep implied.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What POS do most Sheffield cafes use?",
+        a: "Independents overwhelmingly run Square or SumUp on iPads - the same pattern as indie cafes across the UK. Food-led spots and multi-site operators graduate to paid hospitality plans.",
+      },
+      {
+        q: "How much should a cafe pay in card fees per month?",
+        a: "At a flat 1.69%-1.75%: roughly £85-£90 per £5,000 of card sales. If your statement says meaningfully more per pound of sales, something (PCI fees, terminal rental, minimum charges) is stacking on top - worth an audit.",
+      },
+      {
+        q: "Do I need a till drawer if I'm mostly card?",
+        a: "Sheffield cafes still see real cash, especially from older regulars. A basic drawer paired to your iPad till covers it - going fully cashless is legal but costs you some customers.",
+      },
+      {
+        q: "What about tips on card?",
+        a: "Turn tip prompts on - card tips are found money for staff. Remember 100% must reach the team with no card-fee deduction; our tipping-law guide covers the rules.",
+      },
+    ],
+    relatedPosts: [
+      "epos-systems-sheffield",
+      "card-tips-uk-law",
+      "cafe-overpaying-card-fees",
+    ],
+    relatedLinks: [
+      { label: "POS for cafes", href: "/pos-systems/cafes" },
+      { label: "Square review", href: "/reviews/square" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "card-payments-sheffield-salons-barbers",
+    title: "Card Payments for Sheffield Salons & Barbers (Ecclesall Road to Hillsborough)",
+    excerpt:
+      "Sheffield's salons and barbershops are booking-first businesses. The card machine is the easy bit - the diary, deposits and no-show protection are where the money is.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-08",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-payments-sheffield-salons-barbers.webp",
+    featuredAlt: "Client having a haircut in a barbershop chair",
+    intro:
+      "From the salons of Ecclesall Road to the barbershops of Hillsborough and London Road, Sheffield's hair and beauty trade shares one economic truth: the chair only earns when someone's in it. That makes your payment setup a booking problem first and a card machine problem second - and it changes what you should buy.",
+    sections: [
+      {
+        heading: "The no-show maths, Sheffield rates",
+        paragraphs: [
+          "At Sheffield prices - call it £15-£25 barber cuts, £40-£80 salon services - three no-shows a week is £2,500-£8,000 a year of empty-chair time. That dwarfs anything you'll ever pay in card fees, which is why the right question isn't 'cheapest reader' but 'which system stops the no-shows'.",
+          "The fix is boring and proven: online booking with automatic reminders, card-on-file deposits for longer appointments, and a cancellation policy the software enforces politely so you don't have to. Our [full salon POS guide](/blog/pos-system-for-salons-uk) covers the systems; the short version is Square Appointments for most shops, a dedicated booking platform for diary-heavy salons.",
+        ],
+      },
+      {
+        heading: "Barbershop vs salon: different right answers",
+        paragraphs: [
+          "Sheffield's barbershops largely run walk-in-plus-app models: a [SumUp](/reviews/sumup) or [Square](/reviews/square) reader at the counter and a lightweight booking app covers a two-chair shop completely, for £19-£40 of hardware and no subscription. Contactless suits the price point - a £18 cut is one tap - and the queue keeps itself honest.",
+          "Salons carry more complexity: colour appointments that need deposits, patch-test records, retail shelves, stylist columns and commission splits. That's [Square](/reviews/square) Appointments territory (free for one calendar, sensible with staff), or Fresha if the diary is the whole business. Either way the card processing rides along at the same flat rates as everyone else.",
+        ],
+      },
+      {
+        heading: "Chair renters: keep the money separate",
+        paragraphs: [
+          "A lot of Sheffield salons run self-employed stylists renting chairs - and the payment setup should reflect the legal reality. Each renter taking payments on their own reader, under their own name, keeps everyone's turnover, tips and VAT position clean. Readers are £19; blurred finances at tax time cost considerably more.",
+          "For the salon owner, that also simplifies the tipping-law position: tips paid directly to a self-employed stylist are theirs, no allocation policy needed. Where you employ staff, remember [card tips must reach them in full](/blog/card-tips-uk-law) - no card-fee deductions.",
+        ],
+      },
+      {
+        heading: "Setting up: the one-afternoon version",
+        paragraphs: [
+          "For a new Sheffield barbershop or one-chair salon: order a Square or SumUp reader (next-day delivery), download the app, load your services as products, turn on tip prompts, and connect a booking app with SMS reminders. Total cost: the reader. Total setup: an afternoon between clients.",
+          "For an established salon ready to graduate: pick the booking-integrated system first, migrate the client book carefully (export contacts, colour notes and histories), and only then worry about the card hardware - it's the interchangeable part. The [60-second quiz](/get-pos-quotes) will shortlist against your setup, or browse the [salon hub](/pos-systems/salons) for the deeper comparison.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What card machine do Sheffield barbers use?",
+        a: "Mostly SumUp and Square readers - no monthly fee, flat rates, ideal for £15-£25 transactions. The busier shops pair them with booking apps for the appointment side.",
+      },
+      {
+        q: "Should a salon take deposits for appointments?",
+        a: "For anything over an hour, yes - card-captured deposits at booking are the single best no-show fix. Booking-integrated systems automate it so it never feels awkward.",
+      },
+      {
+        q: "Can chair renters share one card machine?",
+        a: "They can, but shouldn't - separate readers keep each self-employed stylist's income, tips and tax cleanly apart. At £19 a reader there's no economic argument for sharing.",
+      },
+      {
+        q: "Do card tips work for barbers?",
+        a: "Yes - turn on the tip prompt; contactless customers tip more than cash-only shops expect. If you employ staff, 100% of those tips must reach them with no deductions under the tipping law.",
+      },
+    ],
+    relatedPosts: [
+      "pos-system-for-salons-uk",
+      "card-tips-uk-law",
+      "epos-systems-sheffield",
+    ],
+    relatedLinks: [
+      { label: "POS for salons", href: "/pos-systems/salons" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "sheffield-street-food-card-payments",
+    title: "Taking Card Payments at Sheffield's Street Food Markets & Events",
+    excerpt:
+      "Peddler, the food halls, Tramlines weekend: Sheffield street food is card-first now. The setup that survives a festival crowd - battery, signal, speed and a backup.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-08",
+    readMinutes: 5,
+    featuredImage: "/images/blog/sheffield-street-food-card-payments.webp",
+    featuredAlt: "Street food vendor serving orders from a food truck hatch",
+    intro:
+      "Sheffield's street food scene - Peddler Night Market in Kelham Island, the city's food halls, festival pitches at Tramlines - is effectively cashless already. Young crowds tap; queues punish anyone who can't. If you're trading food from a truck, gazebo or food-hall unit in this city, your card setup is core kit, and it has to survive conditions a shop till never faces.",
+    sections: [
+      {
+        heading: "What event trading does to a card setup",
+        paragraphs: [
+          "A busy service at a night market is hundreds of small transactions in a few hours, outdoors or in a packed industrial building, with everyone else's phones fighting for the same signal. The failure modes are predictable: reader battery dies mid-rush, venue WiFi collapses, phone data crawls exactly when the queue is longest.",
+          "So the spec writes itself: a reader with its own SIM (it hunts the strongest network itself), enough battery for a full service plus margin, and a charged backup. The SumUp Solo (~£79) and Square's standalone options are the street-food workhorses for exactly these reasons - the £19 phone-paired readers are fine for quiet pitches and brutal at festivals.",
+        ],
+      },
+      {
+        heading: "Speed is revenue",
+        paragraphs: [
+          "At £8-£12 a head, your ceiling on a good night is set by how fast the queue moves. Card helps rather than hurts here - a tap is faster than change from a twenty - but only if the setup cooperates:",
+        ],
+        bullets: [
+          "One-tap menu buttons for your five bestsellers, not typed amounts - typing £8.50 four hundred times is how errors and seconds compound.",
+          "Contactless-first: don't ask, just present the reader. Sheffield event crowds expect it.",
+          "Tip prompts on - event customers tip generously at the moment of tap, and [100% goes to your team](/blog/card-tips-uk-law).",
+          "Digital receipts only; nobody at Peddler wants paper, and printers are one more thing to fail.",
+          "Check your provider's offline-payment rules before you need them - queued offline taps are a lifesaver with liability small print.",
+        ],
+      },
+      {
+        heading: "Festival economics and the fee line",
+        paragraphs: [
+          "A strong festival weekend can put thousands through the reader - at 1.69% flat, £6,000 of Tramlines-weekend takings costs about £101 in fees. That's real money, but it's proportionate: it scales with the good weekend and disappears in the quiet weeks, which is exactly what a seasonal trade needs. Contracted terminals with monthly fees suit street food badly for the same reason they suit market stalls badly.",
+          "If you're doing serious volume across a summer of events, run the numbers on SumUp's Payments Plus tier (lower rate for a monthly fee) in the [fee calculator](/card-machine-fee-calculator) - there's a crossover point where it wins, and it's lower than most vendors think.",
+        ],
+      },
+      {
+        heading: "The food-hall unit: halfway to a restaurant",
+        paragraphs: [
+          "A permanent unit at a Sheffield food hall changes the brief: you've got mains power, venue WiFi, repeat trade and (usually) higher volume. That justifies a proper counter setup - iPad till with menu management, kitchen ticket printing or a screen, and it's worth asking the hall what systems integrate with any shared ordering they run.",
+          "It's the natural stepping stone: plenty of Sheffield food businesses have gone truck → food hall → bricks and mortar, and the nice thing about starting on Square or SumUp is the account travels with you - same reporting, same rates, bigger till each time. When the bricks-and-mortar move comes, the [restaurant hub](/pos-systems/restaurants) covers the full-fat systems.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What card reader is best for street food in Sheffield?",
+        a: "A standalone reader with its own SIM - SumUp Solo or Square Terminal - plus a charged backup. Phone-paired £19 readers work for quiet pitches but struggle with festival-crowd signal congestion.",
+      },
+      {
+        q: "Can I trade card-only at Sheffield events?",
+        a: "Yes, legally and increasingly practically - night-market and festival crowds are heavily cashless. Keep a plan for the customer with only cash (a nearby vendor who'll swap, or just take it) and signal your card-only status clearly.",
+      },
+      {
+        q: "What happens when the signal dies at a festival?",
+        a: "SIM readers hop networks automatically, which solves most of it. For total dead zones, some providers queue offline payments with limits and liability rules - know yours before the weekend, not during it.",
+      },
+      {
+        q: "Do I need a different setup for Peddler vs a festival pitch?",
+        a: "Same core kit. Peddler's indoor-industrial setting is kinder on power and shelter; big outdoor festivals are harsher on battery and signal - hence the power bank and backup reader that experienced vendors never travel without.",
+      },
+    ],
+    relatedPosts: [
+      "card-machine-sheffield-market-traders",
+      "card-machine-for-food-truck",
+      "epos-systems-sheffield",
+    ],
+    relatedLinks: [
+      { label: "POS for mobile businesses", href: "/pos-systems/mobile-businesses" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
