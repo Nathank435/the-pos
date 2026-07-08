@@ -172,7 +172,7 @@ export function ExitIntentModal() {
           </h2>
           <p className="mt-2 text-grey">
             Most UK small businesses are on the wrong plan for their turnover. Pop in your numbers and see your real
-            all-in rate and the cheapest provider for you - takes about 60 seconds, no signup.
+            all-in rate and the cheapest provider for you - takes about 60 seconds.
           </p>
 
           <div className="mt-6 flex flex-col gap-2">

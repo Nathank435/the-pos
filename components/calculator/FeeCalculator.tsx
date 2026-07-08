@@ -1,17 +1,19 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Calculator as CalcIcon, ExternalLink, Mail } from "lucide-react";
+import { Calculator as CalcIcon, ExternalLink } from "lucide-react";
 import { calculate, type CalcInput } from "@/lib/calculator";
 import { gbp } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Callout } from "@/components/ui/Callout";
+import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 import { buildAffiliateUrl, affiliateClickProps } from "@/lib/affiliate";
 import { PROVIDERS } from "@/data/providers";
 import { track } from "@/lib/analytics";
 
 const STORAGE_KEY = "thepos_calc_inputs";
+const UNLOCK_KEY = "thepos_calc_unlocked";
 
 function turnoverBand(n: number): string {
   if (n < 2000) return "Under £2,000";
@@ -28,6 +30,7 @@ export function FeeCalculator() {
     contractMonths: 12,
   });
   const [touched, setTouched] = useState(false);
+  const [captured, setCaptured] = useState(false);
   const resultsViewed = useRef(false);
 
   // Restore last inputs (localStorage), then let ?turnover=&atv= deep-links win.
@@ -45,17 +48,22 @@ export function FeeCalculator() {
     if (Number.isFinite(turnover) && turnover > 0) restored.monthlyTurnover = turnover;
     if (Number.isFinite(atv) && atv > 0) restored.avgTransaction = atv;
     if (Object.keys(restored).length) setInput((prev) => ({ ...prev, ...restored }));
+    try {
+      if (localStorage.getItem(UNLOCK_KEY) === "1") setCaptured(true);
+    } catch {
+      /* ignore */
+    }
   }, []);
 
   const result = useMemo(() => calculate(input), [input]);
 
-  // Results are free and immediate - log the first render of a full breakdown.
+  // Full breakdown is gated - log the first render after unlock.
   useEffect(() => {
-    if (result.cheapest && !resultsViewed.current) {
+    if (captured && result.cheapest && !resultsViewed.current) {
       resultsViewed.current = true;
       track("calc_results_view", { winner: result.cheapest.name });
     }
-  }, [result.cheapest]);
+  }, [captured, result.cheapest]);
 
   const update = (patch: Partial<CalcInput>) => {
     setInput((prev) => {
@@ -132,7 +140,7 @@ export function FeeCalculator() {
         </p>
       </div>
 
-      {/* Results - full table, no gate, no email required */}
+      {/* Results: winner teaser is free; the full table unlocks after capture. */}
       <div className="min-w-0">
         {result.cheapest && (
           <div className="rounded-lg border border-[#bfdbfe] bg-accent-soft/50 p-5">
@@ -150,6 +158,39 @@ export function FeeCalculator() {
           </div>
         )}
 
+        {!captured ? (
+          <div className="mt-4">
+            <LeadMagnetForm
+              source="calculator"
+              title="See the full breakdown"
+              copy="Unlock every provider's monthly + annual cost and your all-in rate - and we'll email you a copy."
+              submitLabel="Show the full comparison"
+              context={{
+                monthlyTurnover: turnoverBand(input.monthlyTurnover),
+                cheapestProvider: result.cheapest?.name,
+                estMonthlyFee: result.cheapest ? gbp(result.cheapest.monthlyTotal, { decimals: true }) : undefined,
+              }}
+              onSuccess={() => {
+                setCaptured(true);
+                try {
+                  localStorage.setItem(UNLOCK_KEY, "1");
+                } catch {
+                  /* ignore */
+                }
+                track("calculator_lead", {
+                  monthly_turnover: turnoverBand(input.monthlyTurnover),
+                  cheapest_provider: result.cheapest?.name,
+                });
+                track("calculator_completed", {
+                  monthly_turnover: turnoverBand(input.monthlyTurnover),
+                  cheapest_provider: result.cheapest?.name,
+                  effective_rate: result.cheapest?.effectiveRate,
+                });
+              }}
+            />
+          </div>
+        ) : (
+          <>
         {result.warnings.map((w, i) => (
           <Callout key={i} tone="warn" className="mt-3">
             {w}
@@ -215,18 +256,14 @@ export function FeeCalculator() {
           Same price as going direct - the provider pays us, not you.
         </p>
 
-        <EmailResultsCard
-          turnoverBand={turnoverBand(input.monthlyTurnover)}
-          cheapestProvider={result.cheapest?.name}
-          estMonthlyFee={result.cheapest ? gbp(result.cheapest.monthlyTotal, { decimals: true }) : undefined}
-        />
-
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <ButtonLink href="/compare-pos-systems">Compare these providers</ButtonLink>
           <ButtonLink href="/get-pos-quotes" variant="outline">
             Get tailored quotes
           </ButtonLink>
         </div>
+          </>
+        )}
 
         <p className="mt-4 rounded-xl border border-border bg-white p-3 text-xs leading-relaxed text-grey">
           <strong className="text-navy">This calculator is an estimate.</strong> Actual rates can vary by card type,
@@ -235,104 +272,6 @@ export function FeeCalculator() {
         </p>
       </div>
     </div>
-  );
-}
-
-/** Optional post-results capture: email-only, split consent (GDPR). */
-function EmailResultsCard({
-  turnoverBand,
-  cheapestProvider,
-  estMonthlyFee,
-}: {
-  turnoverBand: string;
-  cheapestProvider?: string;
-  estMonthlyFee?: string;
-}) {
-  const [email, setEmail] = useState("");
-  const [sendResults, setSendResults] = useState(true);
-  const [tips, setTips] = useState(false);
-  const [state, setState] = useState<"idle" | "submitting" | "done" | "error">("idle");
-
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email || !sendResults || state === "submitting") return;
-    setState("submitting");
-    try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          consent: true,
-          marketingOptIn: tips,
-          leadSource: "calculator",
-          sourcePage: window.location.pathname,
-          monthlyTurnover: turnoverBand,
-          cheapestProvider,
-          estMonthlyFee,
-        }),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      setState("done");
-      track("calc_email_submit", { marketing_opt_in: tips });
-      track("calculator_lead", { monthly_turnover: turnoverBand, cheapest_provider: cheapestProvider });
-    } catch {
-      setState("error");
-    }
-  }
-
-  if (state === "done") {
-    return (
-      <div className="mt-4 rounded-lg border border-border bg-white p-4 text-sm text-navy">
-        Done - your breakdown is on its way to <strong>{email}</strong>.
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={submit} className="mt-4 rounded-lg border border-border bg-white p-4">
-      <p className="flex items-center gap-2 font-heading text-sm font-bold text-navy">
-        <Mail className="h-4 w-4 text-accent" /> Email me this breakdown
-      </p>
-      <p className="mt-0.5 text-xs text-grey">
-        Optional - your results are already above. We&apos;ll send a copy and can alert you when these prices change.
-      </p>
-      <div className="mt-3 flex flex-col gap-2 sm:flex-row">
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@yourbusiness.co.uk"
-          aria-label="Email address"
-          className="w-full rounded-xl border border-border bg-cream px-3 py-2.5 text-sm text-navy outline-none focus:border-accent"
-        />
-        <button
-          type="submit"
-          disabled={state === "submitting"}
-          className="shrink-0 rounded-md bg-accent px-4 py-2.5 text-sm font-bold text-white hover:bg-accent-hover disabled:opacity-60"
-        >
-          {state === "submitting" ? "Sending…" : "Send my results"}
-        </button>
-      </div>
-      <div className="mt-2 space-y-1 text-xs text-grey">
-        <label className="flex items-start gap-2">
-          <input
-            type="checkbox"
-            checked={sendResults}
-            onChange={(e) => setSendResults(e.target.checked)}
-            required
-            className="mt-0.5"
-          />
-          <span>Email me these results (required to send them).</span>
-        </label>
-        <label className="flex items-start gap-2">
-          <input type="checkbox" checked={tips} onChange={(e) => setTips(e.target.checked)} className="mt-0.5" />
-          <span>Also send occasional fee-saving tips and price-change alerts. Unsubscribe any time.</span>
-        </label>
-      </div>
-      {state === "error" && <p className="mt-2 text-xs font-semibold text-red-600">Something broke - try again.</p>}
-    </form>
   );
 }
 

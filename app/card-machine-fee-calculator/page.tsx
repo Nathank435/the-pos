@@ -11,7 +11,7 @@ import { calculatorSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Card Machine Fee Calculator UK - What You'd Really Pay",
   description:
-    "Free UK card fee calculator. Enter turnover + average sale, see monthly cost and all-in rate across SumUp, Square, Dojo & more. No email needed.",
+    "Free UK card fee calculator. Enter turnover + average sale and see your cheapest likely provider - full breakdown across SumUp, Square, Dojo & more.",
   path: "/card-machine-fee-calculator",
 });
 

@@ -24,7 +24,7 @@ TRUST_H = [
 ]
 TOOL_H = [
     "Free Fee Calculator",          # 19
-    "No Email Needed",              # 15
+    "Built For UK Small Biz",       # 22
     "See What You'd Really Pay",    # 25
     "Compare 12 UK Providers",      # 23
     "Takes About Ten Seconds",      # 23
@@ -35,7 +35,7 @@ TRUST_D = [
     "Compare fees, contracts and payout speed across every big UK provider. No sales calls.",
 ]
 TOOL_D = [
-    "Free calculator shows your true monthly cost at your turnover. Ten seconds, no email.",
+    "Free calculator shows your true monthly cost at your turnover in about ten seconds.",
     "Enter turnover and average sale - see monthly cost and all-in rate for every provider.",
 ]
 
@@ -168,7 +168,7 @@ CAMPAIGNS = [
          [("card machine fee calculator", "Exact"), ("card payment fee calculator", "Exact"),
           ("card processing fee calculator", "Exact"), ("card machine fees calculator", "Exact"),
           ("card reader fee calculator", "Exact"), ("card machine fees", "Phrase")],
-         ["Card Machine Fee Calculator", "Your Real Cost In Seconds", "Every UK Provider Compared", "Free - No Email Needed", "Enter Turnover, See Costs"],
+         ["Card Machine Fee Calculator", "Your Real Cost In Seconds", "Every UK Provider Compared", "Your Cheapest Provider", "Enter Turnover, See Costs"],
          ["Two numbers, ten seconds: your true monthly cost on every big UK provider. Free."]),
         ("Card Machine Costs", "1.30", f"{BASE}/card-machine-fee-calculator", "card-machine", "costs",
          [("how much does a card machine cost", "Exact"), ("card machine cost", "Exact"),
