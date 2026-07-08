@@ -103,3 +103,27 @@ Result: better positions at lower CPCs than bidding harder alone.
 ---
 
 *Fees quoted in ads (from 0.99%, from £19) match the site data and are caveated on-site. Provider pricing changes — glance over the ad copy before it ages, and keep it truthful for Google's policies + ASA.*
+
+---
+
+# V2: The "scalpel" campaigns — `thepos-search-campaigns-v2.csv`
+
+**Strategy:** fight where the head-term bidders can't follow. 4 campaigns · 14 ad groups · 66 keywords · 42 RSAs, all tagged to account 156-199-1288. **No keyword overlap with the v1 file** — import alongside it or instead of it.
+
+| Campaign | Budget | What it targets | Why we win the auction |
+|---|---|---|---|
+| ThePOS \| Provider Brand | £15/day | dojo fees, sumup review, worldpay exit fee… | The provider can't honestly bid on "dojo contract catches" — we can. CPCs a fraction of head terms. |
+| ThePOS \| Vs Comparisons | £10/day | sumup vs square + the matrix | KD~0 commercial intent, dedicated landing page per pair = perfect message match = high QS. |
+| ThePOS \| Fee Calculator | £12/day | fee calculator + cost terms | The landing page IS the answer (ungated). Calculator terms convert. |
+| ThePOS \| Switching | £10/day | switch/compare provider terms | Highest-intent audience in the niche. |
+
+## Import
+Google Ads Editor → Account → Import → From file → `thepos-search-campaigns-v2.csv` → review → Post. Same post-import setup as v1 (§2: UK-presence targeting, Search only, no partners).
+
+## V2-specific setup (do these!)
+1. **Brand-campaign negatives** — people searching "sumup login" want support, not a review. Add as negatives to the Provider Brand campaign:
+   `login, log in, sign in, contact, phone number, customer service, support, helpline, app, download, jobs, careers, api, developer, my account, statement`
+2. **Trademark policy**: bidding on brand keywords is fine everywhere. Brand names in ad *text* can occasionally get flagged; review/comparison sites qualify for Google's **informational-site exception** — if an ad is disapproved, appeal citing that policy (the ads all use brands nominatively: "Dojo Review 2026").
+3. **Landing-page match matters most here**: each vs ad group lands on its own /compare/ page and each provider group on its review. Don't "simplify" them to the homepage — the message match is the Ad Rank strategy.
+4. Conversion goals as v1 (§3). For the Switching and Calculator campaigns, watch `affiliate_click` as the secondary signal — those visitors often convert off the table row rather than the quiz.
+5. Start Provider Brand + Vs first (cheapest CPCs, clearest intent). Add Calculator once conversions flow.
