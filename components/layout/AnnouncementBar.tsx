@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Zap, ArrowRight, X } from "lucide-react";
 import { track } from "@/lib/analytics";
@@ -11,6 +12,7 @@ const DISMISS_KEY = "tp_promo_dismissed";
  *  Dismissal is remembered (localStorage), so it stays closed on return. */
 export function AnnouncementBar() {
   const [open, setOpen] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     try {
@@ -29,7 +31,10 @@ export function AnnouncementBar() {
     setOpen(false);
   }
 
-  if (!open) return null;
+  // Commercial pages already carry their own primary CTA - the banner only runs
+  // on informational pages where no other quiz route is visible (CRO audit).
+  const informational = pathname?.startsWith("/blog") || pathname?.startsWith("/guides");
+  if (!open || !informational) return null;
 
   return (
     <div className="relative bg-accent text-white">

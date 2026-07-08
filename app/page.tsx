@@ -174,7 +174,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-border pt-4">
                     <ProviderCTA provider={p} size="sm" label={`View ${p.name} deals`} sourcePage="home-provider-card" />
-                    <Link href={`/reviews/${p.slug}`} className="text-sm font-semibold text-deepblue hover:underline">
+                    <Link href={`/reviews/${p.slug}`} className="inline-block py-1.5 text-sm font-semibold text-deepblue hover:underline">
                       Read the full review
                     </Link>
                   </div>
