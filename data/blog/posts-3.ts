@@ -1101,4 +1101,678 @@ export const POSTS_3: BlogPost[] = [
     }
   ]
 },
+
+  {
+    slug: "dojo-card-machine-fees",
+    title: "Dojo Card Machine Fees Explained: What You'll Actually Be Quoted",
+    excerpt:
+      "Dojo doesn't publish prices - every fee is quoted. What's typically in a Dojo quote, the questions to ask before signing, and how to compare it against flat-rate rivals.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 6,
+    featuredImage: "/images/blog/dojo-card-machine-fees.webp",
+    featuredAlt: "Card payment terminal on a counter",
+    intro:
+      "Dojo card machine fees are quote-based - there's no public price list, which is exactly why five thousand people a month end up searching for them. Here's what a Dojo quote is typically made of, the numbers to pin down before you sign anything, and how to tell whether your quote actually beats a flat-rate provider at your volume.",
+    sections: [
+      {
+        heading: "Why Dojo won't just tell you the price",
+        paragraphs: [
+          "Dojo prices each business individually, based on your card turnover, average transaction and business type. That's not automatically sinister - tailored rates genuinely can undercut flat-rate providers once you're doing serious volume - but it moves all the work onto you, because a quote you can't compare is a quote designed to be said yes to on the spot.",
+          "For context, our comparison uses an illustrative blended estimate of around 1.4% plus a small per-transaction pence amount, with the terminal on a monthly rental - but treat that as a shape, not a promise. Real quotes vary widely, and the only number that matters is the one on your paperwork.",
+        ],
+      },
+      {
+        heading: "What's actually in a Dojo quote",
+        paragraphs: ["Get every one of these in writing before comparing anything:"],
+        bullets: [
+          "The transaction rate(s): sometimes one blended rate, sometimes split by card type - ask which cards cost more.",
+          "Per-transaction pence fees: a 5p 'authorisation fee' matters enormously if your average sale is small.",
+          "Terminal rental: the Dojo Go is typically rented monthly rather than bought.",
+          "Contract length and notice period: newer Dojo agreements are shorter than the legacy multi-year deals the brand inherited - confirm yours, don't assume.",
+          "Anything conditional: introductory rates, rate-review clauses, and minimum billing if quoted.",
+        ],
+      },
+      {
+        heading: "Where Dojo genuinely wins",
+        paragraphs: [
+          "Two things stand out. First, payout speed - next-day transfers including weekends is a headline Dojo feature, and for a wet-led pub or busy restaurant that cash-flow rhythm is worth real money. Second, at higher volumes a negotiated Dojo rate can undercut the flat 1.69%-1.75% providers comfortably - the crossover typically arrives somewhere around £10k+ of monthly card sales.",
+          "Below that volume, the maths usually favours no-contract flat-rate providers, because the rental and commitments eat the rate advantage. Put your own numbers into the [fee calculator](/card-machine-fee-calculator) with the quote in front of you - it takes a minute and removes the guesswork entirely.",
+        ],
+      },
+      {
+        heading: "The questions that make reps sweat (politely)",
+        paragraphs: [
+          "Ask: what's my all-in monthly cost at my real turnover, including rental and every fixed fee? What happens to my rate at review time? What does leaving cost me at month 6? Is PCI compliance charged separately? A good deal survives those questions - a bad one gets vaguer with each answer.",
+          "And read our [full Dojo review](/reviews/dojo) for the verdict, or the [switching checklist](/blog/switching-card-machine-checklist) if you're comparing against an existing provider. Quote-based pricing rewards exactly one type of customer: the prepared kind.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a Dojo card machine cost per month?",
+        a: "There's no public price - quotes bundle a monthly terminal rental with tailored transaction rates. Our comparison uses an illustrative estimate around 1.4% + pence fees with a modest monthly rental, but your quote is the only real number. Get it in writing, all-in.",
+      },
+      {
+        q: "Is Dojo cheaper than SumUp or Square?",
+        a: "At low volume, rarely - the rental and commitment outweigh the rate. At higher volume (roughly £10k+/month on cards), a negotiated Dojo rate often wins. The crossover depends on your quote, which is exactly what the fee calculator is for.",
+      },
+      {
+        q: "Does Dojo have a contract?",
+        a: "Yes - terms vary by agreement and era. Newer Dojo agreements are shorter than the legacy long contracts, but confirm the length, notice period and exit terms on your paperwork before signing, not after.",
+      },
+    ],
+    relatedPosts: ["how-to-cancel-dojo", "average-card-machine-fees-uk", "switching-card-machine-checklist"],
+    relatedLinks: [
+      { label: "Dojo review", href: "/reviews/dojo" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
+  {
+    slug: "how-to-cancel-dojo",
+    title: "How to Cancel Dojo (Without Paying More Than You Have To)",
+    excerpt:
+      "Leaving Dojo is mostly about timing and paperwork: your notice period, any exit fees, and returning the rented terminal. The step-by-step, plus how to avoid a payment gap.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/how-to-cancel-dojo.webp",
+    featuredAlt: "Close-up of a hand signing a contract document",
+    intro:
+      "Cancelling Dojo isn't difficult, but the order of operations matters: know your terms first, get the replacement live second, give notice third. Do it in that order and leaving costs you the minimum your contract allows; do it backwards and you'll pay for two providers, or worse, spend a week unable to take cards.",
+    sections: [
+      {
+        heading: "Step 1: dig out the agreement before you call anyone",
+        paragraphs: [
+          "Everything depends on which agreement you're on. Newer Dojo terms tend to be shorter with rolling notice; older agreements - especially legacy Paymentsense-era contracts - can carry longer fixed terms and meaningful early-termination fees. Find the contract length, the notice period, any exit fee, and the terminal return terms.",
+          "If you can't find the paperwork, request a copy of your terms and your current rate schedule in writing. You're entitled to know what you're signed up to, and having it in writing keeps the later conversation factual.",
+        ],
+      },
+      {
+        heading: "Step 2: get the replacement running first",
+        paragraphs: [
+          "Never cancel into a gap. Choose the new provider, get the hardware in, take a live test payment, and only then give notice. Flat-rate providers (SumUp, Square, Zettle) can have you trading the day the reader arrives, so the overlap can be days rather than weeks - our [switching checklist](/blog/switching-card-machine-checklist) covers the full sequence including reporting continuity and staff retraining.",
+          "If your Dojo exit fee is significant, do the maths on timing: sometimes trading out the remaining months costs less than the fee, sometimes not. The [fee calculator](/card-machine-fee-calculator) tells you what each remaining month actually costs you versus the alternative.",
+        ],
+      },
+      {
+        heading: "Step 3: give notice properly",
+        paragraphs: [
+          "Give notice in writing (email is fine) and ask for written confirmation of: the end date, the final billing, the terminal return process, and that no further charges follow. The rented terminal must go back - unreturned hardware is the most common source of surprise final invoices, so get proof of postage and keep it.",
+          "Watch the last statement for stragglers: a final month's rental, PCI fees, or a rate-review charge. Anything you didn't expect, query in writing - and if something's genuinely wrong, card payment complaints can ultimately go to the Financial Ombudsman for small businesses.",
+        ],
+      },
+      {
+        heading: "Leaving well is a negotiating position too",
+        paragraphs: [
+          "One thing worth knowing: retention teams exist. A polite 'I'm leaving because X quoted me Y' sometimes produces a better rate than the one you've been on - and if it does, you've improved your deal for the cost of a phone call. Take the improvement only if it beats the alternative all-in, not just on the headline rate.",
+          "If you're weighing where to land next, the [comparison table](/compare-card-machines) shows every provider's real shape - and our [Dojo fees explainer](/blog/dojo-card-machine-fees) covers what you're actually walking away from.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does Dojo charge an exit fee?",
+        a: "It depends on your agreement: rolling terms typically need notice rather than a fee, while fixed terms can carry early-termination charges. Your contract is the answer - request a copy in writing if you can't find it.",
+      },
+      {
+        q: "Do I have to return the Dojo terminal?",
+        a: "If it's rented (most are), yes - follow the return process and keep proof of postage. Unreturned hardware is the classic cause of a surprise final bill.",
+      },
+      {
+        q: "How much notice do I need to give Dojo?",
+        a: "Commonly around 30 days on rolling terms, but agreements vary - check yours. Give notice in writing and get the end date confirmed in writing too.",
+      },
+    ],
+    relatedPosts: ["dojo-card-machine-fees", "switching-card-machine-checklist", "no-contract-card-machines-catch"],
+    relatedLinks: [
+      { label: "Dojo review", href: "/reviews/dojo" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "average-card-machine-fees-uk",
+    title: "Average Card Machine Fees in the UK (2026): What Counts as Normal?",
+    excerpt:
+      "UK small businesses typically pay 1.4%-1.75% per card payment all-in. Where that number comes from, why big retailers pay far less, and how to tell if yours is high.",
+    category: "Fees & saving",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 6,
+    featuredImage: "/images/blog/average-card-machine-fees-uk.webp",
+    featuredAlt: "Calculator and paperwork on a desk",
+    intro:
+      "The average card machine fee for a UK small business sits between 1.4% and 1.75% per transaction all-in - that's the honest headline. But 'average' hides a huge spread: a supermarket pays a fraction of a percent while a market stall pays 1.69%, and both are getting a fair deal for their size. Here's what normal looks like at your scale, and the actual warning signs that yours is too high.",
+    sections: [
+      {
+        heading: "The benchmark numbers by business size",
+        paragraphs: ["What UK businesses typically pay per card-present transaction, all-in:"],
+        bullets: [
+          "Micro/small (readers, no contract): 1.4%-1.75% flat - SumUp's 1.69% and Square's 1.75% are the reference points.",
+          "Small-to-medium on negotiated deals: roughly 0.9%-1.4% blended, plus monthly fees - the Dojo/acquirer territory.",
+          "Larger merchants on interchange-plus pricing: often under 0.8% all-in, because they pay the wholesale costs plus a thin margin.",
+          "Online payments run higher than in-person everywhere - typically 1.9%-2.5% for small businesses - because fraud risk prices in.",
+        ],
+      },
+      {
+        heading: "Where the money actually goes",
+        paragraphs: [
+          "Every card fee splits three ways. Interchange goes to the customer's bank - and it's capped by UK regulation at 0.2% for consumer debit and 0.3% for consumer credit. Scheme fees go to Visa or Mastercard. Everything above that is the acquirer's margin - the only negotiable part, and the part that varies wildly between providers.",
+          "That's why the flat 1.69% is honest but not cheap: on a £20 debit payment the regulated wholesale cost is pennies, and the flat rate bundles convenience, hardware subsidy and profit into one number. At low volume that bundle is worth it; at high volume you're overpaying for simplicity - which is the entire logic of when to switch pricing models.",
+        ],
+      },
+      {
+        heading: "The signs your fees are actually high",
+        paragraphs: ["Forget the headline rate - these are the real red flags on a statement:"],
+        bullets: [
+          "Your all-in cost (total fees / total card sales) is above 1.8% for in-person payments at any meaningful volume.",
+          "Fixed monthly charges - rental, PCI, minimum service charges - add more than 0.3% to your effective rate.",
+          "Your negotiated rate has quietly drifted upward at 'review' since you signed.",
+          "You're paying [PCI non-compliance fees](/blog/pci-compliance-fees-uk) - pure penalty, fixable in ten minutes.",
+        ],
+      },
+      {
+        heading: "Find your own number in a minute",
+        paragraphs: [
+          "Averages are a sanity check, not a target - the number that matters is your effective rate at your turnover. Take last month's statement, divide total fees by total card sales, and compare it against what the [fee calculator](/card-machine-fee-calculator) says the best-fit provider would charge at the same volume.",
+          "If the gap is more than a few tenths of a percent, that's real money: 0.3% on £8,000 a month is nearly £300 a year. Our guide on [cutting card processing fees](/blog/how-to-cut-card-processing-fees) covers the negotiation script from there.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the average card transaction fee in the UK?",
+        a: "For small businesses taking payments in person: 1.4%-1.75% all-in on flat-rate providers, less on negotiated deals at volume. Large retailers pay well under 1% because they buy at close to the regulated wholesale costs.",
+      },
+      {
+        q: "Why do small businesses pay more than supermarkets?",
+        a: "Interchange is capped for everyone (0.2%-0.3% on consumer cards), but small merchants pay a bigger acquirer margin per transaction - flat-rate pricing bundles hardware, risk and simplicity into the rate. Volume is the lever that unbundles it.",
+      },
+      {
+        q: "Is 1.75% a good rate for a card machine?",
+        a: "For a low-volume business with no monthly fees, yes - it's the fair market rate for pay-as-you-go. Once you're doing £10k+ a month on cards, you can usually beat it with a negotiated deal - run your numbers to find your crossover.",
+      },
+    ],
+    relatedPosts: ["how-to-cut-card-processing-fees", "dojo-card-machine-fees", "card-machine-fees-compared"],
+    relatedLinks: [
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+    ],
+  },
+  {
+    slug: "what-is-a-pdq-machine",
+    title: "What Is a PDQ Machine? (And Why Everyone Stopped Calling It That)",
+    excerpt:
+      "PDQ stands for 'Process Data Quickly' - 1990s bank jargon for a card machine. What the term means now, the three types, and what to buy instead of renting one.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/what-is-a-pdq-machine.webp",
+    featuredAlt: "Person using a card payment terminal",
+    intro:
+      "A PDQ machine is simply a card machine - PDQ stands for 'Process Data Quickly', a piece of 1990s banking jargon that stuck around in the trade long after everyone else started saying card machine, card terminal or card reader. If a salesperson says PDQ, they usually mean a bank-supplied terminal on a rental contract - and that detail matters more than the name.",
+    sections: [
+      {
+        heading: "The three types of PDQ (and their modern names)",
+        paragraphs: ["The traditional trade classification still describes the market perfectly:"],
+        bullets: [
+          "Countertop: wired to the till, mains-powered - the classic shop terminal. Modern equivalent: any fixed terminal, or an iPad till with an integrated reader.",
+          "Portable: connects over WiFi or Bluetooth within your premises - the pub and restaurant pay-at-table unit.",
+          "Mobile: works anywhere with a SIM - the tradesperson's and market trader's machine. Modern equivalent: SIM readers like the SumUp Solo, or [Tap to Pay on a phone](/blog/tap-to-pay-iphone-worth-it).",
+        ],
+      },
+      {
+        heading: "Why the word 'PDQ' usually signals a rental contract",
+        paragraphs: [
+          "Vocabulary is a tell. Providers who say 'PDQ' are typically banks and acquirers selling the traditional package: rented terminal, monthly fees, negotiated rates, a fixed-term agreement. Providers who say 'card reader' are typically the flat-rate generation selling you a device you own outright with no contract.",
+          "Neither model is wrong - the [rental-plus-rates package](/blog/dojo-card-machine-fees) wins at high volume, the owned reader wins for everyone smaller - but knowing which conversation you're in stops you paying contract prices for reader-sized volume.",
+        ],
+      },
+      {
+        heading: "What a PDQ machine costs now",
+        paragraphs: [
+          "Traditional route: terminal rental commonly £15-£25 a month plus negotiated transaction rates and a contract. Modern route: buy a reader outright from £19 (SumUp, Square) or a standalone SIM terminal from around £79-£150, pay a flat 1.4%-1.75% per transaction, no monthly fee, no contract.",
+          "For most small businesses the modern route wins on arithmetic and on flexibility - and the [comparison table](/compare-card-machines) shows both models side by side. The exception is the high-volume counter where negotiated rates repay the rental many times over.",
+        ],
+      },
+      {
+        heading: "So should you buy a 'PDQ machine' in 2026?",
+        paragraphs: [
+          "Buy a card machine, certainly - just be deliberate about which model. If you're searching 'PDQ machine' because a bank rep used the phrase, get their quote in writing and compare its all-in cost against a flat-rate reader at your turnover in the [fee calculator](/card-machine-fee-calculator) before signing anything.",
+          "And if you just wanted to know what the acronym meant: Process Data Quickly. The industry has processed the name rather slowly.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What does PDQ stand for?",
+        a: "'Process Data Quickly' - 1990s banking terminology for a card payment terminal. It survives mainly in trade vocabulary and bank sales conversations; it's the same thing as a card machine.",
+      },
+      {
+        q: "How much does a PDQ machine cost to rent?",
+        a: "Traditional rentals commonly run £15-£25 a month plus transaction fees and a contract. Compare that against owning a £19-£150 reader with no monthly fee before committing - at small-business volumes the owned reader usually wins.",
+      },
+      {
+        q: "Is a PDQ machine different from a card reader?",
+        a: "Functionally they take the same payments. 'PDQ' usually refers to the rented, contracted terminal model; 'card reader' to the buy-outright flat-rate model. The pricing model is the real difference, not the hardware.",
+      },
+    ],
+    relatedPosts: ["card-reader-vs-card-machine", "how-do-card-machines-work", "how-much-does-a-card-machine-cost-uk"],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+    ],
+  },
+  {
+    slug: "how-do-card-machines-work",
+    title: "How Do Card Machines Actually Work? The Two-Second Journey of a Tap",
+    excerpt:
+      "Between the tap and the beep, your customer's payment visits four companies. How authorisation, settlement and payouts actually work - and why the fee exists at all.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/how-do-card-machines-work.webp",
+    featuredAlt: "Contactless card payment on a terminal",
+    intro:
+      "Tap, beep, done - about a second and a half. In that time the payment has been encrypted, sent to your provider, routed through Visa or Mastercard to the customer's bank, checked against their balance and fraud rules, and approved back down the same chain. Understanding that journey is the fastest way to understand what you're paying for - and where your money is between the tap and your bank account.",
+    sections: [
+      {
+        heading: "The cast: four parties in every payment",
+        paragraphs: ["Every card payment involves the same four roles, whoever your provider is:"],
+        bullets: [
+          "The card machine (terminal): encrypts the card data and talks to your provider. It never stores the card number - that's the point of it.",
+          "Your acquirer/payment provider (SumUp, Square, Dojo, Worldpay...): routes the transaction, takes the risk, and pays you out.",
+          "The card scheme (Visa, Mastercard, Amex): the network in the middle, charging a small toll each way.",
+          "The issuing bank (your customer's bank): says yes or no, and ultimately moves the money.",
+        ],
+      },
+      {
+        heading: "Authorisation: the two seconds",
+        paragraphs: [
+          "When the card taps, the terminal creates an encrypted request - amount, masked card details, merchant ID - and fires it to your acquirer, who passes it via the scheme to the issuing bank. The issuer checks funds, fraud signals and (for contactless) whether a PIN check is due, then returns approved or declined. The whole round trip typically takes one to two seconds.",
+          "Crucially, authorisation only reserves the money - nothing has actually moved yet. That's why a payment can occasionally show as 'pending' on a customer's app and later vanish: an authorisation that was never completed simply expires.",
+        ],
+      },
+      {
+        heading: "Settlement: where your money is overnight",
+        paragraphs: [
+          "At the end of the day the terminal 'batches' its approved transactions and submits them for settlement - the actual movement of money from issuing banks to your acquirer, minus interchange and scheme fees, and then to you, minus your provider's cut. That pipeline is why [payout timing varies by provider](/blog/same-day-payouts-providers): next business day is standard, same-day and weekend settlement are premium features.",
+          "It's also why your fee exists: the acquirer fronts fraud and chargeback risk, pays the wholesale costs, runs the infrastructure, and prices their margin on top. The margin is the only negotiable slice - the subject of our [average fees benchmark](/blog/average-card-machine-fees-uk).",
+        ],
+      },
+      {
+        heading: "Chip, PIN, tap and phone: what changes at the terminal",
+        paragraphs: [
+          "Chip-and-PIN and contactless are the same journey with different customer verification: the chip proves the card is genuine, the PIN (or the phone's Face ID for Apple/Google Pay) proves the holder is present. Contactless card taps are capped at £100 per transaction in the UK; phone wallets aren't, because the device itself authenticates the customer - the full detail is in our [contactless limit explainer](/blog/contactless-limit-uk).",
+          "For you as the merchant, verified in-person payments are the safest kind: liability for most fraud sits with the bank, not you - one of several reasons card-present businesses see so few [successful chargebacks](/blog/chargebacks-uk-small-business).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does a card machine need internet?",
+        a: "Yes - via WiFi, ethernet or its own SIM. Authorisation is a live conversation with the customer's bank. Some providers queue limited offline payments and submit them later, but check the liability rules before relying on it.",
+      },
+      {
+        q: "How long does the money take to reach my account?",
+        a: "Next business day is the small-business standard; some providers offer same-day or weekend settlement. The delay is settlement processing, not your provider sitting on your cash for fun - though faster payouts are a genuine differentiator.",
+      },
+      {
+        q: "Does the card machine store card numbers?",
+        a: "No - modern terminals encrypt card data at the point of read and never hold it. That design is why PCI compliance for a typical small shop is mostly a questionnaire rather than an engineering project.",
+      },
+    ],
+    relatedPosts: ["what-is-a-pdq-machine", "contactless-limit-uk", "same-day-payouts-providers"],
+    relatedLinks: [
+      { label: "How long do card payments take to clear", href: "/guides/how-long-do-card-payments-take-to-clear" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+
+  {
+    slug: "contactless-limit-uk",
+    title: "What's the Contactless Limit in the UK? (£100 - With Big Exceptions)",
+    excerpt:
+      "The UK contactless card limit is £100 per tap - but Apple Pay and Google Pay have no limit at all. What that means for your till, your customers and your average sale.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/contactless-limit-uk.webp",
+    featuredAlt: "Customer paying by tapping a phone on a card terminal",
+    intro:
+      "The UK contactless limit is £100 per transaction for a physical card - it's been there since October 2021. But the number most businesses don't know: payments by phone or watch (Apple Pay, Google Pay) have no £100 cap at all, because the device itself verifies the customer. If your average sale is creeping up, that difference matters at your till.",
+    sections: [
+      {
+        heading: "The rules in one box",
+        paragraphs: ["The current UK contactless framework:"],
+        bullets: [
+          "Card taps: £100 maximum per transaction - above that, it's chip-and-PIN.",
+          "Cumulative check: after several consecutive taps (up to £300 or five transactions, issuer-dependent), the customer is asked for their PIN once - a fraud control, not a fault with your machine.",
+          "Phone and watch wallets: no upper limit, because Face ID/fingerprint verifies the payer on the device.",
+          "The limit is set by regulation and the card schemes - you can't raise it on your terminal, and neither can your provider.",
+        ],
+      },
+      {
+        heading: "What this means for your counter",
+        paragraphs: [
+          "If your average transaction is under £100 - cafes, barbers, shops - the limit is invisible and you can stop reading. If you sell at £100+ (trades invoices, salons with colour appointments, higher-end retail), train the muscle memory: when a card tap declines at £120, it's not a broken machine, it's the limit - ask for the card in the slot with a PIN, or suggest the customer's phone wallet.",
+          "Wallet payments are the quiet fix here: a £400 payment sails through on Apple Pay. That's one reason 'we take contactless' increasingly means phones more than cards - and why a terminal that struggles with wallets isn't fit for 2026.",
+        ],
+      },
+      {
+        heading: "The occasional PIN prompt (and why it's not your fault)",
+        paragraphs: [
+          "Every so often a routine tap triggers 'PIN required'. That's the cumulative fraud check doing its job - the customer's bank counting taps since the last verification. It's random-feeling by design, it's the same on every provider's hardware, and the fix is fifteen seconds of chip-and-PIN.",
+          "Worth telling staff explicitly, because the alternative is them announcing 'the machine's playing up' - which sounds like your business's fault. It isn't; it's the [payment system working as designed](/blog/how-do-card-machines-work).",
+        ],
+      },
+      {
+        heading: "Could the limit change?",
+        paragraphs: [
+          "The FCA has consulted on the future of contactless limits, including possibly removing the fixed cap in favour of issuer-set limits - the direction of travel is towards more flexibility, largely because device wallets have already made the cap feel dated. Nothing to act on today; if it changes, your terminal updates over the air and your job is nil.",
+          "The practical takeaway stays the same either way: make sure your setup handles wallets flawlessly, because that's where the growth is. Every [reader we compare](/compare-card-machines) takes wallets as standard - if yours doesn't, that's your sign.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the contactless limit in the UK right now?",
+        a: "£100 per transaction for physical card taps. Apple Pay, Google Pay and other device wallets have no upper limit because the phone verifies the customer.",
+      },
+      {
+        q: "Why did a contactless payment under £100 get declined?",
+        a: "Most often the cumulative check: after a run of consecutive taps the bank requires one PIN entry before contactless resumes. It's a fraud control on the customer's card, not a fault with your terminal.",
+      },
+      {
+        q: "Can I set a lower contactless limit on my machine?",
+        a: "Generally no - the limits live with the card schemes and issuers, not your terminal settings. What you can control is offering chip-and-PIN smoothly when a tap is declined.",
+      },
+    ],
+    relatedPosts: ["how-do-card-machines-work", "tap-to-pay-iphone-worth-it", "card-reader-vs-card-machine"],
+    relatedLinks: [
+      { label: "What is Tap to Pay", href: "/guides/what-is-tap-to-pay" },
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "card-machine-for-taxi-drivers",
+    title: "Card Machines for Taxi Drivers: What Actually Works in a Cab",
+    excerpt:
+      "London black cabs must take cards by law - and everywhere else, drivers who don't are losing fares. The readers that survive a 10-hour shift, and the fee maths on a £12 fare.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-machine-for-taxi-drivers.webp",
+    featuredAlt: "Black cab on a London street",
+    intro:
+      "For London black cabs, card acceptance isn't optional - TfL has required it since 2016, with approved passenger-facing devices. For every other taxi and private-hire driver in the UK, it's not law but it's increasingly the fare: passengers assume they can tap, and the driver who can't is the driver who gets cancelled on. Here's the setup that works in a cab, and what it costs on real fares.",
+    sections: [
+      {
+        heading: "The rules, depending on what you drive",
+        paragraphs: [
+          "London black cabs: cards are mandatory under TfL rules, using approved devices, with the passenger able to pay in the back. If that's you, your device choice is constrained to the approved list and your fitting matters as much as your fees - check TfL's current requirements before buying anything.",
+          "Private hire and taxis outside London: no blanket legal requirement, but local licensing conditions vary and the commercial reality doesn't - app-hailed passengers never carry cash, and even street hails increasingly expect the tap. Treat card acceptance as standard kit, like the meter.",
+        ],
+      },
+      {
+        heading: "The kit that survives shift work",
+        paragraphs: ["A cab is a hostile environment for payment hardware: long shifts, no mains power, patchy signal on the move. The spec that works:"],
+        bullets: [
+          "A standalone reader with its own SIM (SumUp Solo or similar, from ~£79) - your phone stays free for the sat-nav and the next job.",
+          "Battery for a full shift plus a 12V charger - the reader that dies at 11pm on a Saturday costs you the night's best fares.",
+          "[Tap to Pay on your phone](/blog/tap-to-pay-iphone-worth-it) as the zero-hardware backup - it turns a dead reader into a shrug instead of a lost fare.",
+          "No monthly fee: driving income is variable, and a fee that ignores quiet weeks is the wrong shape - the [no-monthly-fee readers](/card-readers-no-monthly-fee) fit how the job actually pays.",
+        ],
+      },
+      {
+        heading: "The fee maths on a £12 fare",
+        paragraphs: [
+          "At 1.69%, a £12 fare gives up about 20p. Across a £600 card week that's roughly £10 - annoying, real, and still cheaper than the fares lost by being cash-only, because the passenger with no cash doesn't ring you back later. Card-paying passengers also tip more reliably when the prompt appears at payment.",
+          "Watch the per-transaction pence fees when comparing: on small fares a '1.4% + 7p' deal can cost more than a flat 1.69%. It's exactly the kind of small-ticket arithmetic the [fee calculator](/card-machine-fee-calculator) settles in seconds - put in your real average fare.",
+        ],
+      },
+      {
+        heading: "Practicalities from the rank",
+        paragraphs: [
+          "Mount the reader where the passenger can tap without gymnastics; digital receipts by text for the expense-account crowd (they tip better); and know your dead zones - if your patch has signal black spots, a reader that queues offline payments matters, but read the provider's liability rules first because an offline decline is usually your loss.",
+          "Payout speed is worth a thought too: next-day payouts smooth the fuel-and-float cycle, and some providers settle weekends - [the comparison](/blog/same-day-payouts-providers) covers who. For a working driver, cash flow beats a fractionally lower rate most weeks.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do taxi drivers legally have to take card payments?",
+        a: "London black cabs, yes - TfL has mandated approved card devices since 2016. Elsewhere it depends on local licensing conditions, but commercially it's become standard everywhere: cash-only costs fares.",
+      },
+      {
+        q: "What's the best card machine for a taxi?",
+        a: "A standalone SIM reader (SumUp Solo or similar) with all-shift battery and a 12V charger, on a no-monthly-fee plan - plus Tap to Pay on your phone as backup. Avoid anything with a monthly fee unless your card volume genuinely justifies it.",
+      },
+      {
+        q: "What if there's no signal when the passenger pays?",
+        a: "SIM readers hop networks, which solves most of it. Some providers queue offline payments with limits - know your provider's rules, because offline payments that later decline are typically the merchant's loss.",
+      },
+    ],
+    relatedPosts: ["card-machine-for-sole-traders", "tap-to-pay-iphone-worth-it", "same-day-payouts-providers"],
+    relatedLinks: [
+      { label: "POS for mobile businesses", href: "/pos-systems/mobile-businesses" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
+  {
+    slug: "card-machine-for-hairdressers",
+    title: "Card Machines for Hairdressers: Salon, Mobile and Chair Renters Sorted",
+    excerpt:
+      "Three different hairdressing setups, three different right answers - and none of them costs more than £40 up front. Plus the tipping and deposit features worth having.",
+    category: "By business",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-machine-for-hairdressers.webp",
+    featuredAlt: "Hairdresser blow-drying a client's hair",
+    intro:
+      "The right card machine for a hairdresser depends entirely on which hairdresser you are: salon owner with staff, chair renter, or mobile stylist working out of a kit bag. The good news is that all three answers start under £40, none needs a contract, and the decision takes about five minutes once you see it laid out.",
+    sections: [
+      {
+        heading: "Mobile hairdressers: the kit-bag setup",
+        paragraphs: [
+          "You need payment kit that weighs nothing and never has a monthly fee: a £19-£40 reader (SumUp Air, Square Reader) paired to your phone - or increasingly no reader at all, using [Tap to Pay on the phone you already carry](/blog/tap-to-pay-iphone-worth-it). Clients tap at the kitchen table, receipts go by text, and a quiet fortnight costs you nothing.",
+          "The one upgrade worth making as you get busier is on the booking side, not the payment side: an app that takes deposits at booking kills the no-shows that are a mobile stylist's biggest income leak - the maths is in our [salon POS guide](/blog/pos-system-for-salons-uk).",
+        ],
+      },
+      {
+        heading: "Chair renters: your own reader, always",
+        paragraphs: [
+          "If you rent a chair, take your own payments on your own reader under your own name - never through the salon's till. It keeps your turnover, your tips and your tax cleanly yours, which matters for Self Assessment and the VAT threshold, and it makes rent disputes boring instead of forensic.",
+          "A £19 reader and the free app is the whole setup. Your card takings record becomes your income record - HMRC-friendly by default - and the tips prompt is money your scissors earned. Our [sole trader guide](/blog/card-machine-for-sole-traders) covers the bank-account and tax housekeeping.",
+        ],
+      },
+      {
+        heading: "Salon owners: payments are the easy half",
+        paragraphs: [
+          "For a salon with staff, the card machine question is really a booking-system question: deposits, reminders, staff columns and retail all matter more than the reader brand. Square Appointments is the default answer (booking + payments in one, free for one calendar), with the card side riding along at the standard flat rate.",
+          "The two features to switch on from day one: card-captured deposits for anything over an hour, and tip prompts - remembering that [100% of card tips must reach staff](/blog/card-tips-uk-law), card fees included. Both settings pay for themselves in the first month.",
+        ],
+      },
+      {
+        heading: "The fee reality at hairdressing prices",
+        paragraphs: [
+          "At a £25 cut, the flat-rate fee is about 42p; at an £85 colour, £1.44. Against a diary with even one recovered no-show a week, the fees are a rounding error - which is why the right question is never 'cheapest rate' but 'which setup keeps the diary full'.",
+          "If your volume grows to serious retail-plus-services turnover, run the numbers in the [fee calculator](/card-machine-fee-calculator) and see whether a negotiated rate has started to beat the flat one. Until then: reader, deposits, tips on. Done.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What's the best card machine for a mobile hairdresser?",
+        a: "A £19-£40 no-monthly-fee reader (SumUp or Square) paired to your phone - or Tap to Pay on the phone alone. No contract, nothing to pay in quiet weeks, receipts by text.",
+      },
+      {
+        q: "Should chair renters use the salon's card machine?",
+        a: "No - take your own payments on your own reader. It keeps your income, tips and tax cleanly separate from the salon's, which protects both sides. Readers are £19; blurred finances cost more.",
+      },
+      {
+        q: "Can clients tip on card?",
+        a: "Yes - turn the tip prompt on; card clients tip more consistently than cash ones. If you employ staff, the tipping law requires 100% of those tips to reach them with no deductions, card fees included.",
+      },
+    ],
+    relatedPosts: ["pos-system-for-salons-uk", "card-machine-for-sole-traders", "card-tips-uk-law"],
+    relatedLinks: [
+      { label: "POS for salons", href: "/pos-systems/salons" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "card-machine-not-working",
+    title: "Card Machine Not Working? The 10-Minute Fix List (Before You Panic)",
+    excerpt:
+      "A queue forming and a dead terminal is every owner's nightmare. The fixes in the order that actually resolves them, the fallbacks that keep you trading, and the £19 insurance policy.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/card-machine-not-working.webp",
+    featuredAlt: "Person holding a card payment terminal",
+    intro:
+      "A card machine that won't take payments costs you money by the minute, so this is written in the order that actually fixes things fastest - not the order the manual suggests. Work down the list; most terminal problems die at step two or three. And the real lesson lives at the end: the businesses that never have this crisis are the ones with a £19 backup in the drawer.",
+    sections: [
+      {
+        heading: "The fix list, fastest first",
+        paragraphs: ["Ninety seconds each, in this order:"],
+        bullets: [
+          "Restart the machine. Genuinely - a full power-off restart clears most frozen terminals. Do it before anything clever.",
+          "Check the connection: is the WiFi actually up (test on your phone), or has the router restarted onto a different network? SIM readers: check signal bars, move nearer a window.",
+          "Check the battery - a low reader often fails taps before it dies outright. Plug it in and retry.",
+          "Re-pair Bluetooth (phone-paired readers): forget the device in the app, re-pair fresh. This fixes the classic 'connected but not working' state.",
+          "Check the provider's status page: if SumUp/Square/Dojo is having an outage, nothing on your end will fix it - switch to fallbacks and stop debugging.",
+          "Update or reinstall the app (phone-paired) or check for terminal firmware prompts. Last resort before support.",
+        ],
+      },
+      {
+        heading: "Keep trading while it's down",
+        paragraphs: ["The machine being down doesn't mean card payments are down - you have more fallbacks than you think:"],
+        bullets: [
+          "[Tap to Pay on your phone](/blog/tap-to-pay-iphone-worth-it): most providers' apps can take contactless directly on a recent iPhone or Android - zero hardware, live in minutes.",
+          "Payment links: text or email the customer a link from your provider's app - clunky, but it completes the sale.",
+          "The other till's reader, if you have two - or the trusty cash tin while you sort it.",
+          "A handwritten IOU for regulars sounds quaint and works more often than pride suggests.",
+        ],
+      },
+      {
+        heading: "Decline vs broken: know which problem you have",
+        paragraphs: [
+          "One declined card is the customer's problem - the [£100 contactless limit](/blog/contactless-limit-uk), the periodic PIN check, or their bank saying no. Every card declining is your problem - connection or provider. Diagnose with one question: has anything gone through in the last ten minutes?",
+          "If payments authorise but the money later seems missing, that's a settlement question, not a terminal one - check the app's payout schedule before assuming the worst; [payouts run on their own clock](/blog/same-day-payouts-providers).",
+        ],
+      },
+      {
+        heading: "The £19 lesson",
+        paragraphs: [
+          "Every fix above buys minutes; a charged backup reader in the drawer buys immunity. At £19 it's the cheapest business continuity insurance that exists - the Saturday it saves pays for it fifty times over. Buy it from the same provider so it shares your account and reports.",
+          "And if your terminal fails often enough that this page is bookmarked, that's not bad luck - that's a provider or hardware verdict. The [comparison table](/compare-card-machines) is the fix for chronic cases.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Why is my card machine not connecting?",
+        a: "Usually the network, not the machine: WiFi down or changed, weak SIM signal, or Bluetooth pairing gone stale. Restart the terminal, verify the network on another device, re-pair if phone-based - that sequence resolves most cases.",
+      },
+      {
+        q: "Can I take card payments if my machine is broken?",
+        a: "Almost certainly: Tap to Pay on a recent phone through your provider's app, or payment links by text/email. Both are live in minutes and use your existing account.",
+      },
+      {
+        q: "Why do payments decline for every customer suddenly?",
+        a: "All-cards-declining means connection or provider outage - check the provider's status page before touching settings. One card declining is the customer's bank at work.",
+      },
+    ],
+    relatedPosts: ["how-do-card-machines-work", "contactless-limit-uk", "tap-to-pay-iphone-worth-it"],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Card readers with no monthly fee", href: "/card-readers-no-monthly-fee" },
+      { label: "Get matched in 60 seconds", href: "/get-pos-quotes" },
+    ],
+  },
+  {
+    slug: "do-businesses-have-to-give-receipts-uk",
+    title: "Do Businesses Have to Give Receipts in the UK? (Mostly No - With Catches)",
+    excerpt:
+      "There's no general legal duty to hand over a receipt in the UK - but VAT invoices, online sales and your own records are a different story. The actual rules, minus the folklore.",
+    category: "How-to",
+    author: "Nathan Keeble",
+    date: "2026-07-09",
+    readMinutes: 5,
+    featuredImage: "/images/blog/do-businesses-have-to-give-receipts-uk.webp",
+    featuredAlt: "A printed till receipt folded into a paper plane",
+    intro:
+      "Surprising but true: there's no general legal requirement for a UK business to give customers a receipt for an in-person sale. Plenty of folklore says otherwise. But before you bin the receipt roll - there are real exceptions around VAT, online selling and refunds, and solid commercial reasons to offer receipts anyway. Here's where the law actually draws the lines.",
+    sections: [
+      {
+        heading: "The general rule (and the folklore)",
+        paragraphs: [
+          "For a face-to-face sale, no statute forces you to provide a receipt, and the customer's consumer rights exist whether or not paper changed hands - proof of purchase for a refund can be a bank statement, not just a till receipt. The 'legally must give a receipt' belief is folklore, like ['legal tender' at the till](/blog/can-a-business-refuse-cash-uk).",
+          "What is legally yours to worry about is your own record-keeping: every sale needs to be in your books for HMRC whether the customer took a receipt or not - which your card machine does automatically, and a cash-only till does not.",
+        ],
+      },
+      {
+        heading: "The real exceptions",
+        paragraphs: ["Where receipts or paperwork ARE required:"],
+        bullets: [
+          "VAT invoices: if you're VAT-registered and a VAT-registered customer asks, you must provide a VAT invoice - and retail sales over certain amounts warrant at least a simplified VAT receipt on request.",
+          "Online and distance sales: consumers must receive confirmation of the order and the required pre-contract information - effectively a receipt by law, usually the confirmation email.",
+          "Some regulated trades carry their own paperwork duties (think vehicle sales, precious metals) - if you're licensed for something, check your licence conditions.",
+          "Refund policies you advertise: if your posted policy says 'with receipt', you've made the receipt matter - your policy binds you.",
+        ],
+      },
+      {
+        heading: "Why you should offer receipts anyway",
+        paragraphs: [
+          "Receipts are cheap goodwill and cheaper dispute insurance. A customer with a receipt resolves their issue with you; a customer without one increasingly goes to their bank - and a [chargeback](/blog/chargebacks-uk-small-business) costs you more than a lifetime's till roll. The receipt is your evidence as much as theirs.",
+          "Digital receipts settle the cost question entirely: every modern card machine offers email/text receipts at zero marginal cost, customers who don't want one just tap 'no receipt', and the ones who do get a record that never fades in a wallet. It's the correct default for almost every small business.",
+        ],
+      },
+      {
+        heading: "What to keep for yourself",
+        paragraphs: [
+          "Your side of the paperwork is not optional: sales records for HMRC (typically 5+ years for Self Assessment, 6 for companies), your card provider's statements, and VAT records if registered - all of which your payment provider generates for you as a by-product of taking cards. It's one of the quiet arguments for card-first trading covered in our [tax deductibility guide](/blog/are-card-machine-fees-tax-deductible).",
+          "Practical setup: digital receipts on, merchant copies off (the app holds them), and a monthly statement download into your bookkeeping folder. Total ongoing effort: minutes.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is it illegal for a shop not to give a receipt in the UK?",
+        a: "No - there's no general legal duty for in-person sales. Exceptions exist (VAT invoices on request if VAT-registered, online order confirmations, some regulated trades), and customers keep their refund rights either way.",
+      },
+      {
+        q: "Can a customer demand a receipt?",
+        a: "They can ask, and it's almost always smart to oblige - but outside the VAT-invoice and distance-selling cases, it's good practice rather than law. A bank statement counts as proof of purchase for consumer rights purposes.",
+      },
+      {
+        q: "Are digital receipts legally valid?",
+        a: "Yes - email and text receipts serve every purpose paper does, including VAT invoices if they contain the required details. They're also free, unlosable and better evidence in disputes.",
+      },
+    ],
+    relatedPosts: ["can-a-business-refuse-cash-uk", "chargebacks-uk-small-business", "are-card-machine-fees-tax-deductible"],
+    relatedLinks: [
+      { label: "Compare card machines", href: "/compare-card-machines" },
+      { label: "Card machine fees explained", href: "/guides/card-machine-fees-explained" },
+      { label: "Fee calculator", href: "/card-machine-fee-calculator" },
+    ],
+  },
 ];
