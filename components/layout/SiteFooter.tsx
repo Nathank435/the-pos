@@ -65,7 +65,7 @@ export function SiteFooter() {
               © {year} {COMPANY.legalName}. All prices and rates are indicative and may change - always check provider
               terms.
             </p>
-            <p>Made for UK small businesses.</p>
+            <p>Built in Sheffield. Useful across the UK.</p>
           </div>
         </div>
       </div>

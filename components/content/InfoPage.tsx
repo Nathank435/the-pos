@@ -12,6 +12,7 @@ export function InfoPage({
   sections,
   lastUpdated,
   contactEmail,
+  header,
 }: {
   title: string;
   intro?: string;
@@ -21,6 +22,8 @@ export function InfoPage({
   lastUpdated?: string;
   /** If set, renders a prominent "Email us" mailto button under the intro. */
   contactEmail?: string;
+  /** Optional block rendered above the sections (e.g. a founder card). */
+  header?: React.ReactNode;
 }) {
   return (
     <>
@@ -33,6 +36,7 @@ export function InfoPage({
       <Section>
         <Container>
           <div className="max-w-3xl space-y-8">
+            {header}
             {contactEmail && (
               <a
                 href={`mailto:${contactEmail}`}

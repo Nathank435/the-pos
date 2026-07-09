@@ -847,6 +847,16 @@ export function getProviders(slugs: string[]): Provider[] {
 
 export const PROVIDER_SLUGS = PROVIDERS.map((p) => p.slug);
 
+/** Providers we have a tracked affiliate partnership with. Keep in sync with
+ *  the methodology page's disclosure - the homepage independence line and the
+ *  content validator both read this. */
+export const PARTNER_SLUGS: string[] = ["sumup", "mypos", "shopify-pos"];
+
+/** Highest-rated provider - used by the independence proof line. */
+export function topRatedProvider() {
+  return [...PROVIDERS].sort((a, b) => b.editorialRating.overall - a.editorialRating.overall)[0];
+}
+
 /** Providers shown on /compare-card-machines - keep homepage counts in sync with this. */
 export const CARD_MACHINE_PROVIDERS = PROVIDERS.filter((p) => p.type !== "full-pos" || p.hardware.length > 1);
 

@@ -21,7 +21,7 @@ import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
 import { BlogCard } from "@/components/content/BlogCard";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
-import { TrustStrip } from "@/components/content/TrustStrip";
+import { TrustStrip, IndependenceProof } from "@/components/content/TrustStrip";
 import { PROVIDERS, getProvider, CARD_MACHINE_PROVIDERS } from "@/data/providers";
 import { GUIDES } from "@/data/guides";
 import { postsByDate } from "@/data/blog";
@@ -51,7 +51,7 @@ const HOME_FAQS = [
   },
   {
     q: "Is the cheapest card machine actually the cheapest?",
-    a: "Not always. The cheapest card machine is rarely the cheapest once the fees start nibbling - a low headline rate with a monthly fee, PCI charge or contract can cost more than a slightly higher pay-as-you-go rate. Always compare the all-in monthly cost at your real turnover.",
+    a: "Not always. The cheapest card machine is rarely the cheapest once the extras stack up - a low headline rate with a monthly fee, PCI charge or contract can cost more than a slightly higher pay-as-you-go rate. Always compare the all-in monthly cost at your real turnover.",
   },
   {
     q: "How does ThePOS make money?",
@@ -81,17 +81,18 @@ export default function HomePage() {
                   businesses that just want a straight answer.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <ButtonLink href="/compare-card-machines" size="lg" className="w-full sm:w-auto">
-                    Compare providers
+                  <ButtonLink href="/card-machine-fee-calculator" size="lg" className="w-full sm:w-auto">
+                    Calculate my real card fees
                   </ButtonLink>
-                  <ButtonLink href="/get-pos-quotes" variant="outline" size="lg" className="w-full sm:w-auto">
-                    Find my best fit
+                  <ButtonLink href="/compare-card-machines" variant="outline" size="lg" className="w-full sm:w-auto">
+                    Compare providers
                   </ButtonLink>
                 </div>
                 <p className="mt-5 text-sm font-medium text-grey">
-                  Plain-English comparisons. Real fee notes. No sales waffle.
+                  Plain-English comparisons. Real fee notes. Checked against provider pricing.
                 </p>
-                <TrustStrip className="mt-3" />
+                <TrustStrip className="mt-3" verb="researched" />
+                <IndependenceProof className="mt-3 max-w-lg" />
               </div>
 
               <EditorialImage
@@ -132,7 +133,7 @@ export default function HomePage() {
         <Container>
           <div className="max-w-2xl">
             <h2 className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">
-              The big UK card machine &amp; POS providers, minus the spin
+              The big UK card machine &amp; POS providers, compared honestly
             </h2>
             <p className="mt-2 text-grey">
               Who each one is genuinely good for - and who should walk the other way. No one opens a café because
@@ -182,7 +183,11 @@ export default function HomePage() {
               );
             })}
           </div>
-          <div className="mt-7">
+          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-grey">
+            We don&apos;t compare 40 providers. We compare the ones UK small businesses actually shortlist - then tell
+            you who each one suits, and who should walk away.
+          </p>
+          <div className="mt-4">
             <ButtonLink href="/compare-card-machines" variant="outline">
               Compare all {CARD_MACHINE_PROVIDERS.length} card machine providers <ArrowRight className="h-4 w-4" />
             </ButtonLink>

@@ -38,6 +38,32 @@ export default async function GetQuotesPage({
         </div>
       </PageHero>
 
+      {/* Two journeys, clearly separated: advice (quiz) vs commercial (quotes). */}
+      <Section className="!py-8">
+        <Container>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <a
+              href="#quiz"
+              className="rounded-lg border-2 border-accent bg-accent-soft/40 p-5 transition-colors hover:bg-accent-soft"
+            >
+              <p className="font-heading text-lg font-bold text-navy">Just show me my matches</p>
+              <p className="mt-1 text-sm text-grey">
+                The 60-second quiz. Instant results, no email, no follow-up calls.
+              </p>
+            </a>
+            <a
+              href="#quotes"
+              className="rounded-lg border border-border bg-white p-5 transition-colors hover:border-navy"
+            >
+              <p className="font-heading text-lg font-bold text-navy">Get quotes from providers</p>
+              <p className="mt-1 text-sm text-grey">
+                Tell us about your business and we&apos;ll arrange tailored quotes. This one does need your details.
+              </p>
+            </a>
+          </div>
+        </Container>
+      </Section>
+
       {/* Quiz */}
       <Section id="quiz">
         <Container>
@@ -54,7 +80,7 @@ export default async function GetQuotesPage({
       </Section>
 
       {/* Lead form */}
-      <Section muted>
+      <Section muted id="quotes">
         <Container>
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-navy">Prefer tailored quotes?</h2>

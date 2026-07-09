@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** ThePOS.co.uk wordmark + receipt-with-check icon (per the brand guide). */
+/** The POS wordmark + receipt-with-check icon (per the brand guide). */
 export function BrandLogo({
   reversed,
   iconOnly,
@@ -15,9 +15,8 @@ export function BrandLogo({
       <BrandMark reversed={reversed} />
       {!iconOnly && (
         <span className="font-heading text-xl font-extrabold leading-none tracking-tight">
-          <span className={reversed ? "text-white" : "text-navy"}>The</span>
+          <span className={reversed ? "text-white" : "text-navy"}>The </span>
           <span className={reversed ? "text-white" : "text-accent"}>POS</span>
-          <span className={cn("font-semibold", reversed ? "text-white/70" : "text-grey")}>.co.uk</span>
         </span>
       )}
     </span>
