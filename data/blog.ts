@@ -9,8 +9,9 @@ import type { BlogPost } from "./blog/types";
 import { POSTS_1 } from "./blog/posts-1";
 import { POSTS_2 } from "./blog/posts-2";
 import { POSTS_3 } from "./blog/posts-3";
+import { POSTS_4 } from "./blog/posts-4";
 
-export const BLOG_POSTS: BlogPost[] = [...POSTS_1, ...POSTS_2, ...POSTS_3];
+export const BLOG_POSTS: BlogPost[] = [...POSTS_1, ...POSTS_2, ...POSTS_3, ...POSTS_4];
 
 export function getPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);

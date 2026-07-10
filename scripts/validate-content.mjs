@@ -18,6 +18,7 @@ const BLOG_POSTS = [
   ...(await import(join(root, "data/blog/posts-1.ts"))).POSTS_1,
   ...(await import(join(root, "data/blog/posts-2.ts"))).POSTS_2,
   ...(await import(join(root, "data/blog/posts-3.ts"))).POSTS_3,
+  ...(await import(join(root, "data/blog/posts-4.ts"))).POSTS_4,
 ];
 const { PROVIDERS } = await import(join(root, "data/providers.ts"));
 const { CALC_PROVIDERS } = await import(join(root, "lib/calculator.ts"));
