@@ -169,6 +169,36 @@ export async function storeLead(lead: LeadPayload): Promise<{ stored: string[] }
     businessSlug: biz?.slug,
   });
 
+  // Partner lead forwarding: Dojo pays per submitted lead. Any lead showing
+  // Dojo interest is POSTed to DOJO_LEAD_WEBHOOK_URL (Zapier/Make -> partner
+  // portal or partner-manager email) in the portal's field shape.
+  const dojoInterest = [lead.quizTopMatch, lead.cheapestProvider, lead.currentProvider]
+    .some((v) => typeof v === "string" && /dojo/i.test(v));
+  if (dojoInterest && process.env.DOJO_LEAD_WEBHOOK_URL) {
+    try {
+      const res = await fetch(process.env.DOJO_LEAD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          partner: "dojo",
+          businessName: lead.company,
+          contactName: lead.name || lead.firstName,
+          email: lead.email,
+          phone: lead.phone,
+          postcode: lead.postcode,
+          businessType: lead.businessType,
+          monthlyTurnover: lead.monthlyTurnover,
+          interestSignal: lead.quizTopMatch ? "quiz_match" : lead.cheapestProvider ? "calculator" : "quote_form",
+          sourcePage: lead.sourcePage,
+          submittedAt: record.receivedAt,
+        }),
+      });
+      if (res.ok) stored.push("dojo-webhook");
+    } catch (err) {
+      console.error("[leads] dojo webhook failed", err);
+    }
+  }
+
   const subscribed = await klaviyoSubscribe({
     email: lead.email,
     firstName: lead.firstName,

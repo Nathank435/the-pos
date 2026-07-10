@@ -52,7 +52,7 @@ export function ProviderCTA({
         if (isAffiliate) track("affiliate_click", affiliateClickProps(provider, ctx));
       }}
     >
-      {label || `Visit ${provider.name}`}
+      {label || (isAffiliate ? `Visit ${provider.name}` : `Get a ${provider.name} quote`)}
       {isAffiliate && <ExternalLink className="h-4 w-4" />}
     </a>
   );

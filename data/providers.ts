@@ -304,7 +304,6 @@ export const PROVIDERS: Provider[] = [
       { name: "Dojo Go", priceFrom: "Quoted", note: "Portable card machine with fast payouts" },
       { name: "Dojo Pocket / countertop", priceFrom: "Quoted", note: "Range to suit counter or table service" },
     ],
-    affiliateUrl: "https://dojo.tech/card-machines/",
     quoteUrl: "/get-pos-quotes?provider=dojo",
     sourceUrls: ["https://dojo.tech/card-machines/"],
     lastChecked: "2026-06-25",
@@ -850,7 +849,7 @@ export const PROVIDER_SLUGS = PROVIDERS.map((p) => p.slug);
 /** Providers we have a tracked affiliate partnership with. Keep in sync with
  *  the methodology page's disclosure - the homepage independence line and the
  *  content validator both read this. */
-export const PARTNER_SLUGS: string[] = ["sumup", "mypos", "shopify-pos"];
+export const PARTNER_SLUGS: string[] = ["sumup", "mypos", "shopify-pos", "dojo"];
 
 /** Highest-rated provider - used by the independence proof line. */
 export function topRatedProvider() {

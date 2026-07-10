@@ -214,7 +214,7 @@ export function FeeCalculator() {
             <tbody className="divide-y divide-border">
               {result.rows.map((r, i) => {
                 const provider = PROVIDERS.find((p) => p.slug === r.slug);
-                const outbound = provider?.affiliateUrl || provider?.quoteUrl;
+                const outbound = provider?.affiliateUrl;
                 return (
                   <tr key={r.slug} className={i === 0 ? "bg-accent-soft/30" : "hover:bg-cream/40"}>
                     <td className="p-3 font-medium text-navy">{r.name}</td>
