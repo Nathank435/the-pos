@@ -16,7 +16,7 @@ import { Container, Section } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { ProviderLogo } from "@/components/ui/ProviderLogo";
 import { ProviderCTA } from "@/components/comparison/ProviderCTA";
-import { EditorialImage } from "@/components/ui/EditorialImage";
+import { HeroCalcTeaser } from "@/components/calculator/HeroCalcTeaser";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { GuideCard } from "@/components/content/GuideCard";
 import { BlogCard } from "@/components/content/BlogCard";
@@ -77,15 +77,15 @@ export default function HomePage() {
                   Find the card machine that won&apos;t quietly rinse your margins
                 </h1>
                 <p className="mt-4 max-w-lg text-base leading-relaxed text-grey sm:text-lg">
-                  Compare UK POS systems, card readers and payment fees for cafés, shops, salons, takeaways and small
-                  businesses that just want a straight answer.
+                  Every big UK provider compared on what actually leaves your account - fees, contracts and payout
+                  speed. For cafés, shops, salons, trades and stalls that just want a straight answer.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <ButtonLink href="/card-machine-fee-calculator" size="lg" className="w-full sm:w-auto">
-                    Calculate my real card fees
-                  </ButtonLink>
-                  <ButtonLink href="/compare-card-machines" variant="outline" size="lg" className="w-full sm:w-auto">
+                  <ButtonLink href="/compare-card-machines" size="lg" className="w-full sm:w-auto">
                     Compare providers
+                  </ButtonLink>
+                  <ButtonLink href="/get-pos-quotes" variant="outline" size="lg" className="w-full sm:w-auto">
+                    Get matched in 60 seconds
                   </ButtonLink>
                 </div>
                 <p className="mt-5 text-sm font-medium text-grey">
@@ -95,14 +95,7 @@ export default function HomePage() {
                 <IndependenceProof className="mt-3 max-w-lg" />
               </div>
 
-              <EditorialImage
-                src="/images/hero-pos.jpg"
-                alt="Contactless card payment on a POS terminal"
-                label="POS hardware"
-                ratio="4 / 3"
-                priority
-                className="bg-white"
-              />
+              <HeroCalcTeaser />
             </div>
           </div>
 
