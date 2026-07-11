@@ -5,6 +5,7 @@ import { Container, Section } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProviderLogo } from "@/components/ui/ProviderLogo";
 import { RatingStars, ProviderRating } from "@/components/comparison/ProviderRating";
+import { CalcTeaser } from "@/components/calculator/HeroCalcTeaser";
 import { BestForTags } from "@/components/comparison/BestForTags";
 import { ProviderCTA } from "@/components/comparison/ProviderCTA";
 import { ProsCons } from "@/components/content/ProsCons";
@@ -283,6 +284,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           {/* Sidebar */}
           <aside className="space-y-5 lg:sticky lg:top-20 lg:self-start">
             <ProviderRating rating={provider.editorialRating} />
+            <CalcTeaser
+              compact
+              title="Price this at your volume"
+              copy="See every provider's cost at your numbers - not the advert's."
+              source={`review_${provider.slug}`}
+            />
             <div className="rounded-lg border border-border bg-white p-5">
               <h3 className="font-heading text-base font-semibold text-navy">Sources</h3>
               <ul className="mt-2 space-y-1.5">

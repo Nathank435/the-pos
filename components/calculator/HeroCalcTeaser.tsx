@@ -4,33 +4,45 @@ import { useState } from "react";
 import { ArrowRight, Calculator } from "lucide-react";
 import { track } from "@/lib/analytics";
 
-/** Homepage hero teaser: two inputs, no maths on this page - it deep-links
- *  into the fee calculator with the visitor's numbers prefilled, so the
- *  first click already feels like progress. Replaces the stock hero photo:
- *  the tool IS the hero. */
-export function HeroCalcTeaser() {
-  const [turnover, setTurnover] = useState("5000");
-  const [atv, setAtv] = useState("12");
+/** Calculator teaser: two inputs, no maths on this page - it deep-links into
+ *  the fee calculator with the visitor's numbers prefilled, so the first
+ *  click already feels like progress. Presets let hub pages ask the question
+ *  in the reader's own numbers ("what does a cafe actually pay?"). */
+export function CalcTeaser({
+  title = "What would you actually pay?",
+  copy = "Two numbers. Every big UK provider, priced at your volume.",
+  defaultTurnover = 5000,
+  defaultAtv = 12,
+  source = "calc_teaser",
+  compact = false,
+}: {
+  title?: string;
+  copy?: string;
+  defaultTurnover?: number;
+  defaultAtv?: number;
+  source?: string;
+  compact?: boolean;
+}) {
+  const [turnover, setTurnover] = useState(String(defaultTurnover));
+  const [atv, setAtv] = useState(String(defaultAtv));
 
   function go() {
-    const t = parseFloat(turnover) || 5000;
-    const a = parseFloat(atv) || 12;
-    track("calculator_start", { source: "hero_teaser", turnover_band: String(t) });
+    const t = parseFloat(turnover) || defaultTurnover;
+    const a = parseFloat(atv) || defaultAtv;
+    track("calculator_start", { source, turnover_band: String(t) });
     window.location.href = `/card-machine-fee-calculator?turnover=${t}&atv=${a}`;
   }
 
   return (
-    <div className="rounded-lg border border-border bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.04)]">
-      <p className="flex items-center gap-2 font-heading text-lg font-bold text-navy">
-        <Calculator className="h-5 w-5 text-accent" />
-        What would you actually pay?
+    <div className={compact ? "rounded-lg border border-border bg-white p-5" : "rounded-lg border border-border bg-white p-6 shadow-[0_1px_0_rgba(15,23,42,0.04)]"}>
+      <p className={`flex items-center gap-2 font-heading font-bold text-navy ${compact ? "text-base" : "text-lg"}`}>
+        <Calculator className={compact ? "h-4 w-4 text-accent" : "h-5 w-5 text-accent"} />
+        {title}
       </p>
-      <p className="mt-1 text-sm text-grey">
-        Two numbers. Every big UK provider, priced at your volume.
-      </p>
+      <p className="mt-1 text-sm text-grey">{copy}</p>
 
       <form
-        className="mt-5 space-y-4"
+        className={compact ? "mt-4 space-y-3" : "mt-5 space-y-4"}
         onSubmit={(e) => {
           e.preventDefault();
           go();
@@ -72,15 +84,22 @@ export function HeroCalcTeaser() {
 
         <button
           type="submit"
-          className="flex w-full items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-base font-bold text-white transition-colors hover:bg-accent-hover"
+          className={`flex w-full items-center justify-center gap-2 rounded-md bg-accent px-5 font-bold text-white transition-colors hover:bg-accent-hover ${compact ? "py-2.5 text-sm" : "py-3.5 text-base"}`}
         >
           See what I&apos;d actually pay <ArrowRight className="h-4 w-4" />
         </button>
       </form>
 
-      <p className="mt-3 text-center text-xs text-grey">
-        Free · takes about ten seconds · every big UK provider
-      </p>
+      {!compact && (
+        <p className="mt-3 text-center text-xs text-grey">
+          Free · takes about ten seconds · every big UK provider
+        </p>
+      )}
     </div>
   );
+}
+
+/** Homepage hero variant - kept as a named export for clarity at the call site. */
+export function HeroCalcTeaser() {
+  return <CalcTeaser source="hero_teaser" />;
 }

@@ -14,6 +14,8 @@ export type BusinessType = {
   image?: string;
   /** Ordered provider slugs recommended for this business type. */
   recommendedProviders: string[];
+  /** Realistic starter numbers for the embedded calculator teaser. */
+  calc?: { turnover: number; atv: number };
   whatMatters: { title: string; body: string }[];
   feesToWatch: string[];
   recommendedSetup: string;
@@ -23,6 +25,7 @@ export type BusinessType = {
 export const BUSINESS_TYPES: BusinessType[] = [
   {
     slug: "cafes",
+    calc: { turnover: 8000, atv: 5 },
     seoDescription:
       "The best café POS systems and card machines in the UK for 2026 - fast service, tips and low fees compared in plain English. Find your match.",
     name: "Cafés",
@@ -58,6 +61,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "restaurants",
+    calc: { turnover: 25000, atv: 28 },
     seoDescription:
       "The best restaurant POS systems in the UK for 2026 - table service, tips, menus and card fees compared in plain English. Find your best-fit setup.",
     name: "Restaurants",
@@ -93,6 +97,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "retail",
+    calc: { turnover: 9000, atv: 22 },
     seoDescription:
       "The best retail POS systems and card machines for UK shops in 2026 - stock, barcodes and low fees compared in plain English. Find your match.",
     name: "Retail shops",
@@ -128,6 +133,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "market-stalls",
+    calc: { turnover: 1500, atv: 8 },
     seoDescription:
       "Best card readers for UK market stalls in 2026 - works on mobile data, no monthly fee, all-day battery. Top picks compared. Find your match.",
     name: "Market stalls",
@@ -163,6 +169,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "pubs-bars",
+    calc: { turnover: 18000, atv: 9 },
     seoDescription:
       "The best POS systems for UK pubs and bars in 2026 - fast rounds, tabs and card fees compared in plain English. Find your best-fit setup.",
     name: "Pubs & bars",
@@ -192,6 +199,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "salons",
+    calc: { turnover: 5000, atv: 38 },
     seoDescription:
       "The best salon POS systems and card machines in the UK for 2026 - chair-side payments, tips and low fees compared in plain English.",
     name: "Salons",
@@ -221,6 +229,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "tradesmen",
+    calc: { turnover: 6000, atv: 250 },
     seoDescription:
       "The best card machines for UK tradespeople in 2026 - take deposits and payments on the go, low fees and no contract. Top picks compared.",
     name: "Tradespeople",
@@ -255,6 +264,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "takeaways",
+    calc: { turnover: 10000, atv: 14 },
     seoDescription:
       "The best POS systems for UK takeaways in 2026 - fast orders, phone and delivery payments and low card fees compared. Find your best-fit setup.",
     name: "Takeaways",
@@ -284,6 +294,7 @@ export const BUSINESS_TYPES: BusinessType[] = [
   },
   {
     slug: "mobile-businesses",
+    calc: { turnover: 2500, atv: 30 },
     seoDescription:
       "The best mobile card machines for UK businesses in 2026 - take payments anywhere on mobile data, no monthly fee. Top picks compared.",
     name: "Mobile businesses",

@@ -5,6 +5,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ProviderComparisonTable } from "@/components/comparison/ProviderComparisonTable";
 import { ProviderCard } from "@/components/comparison/ProviderCard";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
+import { CalcTeaser } from "@/components/calculator/HeroCalcTeaser";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { AuthorBox } from "@/components/content/AuthorBox";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
@@ -58,6 +59,14 @@ export default async function BusinessTypePage({ params }: { params: Promise<{ s
             label={biz.name}
             ratio="21 / 9"
             priority
+          />
+
+          <CalcTeaser
+            title={`What ${biz.name.toLowerCase()} actually pay`}
+            copy="Start from typical numbers for your trade - then make them yours."
+            defaultTurnover={biz.calc?.turnover ?? 5000}
+            defaultAtv={biz.calc?.atv ?? 12}
+            source={`hub_${biz.slug}`}
           />
 
 

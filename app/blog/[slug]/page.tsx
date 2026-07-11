@@ -15,6 +15,7 @@ import { articleSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { BLOG_POSTS, getPost, blogCover } from "@/data/blog";
 import { AUTHOR } from "@/lib/site";
+import { CalcTeaser } from "@/components/calculator/HeroCalcTeaser";
 import { Clock, Linkedin } from "lucide-react";
 
 export function generateStaticParams() {
@@ -190,6 +191,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 ))}
               </ul>
             </div>
+            {post.category === "Fees & saving" ? (
+              <CalcTeaser
+                compact
+                title="What would you actually pay?"
+                copy="Every big UK provider, priced at your numbers."
+                source="blog_fees_sidebar"
+              />
+            ) : (
             <div className="rounded-lg border border-accent/30 bg-accent-soft/40 p-5">
               <h3 className="font-heading text-base font-semibold text-navy">Not sure what you need?</h3>
               <p className="mt-1.5 text-sm text-grey">Take the 60-second quiz and we'll point you to providers that fit.</p>
@@ -200,6 +209,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 Find my match
               </Link>
             </div>
+            )}
           </aside>
         </Container>
       </Section>
