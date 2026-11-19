@@ -8,6 +8,7 @@ import { ProviderLogo } from "@/components/ui/ProviderLogo";
 import { ProviderCTA } from "@/components/comparison/ProviderCTA";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
+import { IllustrativeFigure } from "@/components/content/IllustrativeFigure";
 import { AuthorBox } from "@/components/content/AuthorBox";
 import { StickyMobileCTA } from "@/components/forms/StickyMobileCTA";
 import { pageMeta } from "@/lib/seo";
@@ -80,6 +81,10 @@ export default async function VersusPage({ params }: { params: Promise<{ slug: s
                 <VersusSummaryTable a={a} b={b} />
               </div>
             </section>
+
+            {v.imageAlt && (
+              <IllustrativeFigure src={`/images/compare/${v.slug}.webp`} alt={v.imageAlt} ratio="21 / 9" />
+            )}
 
             <section className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-lg border border-border bg-white p-5">

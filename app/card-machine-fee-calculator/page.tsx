@@ -3,6 +3,7 @@ import { Container, Section } from "@/components/ui/Container";
 import { PageHero } from "@/components/layout/PageHero";
 import { FeeCalculator } from "@/components/calculator/FeeCalculator";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
+import { IllustrativeFigure } from "@/components/content/IllustrativeFigure";
 import { MethodologyBox } from "@/components/content/MethodologyBox";
 import { pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -42,6 +43,12 @@ export default function CalculatorPage() {
       <Section>
         <Container>
           <FeeCalculator />
+          <IllustrativeFigure
+            src="/images/calculator-context.webp"
+            alt="Small-business owner working out card costs at a desk"
+            ratio="3 / 2"
+            className="mx-auto mt-12 max-w-2xl"
+          />
         </Container>
       </Section>
       <Section muted>
