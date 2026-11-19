@@ -5,6 +5,7 @@ import { Container, Section } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { RelatedGuides } from "@/components/content/RelatedGuides";
+import { IllustrativeFigure } from "@/components/content/IllustrativeFigure";
 import { AuthorBox } from "@/components/content/AuthorBox";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { InlineQuoteCTA } from "@/components/forms/InlineQuoteCTA";
@@ -72,6 +73,16 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </div>
             )}
             <p className="text-lg leading-relaxed text-navy">{guide.intro}</p>
+
+            {guide.imageAlt && (
+              <IllustrativeFigure
+                src={`/images/guides/${guide.slug}.webp`}
+                alt={guide.imageAlt}
+                ratio="16 / 9"
+                className="mt-8"
+                imageClassName="max-sm:!aspect-[4/3]"
+              />
+            )}
 
             {guide.sections.map((s, i) => (
               <section key={i} className="mt-8">

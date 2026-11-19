@@ -6,6 +6,8 @@ export type GuideSection = { heading?: string; paragraphs: string[]; bullets?: s
 
 export type Guide = {
   slug: string;
+  /** Alt text for the illustrative photo at /images/guides/<slug>.webp. Omit when there is no photo. */
+  imageAlt?: string;
   title: string;
   description: string;
   category: "Basics" | "Fees" | "Choosing" | "Features";
@@ -24,6 +26,7 @@ export type Guide = {
 export const GUIDES: Guide[] = [
   {
     slug: "card-machine-fees-explained",
+    imageAlt: "Shop owner checking a card processing statement at the counter",
     title: "Card Machine Fees Explained (UK)",
     description:
       "Transaction fees, monthly fees, hardware costs, payout charges and the sneaky extras - every card machine fee, explained in plain English.",
@@ -97,6 +100,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "what-is-a-pos-system",
+    imageAlt: "Tablet till on the counter of an independent shop",
     title: "What Is a POS System? (Plain-English Guide)",
     description:
       "What 'POS' actually means, how a POS system differs from a card reader, and what features matter for UK small businesses.",
@@ -147,6 +151,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "pos-system-vs-card-reader",
+    imageAlt: "A handheld card reader beside a full tablet till",
     title: "POS System vs Card Reader: Which Do You Need?",
     description:
       "The difference between a simple card reader and a full POS system - and how to tell which one your UK business actually needs.",
@@ -192,6 +197,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-to-choose-a-card-machine",
+    imageAlt: "Café owner comparing two card machines",
     title: "How to Choose a Card Machine (UK Checklist)",
     description: "A practical checklist for choosing a UK card machine: fees, contracts, payouts, hardware and features.",
     category: "Choosing",
@@ -228,6 +234,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "hidden-card-machine-fees",
+    imageAlt: "Small print on a card machine contract being highlighted",
     title: "Hidden Card Machine Fees to Watch For",
     description: "The card machine fees that don't make the homepage - chargebacks, PCI, authorisation and exit fees.",
     category: "Fees",
@@ -264,6 +271,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "no-contract-card-machines",
+    imageAlt: "Market trader serving a customer at an outdoor stall",
     title: "No-Contract Card Machines in the UK",
     description: "Which UK card machines have no contract and no monthly fee - and when a contract is worth it anyway.",
     category: "Choosing",
@@ -293,6 +301,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "what-is-tap-to-pay",
+    imageAlt: "Customer tapping a phone to pay at a coffee van",
     title: "What Is Tap to Pay (on Phone)?",
     description: "How Tap to Pay on iPhone and Android lets you take contactless payments with no card machine.",
     category: "Features",
@@ -323,6 +332,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "what-is-a-virtual-terminal",
+    imageAlt: "Florist taking a phone order at a workbench",
     title: "What Is a Virtual Terminal?",
     description: "How a virtual terminal lets you take card payments over the phone or by keying in card details.",
     category: "Features",
@@ -353,6 +363,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "merchant-account-vs-payment-facilitator",
+    imageAlt: "Business owner reviewing bank paperwork at a laptop",
     title: "Merchant Account vs Payment Facilitator",
     description: "The difference between a traditional merchant account and a payment facilitator like SumUp or Square.",
     category: "Basics",
@@ -383,6 +394,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "how-long-do-card-payments-take-to-clear",
+    imageAlt: "Shop owner checking their balance at closing time",
     title: "How Long Do Card Payments Take to Clear?",
     description: "Payout and settlement times for UK card machines, and which providers pay out fastest.",
     category: "Basics",

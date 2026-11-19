@@ -2,6 +2,8 @@
 
 export type VersusPage = {
   slug: string; // "sumup-vs-square"
+  /** Alt text for the illustrative banner at /images/compare/<slug>.webp. Omit when there is no banner. */
+  imageAlt?: string;
   a: string; // provider slug
   b: string; // provider slug
   /** Bespoke ≤155-char SEO meta description. */
@@ -16,6 +18,7 @@ export type VersusPage = {
 export const VERSUS_PAGES: VersusPage[] = [
   {
     slug: "sumup-vs-square",
+    imageAlt: "Coffee shop counter where a customer is about to pay by card",
     metaDescription:
       "SumUp vs Square (2026): which is better for your UK business? Compare fees, hardware, contracts and who each one suits. Plain-English verdict inside.",
     a: "sumup",
@@ -45,6 +48,7 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "sumup-vs-zettle",
+    imageAlt: "Saturday market stall where a customer is about to pay by card",
     metaDescription:
       "SumUp vs Zettle (2026): which card reader wins for UK small businesses? Fees, hardware and who each one suits, compared. Plain-English verdict inside.",
     a: "sumup",
@@ -74,6 +78,7 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "sumup-vs-dojo",
+    imageAlt: "Busy pub bar where a customer is about to pay by card",
     metaDescription:
       "SumUp vs Dojo (2026): pay-as-you-go simplicity vs fast-payout power for UK businesses. Fees, contracts and verdict compared in plain English.",
     a: "sumup",
@@ -103,6 +108,7 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "square-vs-zettle",
+    imageAlt: "Clothing boutique till point where a customer is about to pay by card",
     metaDescription:
       "Square vs Zettle (2026): which card reader and POS wins for UK small businesses? Fees, payouts and who each suits, compared. Plain-English verdict.",
     a: "square",
@@ -132,6 +138,7 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "dojo-vs-square",
+    imageAlt: "Restaurant table where a customer is about to pay by card",
     metaDescription:
       "Dojo vs Square (2026): fast-payout card machines vs the best free POS app for UK businesses. Fees, contracts and who each suits, compared. Verdict inside.",
     a: "dojo",
@@ -161,6 +168,7 @@ export const VERSUS_PAGES: VersusPage[] = [
   },
   {
     slug: "sumup-vs-mypos",
+    imageAlt: "Barber's chair where a customer is about to pay by card",
     metaDescription:
       "SumUp vs myPOS (2026): two no-monthly-fee card readers for UK mobile sellers, compared on fees, payouts and features. Plain-English verdict inside.",
     a: "sumup",
